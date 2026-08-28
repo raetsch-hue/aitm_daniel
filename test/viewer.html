@@ -131,7 +131,8 @@
     </div>
     <p id="filehint">Noch kein Ordner eingelesen. Über „Ordner einlesen …" <code>test\</code> auswählen —
       der Browser fragt einmal nach Bestätigung. Alternativ den Ordner in dieses Fenster ziehen.
-      Es werden ausschließlich Markdown-Dateien gelistet, nichts wird hochgeladen.</p>
+      Es werden ausschließlich Markdown-Dateien gelistet, nichts wird hochgeladen.
+      Auf einem Server liest die Seite die Liste aus <code>dateien.json</code>.</p>
     <ul id="filelist"></ul>
   </div>
 </section>
@@ -147,6 +148,7 @@
 
   var found=[];        // {name, path, size, get:()=>Promise<string>}
   var activePath=null;
+  var keepOrder=false; // true = Reihenfolge aus dateien.json beibehalten
 
   function isMd(n){ return /\.(md|markdown|mdown|mkd)$/i.test(n); }
   function kb(b){ return b<1024 ? b+' B' : (b/1024).toFixed(1).replace('.',',')+' kB'; }
@@ -203,7 +205,7 @@
   function paintList(){
     filelist.innerHTML='';
     if(!found.length) return;
-    found.sort(function(a,b){ return a.path.localeCompare(b.path,'de'); });
+    if(!keepOrder) found.sort(function(a,b){ return a.path.localeCompare(b.path,'de'); });
     filehint.textContent = found.length+' Markdown-Datei'+(found.length===1?'':'en')+' gefunden.';
     found.forEach(function(f){
       var li=document.createElement('li'), b=document.createElement('button');
@@ -212,7 +214,7 @@
                     '<span class="sz"></span>';
       b.querySelector('.nm').textContent=f.name;
       b.querySelector('.pt').textContent=f.path;
-      b.querySelector('.sz').textContent=kb(f.size);
+      b.querySelector('.sz').textContent = f.size ? kb(f.size) : '';
       b.addEventListener('click', function(){
         f.get().then(function(txt){ render(txt, f.name, f.path); });
       });
@@ -290,31 +292,52 @@
 
   /* ---------- Über http(s): Verzeichnis automatisch lesen ---------- */
 
-  if(location.protocol!=='file:'){
-    fetch('KITools_Uebersicht.md')
-      .then(function(r){ if(!r.ok) throw 0; return r.text(); })
-      .then(function(t){
-        addFound({name:'KITools_Uebersicht.md', path:'KITools_Uebersicht.md', size:t.length,
-                  get:function(){ return Promise.resolve(t); }});
-        render(t,'KI-Tools – Übersicht','KITools_Uebersicht.md');
-      })
-      .catch(function(){});
+  function remote(nm, label){
+    return {name: label||nm, path:nm, size:0,
+            get:function(){ return fetch(nm).then(function(r){
+              if(!r.ok) throw new Error('nicht gefunden: '+nm);
+              return r.text();
+            }); }};
+  }
 
-    fetch('./')
-      .then(function(r){ if(!r.ok) throw 0; return r.text(); })
-      .then(function(html){
-        var doc=new DOMParser().parseFromString(html,'text/html');
-        Array.prototype.slice.call(doc.querySelectorAll('a[href]')).forEach(function(a){
-          var h=a.getAttribute('href');
-          if(!h || !isMd(h) || /^https?:|^\/\//.test(h)) return;
-          var nm=decodeURIComponent(h.replace(/^.*\//,''));
-          addFound({name:nm, path:nm, size:0, get:function(){
-            return fetch(h).then(function(r){ return r.text(); });
-          }});
+  function openFirst(){
+    if(activePath || !found.length) return;
+    var f=found[0];
+    f.get().then(function(t){ render(t, f.name, f.path); }).catch(function(){});
+  }
+
+  if(location.protocol!=='file:'){
+    // 1. Manifest — der zuverlaessige Weg auf GitHub Pages
+    fetch('dateien.json', {cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){
+        var list = Array.isArray(j) ? j : (j.dateien || []);
+        keepOrder = true;
+        list.forEach(function(it){
+          var nm = (typeof it==='string') ? it : it.name;
+          if(nm) addFound(remote(nm, (typeof it==='object' && it.titel) ? it.titel : nm));
         });
-        paintList();
+        paintList(); openFirst();
       })
-      .catch(function(){});
+      .catch(function(){
+        // 2. Verzeichnisindex — funktioniert bei lokalen Servern, nicht auf GitHub Pages
+        fetch('./')
+          .then(function(r){ if(!r.ok) throw 0; return r.text(); })
+          .then(function(html){
+            var doc=new DOMParser().parseFromString(html,'text/html');
+            Array.prototype.slice.call(doc.querySelectorAll('a[href]')).forEach(function(a){
+              var h=a.getAttribute('href');
+              if(!h || !isMd(h) || /^https?:|^\/\//.test(h)) return;
+              addFound(remote(decodeURIComponent(h.replace(/^.*\//,''))));
+            });
+            paintList(); openFirst();
+          })
+          .catch(function(){
+            // 3. Letzter Versuch: die bekannte Datei direkt
+            addFound(remote('KITools_Uebersicht.md','KI-Tools – Übersicht'));
+            paintList(); openFirst();
+          });
+      });
   }
 
   paintList();

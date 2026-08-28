@@ -1,0 +1,7 @@
+{
+  "_hinweis": "Liste der Markdown-Dateien, die viewer.html anzeigen soll. Neue Datei? Hier eintragen. Reihenfolge = Anzeigereihenfolge, der erste Eintrag wird beim Öffnen geladen.",
+  "dateien": [
+    { "name": "KITools_Uebersicht.md", "titel": "KI-Tools – Übersicht" },
+    { "name": "ki_psychologie.md", "titel": "KI und Psychologie" }
+  ]
+}
