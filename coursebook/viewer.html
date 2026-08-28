@@ -183,6 +183,12 @@
       nextBtn=document.getElementById('next');
 
   var rohHTML='';          // gerendertes Dokument ohne Trefferauszeichnung
+  var SPEICHER='coursebook.zuletzt';
+
+  // Der Merker liegt nur in diesem Browser. Ist er gesperrt (privates Fenster,
+  // blockierte Website-Daten), faellt alles still auf den ersten Eintrag zurueck.
+  function merken(pfad){ try{ localStorage.setItem(SPEICHER, pfad); }catch(e){} }
+  function gemerkt(){ try{ return localStorage.getItem(SPEICHER); }catch(e){ return null; } }
   var treffer=[], aktiv=-1;
 
   var found=[];        // {name, path, size, local, get:()=>Promise<string>}
@@ -216,6 +222,7 @@
     // zeigt das Auswahlfeld daneben.
     if(label) document.title = label + ' – Coursebook';
     activePath = path || null;
+    if(activePath) merken(activePath);
     drop.hidden=true; out.hidden=false; suche.hidden=false;
     rohHTML = out.innerHTML;          // Fassung ohne Trefferauszeichnung merken
     treffer=[]; aktiv=-1; q.value=''; count.textContent='';
@@ -338,6 +345,29 @@
     return entry;
   }
 
+  // Nummer aus dem Pfad ("1.4/..." -> [1,4]), ersatzweise aus dem Titel ("1.4 · ...").
+  function nummer(f){
+    var m = /(\d+(?:\.\d+)*)/.exec(f.path.split('/')[0]) || /(\d+(?:\.\d+)*)/.exec(f.name);
+    return m ? m[1].split('.').map(Number) : null;
+  }
+
+  // Aufsteigend nach Nummer: 1.4 < 1.5 < 1.10 < 2.1. Ohne Nummer ans Ende.
+  function sortiere(){
+    found.sort(function(a,b){
+      var A=nummer(a), B=nummer(b);
+      if(A && B){
+        for(var i=0, n=Math.max(A.length,B.length); i<n; i++){
+          var x=A[i]||0, y=B[i]||0;
+          if(x!==y) return x-y;
+        }
+        return a.name.localeCompare(b.name,'de');
+      }
+      if(A) return -1;
+      if(B) return 1;
+      return a.name.localeCompare(b.name,'de');
+    });
+  }
+
   function loadManifest(list){
     found = [];
     (list||[]).forEach(function(it){
@@ -360,8 +390,10 @@
     });
   }
 
-  function openDoc(f){
+  function openDoc(f, rueckfall){
     f.get().then(function(t){ render(t, f.name, f.path); }).catch(function(){
+      // Beim Start: laesst sich das gemerkte Dokument nicht laden, nimm den ersten.
+      if(rueckfall && rueckfall !== f){ openDoc(rueckfall); return; }
       if(isFile && !f.local){
         fail('<strong>'+f.name+'</strong> lässt sich per Doppelklick nicht laden — '+
              'der Browser sperrt lokale Dateizugriffe.<br><br>'+
@@ -401,6 +433,7 @@
   });
 
   function paintList(){
+    sortiere();
     paintNav();
     filelist.innerHTML='';
     if(!found.length){
@@ -514,7 +547,20 @@
 
   /* ---------- Start ---------- */
 
-  var BUILD = '2026-08-28f';
+  // Zuletzt gelesenes Dokument oeffnen; gibt es keins oder laesst es sich
+  // nicht laden, den ersten Eintrag der Liste.
+  function startDokument(){
+    if(isFile || activePath || !found.length) return;
+    var wunsch = gemerkt(), ziel = null;
+    if(wunsch){
+      for(var i=0;i<found.length;i++){ if(found[i].path===wunsch){ ziel=found[i]; break; } }
+    }
+    if(ziel && ziel !== found[0]) openDoc(ziel, found[0]);
+    else openDoc(found[0]);
+  }
+
+
+  var BUILD = '2026-08-28g';
   document.getElementById('build').textContent = 'Viewer ' + BUILD;
 
   // 1. Liste aus dateien.js, das als <script> geladen wurde. Funktioniert
@@ -527,7 +573,7 @@
     loadManifest(DOKUMENTE);
     paintList();
     pruefen();
-    if(!isFile && found.length) openDoc(found[0]);
+    startDokument();
   }
 
   // 2. Ueber http(s) dateien.js zusaetzlich ungecacht nachladen. Ohne das
@@ -542,9 +588,8 @@
         var alt = found.map(function(f){ return f.path; }).join('|');
         var neu = frisch.map(function(it){ return (typeof it==='string') ? it : (it.datei||it.name); }).join('|');
         if(alt === neu) return;                       // nichts geaendert
-        var offen = activePath;
         loadManifest(frisch); paintList(); pruefen();
-        if(!offen && found.length) openDoc(found[0]);
+        startDokument();
       })
       .catch(function(){ /* egal: die Liste aus dem <script> steht bereits */ });
   }
