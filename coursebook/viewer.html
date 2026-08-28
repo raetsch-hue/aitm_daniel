@@ -140,17 +140,10 @@
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<!-- Dokumentliste. Als <script> eingebunden, weil das auch bei file:// funktioniert,
+     wo fetch() gesperrt ist. Gepflegt wird ausschliesslich dateien.js. -->
+<script src="dateien.js"></script>
 <script>
-/* ------------------------------------------------------------------
-   Dateiliste. Steht IMMER sofort da, auch bei Doppelklick (file://).
-   Über http(s) — also auch auf GitHub Pages — hat dateien.json Vorrang;
-   dann muss hier unten nichts gepflegt werden.
-   ------------------------------------------------------------------ */
-var MANIFEST = [
-  { name: "2.1/01_Change-Management-Lewin-ADKAR.md",      titel: "Vertiefung: Lewin & ADKAR" },
-  { name: "2.1/02_Tag-2.1-Coursebook-Zusammenfassung.md", titel: "Tag 2.1 – Zusammenfassung" }
-];
-
 (function(){
   var out=document.getElementById('out'), drop=document.getElementById('drop'),
       q=document.getElementById('q'), count=document.getElementById('count'),
@@ -243,8 +236,22 @@ var MANIFEST = [
   function loadManifest(list){
     found = [];
     (list||[]).forEach(function(it){
-      var p = (typeof it==='string') ? it : it.name;
+      if(!it) return;
+      var p = (typeof it==='string') ? it : (it.datei || it.name);
       if(p) found.push(remote(p, (typeof it==='object' && it.titel) ? it.titel : base(p)));
+    });
+  }
+
+  // Ueber http(s) pruefen, ob die gelisteten Dateien wirklich da sind.
+  // Fehlende werden sofort sichtbar markiert, statt erst beim Klick zu scheitern.
+  function pruefen(){
+    if(isFile) return;
+    found.forEach(function(f){
+      if(f.local) return;
+      fetch(f.path, {method:'HEAD', cache:'no-store'})
+        .then(function(r){ if(!r.ok) f.fehlt=true; })
+        .catch(function(){ f.fehlt=true; })
+        .then(paintList);
     });
   }
 
@@ -258,7 +265,9 @@ var MANIFEST = [
              '<code>python -m http.server</code> und öffne '+
              '<code>http://localhost:8000/viewer.html</code>.');
       } else {
-        fail('Konnte <code>'+f.path+'</code> nicht laden. Liegt die Datei an dieser Stelle?');
+        fail('<strong>'+f.name+'</strong> gibt es nicht (mehr).<br><br>'+
+             'Gesucht unter <code>'+f.path+'</code>. Entweder die Datei dorthin legen, '+
+             'oder den Eintrag aus <code>dateien.js</code> entfernen.');
       }
     });
   }
@@ -276,7 +285,10 @@ var MANIFEST = [
         'Per Doppelklick geöffnet darf der Browser die übrigen nicht lesen — '+
         'zieh den Ordner <code>coursebook</code> hierher oder nutze „Ordner einlesen …".';
     } else {
-      filehint.textContent = n+' Dokument'+(n===1?'':'e')+'.';
+      var weg = found.filter(function(f){ return f.fehlt; }).length;
+      filehint.innerHTML = n+' Dokument'+(n===1?'':'e')+'.'+
+        (weg ? ' <span style="color:#d4574c">'+weg+' davon nicht gefunden — Eintrag in '+
+               '<code>dateien.js</code> entfernen oder Datei ergänzen.</span>' : '');
     }
     found.forEach(function(f){
       var li=document.createElement('li'), b=document.createElement('button');
@@ -286,7 +298,8 @@ var MANIFEST = [
       b.querySelector('.nm').textContent=f.name;
       b.querySelector('.pt').textContent=f.path;
       var sz=b.querySelector('.sz');
-      if(f.size) sz.textContent=kb(f.size);
+      if(f.fehlt){ sz.textContent='fehlt'; sz.style.color='#d4574c'; b.style.opacity='.6'; }
+      else if(f.size) sz.textContent=kb(f.size);
       else if(isFile && !f.local) sz.textContent='gesperrt';
       b.addEventListener('click', function(){ openDoc(f); });
       li.appendChild(b); filelist.appendChild(li);
@@ -371,25 +384,19 @@ var MANIFEST = [
 
   /* ---------- Start ---------- */
 
-  // 1. Liste sofort aus dem eingebetteten Manifest — funktioniert überall,
-  //    auch bei Doppelklick, wo kein fetch möglich ist.
-  loadManifest(MANIFEST);
-  paintList();
-
-  // 2. Über http(s) hat dateien.json Vorrang, damit die Liste ohne Eingriff
-  //    in diese Datei gepflegt werden kann. Auf GitHub Pages ist das der Weg.
-  if(!isFile){
-    fetch('dateien.json', {cache:'no-store'})
-      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
-      .then(function(j){
-        var list = Array.isArray(j) ? j : (j.dateien || []);
-        if(list.length){ loadManifest(list); paintList(); }
-      })
-      .catch(function(){ /* kein Manifest: eingebettete Liste bleibt stehen */ })
-      .then(function(){
-        if(!activePath && found.length) openDoc(found[0]);
-      });
+  // Einzige Quelle der Liste: dateien.js. Wird als <script> geladen und
+  // funktioniert deshalb ueber http(s) UND bei Doppelklick (file://).
+  if(typeof DOKUMENTE === 'undefined'){
+    filehint.innerHTML = '<span style="color:#d4574c"><strong>dateien.js konnte nicht geladen werden.</strong> '+
+      'Liegt die Datei neben viewer.html? Bei einem Syntaxfehler darin steht die Ursache '+
+      'in der Browser-Konsole (F12).</span>';
+  } else {
+    loadManifest(DOKUMENTE);
+    paintList();
+    pruefen();
+    if(!isFile && found.length) openDoc(found[0]);
   }
+
 })();
 </script>
 </body>

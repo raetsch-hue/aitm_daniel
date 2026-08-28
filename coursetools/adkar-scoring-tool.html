@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADKAR Scoring Workbench – KI-Einführung</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --surface:#ffffff; --surface-2:#f0f2f5; --border:#dfe3e8;
+    --text:#14181f; --muted:#5b6472; --accent:#2f5bd0; --accent-soft:#e8eefc;
+    --ok:#1f8a52; --ok-soft:#e3f4ea; --warn:#b3730a; --warn-soft:#fdf1dc;
+    --bad:#c0392f; --bad-soft:#fbe8e6;
+    --unfreeze:#7a4fd0; --change:#2f5bd0; --refreeze:#1f8a52;
+    --radius:10px; --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.05);
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1218; --surface:#171b23; --surface-2:#1e242e; --border:#2b323d;
+      --text:#e8ecf2; --muted:#98a2b3; --accent:#7ba0f5; --accent-soft:#1d2740;
+      --ok:#5cc98d; --ok-soft:#16301f; --warn:#e0a94a; --warn-soft:#33260f;
+      --bad:#f08a80; --bad-soft:#3a1c19;
+      --unfreeze:#b39af0; --change:#7ba0f5; --refreeze:#5cc98d;
+      --shadow:0 1px 2px rgba(0,0,0,.4);
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:24px 20px 96px}
+  h1{font-size:22px;margin:0 0 4px;letter-spacing:-.01em}
+  h2{font-size:17px;margin:0}
+  h3{font-size:15px;margin:0}
+  p.lead{color:var(--muted);margin:0 0 20px;font-size:14px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);margin-bottom:18px;overflow:hidden}
+  .card-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);
+    background:var(--surface-2);flex-wrap:wrap}
+  .card-body{padding:16px}
+  .step-no{flex:0 0 26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;
+    display:grid;place-items:center;font-size:13px;font-weight:700}
+  .grid{display:grid;gap:12px}
+  .grid-2{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  label.fld{display:block;font-size:12px;font-weight:650;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px}
+  input[type=text],textarea,select{width:100%;padding:9px 11px;border:1px solid var(--border);
+    border-radius:8px;background:var(--bg);color:var(--text);font:inherit;font-size:14px}
+  textarea{resize:vertical;min-height:64px}
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+  .btn{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:8px;
+    border:1px solid var(--border);background:var(--surface);color:var(--text);font:inherit;
+    font-size:13.5px;font-weight:600;cursor:pointer}
+  .btn:hover{background:var(--surface-2)}
+  .btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn-primary:hover{filter:brightness(1.08)}
+  .btn-sm{padding:5px 10px;font-size:12.5px}
+  .btn-ghost{background:transparent;border-color:transparent;color:var(--accent)}
+  .btn-ghost:hover{background:var(--accent-soft)}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .spacer{flex:1}
+  .muted{color:var(--muted)}
+  .small{font-size:12.5px}
+  .pill{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;
+    font-size:11.5px;font-weight:700;background:var(--surface-2);border:1px solid var(--border)}
+  .pill.ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+  .pill.warn{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+  .pill.bad{background:var(--bad-soft);color:var(--bad);border-color:transparent}
+
+  /* progress */
+  .progress{height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;border:1px solid var(--border)}
+  .progress > i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
+
+  /* stage block */
+  .stage{border:1px solid var(--border);border-radius:9px;margin-bottom:10px;background:var(--bg)}
+  .stage-head{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer;user-select:none}
+  .letter{flex:0 0 28px;height:28px;border-radius:7px;display:grid;place-items:center;
+    font-weight:800;font-size:14px;background:var(--accent-soft);color:var(--accent)}
+  .stage-title{font-weight:650;font-size:14px}
+  .stage-sub{font-size:12px;color:var(--muted)}
+  .stage-body{padding:0 12px 12px;display:none}
+  .stage.open .stage-body{display:block}
+  .caret{transition:transform .18s;color:var(--muted);font-size:11px}
+  .stage.open .caret{transform:rotate(90deg)}
+
+  .scorebar{display:flex;gap:6px;flex-wrap:wrap}
+  .scorebar button{width:40px;height:34px;border-radius:8px;border:1px solid var(--border);
+    background:var(--surface);color:var(--text);font-weight:700;font-size:14px;cursor:pointer}
+  .scorebar button:hover{border-color:var(--accent)}
+  .scorebar button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .score-label{font-size:12.5px;color:var(--muted);min-height:18px;margin-top:6px}
+
+  .qbox{background:var(--surface-2);border-radius:8px;padding:10px 12px;margin:10px 0 12px}
+  .qbox ul{margin:6px 0 0;padding-left:20px}
+  .qbox li{margin:3px 0;font-size:13px;color:var(--muted)}
+  .qbox b{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+
+  /* matrix */
+  .tablewrap{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+  th,td{border:1px solid var(--border);padding:8px 10px;text-align:left}
+  th{background:var(--surface-2);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  td.sc{text-align:center;font-weight:700;width:78px}
+  td.sc.s1,td.sc.s2{background:var(--bad-soft);color:var(--bad)}
+  td.sc.s3{background:var(--warn-soft);color:var(--warn)}
+  td.sc.s4,td.sc.s5{background:var(--ok-soft);color:var(--ok)}
+  td.sc.barrier{outline:2px solid var(--bad);outline-offset:-2px}
+
+  .lewin-badge{display:inline-block;padding:2px 9px;border-radius:6px;font-size:12px;font-weight:700;color:#fff}
+  .lw-unfreeze{background:var(--unfreeze)} .lw-change{background:var(--change)} .lw-refreeze{background:var(--refreeze)}
+
+  .barrier-box{border:1px solid var(--border);border-left:3px solid var(--bad);border-radius:8px;
+    padding:12px;background:var(--bad-soft);margin-bottom:12px}
+  .callout{border:1px solid var(--border);border-left:3px solid var(--accent);background:var(--accent-soft);
+    border-radius:8px;padding:11px 13px;font-size:13.5px;margin-bottom:14px}
+  .warnlist{margin:0;padding-left:20px;font-size:13px}
+  .warnlist li{margin:3px 0}
+  details.help > summary{cursor:pointer;font-size:13px;color:var(--accent);font-weight:600;padding:4px 0}
+  details.help[open] > summary{margin-bottom:6px}
+
+  .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120%);background:var(--text);
+    color:var(--bg);padding:10px 16px;border-radius:8px;font-size:13.5px;font-weight:600;
+    transition:transform .25s;z-index:99;max-width:92vw;text-align:center}
+  .toast.show{transform:translate(-50%,0)}
+  .sticky{position:sticky;bottom:0;background:var(--surface);border-top:1px solid var(--border);
+    padding:10px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  pre.prompt{white-space:pre-wrap;font:12.5px/1.5 var(--mono);background:var(--surface-2);
+    border:1px solid var(--border);border-radius:8px;padding:11px;max-height:260px;overflow:auto;margin:8px 0 0}
+  .groupname{font-weight:700;font-size:15px}
+  hr.sep{border:0;border-top:1px solid var(--border);margin:16px 0}
+  @media print{
+    .no-print{display:none!important}
+    body{background:#fff}
+    .card{box-shadow:none;break-inside:avoid}
+    .stage-body{display:block!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header style="margin-bottom:18px">
+    <h1>ADKAR Scoring Workbench</h1>
+    <p class="lead">Arbeitsblatt für die Change-Analyse einer KI-Einführung: Use Case wählen → ADKAR-Scoring je Stakeholder-Gruppe begründen → Barrier Point bestimmen → Gegenmaßnahme einer Lewin-Phase zuordnen. Eingaben werden lokal im Browser gespeichert.</p>
+    <div class="progress" title="Fortschritt"><i id="progbar"></i></div>
+    <div class="row small muted" style="margin-top:6px"><span id="progtext">–</span><span class="spacer"></span><span id="savestate"></span></div>
+  </header>
+
+  <!-- ============ SCHRITT 1 ============ -->
+  <section class="card">
+    <div class="card-head"><div class="step-no">1</div><h2>KI-Einführung wählen</h2>
+      <span class="spacer"></span><span class="pill" id="p1status">offen</span></div>
+    <div class="card-body">
+      <div class="callout">Je konkreter der Use Case, desto realistischer die Scores. Benenne <b>wer</b> künftig <b>was</b> anders macht – nicht nur die Technologie.</div>
+      <div class="grid grid-2">
+        <div>
+          <label class="fld" for="preset">Vorlage (optional)</label>
+          <select id="preset">
+            <option value="">– eigene Eingabe –</option>
+            <option value="genai_marketing">GenAI im Marketing (Content-Erstellung)</option>
+            <option value="ml_logistik">Predictive Machine Learning in der Logistik</option>
+            <option value="rpa_buchhaltung">RPA in der Buchhaltung (Rechnungseingang)</option>
+            <option value="copilot_service">KI-Assistent im Kundenservice</option>
+            <option value="genai_hr">GenAI im Recruiting (Screening &amp; Ausschreibungen)</option>
+          </select>
+        </div>
+        <div>
+          <label class="fld" for="m_area">Bereich / Abteilung</label>
+          <input type="text" id="m_area" placeholder="z. B. Marketing, Logistik, Buchhaltung">
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <label class="fld" for="m_title">Titel der KI-Einführung</label>
+        <input type="text" id="m_title" placeholder="z. B. Einführung eines GenAI-Assistenten für Kampagnen-Content">
+      </div>
+      <div style="margin-top:12px">
+        <label class="fld" for="m_desc">Was verändert sich konkret im Arbeitsalltag?</label>
+        <textarea id="m_desc" placeholder="Wer arbeitet ab wann anders? Welche Tätigkeit fällt weg, welche kommt hinzu? Welches System?"></textarea>
+      </div>
+      <div class="grid grid-2" style="margin-top:12px">
+        <div><label class="fld" for="m_scope">Umfang (Betroffene / Standorte)</label>
+          <input type="text" id="m_scope" placeholder="z. B. 24 Mitarbeitende, 2 Standorte"></div>
+        <div><label class="fld" for="m_horizon">Zeithorizont</label>
+          <input type="text" id="m_horizon" placeholder="z. B. Pilot Q4 2026, Rollout Q1 2027"></div>
+        <div><label class="fld" for="m_sponsor">Sponsor / Auftraggeber</label>
+          <input type="text" id="m_sponsor" placeholder="z. B. CMO"></div>
+        <div><label class="fld" for="m_author">Bearbeitet von</label>
+          <input type="text" id="m_author" placeholder="Name"></div>
+      </div>
+      <div class="row no-print" style="margin-top:14px">
+        <button class="btn btn-sm" data-prompt="usecase">Claude: Use Case schärfen</button>
+        <button class="btn btn-sm" data-prompt="stakeholder">Claude: Stakeholder-Gruppen vorschlagen</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHRITT 2 ============ -->
+  <section class="card">
+    <div class="card-head"><div class="step-no">2</div><h2>ADKAR-Scoring je Stakeholder-Gruppe</h2>
+      <span class="spacer"></span><span class="pill" id="p2status">offen</span></div>
+    <div class="card-body">
+      <div class="callout">Score <b>1–5</b> pro Stufe, jeweils mit <b>1–2 Sätzen Begründung</b>. Mindestens <b>2 Gruppen</b> sind gefordert. Bewerte den <b>Ist-Zustand heute</b>, nicht das Ziel – und aus Sicht der Gruppe, nicht aus Projektsicht.</div>
+      <details class="help"><summary>Was bedeuten die Score-Stufen?</summary>
+        <div class="qbox"><ul>
+          <li><b>1</b> – nicht vorhanden: trifft überhaupt nicht zu, Thema ist bei der Gruppe nicht angekommen.</li>
+          <li><b>2</b> – ansatzweise: einzelne Personen, kein gemeinsames Bild.</li>
+          <li><b>3</b> – teilweise: verbreitet, aber lückenhaft / oberflächlich. Kritische Schwelle.</li>
+          <li><b>4</b> – überwiegend: bei der Mehrheit belastbar vorhanden, einzelne Lücken.</li>
+          <li><b>5</b> – voll gegeben: durchgängig vorhanden und im Verhalten sichtbar.</li>
+        </ul></div>
+      </details>
+      <div id="groups"></div>
+      <div class="row no-print" style="margin-top:6px">
+        <button class="btn" id="addGroup">+ Stakeholder-Gruppe hinzufügen</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHRITT 3 ============ -->
+  <section class="card">
+    <div class="card-head"><div class="step-no">3</div><h2>Barrier Point &amp; Gegenmaßnahme (Lewin)</h2>
+      <span class="spacer"></span><span class="pill" id="p3status">offen</span></div>
+    <div class="card-body">
+      <div class="callout"><b>ADKAR-Regel:</b> Der Barrier Point ist die <b>erste</b> Stufe in der Reihenfolge A→D→K→A→R, die <b>≤ 3</b> bewertet ist. Alles danach lässt sich nicht nachhaltig aufbauen, solange diese Stufe offen ist – deshalb setzt die Maßnahme genau dort an.</div>
+      <details class="help"><summary>Lewin-Phasen – wann welche?</summary>
+        <div class="qbox"><ul>
+          <li><span class="lewin-badge lw-unfreeze">Unfreeze</span> Auftauen: Dringlichkeit erzeugen, Betroffenheit herstellen, Widerstand adressieren, Sicherheit geben. Typisch bei Barrieren in <b>Awareness</b> und <b>Desire</b>.</li>
+          <li><span class="lewin-badge lw-change">Change</span> Bewegen: Qualifizieren, Pilotieren, Coaching, Sandbox, neue Prozesse einüben. Typisch bei <b>Knowledge</b> und <b>Ability</b>.</li>
+          <li><span class="lewin-badge lw-refreeze">Refreeze</span> Einfrieren: Verankern über Kennzahlen, Anerkennung, Routinen, Governance, Rückfall verhindern. Typisch bei <b>Reinforcement</b>.</li>
+        </ul></div>
+      </details>
+      <div id="barriers"></div>
+    </div>
+  </section>
+
+  <!-- ============ SCHRITT 4 ============ -->
+  <section class="card">
+    <div class="card-head"><div class="step-no">4</div><h2>Übersicht &amp; Abgabe</h2>
+      <span class="spacer"></span><span class="pill" id="p4status">offen</span></div>
+    <div class="card-body">
+      <div class="tablewrap"><table id="matrix"></table></div>
+      <div id="checks" style="margin-top:14px"></div>
+      <hr class="sep">
+      <div class="row no-print">
+        <button class="btn btn-primary" id="btnMd">⬇ Markdown-Dokument herunterladen</button>
+        <button class="btn" id="btnCopyMd">Markdown kopieren</button>
+        <button class="btn" data-prompt="review">Claude: Gesamtdokument challengen</button>
+        <button class="btn" id="btnPrint">Drucken / PDF</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="card no-print">
+    <div class="card-head"><h2 style="font-size:15px">Daten</h2><span class="spacer"></span>
+      <span class="small muted">Autosave im Browser (localStorage)</span></div>
+    <div class="card-body row">
+      <button class="btn btn-sm" id="btnSaveJson">Zwischenstand als JSON speichern</button>
+      <label class="btn btn-sm" style="cursor:pointer">JSON laden<input type="file" id="fileJson" accept=".json" hidden></label>
+      <span class="spacer"></span>
+      <button class="btn btn-sm" id="btnDemo">Beispiel-Daten laden</button>
+      <button class="btn btn-sm" id="btnReset">Alles zurücksetzen</button>
+    </div>
+  </div>
+
+  <!-- Prompt-Panel -->
+  <div class="card no-print" id="promptCard" style="display:none">
+    <div class="card-head"><h2 style="font-size:15px">Claude-Sparring-Prompt</h2>
+      <span class="spacer"></span><span class="pill" id="promptKind"></span></div>
+    <div class="card-body">
+      <p class="small muted" style="margin:0">Der Prompt ist bereits in der Zwischenablage. „In Claude öffnen“ startet einen neuen Chat – falls der Text nicht automatisch übernommen wird, einfach einfügen (Strg+V).</p>
+      <pre class="prompt" id="promptText"></pre>
+    </div>
+    <div class="sticky">
+      <button class="btn btn-primary" id="btnOpenClaude">In Claude öffnen ↗</button>
+      <button class="btn" id="btnCopyPrompt">Prompt kopieren</button>
+      <span class="spacer"></span>
+      <button class="btn btn-ghost" id="btnClosePrompt">Schließen</button>
+    </div>
+  </div>
+
+  <p class="small muted no-print" style="text-align:center;margin-top:8px">
+    ADKAR® ist ein Modell von Prosci. Dieses Arbeitsblatt ist ein Lern-/Kurswerkzeug.
+  </p>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+
+/* ---------------- Modell-Definitionen ---------------- */
+const STAGES = [
+  { key:"awareness", letter:"A", name:"Awareness", de:"Bewusstsein für die Notwendigkeit",
+    desc:"Die Gruppe weiß, warum die KI-Einführung stattfindet und warum jetzt.",
+    lewin:"unfreeze",
+    questions:[
+      "Können die Betroffenen in eigenen Worten sagen, welches Problem die KI lösen soll?",
+      "Woher stammen ihre Informationen – offizielle Kommunikation oder Flurfunk?",
+      "Ist klar, was passiert, wenn nichts verändert wird?",
+      "Kennen sie den Unterschied zwischen „Effizienz“ und „Stellenabbau“ in diesem Vorhaben?"
+    ]},
+  { key:"desire", letter:"D", name:"Desire", de:"Wunsch mitzumachen",
+    desc:"Die Gruppe will die Veränderung persönlich unterstützen – nicht nur akzeptieren.",
+    lewin:"unfreeze",
+    questions:[
+      "Was gewinnt eine einzelne Person konkret (Zeit, Qualität, weniger Routine)?",
+      "Was verliert sie möglicherweise (Status, Expertise, Kontrolle, Sichtbarkeit)?",
+      "Wer sind die lauten Skeptiker – und welches Argument tragen sie vor?",
+      "Wie glaubwürdig ist die Führungskraft dieser Gruppe im Thema KI?"
+    ]},
+  { key:"knowledge", letter:"K", name:"Knowledge", de:"Wissen, wie es geht",
+    desc:"Die Gruppe weiß, wie sie das Werkzeug in ihren Aufgaben einsetzt – inklusive Regeln.",
+    lewin:"change",
+    questions:[
+      "Gibt es Schulung für die eigenen, echten Use Cases – nicht nur eine Tool-Demo?",
+      "Wissen sie, was sie NICHT dürfen (Datenschutz, Vertraulichkeit, Freigaben)?",
+      "Kennen sie die Grenzen des Systems (Halluzinationen, Bias, Datenqualität)?",
+      "Ist klar, wie der neue Prozess sich vom alten unterscheidet – Schritt für Schritt?"
+    ]},
+  { key:"ability", letter:"A", name:"Ability", de:"Fähigkeit in der Praxis",
+    desc:"Die Gruppe kann es unter realem Arbeitsdruck tatsächlich anwenden.",
+    lewin:"change",
+    questions:[
+      "Haben sie Zugang, Lizenzen, Zeit und einen Übungsraum ohne Risiko?",
+      "Gibt es Ansprechpartner/Key User, wenn es im Tagesgeschäft klemmt?",
+      "Wie groß ist die Lücke zwischen „im Training geklappt“ und „im Alltag genutzt“?",
+      "Behindern bestehende Prozesse, Freigaben oder Systeme die Anwendung?"
+    ]},
+  { key:"reinforcement", letter:"R", name:"Reinforcement", de:"Verankerung",
+    desc:"Die neue Arbeitsweise wird bestätigt, gemessen und bleibt nach dem Projektende bestehen.",
+    lewin:"refreeze",
+    questions:[
+      "Wird die Nutzung sichtbar anerkannt – oder nur der alte Output gelobt?",
+      "Gibt es eine Kennzahl / ein Review, das die neue Arbeitsweise nachhält?",
+      "Was passiert, wenn jemand still zum alten Weg zurückkehrt?",
+      "Ist geklärt, wer das Thema nach Projektende verantwortet?"
+    ]}
+];
+const SCORE_LABELS = {
+  1:"1 – nicht vorhanden", 2:"2 – ansatzweise", 3:"3 – teilweise (kritische Schwelle)",
+  4:"4 – überwiegend vorhanden", 5:"5 – voll gegeben"
+};
+const LEWIN = {
+  unfreeze:{label:"Unfreeze (Auftauen)", cls:"lw-unfreeze",
+    hint:"Dringlichkeit, Kommunikation, Betroffenheit, Widerstand adressieren."},
+  change:{label:"Change (Bewegen)", cls:"lw-change",
+    hint:"Qualifizieren, Pilotieren, Coaching, neue Abläufe einüben."},
+  refreeze:{label:"Refreeze (Einfrieren)", cls:"lw-refreeze",
+    hint:"Verankern über Kennzahlen, Anerkennung, Routinen, Governance."}
+};
+const PRESETS = {
+  genai_marketing:{ area:"Marketing",
+    title:"Einführung eines GenAI-Assistenten für Kampagnen- und Content-Erstellung",
+    desc:"Texter erstellen Erstentwürfe für Social-Posts, Newsletter und Landingpages künftig mit einem GenAI-Assistenten und übernehmen die Rolle des Kurators/Redakteurs statt des Erstautors. Freigabeprozess und Tonalitätsrichtlinie werden angepasst.",
+    scope:"18 Personen im Content-Team, 2 Agenturen angebunden", horizon:"Pilot Q4 2026, Rollout Q1 2027" },
+  ml_logistik:{ area:"Logistik / Supply Chain",
+    title:"Predictive-ML-Modell für Bedarfsprognose und Tourenplanung",
+    desc:"Disponenten erhalten statt manueller Excel-Prognosen ML-basierte Bedarfs- und Laufzeitprognosen als Vorschlag im Planungssystem. Sie entscheiden künftig über Abweichungen statt über jede Einzelplanung.",
+    scope:"12 Disponenten, 3 Distributionszentren", horizon:"Pilot 6 Monate, danach Rollout" },
+  rpa_buchhaltung:{ area:"Finanzen / Buchhaltung",
+    title:"RPA im Rechnungseingang (Erfassung, Kontierung, Freigabe-Routing)",
+    desc:"Ein Software-Roboter liest Eingangsrechnungen aus, kontiert nach Regelwerk vor und startet den Freigabeworkflow. Die Sachbearbeitung prüft Ausnahmen und pflegt das Regelwerk statt jede Rechnung manuell zu erfassen.",
+    scope:"9 Personen Kreditorenbuchhaltung, ca. 4.000 Rechnungen/Monat", horizon:"Go-live in 4 Monaten" },
+  copilot_service:{ area:"Kundenservice",
+    title:"KI-Assistent für Antwortvorschläge im Ticketsystem",
+    desc:"Service-Agents erhalten KI-generierte Antwortvorschläge inkl. Wissensartikel-Verweis und redigieren diese, statt Antworten frei zu formulieren. Qualitätssicherung und Eskalationsregeln werden angepasst.",
+    scope:"35 Agents in 2 Sprachen, 1st-Level", horizon:"Pilot 8 Wochen, Rollout danach" },
+  genai_hr:{ area:"HR / Recruiting",
+    title:"GenAI-Unterstützung für Stellenausschreibungen und Vorauswahl",
+    desc:"Recruiter generieren Ausschreibungstexte und strukturierte Bewerberzusammenfassungen mit GenAI. Die Entscheidung bleibt menschlich; Dokumentations- und Fairness-Anforderungen (AI Act) kommen hinzu.",
+    scope:"7 Recruiter, ca. 250 Stellen p. a.", horizon:"Einführung in 3 Monaten" }
+};
+const GROUP_TEMPLATES = [
+  "Sachbearbeitung / operatives Team", "Teamleitung / mittleres Management",
+  "Betriebsrat", "IT / Datenschutz", "Geschäftsleitung / Sponsor",
+  "Key User / Power User", "Kundenschnittstelle / Vertrieb"
+];
+
+/* ---------------- State ---------------- */
+const STORE_KEY = "adkar_workbench_v1";
+let state = null;
+let uid = 1;
+
+function blankStages(){
+  const o = {};
+  STAGES.forEach(s => o[s.key] = { score:0, rationale:"" });
+  return o;
+}
+function newGroup(name){
+  return { id:"g"+(uid++), name:name||"", profile:"", size:"", stages:blankStages(),
+           barrierOverride:"", measure:"", lewin:"", owner:"", when:"" };
+}
+function blankState(){
+  return { meta:{ preset:"", title:"", area:"", desc:"", scope:"", horizon:"", sponsor:"", author:"" },
+           groups:[ newGroup(""), newGroup("") ] };
+}
+
+/* safe storage */
+const store = (function(){
+  let ok = true;
+  try { localStorage.setItem("__t","1"); localStorage.removeItem("__t"); } catch(e){ ok = false; }
+  let mem = {};
+  return {
+    available: ok,
+    get(k){ try { return ok ? localStorage.getItem(k) : (mem[k]||null); } catch(e){ return mem[k]||null; } },
+    set(k,v){ try { ok ? localStorage.setItem(k,v) : (mem[k]=v); } catch(e){ mem[k]=v; } },
+    del(k){ try { ok ? localStorage.removeItem(k) : delete mem[k]; } catch(e){ delete mem[k]; } }
+  };
+})();
+
+function load(){
+  const raw = store.get(STORE_KEY);
+  if(!raw){ state = blankState(); return; }
+  try {
+    const d = JSON.parse(raw);
+    state = migrate(d);
+  } catch(e){ state = blankState(); }
+}
+function migrate(d){
+  const s = blankState();
+  if(d && d.meta) Object.assign(s.meta, d.meta);
+  if(d && Array.isArray(d.groups) && d.groups.length){
+    s.groups = d.groups.map(g => {
+      const ng = newGroup(g.name||"");
+      ng.profile = g.profile||""; ng.size = g.size||"";
+      ng.barrierOverride = g.barrierOverride||""; ng.measure = g.measure||"";
+      ng.lewin = g.lewin||""; ng.owner = g.owner||""; ng.when = g.when||"";
+      STAGES.forEach(st => {
+        const src = (g.stages && g.stages[st.key]) || {};
+        ng.stages[st.key] = { score:Number(src.score)||0, rationale:src.rationale||"" };
+      });
+      return ng;
+    });
+  }
+  return s;
+}
+let saveTimer = null;
+function save(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(()=>{
+    store.set(STORE_KEY, JSON.stringify(state));
+    const el = document.getElementById("savestate");
+    el.textContent = store.available ? "gespeichert " + new Date().toLocaleTimeString("de-DE")
+                                     : "nur in dieser Sitzung gehalten";
+  }, 250);
+}
+
+/* ---------------- Helpers ---------------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s==null?"":s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function toast(msg){
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("show"), 2400);
+}
+function groupLabel(g,i){ return g.name.trim() || ("Gruppe " + (i+1)); }
+
+/* Barrier point: erste Stufe mit Score <= 3 (ADKAR-Reihenfolge);
+   sonst – wenn alle >= 4 – die schwächste Stufe (erste bei Gleichstand). */
+function barrierOf(g){
+  const scored = STAGES.filter(s => g.stages[s.key].score > 0);
+  if(scored.length < STAGES.length) return { key:null, reason:"incomplete" };
+  if(g.barrierOverride) return { key:g.barrierOverride, reason:"manual" };
+  const first = STAGES.find(s => g.stages[s.key].score <= 3);
+  if(first) return { key:first.key, reason:"threshold" };
+  let min = STAGES[0];
+  STAGES.forEach(s => { if(g.stages[s.key].score < g.stages[min.key].score) min = s; });
+  return { key:min.key, reason:"lowest" };
+}
+const stageByKey = k => STAGES.find(s => s.key === k);
+
+/* ---------------- Render: Schritt 1 ---------------- */
+const META_FIELDS = ["title","area","desc","scope","horizon","sponsor","author"];
+function bindMeta(){
+  META_FIELDS.forEach(f => {
+    const el = document.getElementById("m_"+f);
+    el.value = state.meta[f] || "";
+    el.addEventListener("input", () => { state.meta[f] = el.value; save(); renderStatus(); });
+  });
+  const ps = $("#preset");
+  ps.value = state.meta.preset || "";
+  ps.addEventListener("change", () => {
+    state.meta.preset = ps.value;
+    const p = PRESETS[ps.value];
+    if(p){
+      const filled = META_FIELDS.some(f => (state.meta[f]||"").trim());
+      if(!filled || confirm("Vorhandene Angaben in Schritt 1 mit der Vorlage überschreiben?")){
+        state.meta.title = p.title; state.meta.area = p.area; state.meta.desc = p.desc;
+        state.meta.scope = p.scope; state.meta.horizon = p.horizon;
+        META_FIELDS.forEach(f => document.getElementById("m_"+f).value = state.meta[f]||"");
+      }
+    }
+    save(); renderStatus();
+  });
+}
+
+/* ---------------- Render: Schritt 2 ---------------- */
+function renderGroups(){
+  const host = $("#groups");
+  const openIds = new Set([...host.querySelectorAll(".stage.open")].map(e => e.dataset.oid));
+  host.innerHTML = "";
+  state.groups.forEach((g, gi) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.style.marginBottom = "14px";
+    const avg = (function(){
+      const v = STAGES.map(s => g.stages[s.key].score).filter(x => x > 0);
+      return v.length ? (v.reduce((a,b)=>a+b,0)/v.length).toFixed(1) : "–";
+    })();
+    const done = STAGES.filter(s => g.stages[s.key].score > 0 && g.stages[s.key].rationale.trim()).length;
+
+    let opts = '<option value="">– Vorlage wählen –</option>' +
+      GROUP_TEMPLATES.map(t => '<option value="'+esc(t)+'">'+esc(t)+'</option>').join("");
+
+    card.innerHTML =
+      '<div class="card-head">'+
+        '<span class="groupname">'+esc(groupLabel(g,gi))+'</span>'+
+        '<span class="pill '+(done===5?"ok":(done?"warn":""))+'">'+done+'/5 vollständig</span>'+
+        '<span class="pill">Ø '+avg+'</span>'+
+        '<span class="spacer"></span>'+
+        '<button class="btn btn-sm no-print" data-act="sparring" data-g="'+gi+'">Claude-Sparring</button>'+
+        '<button class="btn btn-sm no-print" data-act="challenge" data-g="'+gi+'">Scores challengen</button>'+
+        (state.groups.length > 2 ? '<button class="btn btn-sm btn-ghost no-print" data-act="del" data-g="'+gi+'">entfernen</button>' : '')+
+      '</div>'+
+      '<div class="card-body">'+
+        '<div class="grid grid-2">'+
+          '<div><label class="fld">Bezeichnung der Gruppe</label>'+
+            '<input type="text" data-f="name" data-g="'+gi+'" value="'+esc(g.name)+'" placeholder="z. B. Sachbearbeitung Kreditoren"></div>'+
+          '<div><label class="fld">Vorlage</label><select data-f="tmpl" data-g="'+gi+'">'+opts+'</select></div>'+
+          '<div><label class="fld">Größe / Rolle im Vorhaben</label>'+
+            '<input type="text" data-f="size" data-g="'+gi+'" value="'+esc(g.size)+'" placeholder="z. B. 9 Personen, direkt betroffen"></div>'+
+        '</div>'+
+        '<div style="margin-top:12px"><label class="fld">Kurzprofil: Was ist für diese Gruppe wichtig?</label>'+
+          '<textarea data-f="profile" data-g="'+gi+'" placeholder="Erfahrung mit Digitalisierung, Arbeitsdruck, Sorgen, Einfluss auf das Vorhaben …">'+esc(g.profile)+'</textarea></div>'+
+        '<hr class="sep">'+
+        '<div data-stages="'+gi+'"></div>'+
+      '</div>';
+    host.appendChild(card);
+
+    const sh = card.querySelector('[data-stages="'+gi+'"]');
+    STAGES.forEach((s, si) => {
+      const cur = g.stages[s.key];
+      const oid = gi+"_"+s.key;
+      const box = document.createElement("div");
+      box.className = "stage" + (openIds.has(oid) ? " open" : "");
+      box.dataset.oid = oid;
+      const scoreTag = cur.score
+        ? '<span class="pill '+(cur.score<=2?"bad":(cur.score===3?"warn":"ok"))+'">Score '+cur.score+'</span>'
+        : '<span class="pill">nicht bewertet</span>';
+      box.innerHTML =
+        '<div class="stage-head">'+
+          '<span class="caret">▶</span>'+
+          '<span class="letter">'+s.letter+'</span>'+
+          '<span><span class="stage-title">'+s.name+'</span> '+
+            '<span class="stage-sub">– '+s.de+'</span></span>'+
+          '<span class="spacer"></span>'+scoreTag+
+          (cur.rationale.trim() ? '' : '<span class="pill warn">Begründung fehlt</span>')+
+        '</div>'+
+        '<div class="stage-body">'+
+          '<p class="small muted" style="margin:2px 0 10px">'+s.desc+'</p>'+
+          '<div class="qbox"><b>Fragen, die den Score realistisch machen</b><ul>'+
+            s.questions.map(q => '<li>'+esc(q)+'</li>').join("")+
+          '</ul></div>'+
+          '<label class="fld">Score (1–5)</label>'+
+          '<div class="scorebar" data-g="'+gi+'" data-s="'+s.key+'">'+
+            [1,2,3,4,5].map(n => '<button type="button" data-n="'+n+'" aria-pressed="'+(cur.score===n)+'">'+n+'</button>').join("")+
+          '</div>'+
+          '<div class="score-label">'+(cur.score?SCORE_LABELS[cur.score]:"noch nicht bewertet")+'</div>'+
+          '<div style="margin-top:10px"><label class="fld">Begründung (1–2 Sätze)</label>'+
+            '<textarea data-r="'+s.key+'" data-g="'+gi+'" placeholder="Woran erkennst du diesen Score konkret? Beobachtung, Zitat, Kennzahl …">'+esc(cur.rationale)+'</textarea></div>'+
+        '</div>';
+      sh.appendChild(box);
+      box.querySelector(".stage-head").addEventListener("click", () => box.classList.toggle("open"));
+    });
+  });
+}
+
+/* ---------------- Render: Schritt 3 ---------------- */
+function renderBarriers(){
+  const host = $("#barriers");
+  host.innerHTML = "";
+  state.groups.forEach((g, gi) => {
+    const b = barrierOf(g);
+    const st = b.key ? stageByKey(b.key) : null;
+    const suggested = st ? st.lewin : "";
+    const card = document.createElement("div");
+    card.className = "card";
+    card.style.marginBottom = "14px";
+    let inner;
+    if(!b.key){
+      inner = '<div class="card-body"><p class="muted small" style="margin:0">Barrier Point wird angezeigt, sobald alle 5 Stufen dieser Gruppe bewertet sind ('+
+        STAGES.filter(s => !g.stages[s.key].score).map(s => s.name).join(", ")+' fehlt noch).</p></div>';
+    } else {
+      const sc = g.stages[b.key].score;
+      const reasonTxt = b.reason === "manual"
+        ? "Manuell gesetzt."
+        : (b.reason === "threshold"
+            ? "Erste Stufe in der ADKAR-Reihenfolge mit Score ≤ 3 – hier bricht die Kette."
+            : "Alle Stufen ≥ 4: kein klassischer Barrier Point. Schwächste Stufe als Fokus.");
+      inner =
+        '<div class="card-body">'+
+          '<div class="barrier-box">'+
+            '<div class="row"><span class="pill bad">Barrier Point</span>'+
+              '<b>'+st.letter+' – '+st.name+'</b><span class="muted small">Score '+sc+'</span></div>'+
+            '<p class="small" style="margin:8px 0 0">'+reasonTxt+'</p>'+
+            '<p class="small muted" style="margin:6px 0 0"><b>Begründung aus Schritt 2:</b> '+
+              (g.stages[b.key].rationale.trim() ? esc(g.stages[b.key].rationale) : "<i>noch keine Begründung erfasst</i>")+'</p>'+
+          '</div>'+
+          '<div class="grid grid-2">'+
+            '<div><label class="fld">Barrier Point überschreiben (optional)</label>'+
+              '<select data-f="barrierOverride" data-g="'+gi+'">'+
+                '<option value="">automatisch (ADKAR-Regel)</option>'+
+                STAGES.map(s => '<option value="'+s.key+'"'+(g.barrierOverride===s.key?" selected":"")+'>'+s.letter+' – '+s.name+'</option>').join("")+
+              '</select></div>'+
+            '<div><label class="fld">Lewin-Phase</label>'+
+              '<select data-f="lewin" data-g="'+gi+'">'+
+                '<option value="">– wählen –</option>'+
+                Object.keys(LEWIN).map(k => '<option value="'+k+'"'+(g.lewin===k?" selected":"")+'>'+LEWIN[k].label+
+                  (k===suggested?"  ← Vorschlag":"")+'</option>').join("")+
+              '</select>'+
+              '<div class="small muted" style="margin-top:5px">'+(g.lewin?LEWIN[g.lewin].hint:("Vorschlag für "+st.name+": "+LEWIN[suggested].label))+'</div></div>'+
+          '</div>'+
+          '<div style="margin-top:12px"><label class="fld">Konkrete Gegenmaßnahme</label>'+
+            '<textarea data-f="measure" data-g="'+gi+'" placeholder="Was genau, mit wem, in welchem Format, wie oft? Beobachtbares Ergebnis nennen.">'+esc(g.measure)+'</textarea></div>'+
+          '<div class="grid grid-2" style="margin-top:12px">'+
+            '<div><label class="fld">Verantwortlich</label><input type="text" data-f="owner" data-g="'+gi+'" value="'+esc(g.owner)+'" placeholder="Rolle / Name"></div>'+
+            '<div><label class="fld">Wann / Takt</label><input type="text" data-f="when" data-g="'+gi+'" value="'+esc(g.when)+'" placeholder="z. B. 4 Wochen vor Go-live, dann monatlich"></div>'+
+          '</div>'+
+          '<div class="row no-print" style="margin-top:12px">'+
+            '<button class="btn btn-sm" data-act="measure" data-g="'+gi+'">Claude: Gegenmaßnahme schärfen</button>'+
+          '</div>'+
+        '</div>';
+    }
+    card.innerHTML = '<div class="card-head"><span class="groupname">'+esc(groupLabel(g,gi))+'</span>'+
+      '<span class="spacer"></span>'+
+      (g.lewin ? '<span class="lewin-badge '+LEWIN[g.lewin].cls+'">'+LEWIN[g.lewin].label+'</span>' : '')+
+      '</div>' + inner;
+    host.appendChild(card);
+  });
+}
+
+/* ---------------- Render: Schritt 4 ---------------- */
+function renderMatrix(){
+  const t = $("#matrix");
+  let head = "<tr><th>Stakeholder-Gruppe</th>" +
+    STAGES.map(s => "<th style='text-align:center'>"+s.letter+" · "+s.name+"</th>").join("") +
+    "<th>Barrier Point</th><th>Lewin-Phase</th></tr>";
+  let body = state.groups.map((g,gi) => {
+    const b = barrierOf(g);
+    const cells = STAGES.map(s => {
+      const sc = g.stages[s.key].score;
+      const cls = sc ? ("sc s"+sc+(b.key===s.key?" barrier":"")) : "sc";
+      return "<td class='"+cls+"'>"+(sc||"–")+"</td>";
+    }).join("");
+    const bp = b.key ? (stageByKey(b.key).letter+" – "+stageByKey(b.key).name) : "<span class='muted'>unvollständig</span>";
+    const lw = g.lewin ? "<span class='lewin-badge "+LEWIN[g.lewin].cls+"'>"+LEWIN[g.lewin].label+"</span>" : "<span class='muted'>–</span>";
+    return "<tr><td><b>"+esc(groupLabel(g,gi))+"</b>"+(g.size?"<br><span class='muted small'>"+esc(g.size)+"</span>":"")+"</td>"+cells+"<td>"+bp+"</td><td>"+lw+"</td></tr>";
+  }).join("");
+  t.innerHTML = head + body;
+}
+
+function openIssues(){
+  const out = [];
+  if(!state.meta.title.trim()) out.push("Schritt 1: Titel der KI-Einführung fehlt.");
+  if(!state.meta.area.trim()) out.push("Schritt 1: Bereich fehlt.");
+  if(!state.meta.desc.trim()) out.push("Schritt 1: Beschreibung der konkreten Veränderung fehlt.");
+  if(state.groups.length < 2) out.push("Schritt 2: mindestens 2 Stakeholder-Gruppen erforderlich.");
+  state.groups.forEach((g,i) => {
+    const n = groupLabel(g,i);
+    if(!g.name.trim()) out.push("Schritt 2: Gruppe "+(i+1)+" hat keine Bezeichnung.");
+    STAGES.forEach(s => {
+      const c = g.stages[s.key];
+      if(!c.score) out.push("Schritt 2 · "+n+": Score für "+s.name+" fehlt.");
+      else if(!c.rationale.trim()) out.push("Schritt 2 · "+n+": Begründung für "+s.name+" fehlt.");
+    });
+    const b = barrierOf(g);
+    if(b.key){
+      if(!g.measure.trim()) out.push("Schritt 3 · "+n+": Gegenmaßnahme zum Barrier Point fehlt.");
+      if(!g.lewin) out.push("Schritt 3 · "+n+": Lewin-Phase nicht zugeordnet.");
+    }
+  });
+  return out;
+}
+function renderChecks(){
+  const issues = openIssues();
+  const host = $("#checks");
+  if(!issues.length){
+    host.innerHTML = '<div class="callout" style="border-left-color:var(--ok);background:var(--ok-soft)"><b>Vollständig.</b> Alle Pflichtangaben sind erfasst – das Dokument ist abgabefertig.</div>';
+  } else {
+    host.innerHTML = '<div class="callout" style="border-left-color:var(--warn);background:var(--warn-soft)">'+
+      '<b>Noch offen ('+issues.length+'):</b><ul class="warnlist" style="margin-top:6px">'+
+      issues.slice(0,14).map(i => "<li>"+esc(i)+"</li>").join("")+
+      (issues.length>14 ? "<li class='muted'>… und "+(issues.length-14)+" weitere</li>" : "")+
+      '</ul></div>';
+  }
+}
+function renderStatus(){
+  const total = 3 + state.groups.length*(10+2);
+  let done = 0;
+  if(state.meta.title.trim()) done++;
+  if(state.meta.area.trim()) done++;
+  if(state.meta.desc.trim()) done++;
+  state.groups.forEach(g => {
+    STAGES.forEach(s => { if(g.stages[s.key].score) done++; if(g.stages[s.key].rationale.trim()) done++; });
+    if(g.measure.trim()) done++;
+    if(g.lewin) done++;
+  });
+  const pct = Math.round(done/total*100);
+  $("#progbar").style.width = pct+"%";
+  $("#progtext").textContent = pct+" % ausgefüllt · "+state.groups.length+" Stakeholder-Gruppen";
+  const meta1 = state.meta.title.trim() && state.meta.area.trim() && state.meta.desc.trim();
+  setPill("p1status", meta1 ? "ok" : "warn", meta1 ? "vollständig" : "offen");
+  const g2 = state.groups.length >= 2 && state.groups.every(g => STAGES.every(s => g.stages[s.key].score && g.stages[s.key].rationale.trim()));
+  setPill("p2status", g2 ? "ok" : "warn", g2 ? "vollständig" : "offen");
+  const g3 = state.groups.every(g => barrierOf(g).key && g.measure.trim() && g.lewin);
+  setPill("p3status", g3 ? "ok" : "warn", g3 ? "vollständig" : "offen");
+  const g4 = openIssues().length === 0;
+  setPill("p4status", g4 ? "ok" : "warn", g4 ? "abgabefertig" : "unvollständig");
+}
+function setPill(id, cls, txt){
+  const el = document.getElementById(id);
+  el.className = "pill " + cls; el.textContent = txt;
+}
+function renderAll(){ renderGroups(); renderBarriers(); renderMatrix(); renderChecks(); renderStatus(); }
+
+/* ---------------- Events ---------------- */
+document.addEventListener("click", e => {
+  const sb = e.target.closest(".scorebar button");
+  if(sb){
+    const bar = sb.parentElement;
+    const gi = +bar.dataset.g, key = bar.dataset.s, n = +sb.dataset.n;
+    const cur = state.groups[gi].stages[key];
+    cur.score = (cur.score === n) ? 0 : n;
+    save();
+    [...bar.children].forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.n === cur.score)));
+    bar.parentElement.querySelector(".score-label").textContent = cur.score ? SCORE_LABELS[cur.score] : "noch nicht bewertet";
+    const stageEl = bar.closest(".stage");
+    const tag = stageEl.querySelector(".stage-head .pill");
+    if(cur.score){ tag.className = "pill " + (cur.score<=2?"bad":(cur.score===3?"warn":"ok")); tag.textContent = "Score "+cur.score; }
+    else { tag.className = "pill"; tag.textContent = "nicht bewertet"; }
+    renderBarriers(); renderMatrix(); renderChecks(); renderStatus();
+    updateGroupHeader(gi);
+    return;
+  }
+  const act = e.target.closest("[data-act]");
+  if(act){
+    const gi = +act.dataset.g;
+    const a = act.dataset.act;
+    if(a === "del"){
+      if(confirm("Gruppe „"+groupLabel(state.groups[gi],gi)+"“ entfernen?")){
+        state.groups.splice(gi,1); save(); renderAll();
+      }
+      return;
+    }
+    showPrompt(a, gi);
+    return;
+  }
+  const pr = e.target.closest("[data-prompt]");
+  if(pr){ showPrompt(pr.dataset.prompt, null); return; }
+});
+
+document.addEventListener("input", e => {
+  const el = e.target;
+  if(el.dataset.g === undefined) return;
+  const gi = +el.dataset.g, g = state.groups[gi];
+  if(!g) return;
+  if(el.dataset.r !== undefined){
+    g.stages[el.dataset.r].rationale = el.value;
+    const head = el.closest(".stage").querySelector(".stage-head");
+    const warn = [...head.querySelectorAll(".pill")].find(p => p.textContent === "Begründung fehlt");
+    if(el.value.trim() && warn) warn.remove();
+    save(); renderChecks(); renderStatus(); updateGroupHeader(gi); renderBarriers();
+    return;
+  }
+  const f = el.dataset.f;
+  if(!f) return;
+  if(f === "name"){
+    g.name = el.value; save();
+    const card = el.closest(".card");
+    if(card) card.querySelector(".groupname").textContent = groupLabel(g,gi);
+    renderMatrix(); renderChecks(); renderStatus();
+    const bh = $("#barriers").children[gi];
+    if(bh) bh.querySelector(".groupname").textContent = groupLabel(g,gi);
+    return;
+  }
+  if(["size","profile","measure","owner","when"].includes(f)){
+    g[f] = el.value; save();
+    if(f === "measure" || f === "size"){ renderMatrix(); renderChecks(); renderStatus(); }
+    return;
+  }
+});
+
+document.addEventListener("change", e => {
+  const el = e.target;
+  if(el.dataset.g === undefined) return;
+  const gi = +el.dataset.g, g = state.groups[gi];
+  if(!g) return;
+  const f = el.dataset.f;
+  if(f === "tmpl" && el.value){
+    g.name = el.value; save(); renderAll(); return;
+  }
+  if(f === "barrierOverride"){ g.barrierOverride = el.value; save(); renderBarriers(); renderMatrix(); renderChecks(); return; }
+  if(f === "lewin"){ g.lewin = el.value; save(); renderBarriers(); renderMatrix(); renderChecks(); renderStatus(); return; }
+});
+
+function updateGroupHeader(gi){
+  const card = $("#groups").children[gi];
+  if(!card) return;
+  const g = state.groups[gi];
+  const done = STAGES.filter(s => g.stages[s.key].score > 0 && g.stages[s.key].rationale.trim()).length;
+  const v = STAGES.map(s => g.stages[s.key].score).filter(x => x > 0);
+  const avg = v.length ? (v.reduce((a,b)=>a+b,0)/v.length).toFixed(1) : "–";
+  const pills = card.querySelectorAll(".card-head .pill");
+  if(pills[0]){ pills[0].className = "pill " + (done===5?"ok":(done?"warn":"")); pills[0].textContent = done+"/5 vollständig"; }
+  if(pills[1]) pills[1].textContent = "Ø "+avg;
+}
+
+$("#addGroup").addEventListener("click", () => { state.groups.push(newGroup("")); save(); renderAll(); });
+$("#btnPrint").addEventListener("click", () => window.print());
+$("#btnReset").addEventListener("click", () => {
+  if(confirm("Alle Eingaben löschen und neu beginnen?")){
+    store.del(STORE_KEY); state = blankState(); bindMetaValues(); renderAll(); toast("Zurückgesetzt.");
+  }
+});
+$("#btnDemo").addEventListener("click", () => {
+  if(!confirm("Beispiel-Daten laden? Vorhandene Eingaben werden ersetzt.")) return;
+  state = demoState(); save(); bindMetaValues(); renderAll(); toast("Beispiel geladen – zum Anschauen der Logik.");
+});
+function bindMetaValues(){
+  META_FIELDS.forEach(f => document.getElementById("m_"+f).value = state.meta[f]||"");
+  $("#preset").value = state.meta.preset || "";
+}
+
+/* ---------------- Markdown-Export ---------------- */
+function buildMarkdown(){
+  const m = state.meta;
+  const L = [];
+  L.push("# ADKAR-Scoring: "+(m.title||"KI-Einführung"));
+  L.push("");
+  L.push("| | |");
+  L.push("|---|---|");
+  L.push("| **Bereich** | "+(m.area||"–")+" |");
+  L.push("| **Umfang** | "+(m.scope||"–")+" |");
+  L.push("| **Zeithorizont** | "+(m.horizon||"–")+" |");
+  L.push("| **Sponsor** | "+(m.sponsor||"–")+" |");
+  L.push("| **Bearbeitet von** | "+(m.author||"–")+" |");
+  L.push("| **Stand** | "+new Date().toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit",year:"numeric"})+" |");
+  L.push("");
+  L.push("## 1. Die KI-Einführung");
+  L.push("");
+  L.push(m.desc || "_keine Beschreibung erfasst_");
+  L.push("");
+  L.push("## 2. ADKAR-Scoring je Stakeholder-Gruppe");
+  L.push("");
+  L.push("Skala: 1 = nicht vorhanden · 2 = ansatzweise · 3 = teilweise · 4 = überwiegend · 5 = voll gegeben");
+  L.push("");
+  L.push("| Stakeholder-Gruppe | "+STAGES.map(s => s.letter+" "+s.name).join(" | ")+" | Ø | Barrier Point |");
+  L.push("|---|"+STAGES.map(()=>"---").join("|")+"|---|---|");
+  state.groups.forEach((g,gi) => {
+    const v = STAGES.map(s => g.stages[s.key].score);
+    const nz = v.filter(x=>x>0);
+    const avg = nz.length ? (nz.reduce((a,b)=>a+b,0)/nz.length).toFixed(1) : "–";
+    const b = barrierOf(g);
+    L.push("| "+groupLabel(g,gi)+" | "+v.map(x=>x||"–").join(" | ")+" | "+avg+" | "+
+      (b.key ? (stageByKey(b.key).letter+" – "+stageByKey(b.key).name) : "unvollständig")+" |");
+  });
+  L.push("");
+  state.groups.forEach((g,gi) => {
+    L.push("### 2."+(gi+1)+" "+groupLabel(g,gi));
+    L.push("");
+    if(g.size) L.push("**Größe / Rolle:** "+g.size+"  ");
+    if(g.profile) L.push("**Kurzprofil:** "+g.profile);
+    L.push("");
+    STAGES.forEach(s => {
+      const c = g.stages[s.key];
+      L.push("**"+s.letter+" – "+s.name+" ("+s.de+"): Score "+(c.score||"–")+"**  ");
+      L.push(c.rationale.trim() || "_Begründung fehlt_");
+      L.push("");
+    });
+  });
+  L.push("## 3. Barrier Points und Gegenmaßnahmen");
+  L.push("");
+  L.push("**Regel:** Barrier Point = erste Stufe in der Reihenfolge A→D→K→A→R mit Score ≤ 3. Solange sie offen ist, tragen die nachfolgenden Stufen nicht.");
+  L.push("");
+  L.push("| Gruppe | Barrier Point | Score | Gegenmaßnahme | Lewin-Phase | Verantwortlich | Wann |");
+  L.push("|---|---|---|---|---|---|---|");
+  state.groups.forEach((g,gi) => {
+    const b = barrierOf(g);
+    if(!b.key){ L.push("| "+groupLabel(g,gi)+" | _unvollständig_ | – | – | – | – | – |"); return; }
+    const s = stageByKey(b.key);
+    L.push("| "+groupLabel(g,gi)+" | "+s.letter+" – "+s.name+" | "+g.stages[b.key].score+" | "+
+      (g.measure.trim().replace(/\n+/g," ")||"_offen_")+" | "+(g.lewin?LEWIN[g.lewin].label:"_offen_")+" | "+
+      (g.owner||"–")+" | "+(g.when||"–")+" |");
+  });
+  L.push("");
+  state.groups.forEach((g,gi) => {
+    const b = barrierOf(g);
+    if(!b.key) return;
+    const s = stageByKey(b.key);
+    L.push("### 3."+(gi+1)+" "+groupLabel(g,gi)+" – Barrier Point: "+s.letter+" "+s.name+" (Score "+g.stages[b.key].score+")");
+    L.push("");
+    L.push("*Begründung des Scores:* "+(g.stages[b.key].rationale.trim()||"_offen_"));
+    L.push("");
+    if(b.reason === "lowest"){
+      L.push("*Hinweis: Alle Stufen dieser Gruppe liegen bei ≥ 4 – es gibt keinen klassischen Barrier Point. Die schwächste Stufe wird als Fokus gesetzt.*");
+      L.push("");
+    } else if(b.reason === "manual"){
+      L.push("*Hinweis: Barrier Point bewusst manuell gesetzt (Abweichung von der Automatik).*");
+      L.push("");
+    }
+    L.push("**Gegenmaßnahme:** "+(g.measure.trim()||"_offen_"));
+    L.push("");
+    L.push("**Lewin-Phase:** "+(g.lewin?LEWIN[g.lewin].label:"_offen_")+
+      (g.lewin?" – "+LEWIN[g.lewin].hint:""));
+    L.push("");
+    if(g.owner||g.when) L.push("**Verantwortlich:** "+(g.owner||"–")+" · **Wann:** "+(g.when||"–"));
+    L.push("");
+  });
+  const iss = openIssues();
+  if(iss.length){
+    L.push("---");
+    L.push("");
+    L.push("<!-- Offene Punkte ("+iss.length+"):");
+    iss.forEach(i => L.push("  - "+i));
+    L.push("-->");
+  }
+  return L.join("\n");
+}
+function download(name, text, mime){
+  const blob = new Blob([text], {type:(mime||"text/plain")+";charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+}
+function slug(s){
+  return (s||"adkar-scoring").toLowerCase()
+    .replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss")
+    .replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60) || "adkar-scoring";
+}
+$("#btnMd").addEventListener("click", () => {
+  download("adkar-scoring-"+slug(state.meta.title)+".md", buildMarkdown(), "text/markdown");
+  const n = openIssues().length;
+  toast(n ? "Heruntergeladen – "+n+" Punkte sind noch offen." : "Markdown heruntergeladen.");
+});
+$("#btnCopyMd").addEventListener("click", () => copy(buildMarkdown(), "Markdown kopiert."));
+$("#btnSaveJson").addEventListener("click", () => download("adkar-scoring-"+slug(state.meta.title)+".json", JSON.stringify(state,null,2), "application/json"));
+$("#fileJson").addEventListener("change", e => {
+  const f = e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try { state = migrate(JSON.parse(r.result)); save(); bindMetaValues(); renderAll(); toast("Zwischenstand geladen."); }
+    catch(err){ toast("Datei konnte nicht gelesen werden."); }
+  };
+  r.readAsText(f);
+  e.target.value = "";
+});
+
+/* ---------------- Clipboard ---------------- */
+function copy(text, msg){
+  const done = () => toast(msg || "Kopiert.");
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(done, () => fallback());
+  } else fallback();
+  function fallback(){
+    const ta = document.createElement("textarea");
+    ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch(e){}
+    ta.remove();
+    toast(ok ? (msg||"Kopiert.") : "Kopieren blockiert – Text bitte manuell markieren.");
+  }
+}
+
+/* ---------------- Claude-Prompts ---------------- */
+function ctx(){
+  const m = state.meta;
+  const L = [];
+  L.push("KONTEXT DER KI-EINFÜHRUNG");
+  L.push("- Titel: "+(m.title||"(noch offen)"));
+  L.push("- Bereich: "+(m.area||"(noch offen)"));
+  L.push("- Was sich konkret ändert: "+(m.desc||"(noch offen)"));
+  if(m.scope) L.push("- Umfang: "+m.scope);
+  if(m.horizon) L.push("- Zeithorizont: "+m.horizon);
+  if(m.sponsor) L.push("- Sponsor: "+m.sponsor);
+  return L.join("\n");
+}
+function groupCtx(g,gi,withScores){
+  const L = [];
+  L.push("STAKEHOLDER-GRUPPE: "+groupLabel(g,gi));
+  if(g.size) L.push("- Größe/Rolle: "+g.size);
+  if(g.profile) L.push("- Kurzprofil: "+g.profile);
+  if(withScores){
+    L.push("");
+    L.push("MEINE BISHERIGEN SCORES UND BEGRÜNDUNGEN (1-5):");
+    STAGES.forEach(s => {
+      const c = g.stages[s.key];
+      L.push("- "+s.letter+" "+s.name+" ("+s.de+"): Score "+(c.score||"nicht bewertet"));
+      L.push("  Begründung: "+(c.rationale.trim()||"(fehlt noch)"));
+    });
+    const b = barrierOf(g);
+    if(b.key) L.push("");
+    if(b.key) L.push("Daraus abgeleiteter Barrier Point: "+stageByKey(b.key).letter+" – "+stageByKey(b.key).name+" (Score "+g.stages[b.key].score+")");
+  }
+  return L.join("\n");
+}
+const PROMPTS = {
+  usecase(){
+    return "Ich arbeite an einem ADKAR-Scoring für eine KI-Einführung und will zuerst den Use Case scharf bekommen.\n\n"+ctx()+
+      "\n\nBitte:\n1. Sag mir in 3-5 Sätzen, was an dieser Beschreibung noch zu vage ist, um Change-Widerstände beurteilen zu können.\n"+
+      "2. Formuliere eine präzisere Version der Veränderungsbeschreibung (wer macht ab wann was konkret anders?).\n"+
+      "3. Stelle mir 3 Rückfragen, deren Antworten das Scoring später realistischer machen.\n\n"+
+      "Sei konkret und vermeide Allgemeinplätze. Antworte auf Deutsch.";
+  },
+  stakeholder(){
+    return "Ich plane ein ADKAR-Scoring für die folgende KI-Einführung.\n\n"+ctx()+
+      "\n\nAktuell habe ich diese Gruppen vorgesehen:\n"+
+      state.groups.map((g,i) => "- "+groupLabel(g,i)+(g.size?" ("+g.size+")":"")).join("\n")+
+      "\n\nBitte:\n1. Nenne mir 4-6 Stakeholder-Gruppen, die bei dieser Einführung wirklich unterschiedliche ADKAR-Profile haben – mit je einem Satz, warum sie sich unterscheiden.\n"+
+      "2. Sag mir, welche meiner Gruppen zu grob oder zu ähnlich geschnitten sind.\n"+
+      "3. Empfehle die 2-3 Gruppen, an denen sich das Vorhaben entscheidet.\n\nAntworte auf Deutsch, knapp und begründet.";
+  },
+  sparring(gi){
+    const g = state.groups[gi];
+    return "Ich plane eine KI-Einführung in "+(state.meta.area||"[Bereich]")+". "+
+      "Hilf mir, ein ADKAR-Scoring für "+groupLabel(g,gi)+" zu erstellen. "+
+      "Stelle mir zu jeder Stufe eine Frage, die mir hilft, den Score realistisch einzuschätzen.\n\n"+
+      ctx()+"\n\n"+groupCtx(g,gi,false)+
+      "\n\nVorgehen bitte so:\n"+
+      "- Gehe die fünf Stufen Awareness, Desire, Knowledge, Ability, Reinforcement einzeln durch.\n"+
+      "- Stelle mir pro Stufe EINE präzise Frage und warte auf meine Antwort, bevor du weitergehst.\n"+
+      "- Nach meiner Antwort: schlage einen Score von 1-5 vor, begründe ihn in 1-2 Sätzen und sage, welche Beobachtung den Score belastbarer machen würde.\n"+
+      "- Sei kritisch: wenn meine Antwort nach Wunschdenken klingt, sag es.\n\n"+
+      "Starte mit der Frage zu Awareness. Antworte auf Deutsch.";
+  },
+  challenge(gi){
+    const g = state.groups[gi];
+    return "Ich habe ein ADKAR-Scoring erstellt und möchte, dass du es kritisch prüfst – bitte nicht bestätigen, sondern challengen.\n\n"+
+      ctx()+"\n\n"+groupCtx(g,gi,true)+
+      "\n\nBitte:\n1. Prüfe jeden Score: zu optimistisch, zu pessimistisch oder plausibel? Begründe kurz.\n"+
+      "2. Zeige mir, wo meine Begründung eine Behauptung statt einer Beobachtung ist.\n"+
+      "3. Prüfe den Barrier Point: stimmt er nach der ADKAR-Regel (erste Stufe ≤ 3)? Ist er inhaltlich der wahre Engpass?\n"+
+      "4. Nenne die eine Frage, die ich in dieser Gruppe stellen sollte, bevor ich das Scoring finalisiere.\n\nAntworte auf Deutsch, direkt und ohne Lob-Floskeln.";
+  },
+  measure(gi){
+    const g = state.groups[gi];
+    const b = barrierOf(g);
+    const bp = b.key ? stageByKey(b.key) : null;
+    return "Ich brauche eine konkrete Gegenmaßnahme für den Barrier Point einer Stakeholder-Gruppe und die passende Lewin-Phase.\n\n"+
+      ctx()+"\n\n"+groupCtx(g,gi,true)+
+      "\n\nBarrier Point: "+(bp ? bp.letter+" – "+bp.name+" (Score "+g.stages[b.key].score+")" : "(noch offen)")+
+      "\nMein Entwurf der Gegenmaßnahme: "+(g.measure.trim()||"(noch keiner)")+
+      "\nMeine Lewin-Zuordnung: "+(g.lewin?LEWIN[g.lewin].label:"(noch keine)")+
+      "\n\nBitte:\n1. Beurteile meinen Entwurf: greift er wirklich an dieser ADKAR-Stufe an oder an einer anderen?\n"+
+      "2. Formuliere eine geschärfte Maßnahme mit Format, Beteiligten, Takt und beobachtbarem Ergebnis (max. 3 Sätze).\n"+
+      "3. Ordne sie einer Lewin-Phase zu (Unfreeze / Change / Refreeze) und begründe die Zuordnung in 1-2 Sätzen.\n"+
+      "4. Nenne einen typischen Fehler, mit dem diese Maßnahme wirkungslos wird.\n\nAntworte auf Deutsch.";
+  },
+  review(){
+    return "Bitte prüfe mein fertiges ADKAR-Scoring-Dokument kritisch, so wie ein erfahrener Change Manager es in einem Review tun würde.\n\n"+
+      "```markdown\n"+buildMarkdown()+"\n```\n\n"+
+      "Bitte:\n1. Sind die Scores untereinander konsistent und plausibel begründet? Wo widersprechen sich Score und Begründung?\n"+
+      "2. Sind die Barrier Points korrekt nach der ADKAR-Logik abgeleitet?\n"+
+      "3. Passen die Gegenmaßnahmen zur jeweiligen ADKAR-Stufe und ist die Lewin-Zuordnung sauber?\n"+
+      "4. Was fehlt dem Dokument, um als Arbeitsgrundlage zu taugen?\n"+
+      "5. Gib mir eine Note von 1-10 mit den zwei wichtigsten Verbesserungen.\n\nAntworte auf Deutsch, klar und ohne Schönfärberei.";
+  }
+};
+const PROMPT_TITLES = { usecase:"Use Case schärfen", stakeholder:"Stakeholder-Gruppen",
+  sparring:"ADKAR-Sparring", challenge:"Scores challengen", measure:"Gegenmaßnahme", review:"Gesamtreview" };
+let currentPrompt = "";
+function showPrompt(kind, gi){
+  const fn = PROMPTS[kind];
+  if(!fn) return;
+  currentPrompt = fn(gi);
+  $("#promptText").textContent = currentPrompt;
+  $("#promptKind").textContent = PROMPT_TITLES[kind] + (gi!==null && gi!==undefined ? " · "+groupLabel(state.groups[gi],gi) : "");
+  const card = $("#promptCard");
+  card.style.display = "";
+  copy(currentPrompt, "Prompt kopiert – bereit für Claude.");
+  card.scrollIntoView({behavior:"smooth", block:"start"});
+}
+$("#btnCopyPrompt").addEventListener("click", () => copy(currentPrompt, "Prompt kopiert."));
+$("#btnClosePrompt").addEventListener("click", () => { $("#promptCard").style.display = "none"; });
+$("#btnOpenClaude").addEventListener("click", () => {
+  const q = encodeURIComponent(currentPrompt);
+  const url = q.length < 6000 ? "https://claude.ai/new?q="+q : "https://claude.ai/new";
+  window.open(url, "_blank", "noopener");
+  if(q.length >= 6000) toast("Prompt ist lang – bitte in Claude mit Strg+V einfügen.");
+});
+
+/* ---------------- Demo ---------------- */
+function demoState(){
+  const s = blankState();
+  s.meta = { preset:"rpa_buchhaltung", title:PRESETS.rpa_buchhaltung.title, area:PRESETS.rpa_buchhaltung.area,
+    desc:PRESETS.rpa_buchhaltung.desc, scope:PRESETS.rpa_buchhaltung.scope, horizon:PRESETS.rpa_buchhaltung.horizon,
+    sponsor:"Leitung Finanzen", author:"" };
+  const g1 = newGroup("Sachbearbeitung Kreditorenbuchhaltung");
+  g1.size = "9 Personen, direkt betroffen"; g1.profile = "Hohe Routine-Sicherheit, wenig Digitalprojekt-Erfahrung, Sorge um die eigene Rolle.";
+  const d1 = { awareness:[4,"Das Vorhaben wurde in zwei Teammeetings vorgestellt, die Zahlen zum Rechnungsvolumen sind bekannt. Der Anlass ist verstanden, der Zeitpunkt wird aber noch als willkürlich empfunden."],
+    desire:[2,"Mehrere Mitarbeitende verbinden RPA offen mit Stellenabbau und sehen keinen persönlichen Gewinn. Der Vorteil „weniger Tippen“ zählt weniger als die Sorge um die eigene Zuständigkeit."],
+    knowledge:[3,"Es gibt eine Tool-Demo, aber keine Schulung an den eigenen Ausnahmefällen. Die Regeln für Prüfung und Freigabe von Roboter-Vorschlägen sind nicht dokumentiert."],
+    ability:[2,"Ohne Übungsumgebung und ohne Zeitfenster im Monatsabschluss kann niemand den neuen Ablauf realistisch einüben."],
+    reinforcement:[2,"Es ist keine Kennzahl definiert, die die neue Arbeitsweise nachhält, und niemand ist nach Projektende verantwortlich."] };
+  STAGES.forEach(st => { const d = d1[st.key]; g1.stages[st.key] = { score:d[0], rationale:d[1] }; });
+  g1.measure = "Zwei moderierte Perspektiv-Workshops (90 Min.) mit der Leitung: offene Aussprache zur Rollenfrage, verbindliche Aussage zur Beschäftigung und gemeinsame Definition des künftigen Aufgabenprofils „Ausnahmen und Regelwerk“ – Ergebnis ist ein von den Betroffenen mitgeschriebenes Rollenprofil.";
+  g1.lewin = "unfreeze"; g1.owner = "Leitung Finanzen + Change-Begleitung"; g1.when = "6 und 4 Wochen vor Go-live";
+  const g2 = newGroup("Teamleitung / Gruppenleitung Finanzen");
+  g2.size = "3 Personen, Multiplikatoren"; g2.profile = "Verantwortlich für Abschlussqualität, hoher Zeitdruck, wollen keine Risiken im Monatsabschluss.";
+  const d2 = { awareness:[5,"Die Leitungsebene hat den Business Case selbst mitgerechnet und kann Anlass und Nutzen präzise erklären."],
+    desire:[4,"Sie wollen die Entlastung, zögern aber wegen der Verantwortung für die Abschlussqualität im Übergang."],
+    knowledge:[3,"Der neue Ablauf ist ihnen bekannt, aber wie sie ihr Team dabei führen und Widerstand aufnehmen, ist unklar."],
+    ability:[3,"Neben dem Tagesgeschäft fehlt ihnen die Kapazität, den Übergang aktiv zu begleiten."],
+    reinforcement:[2,"Ihre Zielvereinbarung honoriert weiterhin nur Abschlusstermine, nicht die Umstellung."] };
+  STAGES.forEach(st => { const d = d2[st.key]; g2.stages[st.key] = { score:d[0], rationale:d[1] }; });
+  g2.measure = "Führungs-Sparring in 3 Sessions à 60 Min.: Umgang mit Einwänden, Sprachregelung zur Rollenfrage, Übung an echten Teamsituationen – plus ein einseitiger Gesprächsleitfaden, den jede Leitung im Team einmal anwendet und rückmeldet.";
+  g2.lewin = "change"; g2.owner = "HR-Entwicklung"; g2.when = "Start 8 Wochen vor Go-live, 2-Wochen-Takt";
+  s.groups = [g1,g2];
+  return s;
+}
+
+/* ---------------- Init ---------------- */
+load();
+bindMeta();
+renderAll();
+$("#savestate").textContent = store.available ? "Autosave aktiv" : "Achtung: kein Browser-Speicher verfügbar – JSON-Export nutzen";
+window.addEventListener("beforeunload", () => { store.set(STORE_KEY, JSON.stringify(state)); });
+</script>
+</body>
+</html>
