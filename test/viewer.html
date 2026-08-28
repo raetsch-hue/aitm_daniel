@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KI-Tools – Viewer</title>
+<style>
+  :root{
+    --bg:#fbfbfa; --fg:#1c1b19; --muted:#6b6862; --line:#e3e0da;
+    --card:#ffffff; --accent:#7a5cff; --accent-soft:#f0ecff; --shadow:0 1px 2px rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#17161a; --fg:#eceaf0; --muted:#a09daa; --line:#302e38;
+      --card:#1f1e24; --accent:#a897ff; --accent-soft:#282342; --shadow:none;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+  header{
+    position:sticky; top:0; z-index:10; background:var(--bg);
+    border-bottom:1px solid var(--line); padding:14px 24px;
+    display:flex; gap:14px; align-items:center; flex-wrap:wrap;
+  }
+  header h1{font-size:15px; font-weight:600; margin:0; letter-spacing:-.01em}
+  header .spacer{flex:1}
+  #q{
+    width:260px; max-width:45vw; padding:7px 11px; border:1px solid var(--line);
+    border-radius:7px; background:var(--card); color:var(--fg); font-size:14px;
+  }
+  #q:focus{outline:2px solid var(--accent); outline-offset:-1px; border-color:transparent}
+  .btn{
+    padding:7px 13px; border:1px solid var(--line); border-radius:7px;
+    background:var(--card); color:var(--fg); font-size:14px; cursor:pointer;
+  }
+  .btn:hover{border-color:var(--accent); color:var(--accent)}
+  #count{font-size:13px; color:var(--muted); white-space:nowrap}
+  main{max-width:1080px; margin:0 auto; padding:32px 24px 40px}
+  #drop{
+    border:2px dashed var(--line); border-radius:12px; padding:56px 24px;
+    text-align:center; color:var(--muted); background:var(--card);
+  }
+  #drop.over{border-color:var(--accent); background:var(--accent-soft); color:var(--fg)}
+  #drop strong{display:block; color:var(--fg); font-size:17px; margin-bottom:8px}
+  #drop code{background:var(--bg); padding:2px 6px; border-radius:4px; font-size:13px}
+  article h1{font-size:30px; letter-spacing:-.02em; margin:0 0 6px}
+  article h2{
+    font-size:20px; margin:44px 0 14px; padding-top:20px;
+    border-top:1px solid var(--line); letter-spacing:-.01em;
+  }
+  article h3{font-size:16px; margin:28px 0 10px}
+  article p{margin:12px 0}
+  article a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent}
+  article a:hover{border-bottom-color:var(--accent)}
+  article blockquote{
+    margin:24px 0; padding:14px 18px; border-left:3px solid var(--accent);
+    background:var(--card); border-radius:0 8px 8px 0; color:var(--muted);
+  }
+  article blockquote p{margin:0}
+  article ul,article ol{padding-left:22px}
+  article li{margin:6px 0}
+  article code{background:var(--card); padding:2px 6px; border-radius:4px; font-size:13.5px}
+  .tablewrap{overflow-x:auto; margin:18px 0; border:1px solid var(--line); border-radius:10px; box-shadow:var(--shadow)}
+  table{border-collapse:collapse; width:100%; background:var(--card); font-size:14.5px}
+  th,td{padding:11px 14px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+  th{
+    background:var(--bg); font-weight:600; font-size:12.5px; text-transform:uppercase;
+    letter-spacing:.04em; color:var(--muted); position:sticky; top:59px;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover td{background:var(--accent-soft)}
+  tr.hidden{display:none}
+  .err{padding:18px; border:1px solid #d4574c; border-radius:10px; background:var(--card); color:#d4574c}
+
+  /* --- Dateiliste unten --- */
+  #files{
+    border-top:1px solid var(--line); background:var(--card);
+    padding:22px 24px 40px; margin-top:48px;
+  }
+  #files .inner{max-width:1080px; margin:0 auto}
+  #files .head{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px}
+  #files h2{font-size:13px; font-weight:600; margin:0; text-transform:uppercase; letter-spacing:.05em; color:var(--muted)}
+  #files .spacer{flex:1}
+  #filehint{font-size:13.5px; color:var(--muted); margin:0}
+  #filelist{list-style:none; margin:0; padding:0; display:grid; gap:8px;
+            grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+  #filelist button{
+    width:100%; text-align:left; cursor:pointer; font:inherit; font-size:14px;
+    background:var(--bg); color:var(--fg); border:1px solid var(--line);
+    border-radius:9px; padding:10px 13px; display:flex; gap:10px; align-items:baseline;
+  }
+  #filelist button:hover{border-color:var(--accent)}
+  #filelist button.active{border-color:var(--accent); background:var(--accent-soft)}
+  #filelist .nm{font-weight:500; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  #filelist .sz{margin-left:auto; font-size:12px; color:var(--muted); white-space:nowrap}
+  #filelist .pt{display:block; font-size:12px; color:var(--muted); margin-top:2px;
+                overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="title">KI-Tools – Übersicht</h1>
+  <span class="spacer"></span>
+  <input id="q" type="search" placeholder="Tabellen filtern …" autocomplete="off" hidden>
+  <span id="count"></span>
+  <button class="btn" id="pick">Datei …</button>
+  <input type="file" id="file" accept=".md,.markdown,text/markdown" hidden>
+</header>
+
+<main>
+  <div id="drop">
+    <strong>Markdown-Datei oder Ordner hierher ziehen</strong>
+    Erwartet wird <code>KITools_Uebersicht.md</code> aus demselben Ordner.<br>
+    Beim Öffnen per Doppelklick sperrt der Browser das automatische Laden — Datei hineinziehen,
+    oder unten den Ordner einlesen.
+  </div>
+  <article id="out" hidden></article>
+</main>
+
+<section id="files">
+  <div class="inner">
+    <div class="head">
+      <h2>Dateien im Verzeichnis</h2>
+      <span class="spacer"></span>
+      <button class="btn" id="pickdir">Ordner einlesen …</button>
+      <input type="file" id="dir" webkitdirectory directory multiple hidden>
+    </div>
+    <p id="filehint">Noch kein Ordner eingelesen. Über „Ordner einlesen …" <code>test\</code> auswählen —
+      der Browser fragt einmal nach Bestätigung. Alternativ den Ordner in dieses Fenster ziehen.
+      Es werden ausschließlich Markdown-Dateien gelistet, nichts wird hochgeladen.</p>
+    <ul id="filelist"></ul>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<script>
+(function(){
+  var out=document.getElementById('out'), drop=document.getElementById('drop'),
+      q=document.getElementById('q'), count=document.getElementById('count'),
+      file=document.getElementById('file'), dir=document.getElementById('dir'),
+      title=document.getElementById('title'), filelist=document.getElementById('filelist'),
+      filehint=document.getElementById('filehint');
+
+  var found=[];        // {name, path, size, get:()=>Promise<string>}
+  var activePath=null;
+
+  function isMd(n){ return /\.(md|markdown|mdown|mkd)$/i.test(n); }
+  function kb(b){ return b<1024 ? b+' B' : (b/1024).toFixed(1).replace('.',',')+' kB'; }
+
+  function fail(msg){
+    drop.hidden=false; out.hidden=true;
+    drop.innerHTML='<div class="err">'+msg+'</div>';
+  }
+
+  function render(md, label, path){
+    if(typeof marked==='undefined'){
+      fail('Der Markdown-Renderer konnte nicht geladen werden (keine Internetverbindung?). '+
+           'Die Seite braucht cdnjs.cloudflare.com beim ersten Laden.');
+      return;
+    }
+    out.innerHTML=marked.parse(md);
+    out.querySelectorAll('table').forEach(function(t){
+      var w=document.createElement('div'); w.className='tablewrap';
+      t.parentNode.insertBefore(w,t); w.appendChild(t);
+    });
+    out.querySelectorAll('a').forEach(function(a){
+      if(/^https?:/.test(a.getAttribute('href')||'')){ a.target='_blank'; a.rel='noopener'; }
+    });
+    if(label) title.textContent=label;
+    activePath = path || null;
+    drop.hidden=true; out.hidden=false; q.hidden=false;
+    paintList(); filter();
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  function filter(){
+    var term=q.value.trim().toLowerCase(), shown=0, total=0;
+    out.querySelectorAll('tbody tr').forEach(function(tr){
+      total++;
+      var hit = !term || tr.textContent.toLowerCase().indexOf(term)>-1;
+      tr.classList.toggle('hidden', !hit);
+      if(hit) shown++;
+    });
+    count.textContent = total ? (term ? shown+' von '+total+' Zeilen' : total+' Einträge') : '';
+  }
+  q.addEventListener('input', filter);
+
+  /* ---------- Dateiliste ---------- */
+
+  function addFound(entry){
+    if(!found.some(function(f){ return f.path===entry.path; })) found.push(entry);
+  }
+
+  function fromFile(f, path){
+    return {name:f.name, path:path||f.webkitRelativePath||f.name, size:f.size,
+            get:function(){ return f.text(); }};
+  }
+
+  function paintList(){
+    filelist.innerHTML='';
+    if(!found.length) return;
+    found.sort(function(a,b){ return a.path.localeCompare(b.path,'de'); });
+    filehint.textContent = found.length+' Markdown-Datei'+(found.length===1?'':'en')+' gefunden.';
+    found.forEach(function(f){
+      var li=document.createElement('li'), b=document.createElement('button');
+      b.className = (f.path===activePath) ? 'active' : '';
+      b.innerHTML = '<span><span class="nm"></span><span class="pt"></span></span>'+
+                    '<span class="sz"></span>';
+      b.querySelector('.nm').textContent=f.name;
+      b.querySelector('.pt').textContent=f.path;
+      b.querySelector('.sz').textContent=kb(f.size);
+      b.addEventListener('click', function(){
+        f.get().then(function(txt){ render(txt, f.name, f.path); });
+      });
+      li.appendChild(b); filelist.appendChild(li);
+    });
+  }
+
+  document.getElementById('pick').addEventListener('click', function(){ file.click(); });
+  file.addEventListener('change', function(){
+    var f=file.files[0]; if(!f) return;
+    addFound(fromFile(f)); f.text().then(function(t){ render(t, f.name, f.name); });
+  });
+
+  document.getElementById('pickdir').addEventListener('click', function(){ dir.click(); });
+  dir.addEventListener('change', function(){
+    Array.prototype.slice.call(dir.files).forEach(function(f){
+      if(isMd(f.name)) addFound(fromFile(f));
+    });
+    paintList();
+    if(!found.length) filehint.textContent='In diesem Ordner wurden keine Markdown-Dateien gefunden.';
+  });
+
+  /* ---------- Drag & Drop: Datei oder Ordner ---------- */
+
+  function walk(entry, prefix, depth){
+    if(depth>4) return Promise.resolve();
+    if(entry.isFile){
+      if(!isMd(entry.name)) return Promise.resolve();
+      return new Promise(function(res){
+        entry.file(function(f){ addFound(fromFile(f, prefix+entry.name)); res(); }, res);
+      });
+    }
+    if(entry.isDirectory){
+      var rdr=entry.createReader(), all=[];
+      return new Promise(function(res){
+        (function read(){
+          rdr.readEntries(function(batch){
+            if(!batch.length){
+              Promise.all(all.map(function(e){ return walk(e, prefix+entry.name+'/', depth+1); })).then(res);
+              return;
+            }
+            all=all.concat(Array.prototype.slice.call(batch)); read();
+          }, res);
+        })();
+      });
+    }
+    return Promise.resolve();
+  }
+
+  ['dragenter','dragover'].forEach(function(e){
+    document.addEventListener(e, function(ev){ ev.preventDefault(); drop.classList.add('over'); });
+  });
+  ['dragleave','drop'].forEach(function(e){
+    document.addEventListener(e, function(ev){ ev.preventDefault(); drop.classList.remove('over'); });
+  });
+  document.addEventListener('drop', function(ev){
+    var dt=ev.dataTransfer; if(!dt) return;
+    var items=dt.items ? Array.prototype.slice.call(dt.items) : [];
+    var entries=items.map(function(i){ return i.webkitGetAsEntry && i.webkitGetAsEntry(); }).filter(Boolean);
+
+    if(entries.length){
+      Promise.all(entries.map(function(e){ return walk(e,'',0); })).then(function(){
+        paintList();
+        if(!activePath && found.length){
+          var first=found[0];
+          first.get().then(function(t){ render(t, first.name, first.path); });
+        }
+        if(!found.length) filehint.textContent='Keine Markdown-Datei im Abwurf gefunden.';
+      });
+      return;
+    }
+    var f=dt.files && dt.files[0];
+    if(f){ addFound(fromFile(f)); f.text().then(function(t){ render(t, f.name, f.name); }); }
+  });
+
+  /* ---------- Über http(s): Verzeichnis automatisch lesen ---------- */
+
+  if(location.protocol!=='file:'){
+    fetch('KITools_Uebersicht.md')
+      .then(function(r){ if(!r.ok) throw 0; return r.text(); })
+      .then(function(t){
+        addFound({name:'KITools_Uebersicht.md', path:'KITools_Uebersicht.md', size:t.length,
+                  get:function(){ return Promise.resolve(t); }});
+        render(t,'KI-Tools – Übersicht','KITools_Uebersicht.md');
+      })
+      .catch(function(){});
+
+    fetch('./')
+      .then(function(r){ if(!r.ok) throw 0; return r.text(); })
+      .then(function(html){
+        var doc=new DOMParser().parseFromString(html,'text/html');
+        Array.prototype.slice.call(doc.querySelectorAll('a[href]')).forEach(function(a){
+          var h=a.getAttribute('href');
+          if(!h || !isMd(h) || /^https?:|^\/\//.test(h)) return;
+          var nm=decodeURIComponent(h.replace(/^.*\//,''));
+          addFound({name:nm, path:nm, size:0, get:function(){
+            return fetch(h).then(function(r){ return r.text(); });
+          }});
+        });
+        paintList();
+      })
+      .catch(function(){});
+  }
+
+  paintList();
+})();
+</script>
+</body>
+</html>
