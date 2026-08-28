@@ -2,6 +2,5 @@
   "_hinweis": "Liste der Markdown-Dateien, die viewer.html anzeigen soll. Neue Datei? Hier eintragen. Pfade sind relativ zu viewer.html. Reihenfolge = Anzeigereihenfolge, der erste Eintrag wird beim Öffnen geladen.",
   "dateien": [
     { "name": "2.1/01_Change-Management-Lewin-ADKAR.md", "titel": "Vertiefung: Lewin & ADKAR" },
-    { "name": "2.1/02_Tag-2.1-Coursebook-Zusammenfassung.md", "titel": "Tag 2.1 – Zusammenfassung" }
   ]
 }
