@@ -27,6 +27,18 @@
   }
   header h1{font-size:15px; font-weight:600; margin:0; letter-spacing:-.01em}
   header .spacer{flex:1}
+  #nav{
+    max-width:min(46vw,420px); padding:7px 30px 7px 11px; border:1px solid var(--line);
+    border-radius:7px; background:var(--card); color:var(--fg); font:inherit; font-size:14px;
+    cursor:pointer; appearance:none; -webkit-appearance:none;
+    background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),
+                     linear-gradient(135deg,currentColor 50%,transparent 50%);
+    background-position:calc(100% - 16px) 52%, calc(100% - 11px) 52%;
+    background-size:5px 5px, 5px 5px; background-repeat:no-repeat;
+  }
+  #nav:hover{border-color:var(--accent)}
+  #nav:focus{outline:2px solid var(--accent); outline-offset:-1px; border-color:transparent}
+  #nav[hidden]{display:none}
   #q{
     width:260px; max-width:45vw; padding:7px 11px; border:1px solid var(--line);
     border-radius:7px; background:var(--card); color:var(--fg); font-size:14px;
@@ -37,6 +49,13 @@
     background:var(--card); color:var(--fg); font-size:14px; cursor:pointer;
   }
   .btn:hover{border-color:var(--accent); color:var(--accent)}
+  #suche{display:flex; gap:6px; align-items:center}
+  .btn.step{padding:6px 10px; line-height:1; font-size:16px}
+  .btn.step[disabled]{opacity:.35; cursor:default}
+  .btn.step[disabled]:hover{border-color:var(--line); color:var(--fg)}
+  mark{background:var(--accent-soft); color:inherit; border-radius:3px; padding:0 1px;
+       scroll-margin-top:96px}
+  mark.aktiv{background:var(--accent); color:var(--bg)}
   #count{font-size:13px; color:var(--muted); white-space:nowrap}
   main{max-width:1080px; margin:0 auto; padding:32px 24px 40px}
   #drop{
@@ -86,6 +105,8 @@
   }
   #files .inner{max-width:1080px; margin:0 auto}
   #files .head{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px}
+  #build{font-size:11px; color:var(--muted); border:1px solid var(--line);
+         border-radius:5px; padding:1px 7px; white-space:nowrap}
   #files h2{font-size:13px; font-weight:600; margin:0; text-transform:uppercase; letter-spacing:.05em; color:var(--muted)}
   #files .spacer{flex:1}
   #filehint{font-size:13.5px; color:var(--muted); margin:0 0 14px}
@@ -109,8 +130,13 @@
 
 <header>
   <h1 id="title">Coursebook</h1>
+  <select id="nav" aria-label="Dokument wählen" title="Dokument wählen"></select>
   <span class="spacer"></span>
-  <input id="q" type="search" placeholder="Tabellen filtern …" autocomplete="off" hidden>
+  <span id="suche" hidden>
+    <input id="q" type="search" placeholder="Im Dokument suchen …" autocomplete="off">
+    <button class="btn step" id="prev" title="Vorheriger Treffer (Umschalt+Enter)" aria-label="Vorheriger Treffer">&#8249;</button>
+    <button class="btn step" id="next" title="Nächster Treffer (Enter)" aria-label="Nächster Treffer">&#8250;</button>
+  </span>
   <span id="count"></span>
   <button class="btn" id="pick">Datei …</button>
   <input type="file" id="file" accept=".md,.markdown,text/markdown" hidden>
@@ -130,6 +156,7 @@
   <div class="inner">
     <div class="head">
       <h2>Dokumente</h2>
+      <span id="build" title="Stand dieser viewer.html"></span>
       <span class="spacer"></span>
       <button class="btn" id="pickdir">Ordner einlesen …</button>
       <input type="file" id="dir" webkitdirectory directory multiple hidden>
@@ -148,8 +175,15 @@
   var out=document.getElementById('out'), drop=document.getElementById('drop'),
       q=document.getElementById('q'), count=document.getElementById('count'),
       file=document.getElementById('file'), dir=document.getElementById('dir'),
-      title=document.getElementById('title'), filelist=document.getElementById('filelist'),
-      filehint=document.getElementById('filehint');
+      filelist=document.getElementById('filelist'),
+      filehint=document.getElementById('filehint'),
+      nav=document.getElementById('nav'),
+      suche=document.getElementById('suche'),
+      prevBtn=document.getElementById('prev'),
+      nextBtn=document.getElementById('next');
+
+  var rohHTML='';          // gerendertes Dokument ohne Trefferauszeichnung
+  var treffer=[], aktiv=-1;
 
   var found=[];        // {name, path, size, local, get:()=>Promise<string>}
   var activePath=null;
@@ -160,7 +194,7 @@
   function kb(b){ return b<1024 ? b+' B' : (b/1024).toFixed(1).replace('.',',')+' kB'; }
 
   function fail(html){
-    drop.hidden=false; out.hidden=true;
+    drop.hidden=false; out.hidden=true; suche.hidden=true; count.textContent='';
     drop.innerHTML='<div class="err">'+html+'</div>';
   }
 
@@ -178,24 +212,95 @@
     out.querySelectorAll('a').forEach(function(a){
       if(/^https?:/.test(a.getAttribute('href')||'')){ a.target='_blank'; a.rel='noopener'; }
     });
-    if(label) title.textContent=label;
+    // Der Kopftitel bleibt die Marke; welches Dokument offen ist,
+    // zeigt das Auswahlfeld daneben.
+    if(label) document.title = label + ' – Coursebook';
     activePath = path || null;
-    drop.hidden=true; out.hidden=false; q.hidden=false;
-    paintList(); filter();
+    drop.hidden=true; out.hidden=false; suche.hidden=false;
+    rohHTML = out.innerHTML;          // Fassung ohne Trefferauszeichnung merken
+    treffer=[]; aktiv=-1; q.value=''; count.textContent='';
+    prevBtn.disabled = nextBtn.disabled = true;
+    paintList();
     window.scrollTo({top:0, behavior:'smooth'});
   }
 
-  function filter(){
-    var term=q.value.trim().toLowerCase(), shown=0, total=0;
-    out.querySelectorAll('tbody tr').forEach(function(tr){
-      total++;
-      var hit = !term || tr.textContent.toLowerCase().indexOf(term)>-1;
-      tr.classList.toggle('hidden', !hit);
-      if(hit) shown++;
-    });
-    count.textContent = total ? (term ? shown+' von '+total+' Zeilen' : total+' Einträge') : '';
+  /* ---------- Volltextsuche im offenen Dokument ---------- */
+
+  function zaehlerZeigen(){
+    if(!treffer.length){
+      count.textContent = q.value.trim() ? 'kein Treffer' : '';
+    } else {
+      count.textContent = (aktiv+1) + ' / ' + treffer.length;
+    }
+    prevBtn.disabled = nextBtn.disabled = treffer.length < 2;
   }
-  q.addEventListener('input', filter);
+
+  function suchen(){
+    var term = q.value.trim();
+    if(rohHTML) out.innerHTML = rohHTML;   // frühere Markierungen entfernen
+    treffer = []; aktiv = -1;
+    if(term.length < 2){ zaehlerZeigen(); return; }
+
+    var lower = term.toLowerCase();
+    var walker = document.createTreeWalker(out, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(n){
+        if(!n.nodeValue) return NodeFilter.FILTER_REJECT;
+        var el = n.parentNode;
+        if(el && (el.nodeName==='SCRIPT' || el.nodeName==='STYLE')) return NodeFilter.FILTER_REJECT;
+        return n.nodeValue.toLowerCase().indexOf(lower) > -1
+             ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    var knoten = [], n;
+    while((n = walker.nextNode())) knoten.push(n);
+
+    knoten.forEach(function(tn){
+      var text = tn.nodeValue, low = text.toLowerCase();
+      var frag = document.createDocumentFragment(), i = 0, j;
+      while((j = low.indexOf(lower, i)) > -1){
+        if(j > i) frag.appendChild(document.createTextNode(text.slice(i, j)));
+        var m = document.createElement('mark');
+        m.textContent = text.slice(j, j + term.length);
+        frag.appendChild(m); treffer.push(m);
+        i = j + term.length;
+      }
+      if(i < text.length) frag.appendChild(document.createTextNode(text.slice(i)));
+      tn.parentNode.replaceChild(frag, tn);
+    });
+
+    if(treffer.length) springe(0, true);
+    else zaehlerZeigen();
+  }
+
+  // Zu einem Treffer springen. absolut=true: Index direkt, sonst Schrittweite.
+  function springe(wert, absolut){
+    if(!treffer.length) return;
+    if(aktiv > -1 && treffer[aktiv]) treffer[aktiv].classList.remove('aktiv');
+    aktiv = absolut ? wert : (aktiv + wert + treffer.length) % treffer.length;
+    var m = treffer[aktiv];
+    m.classList.add('aktiv');
+    m.scrollIntoView({block:'center', behavior:'smooth'});
+    zaehlerZeigen();
+  }
+
+  var tippTimer;
+  q.addEventListener('input', function(){
+    clearTimeout(tippTimer);
+    tippTimer = setTimeout(suchen, 160);
+  });
+  q.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); springe(e.shiftKey ? -1 : 1); }
+    if(e.key === 'Escape'){ q.value=''; suchen(); q.blur(); }
+  });
+  prevBtn.addEventListener('click', function(){ springe(-1); q.focus(); });
+  nextBtn.addEventListener('click', function(){ springe(1); q.focus(); });
+
+  // Strg/Cmd+F fängt die Suche im Dokument ab, solange eines offen ist
+  document.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase()==='f' && !suche.hidden){
+      e.preventDefault(); q.focus(); q.select();
+    }
+  });
 
   /* ---------- Einträge ---------- */
 
@@ -272,10 +377,35 @@
     });
   }
 
+  // Auswahlfeld im Kopf, gespeist aus derselben Liste wie unten
+  function paintNav(){
+    if(!found.length){ nav.hidden=true; nav.innerHTML=''; return; }
+    nav.hidden=false;
+    nav.innerHTML='';
+    var ph=document.createElement('option');
+    ph.value=''; ph.textContent='Dokument wählen …'; ph.disabled=true;
+    if(!activePath) ph.selected=true;
+    nav.appendChild(ph);
+    found.forEach(function(f){
+      var o=document.createElement('option');
+      o.value=f.path;
+      o.textContent=f.name + (f.fehlt ? '  (fehlt)' : (isFile && !f.local ? '  (gesperrt)' : ''));
+      if(f.path===activePath) o.selected=true;
+      nav.appendChild(o);
+    });
+  }
+
+  nav.addEventListener('change', function(){
+    var ziel=nav.value; if(!ziel) return;
+    for(var i=0;i<found.length;i++){ if(found[i].path===ziel){ openDoc(found[i]); return; } }
+  });
+
   function paintList(){
+    paintNav();
     filelist.innerHTML='';
     if(!found.length){
-      filehint.innerHTML='Keine Dokumente eingetragen — in <code>dateien.json</code> ergänzen.';
+      filehint.innerHTML='Keine Dokumente eingetragen — in <code>dateien.js</code> ergänzen.';
+      paintNav();
       return;
     }
     var n = found.length, lokal = found.filter(function(f){ return f.local; }).length;
@@ -384,8 +514,11 @@
 
   /* ---------- Start ---------- */
 
-  // Einzige Quelle der Liste: dateien.js. Wird als <script> geladen und
-  // funktioniert deshalb ueber http(s) UND bei Doppelklick (file://).
+  var BUILD = '2026-08-28f';
+  document.getElementById('build').textContent = 'Viewer ' + BUILD;
+
+  // 1. Liste aus dateien.js, das als <script> geladen wurde. Funktioniert
+  //    ueberall, auch bei Doppelklick (file://), wo fetch gesperrt ist.
   if(typeof DOKUMENTE === 'undefined'){
     filehint.innerHTML = '<span style="color:#d4574c"><strong>dateien.js konnte nicht geladen werden.</strong> '+
       'Liegt die Datei neben viewer.html? Bei einem Syntaxfehler darin steht die Ursache '+
@@ -395,6 +528,25 @@
     paintList();
     pruefen();
     if(!isFile && found.length) openDoc(found[0]);
+  }
+
+  // 2. Ueber http(s) dateien.js zusaetzlich ungecacht nachladen. Ohne das
+  //    kann der Browser eine alte Fassung behalten, obwohl auf dem Server
+  //    laengst eine neue liegt. Aendert sich nichts, passiert auch nichts.
+  if(!isFile){
+    fetch('dateien.js?t=' + Date.now(), {cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw 0; return r.text(); })
+      .then(function(txt){
+        var frisch = new Function(txt + '; return typeof DOKUMENTE!=="undefined" ? DOKUMENTE : null;')();
+        if(!frisch || !frisch.length) return;
+        var alt = found.map(function(f){ return f.path; }).join('|');
+        var neu = frisch.map(function(it){ return (typeof it==='string') ? it : (it.datei||it.name); }).join('|');
+        if(alt === neu) return;                       // nichts geaendert
+        var offen = activePath;
+        loadManifest(frisch); paintList(); pruefen();
+        if(!offen && found.length) openDoc(found[0]);
+      })
+      .catch(function(){ /* egal: die Liste aus dem <script> steht bereits */ });
   }
 
 })();
