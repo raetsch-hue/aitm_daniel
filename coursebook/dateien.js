@@ -11,5 +11,16 @@
    ------------------------------------------------------------------ */
 
 var DOKUMENTE = [
-  { datei: "2.1/01_Change-Management-Lewin-ADKAR.md", titel: "Vertiefung: Lewin & ADKAR" },
+
+  // ---- Woche 1 ----
+  { datei: "1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md",
+    titel: "1.4 · Vier Wellen, KI-Kategorien, Hype Cycle" },
+
+  { datei: "1.5/1.5_Strategisches-Prompt-Engineering.md",
+    titel: "1.5 · Strategisches Prompt Engineering" },
+
+  // ---- Woche 2 ----
+  { datei: "2.1/01_Change-Management-Lewin-ADKAR.md",
+    titel: "2.1 · Vertiefung: Lewin & ADKAR" },
+
 ];
