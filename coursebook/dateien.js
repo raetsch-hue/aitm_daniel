@@ -14,6 +14,13 @@
 
 var DOKUMENTE = [
 
+  // ---- Einstieg ----
+  { datei: "0/00_Index-und-Gewichtung.md",
+    titel: "0 · Index & Gewichtung" },
+
+  { datei: "0/01_Weiterfuehrende-Quellen.md",
+    titel: "0 · Weiterführende Quellen" },
+
   // ---- Woche 1 ----
   { datei: "1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md",
     titel: "1.4 · Vier Wellen, KI-Kategorien, Hype Cycle" },

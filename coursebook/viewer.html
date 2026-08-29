@@ -251,7 +251,68 @@
     paintList();
     window.scrollTo({top:0, behavior:'smooth'});
     balkenFuell.style.width='0%'; fortschritt();
+    if(activePath && history.replaceState){
+      history.replaceState(null, '', '#' + activePath + (zielAnker ? '#'+zielAnker : ''));
+    }
+    if(zielAnker){
+      var ziel = zielAnker; zielAnker = '';
+      setTimeout(function(){ zuAnker(ziel); fortschritt(); }, 60);
+    }
   }
+
+  /* ---------- Querverweise zwischen Dokumenten ---------- */
+
+  // Link der Form  #1.4/datei.md            -> anderes Dokument öffnen
+  //           oder #1.4/datei.md#abschnitt  -> öffnen und zur Überschrift springen
+  // Alles ohne ".md" bleibt ein normaler Sprung innerhalb des Dokuments.
+  function zerlege(hash){
+    var roh = decodeURIComponent(String(hash||'').replace(/^#/,''));
+    var i = roh.toLowerCase().indexOf('.md');
+    if(i < 0) return null;
+    var pfad = roh.slice(0, i+3);
+    var rest = roh.slice(i+3).replace(/^#/,'');
+    return {pfad:pfad, anker:rest};
+  }
+
+  function ausListe(pfad){
+    for(var i=0;i<found.length;i++) if(found[i].path === pfad) return found[i];
+    return null;
+  }
+
+  function zuAnker(id){
+    if(!id) return;
+    var el = document.getElementById(id) ||
+             out.querySelector('[name="'+id.replace(/"/g,'')+'"]');
+    if(el) el.scrollIntoView({block:'start', behavior:'smooth'});
+  }
+
+  function folgeHash(hash, still){
+    var z = zerlege(hash); if(!z) return false;
+    var ziel = ausListe(z.pfad);
+    if(!ziel){
+      fail('Das verlinkte Dokument <code>'+z.pfad+'</code> steht nicht in <code>dateien.js</code>.');
+      return true;
+    }
+    if(ziel.path === activePath){ zuAnker(z.anker); return true; }
+    zielAnker = z.anker;
+    openDoc(ziel);
+    return true;
+  }
+
+  var zielAnker = '';   // nach dem Laden anzuspringende Überschrift
+
+  // Klicks auf Querverweise abfangen
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest && ev.target.closest('a[href^="#"]');
+    if(!a) return;
+    var z = zerlege(a.getAttribute('href'));
+    if(!z) return;                      // normaler Sprung im Dokument
+    ev.preventDefault();
+    if(history.replaceState) history.replaceState(null,'','#'+a.getAttribute('href').replace(/^#/,''));
+    folgeHash(a.getAttribute('href'));
+  });
+
+  window.addEventListener('hashchange', function(){ folgeHash(location.hash); });
 
   /* ---------- Lesefortschritt ---------- */
 
@@ -599,16 +660,15 @@
   // nicht laden, den ersten Eintrag der Liste.
   function startDokument(){
     if(isFile || activePath || !found.length) return;
-    var wunsch = gemerkt(), ziel = null;
-    if(wunsch){
-      for(var i=0;i<found.length;i++){ if(found[i].path===wunsch){ ziel=found[i]; break; } }
-    }
+    // 1. Adresse (geteilter Link), 2. zuletzt gelesen, 3. erster Eintrag
+    if(folgeHash(location.hash)) return;
+    var wunsch = gemerkt(), ziel = wunsch ? ausListe(wunsch) : null;
     if(ziel && ziel !== found[0]) openDoc(ziel, found[0]);
     else openDoc(found[0]);
   }
 
 
-  var BUILD = '2026-08-28j';
+  var BUILD = '2026-08-28k';
   document.getElementById('build').textContent = 'Viewer ' + BUILD;
 
   // 1. Liste aus dateien.js, das als <script> geladen wurde. Funktioniert
