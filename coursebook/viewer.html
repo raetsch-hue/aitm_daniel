@@ -25,6 +25,17 @@
     border-bottom:1px solid var(--line); padding:14px 24px;
     display:flex; gap:14px; align-items:center; flex-wrap:wrap;
   }
+  /* Lesefortschritt: dünner Balken an der Unterkante der Kopfleiste */
+  #fortschritt{
+    position:absolute; left:0; right:0; bottom:-1px; height:3px;
+    background:var(--line); pointer-events:none;
+  }
+  #fortschritt i{
+    display:block; height:100%; width:0; background:var(--accent);
+    transition:width .12s linear;
+  }
+  #pct{font-size:12px; color:var(--muted); white-space:nowrap; font-variant-numeric:tabular-nums}
+  @media (max-width:720px){ #pct{display:none} }
   header h1{font-size:15px; font-weight:600; margin:0; letter-spacing:-.01em}
   header .spacer{flex:1}
   #nav{
@@ -71,6 +82,7 @@
     border-top:1px solid var(--line); letter-spacing:-.01em;
   }
   article h3{font-size:16px; margin:28px 0 10px}
+  article h1,article h2,article h3{scroll-margin-top:88px}
   article p{margin:12px 0}
   article a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent}
   article a:hover{border-bottom-color:var(--accent)}
@@ -88,9 +100,11 @@
   .tablewrap{overflow-x:auto; margin:18px 0; border:1px solid var(--line); border-radius:10px; box-shadow:var(--shadow)}
   table{border-collapse:collapse; width:100%; background:var(--card); font-size:14.5px}
   th,td{padding:11px 14px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+  /* Kein position:sticky am th. Der .tablewrap ist ein eigener Scroll-Container;
+     ein klebender Kopf rutscht darin nach unten und verdeckt die erste Datenzeile. */
   th{
     background:var(--bg); font-weight:600; font-size:12.5px; text-transform:uppercase;
-    letter-spacing:.04em; color:var(--muted); position:sticky; top:59px;
+    letter-spacing:.04em; color:var(--muted);
   }
   tbody tr:last-child td{border-bottom:none}
   tbody tr:hover td{background:var(--accent-soft)}
@@ -131,6 +145,7 @@
 <header>
   <h1 id="title">Coursebook</h1>
   <select id="nav" aria-label="Dokument wählen" title="Dokument wählen"></select>
+  <span id="pct" hidden></span>
   <span class="spacer"></span>
   <span id="suche" hidden>
     <input id="q" type="search" placeholder="Im Dokument suchen …" autocomplete="off">
@@ -140,6 +155,8 @@
   <span id="count"></span>
   <button class="btn" id="pick">Datei …</button>
   <input type="file" id="file" accept=".md,.markdown,text/markdown" hidden>
+  <div id="fortschritt" role="progressbar" aria-label="Leseposition im Dokument"
+       aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><i></i></div>
 </header>
 
 <main>
@@ -180,7 +197,10 @@
       nav=document.getElementById('nav'),
       suche=document.getElementById('suche'),
       prevBtn=document.getElementById('prev'),
-      nextBtn=document.getElementById('next');
+      nextBtn=document.getElementById('next'),
+      balken=document.getElementById('fortschritt'),
+      balkenFuell=balken.querySelector('i'),
+      pct=document.getElementById('pct');
 
   var rohHTML='';          // gerendertes Dokument ohne Trefferauszeichnung
   var SPEICHER='coursebook.zuletzt';
@@ -201,6 +221,7 @@
 
   function fail(html){
     drop.hidden=false; out.hidden=true; suche.hidden=true; count.textContent='';
+    balken.hidden=true; pct.hidden=true;
     drop.innerHTML='<div class="err">'+html+'</div>';
   }
 
@@ -229,7 +250,34 @@
     prevBtn.disabled = nextBtn.disabled = true;
     paintList();
     window.scrollTo({top:0, behavior:'smooth'});
+    balkenFuell.style.width='0%'; fortschritt();
   }
+
+  /* ---------- Lesefortschritt ---------- */
+
+  // Bezugsgröße ist der Artikel, nicht die ganze Seite: die Dateiliste am
+  // Fuß gehört nicht zum Dokument und soll den Wert nicht verwässern.
+  function fortschritt(){
+    if(out.hidden){ balken.hidden=true; pct.hidden=true; return; }
+    balken.hidden=false; pct.hidden=false;
+    var kopf   = document.querySelector('header').offsetHeight;
+    var start  = window.scrollY + out.getBoundingClientRect().top;
+    var spanne = out.offsetHeight - (window.innerHeight - kopf);
+    var anteil = spanne <= 0 ? 1 : (window.scrollY + kopf - start) / spanne;
+    anteil = Math.max(0, Math.min(1, anteil));
+    balkenFuell.style.width = (anteil*100).toFixed(2) + '%';
+    var ganz = Math.round(anteil*100);
+    pct.textContent = ganz + ' %';
+    balken.setAttribute('aria-valuenow', ganz);
+  }
+
+  var tickt=false;
+  function fortschrittGeplant(){
+    if(tickt) return; tickt=true;
+    requestAnimationFrame(function(){ tickt=false; fortschritt(); });
+  }
+  window.addEventListener('scroll', fortschrittGeplant, {passive:true});
+  window.addEventListener('resize', fortschrittGeplant);
 
   /* ---------- Volltextsuche im offenen Dokument ---------- */
 
@@ -560,7 +608,7 @@
   }
 
 
-  var BUILD = '2026-08-28g';
+  var BUILD = '2026-08-28j';
   document.getElementById('build').textContent = 'Viewer ' + BUILD;
 
   // 1. Liste aus dateien.js, das als <script> geladen wurde. Funktioniert
