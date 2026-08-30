@@ -32,4 +32,7 @@ var DOKUMENTE = [
   { datei: "2.1/01_Change-Management-Lewin-ADKAR.md",
     titel: "2.1 · Vertiefung: Lewin & ADKAR" },
 
+  { datei: "2.2/2.2_Kotter-8-Schritte-Modell.md",
+    titel: "2.2 · Kotters 8-Schritte-Modell" },
+
 ];

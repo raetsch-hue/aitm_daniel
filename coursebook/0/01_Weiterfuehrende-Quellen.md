@@ -2,7 +2,7 @@
 
 **Höchstens drei pro Thema — nur was den Aufwand wirklich lohnt**
 Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
-Geprüft am 28.08.2026
+Geprüft am 28.08.2026 · umfasst die Tage 1.4, 1.5, 2.1, 2.2
 
 ---
 
@@ -118,6 +118,40 @@ Journal of Applied Behavioral Science 56(1), 32–59. · Englisch, Fachaufsatz, 
 
 ---
 
+## Tag 2.2 — Kotters 8-Schritte-Modell
+
+### 1. Kotter (1995): Leading Change — Why Transformation Efforts Fail ●●●
+
+Harvard Business Review, Mai–Juni 1995.
+🔗 https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2 · Englisch, teilweise kostenpflichtig
+
+**Warum diese Quelle:** Der Ursprungstext, aus dem die acht Schritte hervorgingen. Zwanzig Seiten, in einer Stunde gelesen, und er enthält beides — das Modell und die Fallbeobachtungen, aus denen es entstand.
+
+**Was du daraus mitnimmst:** Vor allem zwei Dinge, die im Umlauf falsch wiedergegeben werden. Erstens den Satz, der das Modell trägt: *„Skipping steps creates only an illusion of speed and never produces a satisfying result."* Zweitens Kotters **tatsächliche** Aussage zur Erfolgsquote — qualitativ, vorsichtig, und ohne die 70-Prozent-Zahl, die ihm regelmäßig zugeschrieben wird.
+
+**Vorbehalt:** Es ist eine Beratungsbeobachtung, keine kontrollierte Untersuchung. Das mindert den praktischen Wert nicht, aber es gehört bei jeder Zitierung dazu.
+
+### 2. Kotter Inc., The 8 Steps for Leading Change ●●
+
+🔗 https://www.kotterinc.com/methodology/8-steps/ · Englisch, frei
+
+**Warum diese Quelle:** Weil die Schritte heute anders heißen als im Kurs. Aus „Vision kommunizieren" wurde **„Enlist a Volunteer Army"**, aus „Consolidate" wurde „Sustain Acceleration". Wer nur die Fassung von 1996 kennt, kommt in Gesprächen mit Beratungen ins Stolpern.
+
+**Was du daraus mitnimmst:** Die Umbenennung von Schritt 4 ist die aufschlussreichste. Sie verschiebt das Erfolgsmaß von *gesendet* auf *gewonnen* — dieselbe Korrektur, die ADKAR bei *Awareness* vornimmt. Zehn Minuten für eine Einsicht, die deine Kommunikationsplanung ändert.
+
+### 3. Kotter (2012): Accelerate! ●●
+
+Harvard Business Review, November 2012.
+🔗 https://hbr.org/2012/11/accelerate · Englisch, teilweise kostenpflichtig
+
+**Warum diese Quelle:** Kotters eigene Korrektur an seinem Modell. Er beschreibt hier das Dual Operating System — Hierarchie und Netzwerk parallel — und räumt damit implizit ein, dass die strenge Schrittfolge von 1996 der Realität schnelllebiger Organisationen nicht standhält.
+
+**Was du daraus mitnimmst:** Die Begründung dafür, warum KI-Vorhaben beides gleichzeitig brauchen: stabile Governance und schnelle Experimente. Und ein Modell dafür, wie das organisatorisch aussieht, ohne ein separates Innovation Lab zu bauen.
+
+> **Wenn du nur eine Sache liest:** den Artikel von 1995. Er ist die Quelle, er ist kurz, und er immunisiert dich gegen die falschen Zahlen, die in seinem Namen kursieren.
+
+---
+
 ## Was hier bewusst nicht steht
 
 **Keine Prompt-Tipp-Sammlungen und keine „50 besten Prompts"-Videos.** Ein großer Teil dieser Inhalte besteht aus Techniken, die bei Modellen mit adaptivem Denken wirkungslos sind — „denke Schritt für Schritt", Superlative in der Rolle, emotionaler Druck. Was davon gilt und was nicht, steht in [1.5 · Was nicht funktioniert](#1.5/1.5_Strategisches-Prompt-Engineering.md#12-was-nicht-funktioniert--und-sicherheit).
@@ -125,6 +159,8 @@ Journal of Applied Behavioral Science 56(1), 32–59. · Englisch, Fachaufsatz, 
 **Keine Beratungsstudien als Belege.** Die Zahlen aus McKinsey und ähnlichen Erhebungen stehen bereits in den Kursdokumenten. Es sind Umfragewerte, keine Messungen — als Größenordnung brauchbar, als Nachweis nicht. Sie noch einmal zu verlinken, macht sie nicht belastbarer.
 
 **Keine Videos zu Lewin und ADKAR.** Es gibt viele, und die meisten geben das 3-Stufen-Modell unkritisch als Lewins Werk aus — also genau den Fehler, den der Kurstag korrigiert.
+
+**Keine Erklärvideos zu Kotter.** Aus demselben Grund: Ein großer Teil davon führt die 70-Prozent-Zahl als Kotters Befund an. Sie stammt nicht von ihm, und wer sie so weitergibt, gerät bei der ersten Nachfrage in Erklärungsnot. Die Originalquelle ist kürzer als die meisten dieser Videos.
 
 ---
 
