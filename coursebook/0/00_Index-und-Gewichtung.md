@@ -16,7 +16,7 @@ Jeder Punkt trägt eine Gewichtung. Sie richtet sich nicht danach, wie viel Plat
 | ●● | **Wichtig.** Brauchst du regelmäßig, aber nicht täglich. | Wissen, dass es existiert, und wo es steht |
 | ● | **Hintergrund.** Macht dich glaubwürdig, wenn jemand nachbohrt. | Einmal gelesen haben, nachschlagen können |
 
-Die Titel springen direkt an die passende Stelle im jeweiligen Dokument.
+Die Titel springen direkt an die passende Stelle im jeweiligen Dokument — auch die Namen der Fallbeispiele.
 
 ---
 
@@ -52,10 +52,10 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument.
 
 | Fall | Wofür er steht | Gewicht |
 |---|---|---|
-| **Klarna** | Effizienz gemessen, Qualität nicht — Peak und Korrektur in 18 Monaten | ●●● |
-| **Zillow Offers** | Prognosemodell driftet still, 420 Mio. USD in einem Quartal | ●● |
-| **Air Canada** | Du haftest für das, was dein Chatbot sagt | ●● |
-| **Amazon Recruiting** | ML schreibt die Vergangenheit fort — auch die unerwünschte | ● |
+| [**Klarna**](#1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md#81-klarna-der-hype-cycle-in-reinform-in-18-monaten) | Effizienz gemessen, Qualität nicht — Peak und Korrektur in 18 Monaten | ●●● |
+| [**Zillow Offers**](#1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md#82-zillow-offers-wenn-ein-prognosemodell-still-driftet) | Prognosemodell driftet still, 420 Mio. USD in einem Quartal | ●● |
+| [**Air Canada**](#1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md#83-air-canada-die-haftungsfrage-bei-genai) | Du haftest für das, was dein Chatbot sagt | ●● |
+| [**Amazon Recruiting**](#1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md#84-amazons-recruiting-modell-der-bias-fall) | ML schreibt die Vergangenheit fort — auch die unerwünschte | ● |
 
 ---
 
@@ -101,8 +101,8 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument.
 
 | Fall | Kernbefund | Gewicht |
 |---|---|---|
-| **Lewin, Food Habits (1943)** | Vortrag 3 %, Gruppendiskussion 32 % — bei identischem Informationsgehalt | ●●● |
-| **Coch & French (1948)** | Widerstand ist eine Funktion des Beteiligungsgrades, keine Eigenschaft der Belegschaft | ●● |
+| [**Lewin, Food Habits (1943)**](#2.1/01_Change-Management-Lewin-ADKAR.md#91-lewins-eigenes-experiment-die-food-habits-studie-1943) | Vortrag 3 %, Gruppendiskussion 32 % — bei identischem Informationsgehalt | ●●● |
+| [**Coch & French (1948)**](#2.1/01_Change-Management-Lewin-ADKAR.md#92-autonomie-als-umfeldfaktor-die-coch--french-studie-1948) | Widerstand ist eine Funktion des Beteiligungsgrades, keine Eigenschaft der Belegschaft | ●● |
 
 ---
 
@@ -128,9 +128,9 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument.
 
 | Fall | Wofür er steht | Gewicht |
 |---|---|---|
-| **Kodak** | Technologie, Prognose und Zeit vorhanden — nur keine Dringlichkeit. Erfunden 1975, insolvent 2012 | ●●● |
-| **Ford / Mulally** | Koalition entsteht durch Format und psychologische Sicherheit, nicht durch Benennung | ●● |
-| **Kotters 12 Projekte** | Sieg erklärt, Veränderung zwei Jahre später verschwunden | ●● |
+| [**Kodak**](#2.2/2.2_Kotter-8-Schritte-Modell.md#81-kodak-dringlichkeit-die-nie-entstand-schritt-1) | Technologie, Prognose und Zeit vorhanden — nur keine Dringlichkeit. Erfunden 1975, insolvent 2012 | ●●● |
+| [**Ford / Mulally**](#2.2/2.2_Kotter-8-Schritte-Modell.md#82-ford-unter-alan-mulally-koalition-und-handlungsfreiheit-schritte-2-und-5) | Koalition entsteht durch Format und psychologische Sicherheit, nicht durch Benennung | ●● |
+| [**Kotters 12 Projekte**](#2.2/2.2_Kotter-8-Schritte-Modell.md#83-kotters-zwölf-reengineering-projekte-zu-früh-gefeiert-schritt-7) | Sieg erklärt, Veränderung zwei Jahre später verschwunden | ●● |
 
 ---
 
