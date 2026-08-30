@@ -11,7 +11,7 @@
 
 ## 1. Die KI-Einführung
 
-Texter erstellen Erstentwürfe für Social-Posts, Newsletter und Landingpages künftig mit einem GenAI-Assistenten und übernehmen die Rolle des Kurators/Redakteurs statt des Erstautors. Freigabeprozess und Tonalitätsrichtlinie werden angepasst.
+Das Content-Team erstellt Erstentwürfe für Social-Media-Beiträge, Newsletter und Landingpages künftig mithilfe eines GenAI-Assistenten. Der Tätigkeitsschwerpunkt verlagert sich dadurch von der reinen Texterstellung hin zur redaktionellen Auswahl, Überarbeitung und Qualitätskontrolle. Gleichzeitig werden die Freigabeprozesse und Tonalitätsrichtlinien an den KI-gestützten Arbeitsablauf angepasst.
 
 ## 2. ADKAR-Scoring je Stakeholder-Gruppe
 
@@ -24,7 +24,7 @@ Skala: 1 = nicht vorhanden · 2 = ansatzweise · 3 = teilweise · 4 = überwiege
 
 ### 2.1 Geschäftsleitung / Sponsor
 
-**Kurzprofil:** Aktuellen Content, damit die neuen Produkte der Firma verkauften werden
+**Kurzprofil:** Die Geschäftsleitung erwartet, dass aktuelle Inhalte schneller bereitgestellt werden, damit neue Produkte zeitnah vermarktet und die Verkaufsziele unterstützt werden können. Sie tritt als Sponsor der KI-Einführung auf und achtet insbesondere auf Effizienz, Qualität und wirtschaftlichen Nutzen.
 
 **A – Awareness (Bewusstsein für die Notwendigkeit): Score 5**  
 Sie sind sich des langsamen Rollouts und der verzögerten Platzierung neuer Produkte bewusst.
