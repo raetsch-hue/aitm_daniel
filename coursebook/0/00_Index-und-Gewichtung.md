@@ -2,7 +2,7 @@
 
 **Was du wissen musst — und wie stark es zählt**
 Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
-Stand: 28.08.2026 · umfasst die Tage 1.4, 1.5, 2.1, 2.2
+Stand: 01.09.2026 · umfasst die Tage 1.4, 1.5, 2.1, 2.2 und die Ergänzung zu 2.2
 
 ---
 
@@ -20,7 +20,7 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument — auch
 
 ---
 
-## Die Kurzfassung: acht Sätze für den ganzen Stoff
+## Die Kurzfassung: neun Sätze für den ganzen Stoff
 
 1. **Die Kategorie entscheidet, nicht die Technologie.** RPA, Predictive ML, GenAI und Agentic AI lösen verschiedene Probleme — der häufigste teure Fehler ist die falsche Kategorie, nicht der falsche Anbieter.
 2. **Der Reifegrad begrenzt, was möglich ist.** Nicht der Durchschnitt zählt, sondern die schwächste relevante Dimension.
@@ -30,6 +30,7 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument — auch
 6. **Was das Modell nicht wissen kann, erfindet es** — plausibel genug, dass es niemand merkt. Kontext und prüfbares Erfolgskriterium sind die beiden Schrauben mit dem größten Hebel.
 7. **Alles, was du zweimal tippst, gehört nicht in den Prompt.** Kontext gehört in Dateien, nicht in Chatverläufe.
 8. **Die Vorbereitung ist die halbe Veränderung.** Vier von Kotters acht Schritten liegen vor der ersten sichtbaren Änderung — und dort scheitern die meisten Vorhaben.
+9. **Hemmende Kräfte abbauen schlägt treibende verstärken.** Eine weitere Mail ist eine treibende Kraft; ein weggeräumtes Hindernis bewegt mehr — und ein Kraftfeld ohne Maßnahmenzeile hat gar nichts bewegt.
 
 ---
 
@@ -134,6 +135,33 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument — auch
 
 ---
 
+## Ergänzung zu 2.2 — Force-Field-Analyse als Arbeitswerkzeug
+
+→ [Zum vollständigen Dokument](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md)
+
+**Sonderstatus:** Pflichtlektüre **vor** dem Nachmittagsblock am Mittwoch, nicht danach. Der Block ist der kürzeste der Woche, der Vormittag gehört dem Career Day — deshalb ist das Verfahren Voraussetzung und nicht Vertiefung. Das Dokument wiederholt nichts aus 2.2; es fügt das vollständige Kraftfeld-Verfahren und die Toolshero-Lesefassung von Kotter hinzu.
+
+| Gewicht | Punkt | Warum diese Einstufung |
+|---|---|---|
+| ●●● | [Die acht Verfahrensschritte der Kraftfeldanalyse](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug) | Das Arbeitswerkzeug für Mittwoch. Tag 2.1 sagt, *was* ein Kraftfeld ist — hier steht, *wie man eines herstellt* |
+| ●●● | [Ansatzpunkte wählen: stark **und** beeinflussbar](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug) | Der Schritt, der am häufigsten übersprungen wird. Arbeit an schwachen, leicht beeinflussbaren Kräften fühlt sich wie Fortschritt an und bewegt nichts |
+| ●●● | [Kotter-Schritt 5 = Force-Field-Analyse](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#5-kotter-×-force-field-×-adkar-wer-beantwortet-welche-frage) | Kotter sagt „remove obstacles" und lässt offen, welche. Das Kraftfeld liefert die Rangfolge |
+| ●● | [Die drei Kraftcluster](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug) | Verhindert Listen, die nur aus Stimmungen bestehen. **Cluster „Kontext und Umfeld" wird regelmäßig vergessen** — und enthält die stärksten Kräfte |
+| ●● | [Bewerten ohne Scheingenauigkeit](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug) | Summen sind Vergleiche, keine Messungen. Eine einzelne 5 schlägt drei Zweien |
+| ●● | [Die fünf Grenzen des Verfahrens](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug) | Vor allem die Analyse-Falle: Wer mit dem Bild aufhört, hat nichts getan |
+| ●● | [Kraftfeld → ADKAR-Übersetzung](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#5-kotter-×-force-field-×-adkar-wer-beantwortet-welche-frage) | Jede hemmende Kraft lässt sich einer ADKAR-Stufe zuordnen. Zusammen: Rangfolge nach Wirkung *und* nach Zielgruppe |
+| ●● | [Vorlage und die sechs Prüffragen](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#6-vorbereitung-auf-den-nachmittag) | Das Blatt, mit dem du am Mittwoch in den Raum gehst. Wer die sechs Fragen beantworten kann, ist vorbereitet |
+| ● | [Kotter in der Toolshero-Fassung](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#3-kotter-in-der-toolshero-fassung) | Nicht die genaueste, aber die verbreitetste Fassung. **Wenn dir jemand im Steuerkreis Kotter erklärt, ist es meist diese** |
+| ● | [Das Beispiel „Jeffrey" und wie man es liest](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#3-kotter-in-der-toolshero-fassung) | Ein Durchlauf, in dem jeder Schritt gelingt — also keine Fallstudie. Nützlich als Format, lehrreich beim Brechen |
+
+**Das Beispiel, das das Verfahren trägt** → [Kollaborationsplattform](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug)
+
+| Fall | Kernbefund | Gewicht |
+|---|---|---|
+| **Einführung einer Kollaborationsplattform** | Die stärkste hemmende Kraft war fehlende Zeit, nicht Ablehnung — und **keine** der wirksamen Maßnahmen war Kommunikation | ●●● |
+
+---
+
 ## Die Querverbindungen — hier entsteht der eigentliche Wert
 
 Die drei Tage sind kein Nebeneinander. Vier Verbindungen tragen den ganzen Kurs:
@@ -148,6 +176,9 @@ Die drei Tage sind kein Nebeneinander. Vier Verbindungen tragen den ganzen Kurs:
 | **Blockierender Vorgesetzter (2.2) → Kraftfeldanalyse (2.1)** | Derselbe Befund in zwei Sprachen: die stärkste hemmende Kraft abbauen schlägt jede zusätzliche treibende |
 | **Refreeze (2.1) = Schritt 8 (2.2) — und beide brechen bei KI** | Verankern setzt einen stabilen Endzustand voraus, den es bei KI nicht gibt. Beide Male lautet der Ausweg: die Fähigkeit verankern, nicht das Werkzeug |
 | **Die 70-Prozent-Zahl (2.1) und ihre Zuschreibung (2.2)** | Dieselbe Zahl, zweimal unbelegt — einmal in der Herkunft, einmal in der Urheberschaft. Ein gutes Muster dafür, wie Kennzahlen im Change-Diskurs entstehen |
+| **Kraftfeld (2.1) → Verfahren (Ergänzung 2.2)** | 2.1 liefert den Grundgedanken und ein fertiges Beispiel, die Ergänzung das Herstellungsverfahren mit Bewertung, Priorisierung und Maßnahmenzeile. Dasselbe Werkzeug, einmal erklärt und einmal bedienbar |
+| **Kotters blinder Fleck (2.2) → Kraftfeld (Ergänzung 2.2)** | Kotter berücksichtigt finanzielle und politische Kräfte nicht — das ist Toolsheros eigener Einwand, und die Force-Field-Analyse ist die dort empfohlene Abhilfe. Deshalb gehören beide in denselben Nachmittag |
+| **B = f(P, E) (2.1) → „E-Mail geht schneller" (Ergänzung 2.2)** | Eine Überzeugung wird nicht durch Argumente gewonnen, sondern durch eine geänderte Vereinbarung, die ihr den Gegenstand nimmt. Die Feldtheorie als konkrete Maßnahme |
 
 ---
 
@@ -155,9 +186,10 @@ Die drei Tage sind kein Nebeneinander. Vier Verbindungen tragen den ganzen Kurs:
 
 | Zeitbudget | Was |
 |---|---|
-| **10 Minuten** | Die sieben Sätze oben, plus die Diagnoseliste aus [1.5 · Werkzeugkasten](#1.5/1.5_Strategisches-Prompt-Engineering.md#13-werkzeugkasten) |
+| **10 Minuten** | Die neun Sätze oben, plus die Diagnoseliste aus [1.5 · Werkzeugkasten](#1.5/1.5_Strategisches-Prompt-Engineering.md#13-werkzeugkasten) |
 | **30 Minuten** | Zusätzlich alle ●●●-Punkte dieses Index |
 | **2 Stunden** | Die drei Dokumente einmal ganz, ●-Punkte überspringen |
+| **Vor dem Mittwoch-Block** | [Ergänzung 2.2, Abschnitt 4](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug) und die [sechs Prüffragen](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#6-vorbereitung-auf-den-nachmittag). Das ist Pflicht, nicht Kür — es spart im Block rund zwanzig Minuten |
 | **Vor einem Steuerkreis** | [Die drei Framing-Fragen](#1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md#9-werkzeugkasten-für-den-transformation-manager), die [Rückwärtsdiagnose](#2.2/2.2_Kotter-8-Schritte-Modell.md#9-werkzeugkasten-für-den-transformation-manager) und die Formulierungstabellen aus 1.4, 2.1 und 2.2 |
 
 ---

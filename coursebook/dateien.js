@@ -44,6 +44,9 @@ var DOKUMENTE = [
   { datei: "2.2/2.2_Kotter-8-Schritte-Modell.md",
     titel: "2.2 · Kotters 8-Schritte-Modell" },
 
+  { datei: "2.2/2.2_Ergaenzung-Force-Field-Analyse.md",
+    titel: "2.2 · Werkzeug: Force-Field-Analyse (Ergänzung)" },
+
   /* ================= BIBLIOTHEK =================
      Eigene Nachschlage-Einträge aus ../bibliothek/.
      Pfad beginnt mit ../ , weil viewer.html in coursebook/ liegt.

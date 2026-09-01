@@ -2,7 +2,7 @@
 
 **Höchstens drei pro Thema — nur was den Aufwand wirklich lohnt**
 Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
-Geprüft am 28.08.2026 · umfasst die Tage 1.4, 1.5, 2.1, 2.2
+Geprüft am 01.09.2026 · umfasst die Tage 1.4, 1.5, 2.1, 2.2 und die Ergänzung zu 2.2
 
 ---
 
@@ -14,7 +14,7 @@ Es gibt zu jedem dieser Themen hunderte Artikel und Videos. Die meisten wiederho
 - Es liefert die **Gegenposition**, die deine Argumentation belastbar macht
 - Es ist **direkt anwendbar** — du kannst es morgen benutzen
 
-Jeder Link wurde am 28.08.2026 geprüft. Paywalls und Sprache sind vermerkt.
+Jeder Link wurde am 01.09.2026 geprüft. Paywalls und Sprache sind vermerkt.
 
 ---
 
@@ -131,6 +131,8 @@ Harvard Business Review, Mai–Juni 1995.
 
 **Vorbehalt:** Es ist eine Beratungsbeobachtung, keine kontrollierte Untersuchung. Das mindert den praktischen Wert nicht, aber es gehört bei jeder Zitierung dazu.
 
+**Zugang:** Der Artikel liegt **hinter einer Bezahlschranke** — die Adresse steht oben, falls du über Hochschule oder Arbeitgeber Zugang hast. Falls nicht, ist nichts verloren: Die beiden Aussagen, auf die es ankommt — der Satz zum Überspringen von Schritten und Kotters *tatsächliche*, qualitative Formulierung zur Erfolgsquote — sind in [2.2 · Datenlage](#2.2/2.2_Kotter-8-Schritte-Modell.md#2-kotter-und-die-datenlage--was-belegt-ist-und-was-nicht) wörtlich zitiert und eingeordnet.
+
 ### 2. Kotter Inc., The 8 Steps for Leading Change ●●
 
 🔗 https://www.kotterinc.com/methodology/8-steps/ · Englisch, frei
@@ -149,6 +151,42 @@ Harvard Business Review, November 2012.
 **Was du daraus mitnimmst:** Die Begründung dafür, warum KI-Vorhaben beides gleichzeitig brauchen: stabile Governance und schnelle Experimente. Und ein Modell dafür, wie das organisatorisch aussieht, ohne ein separates Innovation Lab zu bauen.
 
 > **Wenn du nur eine Sache liest:** den Artikel von 1995. Er ist die Quelle, er ist kurz, und er immunisiert dich gegen die falschen Zahlen, die in seinem Namen kursieren.
+
+---
+
+## Ergänzung zu 2.2 — Force-Field-Analyse
+
+> **Andere Rolle als die übrigen Abschnitte.** Diese drei Adressen sind nicht Vertiefung nach dem Block, sondern **Vorbereitung darauf**. Der Nachmittagsblock am Mittwoch ist der kürzeste der Woche, der Vormittag gehört dem Career Day. Wer die erste Quelle gelesen hat, spart im Block rund zwanzig Minuten. Aufbereitet und um das Verfahren, die Bewertungsregeln und eine Vorlage ergänzt steht alles in [Ergänzung 2.2](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md) — die Quellen darunter sind das Original dazu.
+
+### 1. Toolshero, Force Field Analysis (Lewin) ●●●
+
+🔗 https://www.toolshero.com/change-management/force-field-analysis-lewin/ · Englisch, frei
+
+**Warum diese Quelle:** Sie ist **direkt anwendbar** — das dritte Auswahlkriterium dieser Liste, und hier ist es wörtlich gemeint. Die Seite beschreibt die Kraftfeldanalyse als Verfahren in acht Schritten, von der Formulierung des Soll-Zustands bis zum Maßnahmenplan mit Verantwortlichen, dazu die Gliederung der Kräfte in drei Cluster, ein durchgerechnetes Beispiel (Einführung einer Kollaborationsplattform) und fünf ehrlich benannte Grenzen.
+
+**Was du daraus mitnimmst:** Das Werkzeug für Mittwoch. Zwei Einsichten tragen den Rest: Kräfte werden **erst einzeln, dann gemeinsam** gesammelt, und ein Ansatzpunkt muss **stark und beeinflussbar** sein — beides gleichzeitig. Der zweite Satz erklärt, warum so viele Change-Maßnahmen fleißig und wirkungslos sind.
+
+**Vorbehalt:** Lernplattform, also Sekundärdarstellung. Als Verfahren brauchbar, als Beleg nicht zitierfähig — die Primärquelle steht unter Nummer 3.
+
+### 2. Toolshero, Kotter's 8 Step Change Model ●●
+
+🔗 https://www.toolshero.com/change-management/kotter-8-step-change-model/ · Englisch, frei
+*(Die zweite kursierende Adresse `/8-step-change-model/` führt auf denselben Artikel.)*
+
+**Warum diese Quelle:** Nicht wegen der Genauigkeit — das Hauptdokument ist in jedem Punkt präziser. Sondern weil das hier die **verbreitetste** Kurzfassung ist: Wenn dir jemand im Steuerkreis Kotter erklärt, ist es mit hoher Wahrscheinlichkeit diese und nicht die von 1995. Sie benutzt noch die Bezeichnungen von 1996, ist durchgehend partizipativer formuliert als Kotters Original und illustriert das Modell an einem Durchlauf, in dem jeder Schritt gelingt.
+
+**Was du daraus mitnimmst:** Vor allem die beiden Einwände am Ende der Seite — Veränderung verläuft eher organisch als linear, und das Modell berücksichtigt finanzielle und politische Kräfte nicht. Die dort gezogene Konsequenz ist genau der Grund, warum morgen beides zusammen dran ist: **Kotter mit der Force-Field-Analyse ergänzen.**
+
+### 3. Lewin (1947): Frontiers in Group Dynamics ●
+
+Human Relations 1(1), 5–41.
+🔗 https://journals.sagepub.com/doi/10.1177/001872674700100103 · Englisch, Fachaufsatz, **kostenpflichtig**
+
+**Warum diese Quelle:** Die Primärquelle zum Kraftfeld. Hier stehen die quasi-stationären Gleichgewichte im Original — und damit der Beleg für die Aussage, die der ganze Mittwoch trägt: dass ein Zustand von zwei gleich starken Kräftebündeln gehalten wird und dass das Lösen der hemmenden Seite andere Folgen hat als das Verstärken der treibenden.
+
+**Was du daraus mitnimmst:** Für die praktische Arbeit nichts, was nicht auch in den ersten beiden Quellen steht. Relevant, wenn du korrekt zitieren musst — und als Beleg dafür, dass die Kraftfeldanalyse **tatsächlich** von Lewin stammt, anders als das 3-Stufen-Modell ([Burnes-Vorbehalt](#2.1/01_Change-Management-Lewin-ADKAR.md#2-kurt-lewin-person-werk-und-was-davon-wirklich-von-ihm-stammt)).
+
+> **Wenn du nur eine Sache liest:** die Force-Field-Seite — und zwar heute, nicht nach dem Block. Sie ist die einzige Quelle dieser ganzen Liste, die morgen Nachmittag Zeit spart.
 
 ---
 
