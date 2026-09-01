@@ -11,25 +11,27 @@ Zwei Hinweise vorweg:
 
 ## Kurzübersicht
 
-| # | Fall | Wofür er steht | Modell / Schritt | Belastbarkeit |
-|---|---|---|---|---|
-| 1 | **Kodak** | Technologie, Prognose und Zeit vorhanden — nur keine Dringlichkeit | Kotter Schritt 1 | dokumentiert |
-| 2 | **Ford / Alan Mulally** | Koalition entsteht durch Format und psychologische Sicherheit, nicht durch Benennung | Kotter Schritte 2 + 5 | dokumentiert (eine Episode aus zweiter Hand) |
-| 3 | **Kotters zwölf Reengineering-Projekte** | Sieg zu früh erklärt, Veränderung zwei Jahre später verschwunden | Kotter Schritt 7 | Kotters eigene Beobachtung, keine Erhebung |
-| 4 | **Lewins Food-Habits-Studie (1943)** | Wissen ändert kein Verhalten, eigene Entscheidung in der Gruppe schon (3 % vs. 32 %) | Lewin / ADKAR: Desire | dokumentiert (Originalstudie) |
-| 5 | **Coch & French, Harwood (1948)** | Widerstand ist eine Funktion des Beteiligungsgrades, keine Eigenschaft der Leute | Lewin: B = f(P, E) | dokumentiert (Originalstudie) |
-| 6 | **Klarna** | Hype Cycle in 18 Monaten; gemessen wurde Durchsatz, nicht Qualität | KI-Kategorien / Hype Cycle | dokumentiert |
-| 7 | **Zillow Offers** | Prognosemodell driftet still weiter — Rückkopplungszeit ist die kritische Größe | Predictive ML | dokumentiert |
-| 8 | **Air Canada** | Wer haftet, wenn das Sprachmodell plausibel Falsches sagt: du | GenAI / Compliance | dokumentiert (Gerichtsentscheid) |
-| 9 | **Amazon Recruiting** | Predictive ML schreibt die Vergangenheit fort und objektiviert sie dabei | Predictive ML / Bias | dokumentiert |
-| 10 | Kategorienfehler: GenAI, wo RPA gereicht hätte | Falsche Werkzeugkategorie frisst die Ersparnis in der Kontrolle auf | KI-Kategorien | typisiertes Szenario |
-| 11 | Desire-Fehler beim Versicherer | Ein Satz über „30 % Effizienz" kostet den Rollout | ADKAR: Desire | typisiertes Szenario |
-| 12 | Ability-Fehler im Maschinenbau | Schulung top, Nutzung 8 % — die Ursachen liegen am Arbeitsplatz | ADKAR: Ability | typisiertes Szenario |
-| 13 | Reinforcement-Fehler in der Behörde | Nutzung 60 % → 25 % nach Projektende | ADKAR: Reinforcement / Refreeze | typisiertes Szenario |
-| 14 | Der Quick Win, der keiner war | Erfolg nur im Steuerkreis sichtbar = keine Bewegung in der Fläche | Kotter Schritt 6 | typisiertes Szenario |
-| 15 | Die Vision, die ein Projektplan war | Zielsatz mit Prozentzahl erzeugt keine Freiwilligen | Kotter Schritt 3 | typisiertes Szenario |
-| 16 | Das E-Problem hinter dem P-Problem | „Widerstand" entpuppt sich als KPI, Compliance-Hinweis und Vorbildverhalten | Lewin: B = f(P, E) | typisiertes Szenario |
-| 17 | Toolsheros „Jeffrey" | Gegenstück: ein Beispiel, in dem jeder Schritt gelingt — also keine Fallstudie | Kotter (Toolshero) | Illustration, kein Fall |
+| # | Fall | Wofür er steht | Modell / Schritt | Belastbarkeit | Quelle im Web |
+|---|---|---|---|---|---|
+| 1 | **Kodak** | Technologie, Prognose und Zeit vorhanden — nur keine Dringlichkeit | Kotter Schritt 1 | dokumentiert | [Kodak](https://en.wikipedia.org/wiki/Kodak) · [Steven Sasson](https://en.wikipedia.org/wiki/Steven_Sasson) |
+| 2 | **Ford / Alan Mulally** | Koalition entsteht durch Format und psychologische Sicherheit, nicht durch Benennung | Kotter Schritte 2 + 5 | dokumentiert (eine Episode aus zweiter Hand) | [Alan Mulally](https://en.wikipedia.org/wiki/Alan_Mulally) |
+| 3 | **Kotters zwölf Reengineering-Projekte** | Sieg zu früh erklärt, Veränderung zwei Jahre später verschwunden | Kotter Schritt 7 | Kotters eigene Beobachtung, keine Erhebung | [HBR 1995: Leading Change](https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2) (Paywall) |
+| 4 | **Lewins Food-Habits-Studie (1943)** | Wissen ändert kein Verhalten, eigene Entscheidung in der Gruppe schon (3 % vs. 32 %) | Lewin / ADKAR: Desire | dokumentiert (Originalstudie) | Originalzitat unten; Hintergrund: [Kurt Lewin](https://en.wikipedia.org/wiki/Kurt_Lewin) |
+| 5 | **Coch & French, Harwood (1948)** | Widerstand ist eine Funktion des Beteiligungsgrades, keine Eigenschaft der Leute | Lewin: B = f(P, E) | dokumentiert (Originalstudie) | [Human Relations 1(4), DOI](https://journals.sagepub.com/doi/10.1177/001872674800100408) |
+| 6 | **Klarna** | Hype Cycle in 18 Monaten; gemessen wurde Durchsatz, nicht Qualität | KI-Kategorien / Hype Cycle | dokumentiert | [Klarna (Wikipedia, mit Belegen)](https://en.wikipedia.org/wiki/Klarna) |
+| 7 | **Zillow Offers** | Prognosemodell driftet still weiter — Rückkopplungszeit ist die kritische Größe | Predictive ML | dokumentiert | [Zillow](https://en.wikipedia.org/wiki/Zillow) |
+| 8 | **Air Canada** | Wer haftet, wenn das Sprachmodell plausibel Falsches sagt: du | GenAI / Compliance | dokumentiert (Gerichtsentscheid) | [Moffatt v. Air Canada, 2024 BCCRT 149 — Analyse](https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot) |
+| 9 | **Amazon Recruiting** | Predictive ML schreibt die Vergangenheit fort und objektiviert sie dabei | Predictive ML / Bias | dokumentiert | [Reuters, 10.10.2018](https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/) |
+| 10 | Kategorienfehler: GenAI, wo RPA gereicht hätte | Falsche Werkzeugkategorie frisst die Ersparnis in der Kontrolle auf | KI-Kategorien | typisiertes Szenario | [Kurs, Tag 1.4](https://neuefische-teaching.github.io/AIDTM/coursebook/1.4/index.html) |
+| 11 | Desire-Fehler beim Versicherer | Ein Satz über „30 % Effizienz" kostet den Rollout | ADKAR: Desire | typisiertes Szenario | [Kurs, Lektüre Lewin/ADKAR](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/lektuere-change-lewin-adkar-w2.html) |
+| 12 | Ability-Fehler im Maschinenbau | Schulung top, Nutzung 8 % — die Ursachen liegen am Arbeitsplatz | ADKAR: Ability | typisiertes Szenario | [Kurs, Lektüre Lewin/ADKAR](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/lektuere-change-lewin-adkar-w2.html) |
+| 13 | Reinforcement-Fehler in der Behörde | Nutzung 60 % → 25 % nach Projektende | ADKAR: Reinforcement / Refreeze | typisiertes Szenario | [Kurs, Lektüre Lewin/ADKAR](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/lektuere-change-lewin-adkar-w2.html) |
+| 14 | Der Quick Win, der keiner war | Erfolg nur im Steuerkreis sichtbar = keine Bewegung in der Fläche | Kotter Schritt 6 | typisiertes Szenario | [Kurs, Lektüre Kotter/Force Field](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/lektuere-change-kotter-forcefield-w2.html) |
+| 15 | Die Vision, die ein Projektplan war | Zielsatz mit Prozentzahl erzeugt keine Freiwilligen | Kotter Schritt 3 | typisiertes Szenario | [Kurs, Lektüre Kotter/Force Field](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/lektuere-change-kotter-forcefield-w2.html) |
+| 16 | Das E-Problem hinter dem P-Problem | „Widerstand" entpuppt sich als KPI, Compliance-Hinweis und Vorbildverhalten | Lewin: B = f(P, E) | typisiertes Szenario | [Kurs, Tag 2.1](https://neuefische-teaching.github.io/AIDTM/coursebook/2.1/index.html) |
+| 17 | Toolsheros „Jeffrey" | Gegenstück: ein Beispiel, in dem jeder Schritt gelingt — also keine Fallstudie | Kotter (Toolshero) | Illustration, kein Fall | [Toolshero: Kotter's 8 Step Change Model](https://www.toolshero.com/change-management/8-step-change-model-kotter/) |
+
+> Hinweis zu den Links: Wo die Originalquelle hinter einer Paywall liegt oder nicht frei abrufbar ist (Klarna-Pressemitteilung, HBR 1995, Bloomberg-Interview 2025), ist eine belegte Sekundärquelle verlinkt. Die Kurs-Links zeigen auf die **gekürzte Website-Fassung** — die ausgearbeiteten Fälle stehen nur in den lokalen Langfassungen unter `coursebook/`.
 
 ---
 
@@ -41,25 +43,27 @@ Zwei Hinweise vorweg:
 **Trough (2025):** CEO Sebastian Siemiatkowski korrigiert öffentlich: man sei zu weit gegangen, die **Servicequalität habe gelitten**, es werden wieder Menschen eingestellt — Kundinnen sollen immer einen Menschen erreichen können.
 **Der Punkt:** Beide Aussagen sind wahr. Was 2024 fehlte, war nicht Technologie, sondern die **Messgröße** — gemessen wurde Durchsatz, nicht Ergebnisqualität.
 **Transfer:** Jeder GenAI-Pilot im Kundenkontakt braucht eine Qualitätskennzahl, **die widersprechen kann** (Erstkontakt-Lösungsquote, Wiederkontaktquote, Zufriedenheit nach Abschluss).
+*Quellen: Klarna-Pressemitteilung vom 27.02.2024 („Klarna AI assistant handles two-thirds of customer service chats in its first month"); zur Kurskorrektur das Bloomberg-Interview mit Siemiatkowski, Mai 2025 — beide nicht frei abrufbar, belegte Zusammenfassung mit Einzelnachweisen: [Klarna auf Wikipedia](https://en.wikipedia.org/wiki/Klarna).*
 
 ### 2. Zillow Offers: wenn ein Prognosemodell still driftet
 
 2018 startet Zillow das iBuying: Häuser algorithmisch bewerten, ankaufen, renovieren, verkaufen. Am **2. November 2021** wird das Geschäft eingestellt — allein Q3/2021 ca. **420 Mio. USD** Verlust, rund **7.000 Häuser** im Bestand, **25 %** der Belegschaft entlassen.
 **Mechanismus:** Das Modell war nicht falsch programmiert, sondern auf einem Markt kalibriert, den es nicht mehr gab — und lieferte weiter Preise mit unveränderter Zuversicht. Zwischen Vorhersage und Überprüfung lagen Wochen; in dieser Zeit kaufte der Algorithmus weiter.
 **Prüffrage:** *Wie schnell würden wir merken, dass es falsch liegt — und wie viel Schaden entsteht bis dahin?*
+*Quelle: Ankündigung von Zillow Group am 02.11.2021; Zahlen belegt in der [Zillow-Übersicht mit Einzelnachweisen](https://en.wikipedia.org/wiki/Zillow).*
 
 ### 3. Air Canada: die Haftungsfrage bei GenAI
 
 Ein Chatbot auf der Airline-Website gibt eine falsche Auskunft zu Trauerfalltarifen. Im **Februar 2024** entscheidet das kanadische Civil Resolution Tribunal gegen Air Canada; das Argument, der Chatbot sei eine eigenständige Entität, wird zurückgewiesen.
 **Folge:** Jeder GenAI-Einsatz mit verbindlichen Auskünften an Kundinnen ist ein **Compliance-Vorhaben**, kein Effizienzprojekt — mit Freigabe, Protokollierung und Rückfallpfad zum Menschen.
-*Quelle: Moffatt v. Air Canada, Feb. 2024.*
+*Quelle: Moffatt v. Air Canada, 2024 BCCRT 149, entschieden am 19.02.2024 — [Analyse mit Fundstelle](https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot).*
 
 ### 4. Amazons Recruiting-Modell: der Bias-Fall
 
 Ab 2014 entwickelt Amazon ein ML-Modell zur Bewerbungsvorauswahl, trainiert auf zehn Jahren Lebensläufen. 2018 wird bekannt, dass es eingestellt wurde: Bewerbungen von Frauen wurden systematisch benachteiligt, „Frauen-" im Lebenslauf wirkte negativ.
 **Der Punkt:** Das Modell funktionierte technisch einwandfrei — es sagte präzise voraus, wen Amazon *früher* eingestellt hätte. **Predictive ML extrapoliert die Vergangenheit.**
 **Prüffrage:** *Wollen wir die Vergangenheit fortschreiben oder ändern?* Nachfrageprognose → fortschreiben, ML richtig. Personalauswahl, Kredit, Leistungsbewertung → ändern, historisch trainiertes Modell falsch.
-*Quelle: Reuters, Oktober 2018.*
+*Quelle: [Reuters, 10.10.2018 — „Amazon scraps secret AI recruiting tool that showed bias against women"](https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/).*
 
 ### 5. Der Kategorienfehler: GenAI, wo RPA gereicht hätte *(typisiert)*
 
@@ -83,7 +87,7 @@ Im Zweiten Weltkrieg sollte in den USA der Verbrauch von Innereien gesteigert we
 **Ergebnis:** Vortragsgruppe ca. **3 %**, Diskussionsgruppe ca. **32 %** hatten die neuen Gerichte zubereitet — etwa das Zehnfache.
 **Warum das der stärkste Change-Fall ist:** Der Informationsgehalt war praktisch identisch. Unterschiedlich war nur, ob die Teilnehmerinnen selbst zu einer Entscheidung kamen und diese in der Gruppe sichtbar wurde. In ADKAR: A bekam **Knowledge**, B bekam **Desire plus soziale Verbindlichkeit**.
 **Transfer:** Das Prompting-Webinar für 200 Personen ist Gruppe A. Der 90-Minuten-Workshop, in dem ein Team eigene zeitraubende Aufgaben aufschreibt, eine gemeinsam mit KI löst und verbindlich festlegt, wer bis wann was ausprobiert, ist Gruppe B. Gleicher Aufwand, eine Größenordnung Wirkung.
-*Quelle: Lewin, K. (1943): Forces Behind Food Habits and Methods of Change. Bulletin of the National Research Council, 108, 35–65.*
+*Quelle: Lewin, K. (1943): Forces Behind Food Habits and Methods of Change. Bulletin of the National Research Council, 108, 35–65. (Keine frei zugängliche Online-Fassung verifiziert — Hintergrund zur Person und zur Kraftfeldanalyse: [Kurt Lewin](https://en.wikipedia.org/wiki/Kurt_Lewin).)*
 
 ### 7. Autonomie als Umfeldfaktor: Coch & French, Harwood (1948)
 
@@ -91,7 +95,7 @@ In der Harwood-Textilfabrik in Virginia führte jede Ablaufänderung zu Produkti
 **Ergebnis:** Gruppe 1 erreichte das alte Niveau nie wieder (Beschwerden, Kündigungen), Gruppe 2 nach etwa zwei Wochen, Gruppe 3 übertraf es deutlich — ohne Fluktuation.
 **Lehre:** Widerstand war keine Eigenschaft der Belegschaft (P), sondern eine Funktion des Beteiligungsgrades (E). Dieselben Menschen, dieselbe Änderung, drei Ergebnisse. **B = f(P, E) im Experiment.**
 **Transfer:** Ein Anwendungsfall, den die Fachabteilung selbst benannt hat, wird genutzt; derselbe Fall von der IT ausgewählt und ausgerollt nicht. Der Unterschied liegt nicht im Tool.
-*Quelle: Coch, L. & French, J. R. P. (1948): Overcoming Resistance to Change. Human Relations, 1(4), 512–532.*
+*Quelle: [Coch, L. & French, J. R. P. (1948): Overcoming Resistance to Change. Human Relations, 1(4), 512–532](https://journals.sagepub.com/doi/10.1177/001872674800100408) (DOI 10.1177/001872674800100408).*
 
 ### 8. Der Desire-Fehler: eine Formulierung, die einen Rollout kostet *(typisiert)*
 
@@ -149,7 +153,7 @@ Regel: der erste Wert ≤ 3 ist der Barrier Point; alles danach ist wirkungslos,
 **Ergebnis:** Am **19. Januar 2012** meldete Kodak Chapter 11 an.
 **Warum das der lehrreichste Urgency-Fall ist:** Kodak fehlte weder Technologie noch Information noch Prognose. Es fehlte die **geteilte Überzeugung, dass jetzt gehandelt werden muss** — zu einem Zeitpunkt, als das Kerngeschäft hervorragend lief. Genau das ist Kotters Punkt: Dringlichkeit ist am schwersten zu erzeugen, wenn es der Organisation gut geht, und genau dann am wertvollsten.
 **Transfer auf KI:** Eine Organisation, deren Zahlen stimmen, nimmt eine KI-Analyse zur Kenntnis und ändert nichts. „Wir haben eine Studie" ist keine Dringlichkeit. Prüffrage: *Was in unserem Geschäft würde in drei Jahren nicht mehr funktionieren, und woran würden wir das heute schon merken?*
-*Belastbarkeit: hoch — Sasson-Prototyp 1975, Matteson-Prognose 1979, Chapter-11-Antrag 19.01.2012, alles öffentlich dokumentiert.*
+*Belastbarkeit: hoch — Sasson-Prototyp 1975, Matteson-Prognose 1979, Chapter-11-Antrag 19.01.2012, alles öffentlich dokumentiert. Belege: [Kodak](https://en.wikipedia.org/wiki/Kodak) (Chapter 11 am 19.01.2012, Sasson-Prototyp 1975) · [Steven Sasson](https://en.wikipedia.org/wiki/Steven_Sasson) (100 × 100 Pixel = 10.000 Bildpunkte, 3,6 kg, Speicherung auf Kassettenband).*
 
 ### 15. Ford unter Alan Mulally: Koalition und Handlungsfreiheit (Schritte 2 und 5)
 
@@ -159,6 +163,7 @@ Regel: der erste Wert ≤ 3 ist der Barrier Point; alles danach ist wirkungslos,
 **Die Voraussetzung, an der es fast scheiterte:** Nach Bryce Hoffman (*American Icon*) zeigten die Führungskräfte über Wochen ausschließlich grüne Kennzahlen — bei einem Konzern, der Milliarden verlor. Erst als **Mark Fields** als Erster einen Punkt auf Rot setzte und Mulally applaudierte statt zu sanktionieren, änderte sich das Verhalten. *(Journalistisch belegt, Darstellung aus zweiter Hand — als Illustration geeignet, nicht als Beleg zitierbar.)*
 **Ergebnis:** Ford überstand die Krise 2008/09 als einziger der drei großen US-Hersteller **ohne staatliche Rettung**.
 **Lehre:** Eine Führungskoalition entsteht nicht durch Benennung, sondern durch ein **Format mit Taktung und psychologischer Sicherheit**. Schritt 5 beginnt nicht bei Budget und Werkzeugen, sondern bei der Frage, ob Probleme benannt werden dürfen. Übertragen: Wenn ein Pilot nur Erfolgsmeldungen produziert, misst du nicht den Piloten, sondern die Angst im Team.
+*Belege: [Alan Mulally](https://en.wikipedia.org/wiki/Alan_Mulally) — Amtszeit ab 2006, 23,6-Mrd.-USD-Kredit gegen Verpfändung aller Vermögenswerte, BPR jeden Donnerstag 7 Uhr, Ford als einziger der Detroit Three ohne Staatskredit. Die Fields-Episode: Bryce Hoffman, *American Icon* (2012).*
 
 ### 16. Kotters zwölf Reengineering-Projekte: zu früh gefeiert (Schritt 7)
 
@@ -166,7 +171,7 @@ In zwölf beobachteten Vorhaben wurde nach zwei bis drei Jahren der Sieg erklär
 **Mechanismus:** Die Siegeserklärung ist kein Kommunikationsfehler, sondern ein **Ressourcenereignis** — sie beendet Aufmerksamkeit, Budget und Rollen. Die alten Strukturen waren nie weg, sie hatten nur weniger Raum.
 **Warum das zählt:** Es ist der einzige Fehler, den man **im Moment des Erfolgs** macht — deshalb schützt Erfahrung nicht davor.
 **Gegenmaßnahme:** schon bei der Planung festlegen, was *nach* dem erfolgreichen Piloten passiert (welche Rollen bleiben, welcher Prozess ändert sich, wann wird nachgemessen).
-*Belastbarkeit: Kotters eigene Fallbeobachtung, keine unabhängige Erhebung — als Muster aussagekräftig, als Statistik nicht.*
+*Belastbarkeit: Kotters eigene Fallbeobachtung, keine unabhängige Erhebung — als Muster aussagekräftig, als Statistik nicht. Original: [Kotter, J. P. (1995): Leading Change: Why Transformation Efforts Fail, HBR März–April 1995](https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2) (Paywall).*
 
 ### 17. Der Quick Win, der keiner war (Schritt 6) *(typisiert)*
 
@@ -185,11 +190,13 @@ Maschinenbauer, KI-Vision: „Bis Ende 2027 sind unsere Kernprozesse in Vertrieb
 ## 2.2 Ergänzung — Force-Field-Analyse
 
 ### 19. Toolsheros Fallbeispiel „Jeffrey" — als Gegenstück
+*Quelle: [Toolshero — Kotter's 8 Step Change Model: the Basics and Examples](https://www.toolshero.com/change-management/8-step-change-model-kotter/)*
 
 Jeffrey leitet ein Unternehmen mit rund 100 Beschäftigten und verliert Umsatz an Wettbewerber, die in neue Technologie investieren. Er arbeitet die acht Schritte der Reihe nach ab — und **jeder Schritt gelingt**. Kein Unternehmen, keine Zahlen, kein Zeitraum, kein Ergebnis: **keine Fallstudie**, im Gegensatz zu den drei Fällen im Hauptdokument, die ausgewählt wurden, weil dort etwas schiefging.
 **Wozu es trotzdem taugt:** als **Format** (acht Absätze, ein Vorhaben, ein Schritt pro Absatz) für das eigene Vorhaben — und als Übung, es zu brechen: bei jedem Schritt fragen, was passiert, wenn er misslingt (Schritt 1 → Kodak; Schritt 2 → die Runde besteht aus Überzeugten, der respektierte Skeptiker fehlt; Schritt 3 → der Satz enthält eine Prozentzahl; Schritt 4 → es wird gesendet, die Führung verhält sich gegenteilig, es entsteht Zynismus; Schritt 5 → „Dialog" ersetzt die Entscheidung, wenn eine Führungskraft blockiert).
 
 ### 20. Toolsheros Beispiel: Einführung einer Kollaborationsplattform
+*Quelle: [Toolshero — Force Field Analysis: The Basics and an Example](https://www.toolshero.com/change-management/force-field-analysis-lewin/)*
 
 Toolshero führt das Kraftfeld-Verfahren an einer Plattformeinführung vor — nah genug an einem KI-Rollout, dass sich alles übertragen lässt. Merksatz aus der Vorlage: die letzte Spalte („woran erkennbar") macht den Unterschied. „Schulung durchgeführt" ist kein Ergebnis; „drei von fünf Teams haben in der Folgewoche mindestens einmal ohne Aufforderung genutzt" ist eines.
 
@@ -199,17 +206,19 @@ Toolshero führt das Kraftfeld-Verfahren an einer Plattformeinführung vor — n
 
 Diese liegen noch nicht als lokale Langfassung im Repo, tauchen aber auf den Tagesseiten auf:
 
-| Fall | Wo | Inhalt in einem Satz |
+| Fall | Wo (Link) | Inhalt in einem Satz |
 |---|---|---|
-| **Deutsche Telekom** | Tag 3.3, Tag 8.1 | Plattformwahl nach Governance-Anforderungen und Reifegrad statt nach technischer Überlegenheit; später zentralisiertes Top-Down-Data-Governance-Modell mit Qualitäts-KPIs und Datenkatalog. |
-| **Bosch** | Tag 9.1 | Systematischer KI-Rollout 2020–2024 über mehrere hundert Werke, zentrale KI-Plattform, Hub-and-Spoke (zentrale Methodik, lokale Umsetzung). |
-| **Bosch** | Tag 5.3 | Governance-Transformation: gewachsene Datensilos, ein Rechtsbereich, der Datenschutz kannte und den AI Act nicht, Mitbestimmung von Anfang an in der RACI. |
-| **Bosch** | Tag 6.2 | Beschaffung je Anwendungsfall statt nach einer Regel: HR-Dokumentenverarbeitung als Kaufsoftware, Predictive Maintenance und Bildprüfung als Partnermodell. |
-| **Siemens** | Tag 4.3 | Erste Kommunikationswelle nur Effizienzgewinne → Ingenieure fragen sich, ob Stellen wegfallen; erst die zweite Welle mit Entwicklungspfaden verbessert das Engagement. |
-| **Siemens** | Tag 7.2 | Smart Factory Nanjing, 2021 live: ca. 20 % Produktivitätssteigerung, 20 % Kostenreduktion gegenüber traditionellen Werken. |
-| **Siemens Industrial Copilot / Moody's / Canadian Tire** | Tag 4.4 | Referenzbeispiele im Executive Briefing: über 50 aktive Kunden · 25 % Zeitersparnis bei 14.000 Nutzenden · Nicht-Tech-Referenz. |
-| **Hofmann Personal** | Tag 7.1, 7.3 | 2024 Langdock für CV-Verarbeitung eingeführt: 10–30 Min. auf 1–2 Min. pro CV, laut Unternehmen ca. 25.000 eingesparte Arbeitsstunden/Jahr (ROI-Rechenbeispiel). |
-| **HaTL — Hartmann Transport & Logistik GmbH** | Wochen 13–16 | Kein realer Fall, sondern das durchgängige fiktive Simulationsunternehmen der Abschluss-Simulation. |
+| **Deutsche Telekom** | [Tag 3.3](https://neuefische-teaching.github.io/AIDTM/coursebook/3.3/index.html) · [Tag 8.1](https://neuefische-teaching.github.io/AIDTM/coursebook/8.1/index.html) | Plattformwahl nach Governance-Anforderungen und Reifegrad statt nach technischer Überlegenheit; später zentralisiertes Top-Down-Data-Governance-Modell mit Qualitäts-KPIs und Datenkatalog. |
+| **Bosch** | [Tag 9.1](https://neuefische-teaching.github.io/AIDTM/coursebook/9.1/index.html) | Systematischer KI-Rollout 2020–2024 über mehrere hundert Werke, zentrale KI-Plattform, Hub-and-Spoke (zentrale Methodik, lokale Umsetzung). |
+| **Bosch** | [Tag 5.3](https://neuefische-teaching.github.io/AIDTM/coursebook/5.3/index.html) | Governance-Transformation: gewachsene Datensilos, ein Rechtsbereich, der Datenschutz kannte und den AI Act nicht, Mitbestimmung von Anfang an in der RACI. |
+| **Bosch** | [Tag 6.2](https://neuefische-teaching.github.io/AIDTM/coursebook/6.2/index.html) | Beschaffung je Anwendungsfall statt nach einer Regel: HR-Dokumentenverarbeitung als Kaufsoftware, Predictive Maintenance und Bildprüfung als Partnermodell. |
+| **Siemens** | [Tag 4.3](https://neuefische-teaching.github.io/AIDTM/coursebook/4.3/index.html) | Erste Kommunikationswelle nur Effizienzgewinne → Ingenieure fragen sich, ob Stellen wegfallen; erst die zweite Welle mit Entwicklungspfaden verbessert das Engagement. |
+| **Siemens** | [Tag 7.2](https://neuefische-teaching.github.io/AIDTM/coursebook/7.2/index.html) | Smart Factory Nanjing, 2021 live: ca. 20 % Produktivitätssteigerung, 20 % Kostenreduktion gegenüber traditionellen Werken. |
+| **Siemens Industrial Copilot / Moody's / Canadian Tire** | [Tag 4.4](https://neuefische-teaching.github.io/AIDTM/coursebook/4.4/index.html) | Referenzbeispiele im Executive Briefing: über 50 aktive Kunden · 25 % Zeitersparnis bei 14.000 Nutzenden · Nicht-Tech-Referenz. |
+| **Hofmann Personal** | [Tag 7.1](https://neuefische-teaching.github.io/AIDTM/coursebook/7.1/index.html) · [Tag 7.3](https://neuefische-teaching.github.io/AIDTM/coursebook/7.3/index.html) | 2024 Langdock für CV-Verarbeitung eingeführt: 10–30 Min. auf 1–2 Min. pro CV, laut Unternehmen ca. 25.000 eingesparte Arbeitsstunden/Jahr (ROI-Rechenbeispiel). |
+| **HaTL — Hartmann Transport & Logistik GmbH** | [Woche 13](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-13/index.html) ff. | Kein realer Fall, sondern das durchgängige fiktive Simulationsunternehmen der Abschluss-Simulation (Wochen 13–16). |
+
+Externe Belege zu diesen Fällen sind auf den Kursseiten selbst nur teils angegeben (Bosch verweist z. B. auf den Geschäftsbericht 2024, Hofmann Personal auf eine Langdock-Case-Study 2024, Ref. CL-012). Vor einer Verwendung nach außen also am Tag selbst nachsehen, welcher Beleg dort steht.
 
 ---
 
@@ -218,3 +227,42 @@ Diese liegen noch nicht als lokale Langfassung im Repo, tauchen aber auf den Tag
 - **Zitierfähig ohne Einschränkung:** Kodak, Ford (außer der Fields-Episode), Klarna, Zillow, Air Canada, Amazon, Lewin 1943, Coch & French 1948.
 - **Nur als Muster verwendbar:** alles mit *(typisiert)* markierte sowie Kotters zwölf Projekte. Diese Fälle bilden dokumentierte Fehlermuster ab, sind aber keine Fallstudien namentlicher Unternehmen — in einer Vorlage für Entscheider also als Szenario kennzeichnen.
 - **Die drei Fälle, die man laut Kursindex parat haben sollte:** Kodak (●●●), Ford / Mulally (●●), Kotters zwölf Projekte (●●).
+
+---
+
+## Quellen im Überblick
+
+**Primär- und Belegquellen zu den Fällen**
+
+- Kodak / Steven Sasson: [Kodak](https://en.wikipedia.org/wiki/Kodak) · [Steven Sasson](https://en.wikipedia.org/wiki/Steven_Sasson)
+- Ford / Alan Mulally: [Alan Mulally](https://en.wikipedia.org/wiki/Alan_Mulally); Fields-Episode aus Bryce Hoffman, *American Icon* (2012)
+- Kotters zwölf Projekte: [HBR, März–April 1995 — Leading Change: Why Transformation Efforts Fail](https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2) (Paywall)
+- Coch & French (1948): [Human Relations 1(4), 512–532](https://journals.sagepub.com/doi/10.1177/001872674800100408)
+- Lewin (1943), Food Habits: Bulletin of the National Research Council 108, 35–65 — keine frei zugängliche Fassung verifiziert; Hintergrund [Kurt Lewin](https://en.wikipedia.org/wiki/Kurt_Lewin)
+- Klarna: [Klarna (Wikipedia, mit Einzelnachweisen zur Pressemitteilung 27.02.2024)](https://en.wikipedia.org/wiki/Klarna); Kurskorrektur laut Bloomberg-Interview, Mai 2025
+- Zillow Offers: [Zillow](https://en.wikipedia.org/wiki/Zillow)
+- Air Canada: [Moffatt v. Air Canada, 2024 BCCRT 149 (19.02.2024) — juristische Analyse](https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot)
+- Amazon Recruiting: [Reuters, 10.10.2018](https://www.reuters.com/article/world/insight-amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK0AG/)
+
+**Die Pflichtlektüren des Kurses (Originale)**
+
+- [Toolshero — Lewin Change Model](https://www.toolshero.com/change-management/lewin-change-model/)
+- [Toolshero — ADKAR Model](https://www.toolshero.com/change-management/adkar-model/)
+- [Toolshero — Kotter's 8 Step Change Model](https://www.toolshero.com/change-management/8-step-change-model-kotter/)
+- [Toolshero — Force Field Analysis](https://www.toolshero.com/change-management/force-field-analysis-lewin/)
+
+**Course Book (gekürzte Website-Fassung)**
+
+- [Woche 2 — Übersicht](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/)
+- [Lektüre: Warum Veränderung scheitert — Lewin und ADKAR](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/lektuere-change-lewin-adkar-w2.html)
+- [Lektüre: Acht Fehler, und ein Werkzeug dagegen — Kotter und Force-Field-Analyse](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/lektuere-change-kotter-forcefield-w2.html)
+- [Lektüre: Widerstand ist eine Information, nicht ein Hindernis](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-2/lektuere-change-widerstand-w2.html)
+- [Tag 1.4](https://neuefische-teaching.github.io/AIDTM/coursebook/1.4/index.html) · [Tag 2.1](https://neuefische-teaching.github.io/AIDTM/coursebook/2.1/index.html) · [Tag 2.2](https://neuefische-teaching.github.io/AIDTM/coursebook/2.2/index.html)
+
+**Lokale Langfassungen (die eigentliche Quelle dieser Sammlung)**
+
+- `coursebook/1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md` — Abschnitt 8
+- `coursebook/2.1/01_Change-Management-Lewin-ADKAR.md` — Abschnitt 9
+- `coursebook/2.2/2.2_Kotter-8-Schritte-Modell.md` — Abschnitt 8
+- `coursebook/2.2/2.2_Ergaenzung-Force-Field-Analyse.md` — Abschnitte 3.3 und 4.6
+- `coursebook/0/00_Index-und-Gewichtung.md` — Gewichtung der drei Kernfälle
