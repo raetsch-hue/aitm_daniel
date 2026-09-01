@@ -38,7 +38,7 @@
   @media (max-width:720px){ #pct{display:none} }
   header h1{font-size:15px; font-weight:600; margin:0; letter-spacing:-.01em}
   header .spacer{flex:1}
-  #nav{
+  #nav,#bereich{
     max-width:min(46vw,420px); padding:7px 30px 7px 11px; border:1px solid var(--line);
     border-radius:7px; background:var(--card); color:var(--fg); font:inherit; font-size:14px;
     cursor:pointer; appearance:none; -webkit-appearance:none;
@@ -47,9 +47,12 @@
     background-position:calc(100% - 16px) 52%, calc(100% - 11px) 52%;
     background-size:5px 5px, 5px 5px; background-repeat:no-repeat;
   }
-  #nav:hover{border-color:var(--accent)}
-  #nav:focus{outline:2px solid var(--accent); outline-offset:-1px; border-color:transparent}
-  #nav[hidden]{display:none}
+  /* Der Bereichsschalter steht vor der Dokumentwahl und bleibt schmal,
+     damit auf kleinen Fenstern die Dokumenttitel den Platz behalten. */
+  #bereich{max-width:min(30vw,190px); font-weight:600}
+  #nav:hover,#bereich:hover{border-color:var(--accent)}
+  #nav:focus,#bereich:focus{outline:2px solid var(--accent); outline-offset:-1px; border-color:transparent}
+  #nav[hidden],#bereich[hidden]{display:none}
   #q{
     width:260px; max-width:45vw; padding:7px 11px; border:1px solid var(--line);
     border-radius:7px; background:var(--card); color:var(--fg); font-size:14px;
@@ -138,12 +141,20 @@
   #filelist .sz{margin-left:auto; font-size:12px; color:var(--muted); white-space:nowrap}
   #filelist .pt{display:block; font-size:12px; color:var(--muted); margin-top:2px;
                 overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  /* Bereichsüberschrift in der Liste, nur sichtbar bei "Alle Bereiche" */
+  #filelist li.gruppe{
+    grid-column:1/-1; font-size:11.5px; font-weight:700; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted); padding:10px 2px 2px;
+    border-top:1px solid var(--line); margin-top:6px;
+  }
+  #filelist li.gruppe:first-child{border-top:none; margin-top:0; padding-top:0}
 </style>
 </head>
 <body>
 
 <header>
   <h1 id="title">Coursebook</h1>
+  <select id="bereich" aria-label="Bereich wählen" title="Bereich wählen (Verzeichnis)"></select>
   <select id="nav" aria-label="Dokument wählen" title="Dokument wählen"></select>
   <span id="pct" hidden></span>
   <span class="spacer"></span>
@@ -162,9 +173,10 @@
 <main>
   <div id="drop">
     <strong>Dokument unten auswählen</strong>
-    Die verfügbaren Dateien stehen am Seitenende.<br>
+    Die verfügbaren Dateien stehen am Seitenende, umgeschaltet wird der Bereich oben links.<br>
     Beim Öffnen per Doppelklick (<code>file://</code>) darf der Browser sie nicht selbst lesen —
-    zieh dann den Ordner <code>coursebook</code> in dieses Fenster.
+    zieh dann den Ordner <code>aitm_daniel</code> in dieses Fenster
+    (dann sind Coursebook <em>und</em> Bibliothek lesbar).
   </div>
   <article id="out" hidden></article>
 </main>
@@ -195,6 +207,7 @@
       filelist=document.getElementById('filelist'),
       filehint=document.getElementById('filehint'),
       nav=document.getElementById('nav'),
+      bereichSel=document.getElementById('bereich'),
       suche=document.getElementById('suche'),
       prevBtn=document.getElementById('prev'),
       nextBtn=document.getElementById('next'),
@@ -204,6 +217,52 @@
 
   var rohHTML='';          // gerendertes Dokument ohne Trefferauszeichnung
   var SPEICHER='coursebook.zuletzt';
+  var SPEICHER_BEREICH='coursebook.bereich';
+
+  /* ---------- Bereiche (Verzeichnisse) ----------
+     Ein Bereich ist ein Ordner, aus dem der Viewer liest. Neuer Ordner?
+     Hier eine Zeile ergaenzen und die Dokumente in dateien.js eintragen.
+       id     : interner Schluessel, auch der Wert in dateien.js ("bereich")
+       titel  : Beschriftung im Umschalter
+       ordner : Ordnername, an dem der Bereich im Pfad erkannt wird
+                (leer = Standardbereich fuer alles ohne Treffer)
+       nummeriert : true  -> Sortierung nach Nummer im Pfad (1.4 < 2.1)
+                    false -> alphabetisch nach Titel                       */
+  var BEREICHE = [
+    { id:'coursebook', titel:'Coursebook', ordner:'coursebook', nummeriert:true  },
+    { id:'bibliothek', titel:'Bibliothek', ordner:'bibliothek', nummeriert:false }
+  ];
+  var STANDARD_BEREICH = BEREICHE[0].id;
+  var bereichAktiv = STANDARD_BEREICH;
+
+  function bereichDef(id){
+    for(var i=0;i<BEREICHE.length;i++) if(BEREICHE[i].id===id) return BEREICHE[i];
+    return null;
+  }
+  function bereichIndex(id){
+    for(var i=0;i<BEREICHE.length;i++) if(BEREICHE[i].id===id) return i;
+    return BEREICHE.length;
+  }
+  function bereichTitel(id){
+    var b=bereichDef(id); return b ? b.titel : id;
+  }
+
+  // Bereich aus dem Pfad ableiten. Greift fuer Manifest-Pfade
+  // ("../bibliothek/x.md") genauso wie fuer eingelesene Ordner
+  // ("aitm_daniel/bibliothek/x.md"). Ohne Treffer: Standardbereich.
+  function bereichVon(pfad, vorgabe){
+    if(vorgabe && bereichDef(vorgabe)) return vorgabe;
+    var p = String(pfad||'').replace(/\\/g,'/').toLowerCase();
+    for(var i=0;i<BEREICHE.length;i++){
+      var o = (BEREICHE[i].ordner||'').toLowerCase();
+      if(!o) continue;
+      if(p.indexOf(o+'/')===0 || p.indexOf('/'+o+'/')>-1) return BEREICHE[i].id;
+    }
+    return STANDARD_BEREICH;
+  }
+
+  function bereichMerken(id){ try{ localStorage.setItem(SPEICHER_BEREICH, id); }catch(e){} }
+  function bereichGemerkt(){ try{ return localStorage.getItem(SPEICHER_BEREICH); }catch(e){ return null; } }
 
   // Der Merker liegt nur in diesem Browser. Ist er gesperrt (privates Fenster,
   // blockierte Website-Daten), faellt alles still auf den ersten Eintrag zurueck.
@@ -244,6 +303,12 @@
     if(label) document.title = label + ' – Coursebook';
     activePath = path || null;
     if(activePath) merken(activePath);
+    // Oeffnet ein Querverweis ein Dokument aus einem anderen Bereich,
+    // schaltet der Umschalter mit, damit die Liste dazu passt.
+    var offen = activePath ? ausListe(activePath) : null;
+    if(offen && bereichAktiv!=='alle' && offen.bereich && offen.bereich!==bereichAktiv){
+      bereichAktiv = offen.bereich; bereichMerken(bereichAktiv);
+    }
     drop.hidden=true; out.hidden=false; suche.hidden=false;
     rohHTML = out.innerHTML;          // Fassung ohne Trefferauszeichnung merken
     treffer=[]; aktiv=-1; q.value=''; count.textContent='';
@@ -274,8 +339,20 @@
     return {pfad:pfad, anker:rest};
   }
 
+  // Pfad fuer Vergleiche vereinheitlichen: Backslashes, fuehrende ../,
+  // Gross-/Kleinschreibung. So findet ein Querverweis auf
+  // "bibliothek/x.md" auch den Eintrag "../bibliothek/x.md".
+  function normPfad(p){
+    return String(p||'').replace(/\\/g,'/').replace(/^(\.\.\/)+/,'').replace(/^\.\//,'').toLowerCase();
+  }
   function ausListe(pfad){
-    for(var i=0;i<found.length;i++) if(found[i].path === pfad) return found[i];
+    var i;
+    for(i=0;i<found.length;i++) if(found[i].path === pfad) return found[i];
+    var n = normPfad(pfad);
+    for(i=0;i<found.length;i++){
+      var f = normPfad(found[i].path);
+      if(f === n || f.slice(-n.length-1) === '/'+n || n.slice(-f.length-1) === '/'+f) return found[i];
+    }
     return null;
   }
 
@@ -421,8 +498,9 @@
   /* ---------- Einträge ---------- */
 
   // Manifest-Eintrag: wird über das Netz nachgeladen (http/https).
-  function remote(path, label){
+  function remote(path, label, bereich){
     return {name: label||base(path), path:path, size:0, local:false,
+      bereich: bereichVon(path, bereich),
       get:function(){
         return fetch(path,{cache:'no-store'}).then(function(r){
           if(!r.ok) throw new Error('HTTP '+r.status);
@@ -432,16 +510,21 @@
   }
 
   // Lokal gewählte oder hereingezogene Datei.
-  function local(f, path){
-    return {name:f.name, path:path||f.webkitRelativePath||f.name, size:f.size, local:true,
+  function local(f, path, bereich){
+    var p = path||f.webkitRelativePath||f.name;
+    return {name:f.name, path:p, size:f.size, local:true,
+            bereich: bereichVon(p, bereich),
             get:function(){ return f.text(); }};
   }
 
   // Lokale Datei ersetzt den Manifest-Eintrag mit gleichem Dateinamen,
   // damit die Liste nicht doppelt wird und der Titel erhalten bleibt.
+  // Der Bereich muss dabei uebereinstimmen: gleichnamige Dateien in
+  // coursebook/ und bibliothek/ bleiben zwei Eintraege.
   function merge(entry){
     for(var i=0;i<found.length;i++){
-      if(base(found[i].path).toLowerCase() === base(entry.path).toLowerCase()){
+      if(base(found[i].path).toLowerCase() === base(entry.path).toLowerCase() &&
+         found[i].bereich === entry.bereich){
         if(entry.local && !found[i].local){
           entry.name = found[i].name;   // Titel aus dem Manifest behalten
           entry.path = found[i].path;
@@ -454,15 +537,33 @@
     return entry;
   }
 
+  // Pfad innerhalb des Bereichs, ohne ../ und ohne den Bereichsordner.
+  // Damit greift die Nummernsortierung auch bei eingelesenen Ordnern.
+  function relPfad(f){
+    var p = String(f.path||'').replace(/\\/g,'/').replace(/^(\.\.\/)+/,'');
+    var b = bereichDef(f.bereich);
+    if(b && b.ordner){
+      var i = p.toLowerCase().indexOf(b.ordner.toLowerCase()+'/');
+      if(i > -1) p = p.slice(i + b.ordner.length + 1);
+    }
+    return p;
+  }
+
   // Nummer aus dem Pfad ("1.4/..." -> [1,4]), ersatzweise aus dem Titel ("1.4 · ...").
   function nummer(f){
-    var m = /(\d+(?:\.\d+)*)/.exec(f.path.split('/')[0]) || /(\d+(?:\.\d+)*)/.exec(f.name);
+    var m = /(\d+(?:\.\d+)*)/.exec(relPfad(f).split('/')[0]) || /(\d+(?:\.\d+)*)/.exec(f.name);
     return m ? m[1].split('.').map(Number) : null;
   }
 
-  // Aufsteigend nach Nummer: 1.4 < 1.5 < 1.10 < 2.1. Ohne Nummer ans Ende.
+  // Erst nach Bereich (Reihenfolge aus BEREICHE), dann innerhalb des
+  // Bereichs: nummerierte Bereiche aufsteigend nach Nummer
+  // (1.4 < 1.5 < 1.10 < 2.1, ohne Nummer ans Ende), sonst alphabetisch.
   function sortiere(){
     found.sort(function(a,b){
+      var ba=bereichIndex(a.bereich), bb=bereichIndex(b.bereich);
+      if(ba!==bb) return ba-bb;
+      var def=bereichDef(a.bereich);
+      if(def && def.nummeriert===false) return a.name.localeCompare(b.name,'de');
       var A=nummer(a), B=nummer(b);
       if(A && B){
         for(var i=0, n=Math.max(A.length,B.length); i<n; i++){
@@ -482,9 +583,62 @@
     (list||[]).forEach(function(it){
       if(!it) return;
       var p = (typeof it==='string') ? it : (it.datei || it.name);
-      if(p) found.push(remote(p, (typeof it==='object' && it.titel) ? it.titel : base(p)));
+      if(!p) return;
+      var titel = (typeof it==='object' && it.titel) ? it.titel : base(p);
+      var ber   = (typeof it==='object') ? it.bereich : null;
+      found.push(remote(p, titel, ber));
     });
   }
+
+  /* ---------- Bereichsauswahl ---------- */
+
+  // Nur Dokumente des gewaehlten Bereichs; "alle" zeigt sie zusammen.
+  function sichtbare(){
+    if(bereichAktiv==='alle') return found;
+    return found.filter(function(f){ return f.bereich===bereichAktiv; });
+  }
+
+  function bereichZaehler(){
+    var z={};
+    found.forEach(function(f){ z[f.bereich]=(z[f.bereich]||0)+1; });
+    return z;
+  }
+
+  // Umschalter aufbauen. Gibt es nur einen belegten Bereich, bleibt er
+  // verborgen - dann ist nichts umzuschalten.
+  function paintBereich(){
+    var z = bereichZaehler();
+    var mit = BEREICHE.filter(function(b){ return z[b.id]; });
+    if(mit.length < 2){
+      bereichSel.hidden = true; bereichSel.innerHTML='';
+      bereichAktiv = mit.length ? mit[0].id : STANDARD_BEREICH;
+      return;
+    }
+    if(bereichAktiv!=='alle' && !z[bereichAktiv]) bereichAktiv = mit[0].id;
+    bereichSel.hidden = false;
+    bereichSel.innerHTML = '';
+    mit.forEach(function(b){
+      var o=document.createElement('option');
+      o.value=b.id; o.textContent=b.titel+' ('+z[b.id]+')';
+      if(b.id===bereichAktiv) o.selected=true;
+      bereichSel.appendChild(o);
+    });
+    var oa=document.createElement('option');
+    oa.value='alle'; oa.textContent='Alle Bereiche ('+found.length+')';
+    if(bereichAktiv==='alle') oa.selected=true;
+    bereichSel.appendChild(oa);
+  }
+
+  bereichSel.addEventListener('change', function(){
+    bereichAktiv = bereichSel.value;
+    bereichMerken(bereichAktiv);
+    paintList();
+    // Gehoert das offene Dokument nicht zum neuen Bereich, das erste
+    // des Bereichs oeffnen - sonst zeigt der Kopf eine leere Auswahl.
+    var liste = sichtbare();
+    var offen = activePath ? ausListe(activePath) : null;
+    if(liste.length && (!offen || liste.indexOf(offen)<0)) openDoc(liste[0]);
+  });
 
   // Ueber http(s) pruefen, ob die gelisteten Dateien wirklich da sind.
   // Fehlende werden sofort sichtbar markiert, statt erst beim Klick zu scheitern.
@@ -506,10 +660,19 @@
       if(isFile && !f.local){
         fail('<strong>'+f.name+'</strong> lässt sich per Doppelklick nicht laden — '+
              'der Browser sperrt lokale Dateizugriffe.<br><br>'+
-             'Zieh den Ordner <code>coursebook</code> in dieses Fenster (dann sind alle '+
-             'Dokumente lesbar), oder starte im Ordner kurz einen Server:<br>'+
+             'Zieh den Ordner <code>aitm_daniel</code> in dieses Fenster (dann sind '+
+             'Coursebook und Bibliothek lesbar), oder starte im Ordner kurz einen Server:<br>'+
              '<code>python -m http.server</code> und öffne '+
-             '<code>http://localhost:8000/viewer.html</code>.');
+             '<code>http://localhost:8000/coursebook/viewer.html</code>.');
+      } else if(/^\.\.\//.test(f.path)){
+        // Pfad fuehrt aus coursebook/ heraus. Ein Server, der IN coursebook
+        // gestartet wurde, liefert dafuer nichts - er kennt nur seinen Ordner.
+        fail('<strong>'+f.name+'</strong> liegt ausserhalb von <code>coursebook</code> '+
+             '(<code>'+f.path+'</code>) und ist von hier nicht erreichbar.<br><br>'+
+             'Starte den Server eine Ebene höher, in <code>aitm_daniel</code>:<br>'+
+             '<code>python -m http.server</code> und öffne '+
+             '<code>http://localhost:8000/coursebook/viewer.html</code>.<br>'+
+             'Alternativ die Datei über „Ordner einlesen …" holen.');
       } else {
         fail('<strong>'+f.name+'</strong> gibt es nicht (mehr).<br><br>'+
              'Gesucht unter <code>'+f.path+'</code>. Entweder die Datei dorthin legen, '+
@@ -520,19 +683,28 @@
 
   // Auswahlfeld im Kopf, gespeist aus derselben Liste wie unten
   function paintNav(){
-    if(!found.length){ nav.hidden=true; nav.innerHTML=''; return; }
+    var liste = sichtbare();
+    if(!liste.length){ nav.hidden=true; nav.innerHTML=''; return; }
     nav.hidden=false;
     nav.innerHTML='';
     var ph=document.createElement('option');
     ph.value=''; ph.textContent='Dokument wählen …'; ph.disabled=true;
     if(!activePath) ph.selected=true;
     nav.appendChild(ph);
-    found.forEach(function(f){
+    var ziel=nav, letzterBereich=null;
+    liste.forEach(function(f){
+      // Bei "Alle Bereiche" die Dokumente nach Bereich gruppieren.
+      if(bereichAktiv==='alle' && f.bereich!==letzterBereich){
+        letzterBereich=f.bereich;
+        ziel=document.createElement('optgroup');
+        ziel.label=bereichTitel(f.bereich);
+        nav.appendChild(ziel);
+      }
       var o=document.createElement('option');
       o.value=f.path;
       o.textContent=f.name + (f.fehlt ? '  (fehlt)' : (isFile && !f.local ? '  (gesperrt)' : ''));
       if(f.path===activePath) o.selected=true;
-      nav.appendChild(o);
+      ziel.appendChild(o);
     });
   }
 
@@ -543,26 +715,46 @@
 
   function paintList(){
     sortiere();
+    paintBereich();
     paintNav();
     filelist.innerHTML='';
     if(!found.length){
       filehint.innerHTML='Keine Dokumente eingetragen — in <code>dateien.js</code> ergänzen.';
-      paintNav();
       return;
     }
-    var n = found.length, lokal = found.filter(function(f){ return f.local; }).length;
+    var liste = sichtbare();
+    var wo = (bereichAktiv==='alle') ? '' : ' im Bereich '+bereichTitel(bereichAktiv);
+    if(!liste.length){
+      filehint.innerHTML='Keine Dokumente'+wo+' — in <code>dateien.js</code> ergänzen '+
+        'oder oben einen anderen Bereich wählen.';
+      return;
+    }
+    var n = liste.length, lokal = liste.filter(function(f){ return f.local; }).length;
     if(isFile && lokal < n){
-      filehint.innerHTML = n+' Dokument'+(n===1?'':'e')+' gelistet'+
+      filehint.innerHTML = n+' Dokument'+(n===1?'':'e')+' gelistet'+wo+
         (lokal ? ', '+lokal+' davon eingelesen. ' : '. ')+
         'Per Doppelklick geöffnet darf der Browser die übrigen nicht lesen — '+
-        'zieh den Ordner <code>coursebook</code> hierher oder nutze „Ordner einlesen …".';
+        'zieh den Ordner <code>aitm_daniel</code> hierher oder nutze „Ordner einlesen …".';
     } else {
-      var weg = found.filter(function(f){ return f.fehlt; }).length;
-      filehint.innerHTML = n+' Dokument'+(n===1?'':'e')+'.'+
-        (weg ? ' <span style="color:#d4574c">'+weg+' davon nicht gefunden — Eintrag in '+
-               '<code>dateien.js</code> entfernen oder Datei ergänzen.</span>' : '');
+      var fehlend = liste.filter(function(f){ return f.fehlt; });
+      var weg = fehlend.length;
+      var raus = fehlend.some(function(f){ return /^\.\.\//.test(f.path); });
+      filehint.innerHTML = n+' Dokument'+(n===1?'':'e')+wo+'.'+
+        (weg ? ' <span style="color:#d4574c">'+weg+' davon nicht gefunden — '+
+               (raus ? 'Pfade mit <code>../</code> erreicht der Server nur, wenn er in '+
+                       '<code>aitm_daniel</code> gestartet wurde (dann '+
+                       '<code>/coursebook/viewer.html</code> öffnen).'
+                     : 'Eintrag in <code>dateien.js</code> entfernen oder Datei ergänzen.')+
+               '</span>' : '');
     }
-    found.forEach(function(f){
+    var letzterBereich=null;
+    liste.forEach(function(f){
+      if(bereichAktiv==='alle' && f.bereich!==letzterBereich){
+        letzterBereich=f.bereich;
+        var kopf=document.createElement('li');
+        kopf.className='gruppe'; kopf.textContent=bereichTitel(f.bereich);
+        filelist.appendChild(kopf);
+      }
       var li=document.createElement('li'), b=document.createElement('button');
       b.className = (f.path===activePath) ? 'active' : '';
       b.innerHTML = '<span><span class="nm"></span><span class="pt"></span></span>'+
@@ -588,28 +780,51 @@
 
   /* ---------- Ordner einlesen ---------- */
 
-  document.getElementById('pickdir').addEventListener('click', function(){ dir.click(); });
-  dir.addEventListener('change', function(){
-    var n=0;
-    Array.prototype.slice.call(dir.files).forEach(function(f){
-      if(isMd(f.name)){ merge(local(f, f.webkitRelativePath||f.name)); n++; }
-    });
+  // Nach dem Einlesen: gehoeren die neuen Dateien zu genau einem Bereich,
+  // schaltet der Viewer dorthin um. So genuegt es, den Ordner bibliothek
+  // einzulesen, um in der Bibliothek zu landen.
+  function nachEinlesen(neue){
+    var ber = {};
+    neue.forEach(function(e){ if(e) ber[e.bereich]=1; });
+    var ids = Object.keys(ber);
+    if(ids.length===1 && bereichAktiv!=='alle' && ids[0]!==bereichAktiv){
+      bereichAktiv = ids[0]; bereichMerken(bereichAktiv);
+    }
     paintList();
-    if(!n){ filehint.textContent='In diesem Ordner wurden keine Markdown-Dateien gefunden.'; return; }
-    if(!activePath){
-      var erste = found.filter(function(f){ return f.local; })[0];
+    var liste = sichtbare();
+    var offen = activePath ? ausListe(activePath) : null;
+    if(!offen || liste.indexOf(offen)<0){
+      var erste = liste.filter(function(f){ return f.local; })[0] || liste[0];
       if(erste) openDoc(erste);
     }
+  }
+
+  document.getElementById('pickdir').addEventListener('click', function(){ dir.click(); });
+  dir.addEventListener('change', function(){
+    var neue=[];
+    Array.prototype.slice.call(dir.files).forEach(function(f){
+      if(isMd(f.name)) neue.push(merge(local(f, f.webkitRelativePath||f.name)));
+    });
+    if(!neue.length){
+      paintList();
+      filehint.textContent='In diesem Ordner wurden keine Markdown-Dateien gefunden.';
+      return;
+    }
+    nachEinlesen(neue);
   });
 
   /* ---------- Drag & Drop: Datei oder Ordner ---------- */
 
-  function walk(entry, prefix, depth){
+  // sammel: Array, in das die erzeugten Eintraege gelegt werden, damit
+  // danach klar ist, welche Bereiche neu dazugekommen sind.
+  function walk(entry, prefix, depth, sammel){
     if(depth>4) return Promise.resolve();
     if(entry.isFile){
       if(!isMd(entry.name)) return Promise.resolve();
       return new Promise(function(res){
-        entry.file(function(f){ merge(local(f, prefix+entry.name)); res(); }, res);
+        entry.file(function(f){
+          sammel.push(merge(local(f, prefix+entry.name))); res();
+        }, res);
       });
     }
     if(entry.isDirectory){
@@ -618,7 +833,9 @@
         (function read(){
           rdr.readEntries(function(batch){
             if(!batch.length){
-              Promise.all(all.map(function(e){ return walk(e, prefix+entry.name+'/', depth+1); })).then(res);
+              Promise.all(all.map(function(e){
+                return walk(e, prefix+entry.name+'/', depth+1, sammel);
+              })).then(res);
               return;
             }
             all=all.concat(Array.prototype.slice.call(batch)); read();
@@ -641,17 +858,15 @@
     var entries=items.map(function(i){ return i.webkitGetAsEntry && i.webkitGetAsEntry(); }).filter(Boolean);
 
     if(entries.length){
-      Promise.all(entries.map(function(e){ return walk(e,'',0); })).then(function(){
-        paintList();
-        if(!activePath){
-          var erste = found.filter(function(f){ return f.local; })[0];
-          if(erste) openDoc(erste);
-        }
+      var sammel=[];
+      Promise.all(entries.map(function(e){ return walk(e,'',0,sammel); })).then(function(){
+        if(!sammel.length){ paintList(); return; }
+        nachEinlesen(sammel);
       });
       return;
     }
     var f=dt.files && dt.files[0];
-    if(f){ var e=merge(local(f)); paintList(); openDoc(e); }
+    if(f){ var e=merge(local(f)); nachEinlesen([e]); }
   });
 
   /* ---------- Start ---------- */
@@ -661,14 +876,22 @@
   function startDokument(){
     if(isFile || activePath || !found.length) return;
     // 1. Adresse (geteilter Link), 2. zuletzt gelesen, 3. erster Eintrag
+    // des gewaehlten Bereichs
     if(folgeHash(location.hash)) return;
+    var erste = sichtbare()[0] || found[0];
     var wunsch = gemerkt(), ziel = wunsch ? ausListe(wunsch) : null;
-    if(ziel && ziel !== found[0]) openDoc(ziel, found[0]);
-    else openDoc(found[0]);
+    if(ziel && ziel !== erste) openDoc(ziel, erste);
+    else openDoc(erste);
   }
 
+  // Zuletzt gewaehlter Bereich. Steht er nicht in BEREICHE (Eintrag
+  // umbenannt oder entfernt), bleibt der Standardbereich.
+  (function(){
+    var b = bereichGemerkt();
+    if(b === 'alle' || (b && bereichDef(b))) bereichAktiv = b;
+  })();
 
-  var BUILD = '2026-08-28k';
+  var BUILD = '2026-09-01a';
   document.getElementById('build').textContent = 'Viewer ' + BUILD;
 
   // 1. Liste aus dateien.js, das als <script> geladen wurde. Funktioniert
@@ -693,8 +916,13 @@
       .then(function(txt){
         var frisch = new Function(txt + '; return typeof DOKUMENTE!=="undefined" ? DOKUMENTE : null;')();
         if(!frisch || !frisch.length) return;
-        var alt = found.map(function(f){ return f.path; }).join('|');
-        var neu = frisch.map(function(it){ return (typeof it==='string') ? it : (it.datei||it.name); }).join('|');
+        // Reihenfolge-unabhaengig vergleichen: found ist sortiert, das
+        // Manifest nicht - sonst gilt jede Liste als geaendert.
+        var alt = found.map(function(f){ return f.path+'#'+f.bereich; }).sort().join('|');
+        var neu = frisch.map(function(it){
+          var p = (typeof it==='string') ? it : (it.datei||it.name);
+          return p+'#'+bereichVon(p, (typeof it==='object') ? it.bereich : null);
+        }).sort().join('|');
         if(alt === neu) return;                       // nichts geaendert
         loadManifest(frisch); paintList(); pruefen();
         startDokument();

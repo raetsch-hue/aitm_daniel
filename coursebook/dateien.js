@@ -10,9 +10,18 @@
    - Beim Öffnen erscheint das zuletzt gelesene Dokument, beim ersten
      Besuch das erste der sortierten Liste
    - Ein Komma zu viel am Ende ist hier erlaubt (anders als in JSON)
+
+   BEREICHE
+   Der Viewer hat oben im Kopf einen Umschalter "Bereich". Zu welchem
+   Bereich ein Dokument gehört, erkennt er am Pfad; "bereich" muss man
+   also nur setzen, wenn der Pfad es nicht verrät.
+   - coursebook: alles unterhalb von coursebook/  (Standard)
+   - bibliothek: alles unterhalb von ../bibliothek/
    ------------------------------------------------------------------ */
 
 var DOKUMENTE = [
+
+  /* ================= COURSEBOOK ================= */
 
   // ---- Einstieg ----
   { datei: "0/00_Index-und-Gewichtung.md",
@@ -34,5 +43,14 @@ var DOKUMENTE = [
 
   { datei: "2.2/2.2_Kotter-8-Schritte-Modell.md",
     titel: "2.2 · Kotters 8-Schritte-Modell" },
+
+  /* ================= BIBLIOTHEK =================
+     Eigene Nachschlage-Einträge aus ../bibliothek/.
+     Pfad beginnt mit ../ , weil viewer.html in coursebook/ liegt.
+     Sortiert wird hier alphabetisch nach Titel, nicht nach Nummer.  */
+
+  { datei: "../bibliothek/lewin-adkar.md",
+    titel: "Lewin & ADKAR",
+    bereich: "bibliothek" },
 
 ];
