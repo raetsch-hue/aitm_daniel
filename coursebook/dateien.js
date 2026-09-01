@@ -56,4 +56,8 @@ var DOKUMENTE = [
     titel: "Lewin & ADKAR",
     bereich: "bibliothek" },
 
+  { datei: "../bibliothek/kotter-forcefield.md",
+    titel: "Kotter & Force Field",
+    bereich: "bibliothek" },
+
 ];
