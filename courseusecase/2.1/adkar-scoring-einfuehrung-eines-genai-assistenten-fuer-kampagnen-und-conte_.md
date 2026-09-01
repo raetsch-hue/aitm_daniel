@@ -7,7 +7,7 @@
 | **Zeithorizont** | Pilot Q4 2026, Rollout Q1 2027 |
 | **Sponsor** | – |
 | **Bearbeitet von** | DR |
-| **Stand** | 31.08.2026 |
+| **Stand** | 30.08.2026 |
 
 ## 1. Die KI-Einführung
 
@@ -20,7 +20,7 @@ Skala: 1 = nicht vorhanden · 2 = ansatzweise · 3 = teilweise · 4 = überwiege
 | Stakeholder-Gruppe | A Awareness | D Desire | K Knowledge | A Ability | R Reinforcement | Ø | Barrier Point |
 |---|---|---|---|---|---|---|---|
 | Geschäftsleitung / Sponsor | 5 | 4 | 2 | 3 | 1 | 3.0 | K – Knowledge |
-| Content-Team / operatives Team | 4 | 3 | 2 | 3 | 2 | 2.8 | D – Desire |
+| Sachbearbeitung / operatives Team | 4 | 3 | 2 | 3 | 2 | 2.8 | D – Desire |
 
 ### 2.1 Geschäftsleitung / Sponsor
 
@@ -41,9 +41,9 @@ Grundsätzlich sind die Mitarbeitenden in der Lage, den GenAI-Assistenten im Arb
 **R – Reinforcement (Verankerung): Score 1**  
 Konkrete Maßnahmen zur nachhaltigen Verankerung und regelmäßigen Nutzung des GenAI-Assistenten fehlen bislang.
 
-### 2.2 Content-Team / operatives Team
+### 2.2 Sachbearbeitung / operatives Team
 
-**Kurzprofil:** Das Content-Team ist grundsätzlich offen für den GenAI-Assistenten und sieht Potenzial, zeitaufwendige Routineaufgaben abzugeben. Gleichzeitig bestehen Sorgen über mögliche Veränderungen der eigenen Rolle und die langfristigen Auswirkungen auf Arbeitsplätze. Entscheidend sind deshalb transparente, belastbare Informationen, eine frühzeitige Beteiligung des Teams und eine klare Abgrenzung zwischen KI-Unterstützung und menschlicher Verantwortung.
+**Kurzprofil:** Die Sachbearbeitenden sind grundsätzlich motiviert, bleiben wegen möglicher Arbeitsplatzverluste aber zurückhaltend. Entscheidend sind daher eine glaubwürdige Arbeitsplatzgarantie und die klare Botschaft, dass KI vor allem zeitaufwendige Routineaufgaben übernimmt und nicht die Mitarbeitenden ersetzt.
 
 **A – Awareness (Bewusstsein für die Notwendigkeit): Score 4**  
 Die Mitarbeitenden verstehen, dass KI zeitaufwendige Routineaufgaben übernehmen und die Bearbeitung beschleunigen kann.
@@ -66,24 +66,24 @@ Maßnahmen zur nachhaltigen Verankerung fehlen bislang. Regelmäßiges Feedback,
 
 | Gruppe | Barrier Point | Score | Gegenmaßnahme | Lewin-Phase | Verantwortlich | Wann |
 |---|---|---|---|---|---|---|
-| Geschäftsleitung / Sponsor | K – Knowledge | 2 | Die KI-Projektleitung führt vor dem Pilotstart einen praxisbezogenen Workshop mit Geschäftsleitung, Marketingleitung, direkter Führungskraft, Datenschutz, Compliance, IT-Sicherheit und einer Vertretung der Agenturen durch. Anhand realer Content-Anwendungsfälle werden Einsatzgrenzen, Risiken, Datenschutz, Urheberrechte sowie Prüf- und Freigabeverantwortung geklärt und in einer verbindlichen Use-Case-Matrix dokumentiert. Eine Woche später werden offene Fragen nachverfolgt; der Lernerfolg zeigt sich daran, dass die Beteiligten Anwendungsfälle korrekt einordnen und gemeinsame Regeln für den Piloten freigeben können. | Change (Bewegen) | KI-Projektleitung gemeinsam mit Datenschutz und Compliance | Innerhalb der nächsten 2 Wochen |
-| Content-Team / operatives Team | D – Desire | 3 | Die KI-Projektleitung klärt gemeinsam mit Geschäftsführung, HR, Betriebsrat und der direkten Führungskraft zunächst, welche Auswirkungen die KI-Einführung tatsächlich auf Aufgaben, Rollen und Arbeitsplätze haben kann. Anschließend informieren Geschäftsführung und HR das Content-Team über die bestätigten Rahmenbedingungen, während die KI-Projektleitung die Kommunikation plant, moderiert und offene Fragen sowie Bedenken in zweiwöchentlichen Feedbackrunden nachverfolgt. Als beobachtbares Ergebnis sind die Auswirkungen auf Rollen und Arbeitsplätze dokumentiert, offene Fragen verantwortlichen Stellen zugeordnet und die Akzeptanz wird durch eine kurze Befragung vor und nach der Maßnahme überprüft. | Unfreeze (Auftauen) | Geschäftsführung und Personalabteilung | Innerhalb der nächsten Woche |
+| Geschäftsleitung / Sponsor | K – Knowledge | 2 | Kompaktes KI-Briefing zu Einsatzmöglichkeiten, Grenzen, Halluzinationen, Datenschutz und menschlicher Kontrolle | Change (Bewegen) | KI-Projektleitung gemeinsam mit Datenschutz und Compliance | Innerhalb der nächsten 2 Wochen |
+| Sachbearbeitung / operatives Team | D – Desire | 3 | Verbindlich kommunizieren, dass die KI-Einführung nicht zum Abbau von Arbeitsplätzen dient, sondern das Team von zeitaufwendigen Routineaufgaben entlasten soll | Unfreeze (Auftauen) | Geschäftsführung und Personalabteilung | Innerhalb der nächsten Woche |
 
 ### 3.1 Geschäftsleitung / Sponsor – Barrier Point: K Knowledge (Score 2)
 
 *Begründung des Scores:* Es fehlt noch an Wissen über die konkreten Einsatzmöglichkeiten und Grenzen von KI. Teilweise herrscht die Vorstellung: ‚KI kann doch einfach alles.
 
-**Gegenmaßnahme:** Die KI-Projektleitung führt vor dem Pilotstart einen praxisbezogenen Workshop mit Geschäftsleitung, Marketingleitung, direkter Führungskraft, Datenschutz, Compliance, IT-Sicherheit und einer Vertretung der Agenturen durch. Anhand realer Content-Anwendungsfälle werden Einsatzgrenzen, Risiken, Datenschutz, Urheberrechte sowie Prüf- und Freigabeverantwortung geklärt und in einer verbindlichen Use-Case-Matrix dokumentiert. Eine Woche später werden offene Fragen nachverfolgt; der Lernerfolg zeigt sich daran, dass die Beteiligten Anwendungsfälle korrekt einordnen und gemeinsame Regeln für den Piloten freigeben können.
+**Gegenmaßnahme:** Kompaktes KI-Briefing zu Einsatzmöglichkeiten, Grenzen, Halluzinationen, Datenschutz und menschlicher Kontrolle
 
 **Lewin-Phase:** Change (Bewegen) – Qualifizieren, Pilotieren, Coaching, neue Abläufe einüben.
 
 **Verantwortlich:** KI-Projektleitung gemeinsam mit Datenschutz und Compliance · **Wann:** Innerhalb der nächsten 2 Wochen
 
-### 3.2 Content-Team / operatives Team – Barrier Point: D Desire (Score 3)
+### 3.2 Sachbearbeitung / operatives Team – Barrier Point: D Desire (Score 3)
 
 *Begründung des Scores:* Grundsätzlich besteht Interesse. Die Sorge um den eigenen Arbeitsplatz führt jedoch zu Zurückhaltung. Eine glaubwürdige Arbeitsplatzgarantie würde die Bereitschaft deutlich erhöhen.
 
-**Gegenmaßnahme:** Die KI-Projektleitung klärt gemeinsam mit Geschäftsführung, HR, Betriebsrat und der direkten Führungskraft zunächst, welche Auswirkungen die KI-Einführung tatsächlich auf Aufgaben, Rollen und Arbeitsplätze haben kann. Anschließend informieren Geschäftsführung und HR das Content-Team über die bestätigten Rahmenbedingungen, während die KI-Projektleitung die Kommunikation plant, moderiert und offene Fragen sowie Bedenken in zweiwöchentlichen Feedbackrunden nachverfolgt. Als beobachtbares Ergebnis sind die Auswirkungen auf Rollen und Arbeitsplätze dokumentiert, offene Fragen verantwortlichen Stellen zugeordnet und die Akzeptanz wird durch eine kurze Befragung vor und nach der Maßnahme überprüft.
+**Gegenmaßnahme:** Verbindlich kommunizieren, dass die KI-Einführung nicht zum Abbau von Arbeitsplätzen dient, sondern das Team von zeitaufwendigen Routineaufgaben entlasten soll
 
 **Lewin-Phase:** Unfreeze (Auftauen) – Dringlichkeit, Kommunikation, Betroffenheit, Widerstand adressieren.
 
