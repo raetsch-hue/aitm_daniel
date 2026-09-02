@@ -229,8 +229,10 @@
        nummeriert : true  -> Sortierung nach Nummer im Pfad (1.4 < 2.1)
                     false -> alphabetisch nach Titel                       */
   var BEREICHE = [
-    { id:'coursebook', titel:'Coursebook', ordner:'coursebook', nummeriert:true  },
-    { id:'bibliothek', titel:'Bibliothek', ordner:'bibliothek', nummeriert:false }
+    { id:'coursebook',   titel:'Coursebook',   ordner:'coursebook',   nummeriert:true  },
+    { id:'bibliothek',   titel:'Bibliothek',   ordner:'bibliothek',   nummeriert:false },
+    { id:'examples',     titel:'Beispiele',    ordner:'examples',     nummeriert:false },
+    { id:'lerntagebuch', titel:'Lerntagebuch', ordner:'lerntagebuch', nummeriert:false }
   ];
   var STANDARD_BEREICH = BEREICHE[0].id;
   var bereichAktiv = STANDARD_BEREICH;

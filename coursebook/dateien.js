@@ -47,6 +47,12 @@ var DOKUMENTE = [
   { datei: "2.2/2.2_Ergaenzung-Force-Field-Analyse.md",
     titel: "2.2 · Werkzeug: Force-Field-Analyse (Ergänzung)" },
 
+  { datei: "2.3/2.3_Kraefte-sichtbar-machen.md",
+    titel: "2.3 · Kräfte sichtbar machen (Analyse)" },
+
+  { datei: "2.4/2.4_Widerstand-ist-eine-Information.md",
+    titel: "2.4 · Widerstand ist eine Information (Analyse)" },
+
   /* ================= BIBLIOTHEK =================
      Eigene Nachschlage-Einträge aus ../bibliothek/.
      Pfad beginnt mit ../ , weil viewer.html in coursebook/ liegt.
@@ -59,5 +65,17 @@ var DOKUMENTE = [
   { datei: "../bibliothek/kotter-forcefield.md",
     titel: "Kotter & Force Field",
     bereich: "bibliothek" },
+
+  /* ================= BEISPIELE ================= */
+
+  { datei: "../examples/fallbeispiele.md",
+    titel: "Fallbeispiele im Kurs (Übersicht)",
+    bereich: "examples" },
+
+  /* ================= LERNTAGEBUCH ================= */
+
+  { datei: "../lerntagebuch/lerntagebuch.md",
+    titel: "Lerntagebuch (Stand 2.2)",
+    bereich: "lerntagebuch" },
 
 ];
