@@ -73,6 +73,10 @@ var DOKUMENTE = [
     titel: "Kotter & Force Field",
     bereich: "bibliothek" },
 
+  { datei: "../bibliothek/widerstand.md",
+    titel: "Widerstand",
+    bereich: "bibliothek" },
+
   /* ================= BEISPIELE ================= */
 
   { datei: "../examples/fallbeispiele.md",
