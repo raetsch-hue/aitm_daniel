@@ -197,8 +197,17 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
 <!-- Dokumentliste. Als <script> eingebunden, weil das auch bei file:// funktioniert,
-     wo fetch() gesperrt ist. Gepflegt wird ausschliesslich dateien.js. -->
-<script src="dateien.js"></script>
+     wo fetch() gesperrt ist. Gepflegt wird ausschliesslich dateien.js.
+     Ueber http(s) haengt ein Zeitstempel an der Adresse: sonst liefert der
+     Browser nach einer Aenderung an dateien.js weiter die alte Liste aus dem
+     Cache, und neue Dokumente erscheinen erst nach Strg+F5. Bei file://
+     bleibt die Adresse unveraendert, weil manche Browser dort Parameter
+     nicht mitmachen. document.write haelt die Ausfuehrungsreihenfolge. -->
+<script>
+  document.write('<script src="dateien.js' +
+    (location.protocol.indexOf('http') === 0 ? '?t=' + Date.now() : '') +
+    '"><\/script>');
+</script>
 <script>
 (function(){
   var out=document.getElementById('out'), drop=document.getElementById('drop'),
