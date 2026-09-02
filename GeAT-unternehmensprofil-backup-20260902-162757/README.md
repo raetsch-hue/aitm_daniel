@@ -24,7 +24,7 @@ Der durchgehende Fall für alle Methoden des Kurses bis Woche 12: Change Managem
 
 Der Kernprozess des Unternehmens **ist** der KI-Fall. Bei einem Maschinenbauer hängt man KI an einen Prozess an; bei einem Personaldienstleister ist die Auswahl von Menschen für Stellen das Geschäft selbst. Daraus folgen drei Dinge, die kein anderer Fall in dieser Schärfe liefert:
 
-1. **EU AI Act Annex III, Nummer 4 — voraussichtlich Hochrisiko.** Filterung und Bewertung von Bewerbungen sind ausdrücklich gelistet. Art. 6 Abs. 3 enthält eng begrenzte Ausnahmen für Systeme ohne erheblichen Einfluss auf die Entscheidung; ein menschlicher Klick allein genügt dafür nicht. Gerade diese Abgrenzung macht den Fall didaktisch wertvoll.
+1. **EU AI Act Annex III, Nummer 4 — Hochrisiko, nicht Randzone.** Bewerbersuche, Filterung und Bewertung sind ausdrücklich gelistet. Der Fall lässt sich nicht mit „ein Mensch klickt ja" auflösen, und genau daran lernt man, was wirksame menschliche Aufsicht heißt.
 2. **Bias mit Zahlen statt mit Beispielen.** 28,8 Prozent der Zeitarbeitnehmer in Deutschland haben keinen Berufsabschluss, 20,4 Prozent waren zuvor langzeitarbeitslos oder noch nie beschäftigt, und Zeitarbeit trägt 10,8 Prozent der Übergänge aus Langzeitarbeitslosigkeit in Beschäftigung — alles belegt (GVP 2025). Ein auf Erfolgswahrscheinlichkeit trainiertes Modell sortiert genau diese Gruppen zuerst aus. Das ist keine Übungsaufgabe, das ist eine Rechnung.
 3. **Die Aufsichtsbehörde ist die Bundesagentur für Arbeit** (belegt, Impressum). Sie erteilt die Erlaubnis, von der das Geschäftsmodell abhängt, und ist im Vermittlungsmarkt selbst Akteur. Für einen Digital Transformation Manager in der öffentlichen Arbeitsverwaltung ist das der Fall von der anderen Seite des Tisches.
 
@@ -53,7 +53,7 @@ Ein Profil ohne Widersprüche liefert bei jeder Methode glatte Ergebnisse. Sechs
 
 | Reibung | Wo |
 |---|---|
-| Zwei Rollen mit unvereinbaren Zielen: Recruiting Center gegen Niederlassungsleitung Gotha | `menschen.md`, Rollen 4 und 5 |
+| Zwei Rollen mit unvereinbaren Zielen: Recruiting Center gegen Niederlassungsleitung Nordhausen | `menschen.md`, Rollen 4 und 5 |
 | Gescheiterte Vorgängerinitiative: Bewerbermanagement-Modul 2023, 34 Prozent Nutzung, nie ausgewertet | `profil.md`, Vorgeschichte |
 | System ohne Schnittstelle: Multiposting ↔ Bewerbermanagement, jede Anzeige zweimal gepflegt | `systeme-daten.md` |
 | Datenbestand mit Mangel: 41.000 Profile, 63 Prozent ohne strukturiertes Können, 18.000 über die Speicherfrist | `systeme-daten.md` |

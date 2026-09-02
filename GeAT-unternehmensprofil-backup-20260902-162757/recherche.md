@@ -28,7 +28,7 @@ GeAT ist ein **reales Unternehmen**. Diese Datei enthält ausschließlich öffen
 | USt-IdNr. | DE 190055861 | [geat.de/impressum](https://www.geat.de/impressum/) | 02.09.2026 |
 | Rechtsformwechsel | Beschluss der Hauptversammlung vom 02.06.2025: formwechselnde Umwandlung der AG in eine mbH. **Vorbehalt:** aus der Suchergebnis-Zusammenfassung von companyhouse.de, die Originalseite wurde nicht geöffnet. Vor Verwendung in einem Deliverable prüfen | companyhouse.de (Suchergebnis) | 02.09.2026 |
 | Gründung | 1995 | [geat.de/aboutus](https://www.geat.de/aboutus/) | 02.09.2026 |
-| Niederlassungen | 6: Aschersleben, Erfurt, Gera, Gotha, Heilbad Heiligenstadt und Jena; die Zentrale sitzt ebenfalls in Erfurt | [geat.de/aboutus](https://www.geat.de/aboutus/), [geat.de/kontakt](https://www.geat.de/kontakt/) | 02.09.2026 |
+| Niederlassungen | **widersprüchlich:** geat.de nennt „6 Niederlassungen in der Region", Wikipedia „acht Niederlassungen in Thüringen und Sachsen-Anhalt". Aus Stellenanzeigen belegbare Orte: Erfurt, Nordhausen, Jena, Leinefelde-Worbis, Apolda, Schönebeck | [geat.de/aboutus](https://www.geat.de/aboutus/), [Wikipedia](https://de.wikipedia.org/wiki/GeAT), [geat.de](https://www.geat.de/) | 02.09.2026 |
 | Beschäftigte 2018 | 992 Zeitarbeitnehmer, 74 Stammpersonal | [Wikipedia](https://de.wikipedia.org/wiki/GeAT) | 02.09.2026 |
 | Beschäftigte 2021 | 698 Zeitarbeitnehmer, 61 Stammpersonal; Zeitarbeitnehmer aus über 55 Nationen | [Wikipedia](https://de.wikipedia.org/wiki/GeAT) | 02.09.2026 |
 | Beschäftigte 2025/2026 | **nicht belegbar** | — | — |
@@ -71,7 +71,6 @@ Die Zeile zur Aufsichtsbehörde ist für diesen Kurs die wichtigste öffentliche
 | Marktvolumen Zeitarbeit Deutschland | 31,9 Mrd. Euro, −3,1 % gegenüber Vorjahr, zweites Rückgangsjahr in Folge | 2024 | [Lünendonk-Studie 2025](https://www.luenendonk.de/neue-luenendonk-studie-zeitarbeitsbranche-in-der-krise-vorsichtiger-optimismus-fuer-die-zukunft/) | 02.09.2026 |
 | Anteil Unternehmen mit Umsatzrückgang | 76 % | 2024 | Lünendonk 2025 | 02.09.2026 |
 | Umsatzerwartung | +5,9 % im Mittel | 2025 | Lünendonk 2025 | 02.09.2026 |
-| Umsatzentwicklung Top 25 | −7,0 % im Mittel | 2025 (Ist-Auswertung) | [Lünendonk-Liste 2026](https://www.luenendonk.de/luenendonk-liste-2026-zeitarbeitsbranche-sieht-nach-erneutem-rueckgang-die-talsohle-erreicht/) | 02.09.2026 |
 | Umsatzstruktur im Mittel | ca. 90 % klassische Zeitarbeit, 5 % Personalvermittlung, knapp 3 % Projekt/Contracting; margenstarke Anbieter über 10 % außerhalb der klassischen Zeitarbeit | 2024 | Lünendonk 2025 | 02.09.2026 |
 | Größte Hemmnisse | schwache Konjunktur 77 %, sinkende Bewerberqualität 31 %, eigener Fachkräftemangel 27 % | 2024/25 | Lünendonk 2025 | 02.09.2026 |
 | **KI-Nutzung in der Branche** | **46 % der befragten Unternehmen nutzen KI-Werkzeuge regelmäßig**, vor allem für Kandidaten-Matching, Onboarding, Dokumentenautomatisierung und Kapazitätsplanung | 2024/25 | Lünendonk 2025 (87 Unternehmen, 13,1 Mrd. Euro Deutschlandumsatz) | 02.09.2026 |
@@ -96,6 +95,7 @@ Diese vier tragen im Profil `angenommen (Erfahrungswert, Quelle nachtragen)` und
 ## Offene Fragen
 
 1. **Aktuelle Beschäftigtenzahl.** Belegt sind nur 2018 und 2021. Der Trend beider Jahre (−30 % Zeitarbeitnehmer in drei Jahren) passt zum Marktrückgang, aber der Wert für 2025 ist gesetzt, nicht erhoben.
-2. **Branchensoftware.** Siehe Punkt 4. Der wertvollste noch offene Rechercheschritt.
-3. **Eigentümerstruktur nach dem Formwechsel.** Wer die Anteile der mbH hält, ist nicht öffentlich. Das Profil nimmt eine Gesellschafterversammlung mit Freigabegrenze an, weil die Methoden ab Woche 4 ein Gremium neben der Geschäftsführung brauchen.
-4. **Rohertrags- und Margenbenchmarks.** Die Lünendonk-Studie enthält sie, die frei zugängliche Pressemitteilung nicht. Wer die Studie hat, kann vier `angenommen`-Werte in `öffentlich` überführen.
+2. **Zahl der Niederlassungen.** Sechs oder acht — die eigene Website und Wikipedia widersprechen sich. Das Profil arbeitet mit sieben Standorten und markiert das als `angenommen`.
+3. **Branchensoftware.** Siehe Punkt 4. Der wertvollste noch offene Rechercheschritt.
+4. **Eigentümerstruktur nach dem Formwechsel.** Wer die Anteile der mbH hält, ist nicht öffentlich. Das Profil nimmt eine Gesellschafterversammlung mit Freigabegrenze an, weil die Methoden ab Woche 4 ein Gremium neben der Geschäftsführung brauchen.
+5. **Rohertrags- und Margenbenchmarks.** Die Lünendonk-Studie enthält sie, die frei zugängliche Pressemitteilung nicht. Wer die Studie hat, kann vier `angenommen`-Werte in `öffentlich` überführen.

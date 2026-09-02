@@ -6,7 +6,7 @@ rechtsform: mbH (bis 2025 AG)
 eigentuemer: Investor   # nicht öffentlich belegt, angenommen
 gruendung: 1995
 mitarbeitende: 708      # 68 Stammpersonal + 640 Zeitarbeitnehmer im Jahresdurchschnitt
-standorte: [Aschersleben, Erfurt, Gera, Gotha, Heilbad Heiligenstadt, Jena]
+standorte: [Erfurt, Nordhausen, Jena, Leinefelde-Worbis, Apolda, Schönebeck, Gera]
 umsatz_mio_eur: 31.0
 stand: 2026-09-02
 herkunft_kopf: gemischt   # Name, Rechtsform, Gründung, Sitz = öffentlich; Beschäftigte, Umsatz, Eigentümer = angenommen
@@ -20,7 +20,7 @@ herkunft_kopf: gemischt   # Name, Rechtsform, Gründung, Sitz = öffentlich; Bes
 
 ## Geschäftsmodell
 
-GeAT verkauft Arbeitszeit und Zugang zu Bewerbern. Vier Erlösarten (Struktur `angenommen`, am Branchenbild der Lünendonk-Studie 2025 ausgerichtet und für dieses Profil auf 90 / 6 / 3 / 1 Prozent gesetzt):
+GeAT verkauft Arbeitszeit und Zugang zu Bewerbern. Vier Erlösarten (Struktur `angenommen`, an den Branchenmittelwerten der Lünendonk-Studie 2025 ausgerichtet: 90 / 5 / 3 Prozent):
 
 | Erlösart | Umsatz 2025 | Anteil | Rohertragsmarge | Herkunft |
 |---|---:|---:|---:|---|
@@ -34,7 +34,7 @@ GeAT verkauft Arbeitszeit und Zugang zu Bewerbern. Vier Erlösarten (Struktur `a
 Drei größte Kundengruppen (`angenommen`, gestützt auf die Berufsfelder in den öffentlichen Stellenanzeigen):
 
 1. **Metall- und Kunststoffverarbeitung, CNC-Zerspanung** in Mittelthüringen, rund 38 Prozent des Überlassungsumsatzes. Rahmenverträge, planbare Volumen, harter Preiswettbewerb.
-2. **Druck, Verpackung, Logistik** im Raum Erfurt/Gera/Aschersleben, rund 27 Prozent. Stark schwankend, kurzfristige Bedarfe, hohe Zahlungsbereitschaft für Schnelligkeit.
+2. **Druck, Verpackung, Logistik** im Raum Erfurt/Apolda/Schönebeck, rund 27 Prozent. Stark schwankend, kurzfristige Bedarfe, hohe Zahlungsbereitschaft für Schnelligkeit.
 3. **Handwerk und technische Gewerke** (Elektro, Tischlerei, Anlagenbau), rund 18 Prozent. Kleine Volumen, hohe Qualifikationsanforderungen, hier liegt die Vermittlung mit der besten Marge.
 
 Der Rest verteilt sich auf kaufmännische Besetzungen und öffentliche Auftraggeber.
@@ -62,7 +62,7 @@ Skala: 1 = ad hoc, 2 = ansatzweise, 3 = definiert, 4 = gesteuert, 5 = optimiert.
 | **Daten** | **2** | 3 | 41.000 Bewerberprofile, **63 Prozent ohne strukturierte Qualifikationsfelder** — der Lebenslauf liegt als PDF-Anhang, das Können steht im Freitext. 18.000 Profile älter als die den Bewerbern zugesagte Speicherdauer. Kein Datenverantwortlicher, keine Pflichtfeldregeln, kein Löschkonzept in Betrieb | angenommen |
 | **Kultur** | **2** | 3 | Die ATS-Einführung 2023 wurde nie ausgewertet, obwohl die Nutzung bei 34 Prozent liegt. In den letzten fünf Niederlassungsleiterrunden wurde die Besetzungsquote nicht als Kennzahl aufgerufen, obwohl sie in zwei Jahren um acht Punkte gefallen ist. Wer eine Besetzung „über Beziehung" macht, gilt als guter Disponent; wer sie über den Bestand macht, gilt als bequem | angenommen |
 | **Prozesse** | **2** | 4 | Der Pilotprozess durchläuft drei Systeme und vier manuelle Übertragungen. Stundenzettel kommen auf Papier und als Foto im Messenger. Der Prozess ist für ISO 9001 beschrieben; die Beschreibung enthält den Schritt „Abgleich mit dem Bewerberpool", der faktisch bei einem Drittel der Anfragen übersprungen wird | angenommen |
-| **People** | 3 | 4 | Fachkompetenz hoch: die vier Senior-Disponenten sind im Mittel 14 Jahre im Haus und kennen ihre Kundenbetriebe von innen. Aber: keine Rolle für Automatisierung, 1,5 IT-Stellen für sechs Niederlassungen plus Zentrale, und neun von 68 Stammkräften nutzen private KI-Konten für Anzeigentexte und Profilzusammenfassungen — mit Bewerberdaten darin | angenommen |
+| **People** | 3 | 4 | Fachkompetenz hoch: die vier Senior-Disponenten sind im Mittel 14 Jahre im Haus und kennen ihre Kundenbetriebe von innen. Aber: keine Rolle für Automatisierung, 1,5 IT-Stellen für sieben Standorte, und neun von 68 Stammkräften nutzen private KI-Konten für Anzeigentexte und Profilzusammenfassungen — mit Bewerberdaten darin | angenommen |
 
 **Mittelwert 2,2.** Die Zahl erklärt nichts und steht hier nur, damit sie nicht anderswo als Argument auftaucht.
 
@@ -103,7 +103,7 @@ Median 11 Arbeitstage von Kundenanfrage bis Arbeitsbeginn, 2023 waren es 8 (`ang
 
 ### Problem 3: Die Marge trägt keine Investition mehr
 
-EBIT-Marge 2024: 4,6 Prozent. 2025: 2,9 Prozent (`angenommen`, Benchmark 2 bis 5 Prozent). Ursache ist der Volumenrückgang bei weitgehend gleichbleibenden Fixkosten für sechs Niederlassungen und die Zentrale, dazu tarifliche Lohnsteigerungen, die nicht vollständig weitergegeben werden konnten, und ein Anzeigenbudget, das mit sinkender Bewerberqualität steigt. Der Markt bestätigt das Muster: Die Top 25 meldeten für 2025 im Mittel 7,0 Prozent Umsatzrückgang (`öffentlich`, Lünendonk-Liste 2026). Der angenommene Rückgang der GeAT um 5,5 Prozent ist deshalb kein Beleg für einen Marktanteilsverlust, sondern liegt etwas besser als dieser Vergleichswert. Betroffen: die Gesellschafterversammlung, die Ausschüttung und Investition aus einem Topf zahlt. Bisher versucht: Zusammenlegung von zwei Niederlassungen 2025, brachte 180.000 Euro und Unruhe (`generiert`).
+EBIT-Marge 2024: 4,6 Prozent. 2025: 2,9 Prozent (`angenommen`, Benchmark 2 bis 5 Prozent). Ursache ist der Volumenrückgang bei gleichbleibenden Fixkosten für sieben Standorte, dazu tarifliche Lohnsteigerungen, die nicht vollständig weitergegeben werden konnten, und ein Anzeigenbudget, das mit sinkender Bewerberqualität steigt. Der Markt bestätigt das Muster: −3,1 Prozent Branchenumsatz 2024, 76 Prozent der Anbieter mit Rückgang (`öffentlich`, Lünendonk 2025). Betroffen: die Gesellschafterversammlung, die Ausschüttung und Investition aus einem Topf zahlt. Bisher versucht: Zusammenlegung von zwei Niederlassungen 2025, brachte 180.000 Euro und Unruhe (`generiert`).
 
 ## Vorgeschichte
 
@@ -131,7 +131,7 @@ Warum es scheiterte: Für den Disponenten war die Datenpflege reine Zusatzarbeit
 | **Branchenaufsicht** | Unbefristete Erlaubnis zur gewerbsmäßigen Arbeitnehmerüberlassung ab 25.09.2000, Aufsicht durch die **Bundesagentur für Arbeit** (Agentur für Arbeit Kiel). AÜG mit Überlassungshöchstdauer, equal pay und equal treatment. Der Entzug der Erlaubnis beendet das Geschäftsmodell | öffentlich |
 | Qualitätsmanagement | DIN EN ISO 9001 seit 2004, Tarifwerke DGB/GVP, GVP-Mitgliedschaft, Charta der Vielfalt | öffentlich |
 | **Datenarten** | Bewerberdaten (Lebenslauf, Qualifikation, teils Gesundheitsdaten aus der arbeitsmedizinischen Vorsorge, teils Angaben zu Aufenthalt und Sprache), Beschäftigtendaten der Zeitarbeitnehmer und des Stammpersonals, Kundendaten. **Keine Bonitätsdaten.** Damit liegt fast der gesamte Datenbestand im Bereich besonders schutzbedürftiger Verarbeitung | angenommen |
-| **EU AI Act, Annex III** | **Voraussichtlich Hochrisiko; vor Einsatz rechtlich zu prüfen.** Annex III Nummer 4 erfasst KI-Systeme für Beschäftigung und Personalmanagement, ausdrücklich Filterung und Bewertung von Bewerbungen. Ein System, das Kandidaten rangiert und damit die Auswahl materiell beeinflusst, fällt grundsätzlich darunter. Art. 6 Abs. 3 kennt jedoch eng begrenzte Ausnahmen, etwa für rein vorbereitende Aufgaben ohne erheblichen Einfluss; die Einstufung muss dokumentiert werden. Ein menschlicher Klick allein beseitigt den Hochrisikostatus nicht | rechtliche Arbeitshypothese |
+| **EU AI Act, Annex III** | **Ja, Hochrisiko.** Annex III Nummer 4 erfasst KI-Systeme für Beschäftigung und Personalmanagement, ausdrücklich Bewerbersuche, Filterung und Bewertung von Bewerbungen. Der Pilot fällt damit nicht in die Randzone, sondern in den Kern der Hochrisiko-Liste. Folge: Risikomanagement, Datengovernance, technische Dokumentation, Protokollierung, wirksame menschliche Aufsicht, Transparenz gegenüber Bewerbern, Registrierung. Ein Assistent, der Vorschläge macht, entkommt dem nicht dadurch, dass ein Mensch klickt | angenommen |
 | Weitere Rechtsgrundlagen | Art. 22 DSGVO (automatisierte Einzelentscheidung), § 26 BDSG, AGG (Diskriminierungsverbot bei Auswahl), § 87 BetrVG (Mitbestimmung bei technischen Überwachungseinrichtungen) | angenommen |
 | **Betriebsrat** | Ja, am Sitz Erfurt, sieben Mitglieder, zuständig für Stammpersonal **und** die überlassenen Zeitarbeitnehmer, die zum Betrieb des Verleihers gehören. Faktisch erreicht er die Zeitarbeitnehmer kaum, weil sie in Kundenbetrieben arbeiten. Das ist eine Mitbestimmungslücke, die dem Vorhaben erst auffällt, wenn es sie ausnutzt | angenommen |
 
@@ -139,7 +139,7 @@ Warum es scheiterte: Für den Disponenten war die Datenpflege reine Zusatzarbeit
 
 | Reibung | Wo sie steht |
 |---|---|
-| Zwei Rollen mit unvereinbaren Zielen: die Leiterin Recruiting Center will den Bestand zur ersten Suchquelle machen, der Niederlassungsleiter Gotha verteidigt die Besetzung über persönliche Beziehung als das, was seine Zahlen trägt | [`menschen.md`](menschen.md), Rollen 4 und 5 |
+| Zwei Rollen mit unvereinbaren Zielen: die Leiterin Recruiting Center will den Bestand zur ersten Suchquelle machen, der Niederlassungsleiter Nordhausen verteidigt die Besetzung über persönliche Beziehung als das, was seine Zahlen trägt | [`menschen.md`](menschen.md), Rollen 4 und 5 |
 | Gescheiterte Vorgängerinitiative: Bewerbermanagement-Modul 2023, 34 Prozent Nutzung, nie ausgewertet | oben, Vorgeschichte |
 | System ohne Schnittstelle: Multiposting-Werkzeug ↔ Bewerbermanagement. Jede Anzeige wird zweimal gepflegt, und keine Bewerbung trägt die Quelle, aus der sie kam | [`systeme-daten.md`](systeme-daten.md) |
 | Datenbestand mit Mangel, der den Piloten gefährdet: 41.000 Profile, 63 Prozent ohne strukturiertes Können, 18.000 über die zugesagte Speicherdauer hinaus | [`systeme-daten.md`](systeme-daten.md) |

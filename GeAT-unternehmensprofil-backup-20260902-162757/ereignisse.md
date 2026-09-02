@@ -8,7 +8,7 @@ Was sich im Kursverlauf am Unternehmen geändert hat. Eine Zeile je Änderung, m
 | 2.3 | Recherche durchgeführt: Firma, Sitz, Gründung, Leistungen, Beschäftigte 2018 und 2021, Zertifikate, Aufsicht und sieben Branchenbenchmarks als `öffentlich` belegt | Stufe 1 des Feldkatalogs | `recherche.md` |
 | 2.3 | Umsatz, Ergebnis und alle Prozesskosten als `angenommen` gesetzt, weil zur Ertragslage nichts öffentlich ist | Stufe 2. Der Vorbehalt steht im Kopf von `zahlen.md` | `zahlen.md` |
 | 2.3 | Reifegradbewertung mit prüfbarem Nachweis je Dimension angelegt, Wellen-Diagnose ergänzt — übernommen aus der Bauweise der Trainingsfirma in `training-company/` | Nachweise statt Adjektive. „Daten: 2" ist eine Behauptung, „63 Prozent der Profile ohne strukturierte Qualifikationsfelder" ein Argument | `profil.md` |
-| 2.3 | EU AI Act als **voraussichtlich Hochrisiko** eingeordnet (Annex III Nr. 4), mit Prüfung der Ausnahme nach Art. 6 Abs. 3 | Bewerberauswahl ist in Annex III genannt; entscheidend bleibt, ob das System die Auswahl materiell beeinflusst. Unterscheidet diesen Fall vom Musterprofil und von der Trainingsfirma | `profil.md`, `vorhaben.md` |
+| 2.3 | EU AI Act als **Hochrisiko** eingeordnet (Annex III Nr. 4), nicht als begrenztes Risiko | Bewerberauswahl ist der Kern der Liste, nicht ihr Rand. Unterscheidet diesen Fall vom Musterprofil und von der Trainingsfirma | `profil.md`, `vorhaben.md` |
 | 2.3 | Pilotkennzahl von Besetzungsdauer auf **gesendete Profile je Besetzung** geändert | Von 11 Tagen Besetzungsdauer sind 0,4 Tage Arbeit. Die Profilzahl ist die einzige Größe, auf die der Assistent direkt wirkt | `vorhaben.md`, `zahlen.md` |
 
 ## Zu erwartende Ereignisse

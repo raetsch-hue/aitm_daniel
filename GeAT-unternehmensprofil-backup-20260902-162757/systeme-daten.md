@@ -42,7 +42,7 @@ Was ein Assistent lesen müsste, um eine Anfrage zu besetzen — und in welchem 
 | Bewerberprofile im ATS | 41.000 Profile, davon 15.000 mit strukturierten Feldern | siehe oben: 63 Prozent unstrukturiert, Schreibweisen uneinheitlich | angenommen |
 | Lebenslauf-PDF | der eigentliche Inhalt: Tätigkeiten, Branchen, Maschinen, Schichtbereitschaft | 41.000 Dateien, kein Textindex, gescannte Dokumente teils ohne Texterkennung | angenommen |
 | Anforderungsprofile der Kunden | was ein Kundenbetrieb tatsächlich braucht, jenseits der Stellenbezeichnung | in Postfächern und in Köpfen. Kein Feld im System | angenommen |
-| Kandidatenlisten der Niederlassungen | wer gerade verfügbar ist, wer wo schon war, wer mit wem nicht kann | sechs Excel-Dateien, sechs Formate, kein Zugriff über Standortgrenzen | angenommen |
+| Kandidatenlisten der Niederlassungen | wer gerade verfügbar ist, wer wo schon war, wer mit wem nicht kann | sieben Excel-Dateien, sieben Formate, kein Zugriff über Standortgrenzen | angenommen |
 | Köpfe | Kenntnis der Kundenbetriebe: Meister, Schichtklima, Anforderungen zwischen den Zeilen | vier Senior-Disponenten, zwei über 58 | angenommen |
 | Pinnwand-Ausdruck in der Sachbearbeitung | welcher Kundenbetrieb welches Zeitnachweis-Format akzeptiert | eine Person, ein Ausdruck, keine Kopie | angenommen |
 | Prompt-Sammlung einer Recruiterin | funktionierende Textbausteine für Anzeigen und Profilzusammenfassungen | privat, außerhalb des Unternehmens, nicht geteilt | angenommen |
@@ -52,7 +52,7 @@ Was ein Assistent lesen müsste, um eine Anfrage zu besetzen — und in welchem 
 | Was | Wer | Warum | Herkunft |
 |---|---|---|---|
 | **Privater KI-Zugang für Anzeigentexte und Profilzusammenfassungen** | neun Personen im Recruiting und Innendienst, überwiegend unter 35 | schneller als die Textbausteine. Niemand hat es verboten, niemand hat es erlaubt. **Lebensläufe werden dabei eingefügt** | angenommen |
-| Sechs Kandidatenlisten in Excel | Niederlassungen | „Das System zeigt nicht, wer nächste Woche frei ist." Die Verfügbarkeit steht nirgends als Feld | angenommen |
+| Sieben Kandidatenlisten in Excel | Niederlassungen | „Das System zeigt nicht, wer nächste Woche frei ist." Die Verfügbarkeit steht nirgends als Feld | angenommen |
 | WhatsApp-Gruppen je Niederlassung, mit Zeitarbeitnehmern darin | Disponenten und rund 300 Zeitarbeitnehmer | einziger Kanal, der zuverlässig ankommt. Darin: Einsatzabsprachen, Fotos von Stundenzetteln, gelegentlich Krankmeldungen | angenommen |
 | Persönliche Outlook-Ordner als Kundenhistorie | Vertrieb, Niederlassungsleitungen | es gibt kein CRM | angenommen |
 | Kalkulations-Excel für Verrechnungssätze | Vertrieb, Niederlassungsleitungen | fünf Fassungen im Umlauf, keine als gültig gekennzeichnet | generiert |

@@ -2,7 +2,7 @@
 
 > **Alle Zahlen in dieser Datei tragen `angenommen` oder `generiert`.** Zu Umsatz, Ergebnis und Bilanz der GeAT ist nichts öffentlich verfügbar (siehe [`recherche.md`](recherche.md), Punkt 3). Die Werte sind aus den belegten Beschäftigtenzahlen und den Branchenbenchmarks abgeleitet und so gesetzt, dass sie sich gegenseitig stützen. Die **Struktur** der Rechnung ist übertragbar, die absoluten Werte sind es nicht. Für ein Deliverable außerhalb dieses Kurses ist keine Zahl dieser Datei verwendbar.
 
-Alle Beträge in Euro. Bezugsgröße: Gesellschaft insgesamt, sechs Niederlassungen plus Zentrale.
+Alle Beträge in Euro. Bezugsgröße: Gesellschaft insgesamt, sieben Standorte.
 
 ## Mengengerüst Beschäftigte
 
@@ -22,9 +22,9 @@ Alle Beträge in Euro. Bezugsgröße: Gesellschaft insgesamt, sechs Niederlassun
 | Sonstige betriebliche Aufwendungen | 4,8 Mio | 5,0 Mio | 15,5 % | angenommen |
 | **EBIT** | **0,9 Mio** | **1,5 Mio** | **2,9 %** | angenommen (Benchmark 2 bis 5 %) |
 
-Sonstige betriebliche Aufwendungen enthalten Miete für sechs Niederlassungen und die Zentrale, Fahrzeuge der Disponenten, Stellenanzeigen und Jobbörsen (480.000), arbeitsmedizinische Vorsorge und persönliche Schutzausrüstung, IT, Beratung und Abschlusskosten (angenommen).
+Sonstige betriebliche Aufwendungen enthalten Miete für sieben Standorte, Fahrzeuge der Disponenten, Stellenanzeigen und Jobbörsen (480.000), arbeitsmedizinische Vorsorge und persönliche Schutzausrüstung, IT, Beratung und Abschlusskosten (angenommen).
 
-**Der Umsatzrückgang bleibt eine Dringlichkeitszahl, aber kein Marktanteilsbeleg.** Die Lünendonk-Studie 2025 erwartete im Befragungszeitpunkt noch ein Plus von 5,9 Prozent. Der spätere Ist-Vergleich der Top 25 weist für 2025 dagegen einen mittleren Umsatzrückgang von 7,0 Prozent aus (`öffentlich`, Lünendonk-Liste 2026). Der angenommene Rückgang der GeAT um 5,5 Prozent ist damit ernst, aber etwas besser als dieser Marktvergleich. Ein Verlust von Marktanteilen lässt sich daraus nicht ableiten.
+**Der Umsatzrückgang ist die Dringlichkeitszahl.** Der Branchenmittelwert erwartete für 2025 ein Plus von 5,9 Prozent (`öffentlich`, Lünendonk 2025). GeAT hat 5,5 Prozent verloren. Die Differenz von elf Punkten ist kein Konjunkturthema, sondern Marktanteil — und sie liegt in derselben Größenordnung wie die acht Punkte, die die Besetzungsquote verloren hat.
 
 ## Rohertrag Arbeitnehmerüberlassung
 
@@ -57,13 +57,13 @@ Margenstarke Anbieter erwirtschaften laut Lünendonk über 10 Prozent außerhalb
 
 | Bereich | Köpfe | Kosten pro Jahr | Je Kopf | Herkunft |
 |---|---:|---:|---:|---|
-| Personaldisposition (sechs Niederlassungen) | 23 | 1.500.000 | 65.200 | angenommen |
-| Niederlassungsleitungen | 6 | 540.000 | 90.000 | angenommen |
+| Personaldisposition (sieben Niederlassungen) | 23 | 1.500.000 | 65.200 | angenommen |
+| Niederlassungsleitungen | 7 | 630.000 | 90.000 | angenommen |
 | Recherche und Recruiting Center Erfurt | 9 | 480.000 | 53.300 | angenommen |
 | Vertrieb und Key Account | 5 | 400.000 | 80.000 | angenommen |
 | Sachbearbeitung Einsatz und Lohn | 9 | 450.000 | 50.000 | angenommen |
 | Buchhaltung und Controlling | 4 | 250.000 | 62.500 | angenommen |
-| Verwaltung und internes Personal | 5 | 310.000 | 62.000 | angenommen |
+| Verwaltung und internes Personal | 4 | 220.000 | 55.000 | angenommen |
 | IT (2 Köpfe, 1,5 Vollzeitstellen) | 2 | 130.000 | 65.000 | angenommen |
 | GeAT Academy | 3 | 180.000 | 60.000 | generiert |
 | Geschäftsführung | 2 | 360.000 | 180.000 | angenommen |
