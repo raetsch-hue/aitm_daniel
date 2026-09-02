@@ -53,6 +53,13 @@ var DOKUMENTE = [
   { datei: "2.4/2.4_Widerstand-ist-eine-Information.md",
     titel: "2.4 · Widerstand ist eine Information (Analyse)" },
 
+  // ---- Kurzfassungen ----
+  { datei: "essentials/2.3_Essentials-Kraefte-sichtbar-machen.md",
+    titel: "2.3 · Essentials: Kräfte sichtbar machen" },
+
+  { datei: "essentials/2.4_Essentials-Widerstand.md",
+    titel: "2.4 · Essentials: Widerstand ist eine Information" },
+
   /* ================= BIBLIOTHEK =================
      Eigene Nachschlage-Einträge aus ../bibliothek/.
      Pfad beginnt mit ../ , weil viewer.html in coursebook/ liegt.
