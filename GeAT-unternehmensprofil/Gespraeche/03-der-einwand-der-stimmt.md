@@ -17,9 +17,9 @@ herkunft: "Persona an menschen.md angedockt. Rechtsbezüge sind unten getrennt d
 
 ## Meine Rolle — und was daran neu ist
 
-Der „Ich" dieses Gesprächs ist der **AI and Digital Transformation Manager der GeAT**: eine Stelle, die es im Profil nicht gibt und die ich für diese Übung neu einführe — ausdrücklich als **Änderung am Fall**. Neu geschaffen, seit Mai 2026 besetzt, vier Monate im Haus; bei der Geschäftsführung angesiedelt; Macht 2, Interesse 5; **kein Gremium** — der Lenkungsausschuss Digitalisierung existiert bei GeAT nicht ([`menschen.md`](../menschen.md), Gremien).
+Der „Ich" dieses Gesprächs ist der **AI and Digital Transformation Manager der GeAT**: Rolle 15 in [`menschen.md`](../menschen.md), am 03.09.2026 eingetragen — ausdrücklich als **Änderung am Fall**. Neu geschaffen, seit Mai 2026 besetzt, vier Monate im Haus; bei der Geschäftsführung angesiedelt; Macht 2, Interesse 5; **kein Gremium** — der Lenkungsausschuss Digitalisierung existiert bei GeAT nicht ([`menschen.md`](../menschen.md), Gremien).
 
-**Die Folge für das Profil, die nachgezogen werden muss.** [`profil.md`](../profil.md) begründet Reifegrad Strategie = 2 mit *„Keine Rolle für Digitalisierung oder KI im Organigramm"*. Dieser Nachweis ist zu ersetzen, ohne die Stufe zu ändern: „Die Rolle existiert seit vier Monaten — ohne eigenen Budgetposten, ohne Gremium und ohne Weisungsrecht."
+**Die Folge für das Profil — am 03.09.2026 nachgezogen.** [`profil.md`](../profil.md) begründet Reifegrad Strategie = 2 mit *„Keine Rolle für Digitalisierung oder KI im Organigramm"*. Dieser Nachweis ist ersetzt worden, ohne die Stufe zu ändern: „Die Rolle existiert seit vier Monaten — ohne eigenen Budgetposten, ohne Gremium und ohne Weisungsrecht."
 
 **Warum das dieses Gespräch am stärksten verändert.** Marnitz' Rolle ist in [`menschen.md`](../menschen.md) so beschrieben: *„Nichts. Er berät, er entscheidet nicht — und wird meist nach der Entscheidung gefragt."* Mit meiner Rolle gibt es erstmals jemanden, der ihn **vor** der Entscheidung fragt. Das ist der Grund, warum das Gespräch überhaupt so verläuft. Und es erzeugt gleich das nächste Problem, das er benennt: **wenn ich sein einziger Adressat bin und es kein Gremium gibt, verschwinden seine Einwände mit mir.** Sein informeller Einfluss ist laut Profil *„gering im Alltag, entscheidend im Konfliktfall: seine Stellungnahme geht an die Gesellschafter"* — an mir vorbei.
 
@@ -265,7 +265,7 @@ Diese Trennung ist bei diesem Gespräch wichtiger als bei den anderen zwei, weil
 | Die Haftungskette im Staplerschein-Fall | Konstruiert aus [`systeme-daten.md`](../systeme-daten.md) („Scan ohne Ablaufdatum, Gültigkeit telefonisch erfragt"). Der Fall selbst steht nirgends |
 | Die Ersparnis von gut 24.000 Euro bei 3c vor 3b | Meine Hochrechnung, anteilig: 18.000 von 41.000 Dateien bei 55.000 Euro Gesamtaufwand = 24.100 Euro. Nicht im Ordner, und die Annahme linearer Kosten je Datei ist meine |
 | „Vierzehn Bewerbungen, vierzehnmal nicht vorgeschlagen" | Illustration |
-| **Die Rolle des „Ich" vollständig** — AI and Digital Transformation Manager, seit Mai 2026, bei der Geschäftsführung, kein Gremium | Falländerung, oben unter „Meine Rolle" begründet. Der Nachweis für Reifegrad Strategie = 2 in [`profil.md`](../profil.md) muss ausgetauscht werden |
+| **Die Rolle des „Ich" vollständig** — AI and Digital Transformation Manager, seit Mai 2026, bei der Geschäftsführung, kein Gremium | Falländerung, oben unter „Meine Rolle" begründet. Am 03.09.2026 als Rolle 15 in [`menschen.md`](../menschen.md) eingetragen, Nachweise und Zahlen im Ordner nachgezogen |
 | „In sechs Jahren Mandat", „vierzehn Mandate, in denen ich diese Bitte höre" | Die vierzehn Mandate stehen in [`menschen.md`](../menschen.md); die Mandatsdauer bei GeAT und die Häufigkeitsaussage sind erfunden |
 | Externer Datenschutzbeauftragter statt interner Datenschutzkoordinator | Abweichung vom Beispiel-Prompt, oben begründet |
 

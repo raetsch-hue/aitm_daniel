@@ -9,7 +9,7 @@ Alle Beträge in Euro. Bezugsgröße: Gesellschaft insgesamt, sechs Niederlassun
 | Angabe | 2025 | 2024 | 2021 | 2018 | Herkunft |
 |---|---:|---:|---:|---:|---|
 | Zeitarbeitnehmer im Jahresdurchschnitt | 640 | 690 | **698** | **992** | 2018 und 2021 öffentlich (Wikipedia); 2024/2025 angenommen, Trend fortgeschrieben |
-| Stammpersonal | 68 | 71 | **61** | **74** | wie oben |
+| Stammpersonal | 69 | 71 | **61** | **74** | wie oben; 2025 enthält die im Mai 2026 geschaffene Stelle für Digitalisierung und KI (`real`, siehe [`menschen.md`](menschen.md) Rolle 15) |
 | Überlassungsstunden | 940.000 | 1.014.000 | — | — | angenommen (1.469 Stunden je Zeitarbeitnehmer) |
 
 ## GuV-Skelett
@@ -18,9 +18,9 @@ Alle Beträge in Euro. Bezugsgröße: Gesellschaft insgesamt, sechs Niederlassun
 |---|---:|---:|---:|---|
 | Umsatz | 31,0 Mio | 32,8 Mio | 100 % | angenommen |
 | Personalaufwand Zeitarbeitnehmer | 20,7 Mio | 21,6 Mio | 66,8 % | angenommen |
-| Personalaufwand Stammpersonal | 4,6 Mio | 4,7 Mio | 14,8 % | angenommen |
+| Personalaufwand Stammpersonal | 4,695 Mio | 4,7 Mio | 15,1 % | angenommen; enthält 95.000 für die neue Stelle Digitalisierung und KI |
 | Sonstige betriebliche Aufwendungen | 4,8 Mio | 5,0 Mio | 15,5 % | angenommen |
-| **EBIT** | **0,9 Mio** | **1,5 Mio** | **2,9 %** | angenommen (Benchmark 2 bis 5 %) |
+| **EBIT** | **0,805 Mio** | **1,5 Mio** | **2,6 %** | gerechnet (Benchmark 2 bis 5 %) |
 
 Sonstige betriebliche Aufwendungen enthalten Miete für sechs Niederlassungen und die Zentrale, Fahrzeuge der Disponenten, Stellenanzeigen und Jobbörsen (480.000), arbeitsmedizinische Vorsorge und persönliche Schutzausrüstung, IT, Beratung und Abschlusskosten (angenommen).
 
@@ -40,7 +40,7 @@ Die Kennzahl, an der das Geschäft gesteuert wird.
 | Ø Personalkosten je Stunde | 22,02 | 21,31 | gerechnet |
 | **Rohertrag je Überlassungsstunde** | **7,66** | **7,79** | gerechnet |
 
-Der Verrechnungssatz ist um 2,0 Prozent gestiegen, die Personalkosten je Stunde um 3,4 Prozent. Die Schere ist 13 Cent je Stunde breit, macht bei 940.000 Stunden 122.000 Euro und erklärt einen Fünftel des EBIT-Rückgangs. Der Rest kommt aus dem Volumen (angenommen).
+Der Verrechnungssatz ist um 2,0 Prozent gestiegen, die Personalkosten je Stunde um 3,4 Prozent. Die Schere ist 13 Cent je Stunde breit, macht bei 940.000 Stunden 122.000 Euro und erklärt ein Sechstel des EBIT-Rückgangs von 695.000 Euro. Weitere 95.000 sind die neue Stelle für Digitalisierung und KI. Der Rest kommt aus dem Volumen (angenommen).
 
 ## Umsatzstruktur
 
@@ -66,8 +66,9 @@ Margenstarke Anbieter erwirtschaften laut Lünendonk über 10 Prozent außerhalb
 | Verwaltung und internes Personal | 5 | 310.000 | 62.000 | angenommen |
 | IT (2 Köpfe, 1,5 Vollzeitstellen) | 2 | 130.000 | 65.000 | angenommen |
 | GeAT Academy | 3 | 180.000 | 60.000 | generiert |
+| **Digitalisierung und KI** (Stelle neu, seit Mai 2026) | **1** | **95.000** | **95.000** | Stelle `real`, Kostenwert `generiert` |
 | Geschäftsführung | 2 | 360.000 | 180.000 | angenommen |
-| **Summe** | **68** | **4.600.000** | 67.600 | gerechnet |
+| **Summe** | **69** | **4.695.000** | 68.000 | gerechnet |
 
 Zeitarbeitnehmer: 20,7 Mio geteilt durch 640 Köpfe sind 32.340 Euro je Kopf und Jahr, inklusive Arbeitgeberanteile und Leerzeiten (gerechnet, plausibel für die Tarifwerke DGB/GVP).
 
@@ -141,9 +142,13 @@ Die 2,3 Tage Liegezeit bis zur Sichtung sind ein Dispositionsproblem, die 2,6 Ta
 
 | Angabe | Wert | Herkunft |
 |---|---:|---|
-| Frei in den nächsten zwei Jahren | 900.000 | angenommen (aus EBIT 0,9 Mio je Jahr abzüglich Ausschüttung und Ersatzinvestitionen) |
+| Frei in den nächsten zwei Jahren | 900.000 | angenommen (aus EBIT rund 0,8 Mio je Jahr abzüglich Ausschüttung und Ersatzinvestitionen) |
 | Davon reserviert für die Migration der Branchensoftware 2027 | 620.000 | angenommen |
 | **Bleibt für alles andere** | **280.000** | gerechnet |
+
+> **Offener Punkt für Woche 6 und 7, entstanden mit der Stelle für Digitalisierung und KI.** Die 900.000 Euro sind aus einem EBIT von 0,9 Mio je Jahr abgeleitet. Mit 0,805 Mio trägt dieselbe Ableitung nur noch rund 805.000 Euro, und nach der Reservierung von 620.000 bleiben **185.000 statt 280.000**. Die Stufen 1 bis 5 des [`transformationsvorschlags`](transformationsvorschlag.md) kosten 240.000 und passen dann **nicht mehr** in den Spielraum.
+>
+> Der Wert 900.000 ist hier **bewusst unverändert stehen geblieben**, weil er `angenommen` ist und die gesamte Taktung des Transformationsvorschlags trägt. Er ist damit die erste Zahl, die der Business Case in Woche 6 entweder bestätigt oder korrigiert — und die Korrektur wäre nicht kosmetisch: sie würde eine Stufe streichen. Nicht still nachrechnen, sondern entscheiden.
 | Freigabe bis 25.000 | Geschäftsführung | angenommen |
 | Freigabe über 25.000 | Gesellschafterversammlung, tagt quartalsweise | angenommen |
 | Diskontsatz für Barwertrechnung | 8 % | angenommen (Benchmark Mittelstand 7 bis 9 %) |

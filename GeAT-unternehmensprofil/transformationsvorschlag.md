@@ -2,7 +2,7 @@
 titel: Transformationsvorschlag GeAT mbH
 bezug: Unternehmensprofil GeAT (profil.md, zahlen.md, systeme-daten.md, menschen.md, vorhaben.md)
 typ: Vorschlag, nicht beschlossen
-stand: 2026-09-02
+stand: 2026-09-03
 herkunft: abgeleitet — alle Aufwände und Kennzahlwerte sind `angenommen` oder `generiert`
 ---
 
@@ -11,6 +11,10 @@ herkunft: abgeleitet — alle Aufwände und Kennzahlwerte sind `angenommen` oder
 > **Was diese Datei ist.** Ein Vorschlag zur Reihenfolge, abgeleitet aus dem Profil in diesem Ordner. Sie ergänzt [`vorhaben.md`](vorhaben.md), sie ersetzt es nicht: dort steht, **was** gebaut wird, hier steht, **in welcher Reihenfolge und gegen welche Taktgrenze**.
 >
 > **Alle Aufwände, Termine und Zielwerte sind konstruiert.** Sie sind aus den Zahlen in [`zahlen.md`](zahlen.md) abgeleitet und so gesetzt, dass sie sich gegenseitig stützen. Die Struktur der Argumentation ist übertragbar, kein einzelner Wert ist es. Nichts aus dieser Datei gehört in ein Deliverable über eine reale Organisation.
+>
+> **Wer diesen Vorschlag verantwortet:** Rolle 15 in [`menschen.md`](menschen.md), der AI and Digital Transformation Manager — Stelle seit Mai 2026, Macht 2, kein eigenes Budget und **kein Gremium**. Jede Vorlage geht dienstags durch die Geschäftsführung, alles über 25.000 Euro quartalsweise durch die Gesellschafterversammlung. Zwei Folgen für die Lesart dieser Datei: Der Verantwortliche ist der einzige Beteiligte, dessen Lage von der Entscheidung abhängt — das gehört in jede Vorlage benannt. Und was die Anwesenheit dieser Rolle überdauern soll, gehört in die Rahmen-Betriebsvereinbarung, in die Ausschreibung oder in einen Gesellschafterbeschluss, nicht in dieses Papier.
+>
+> **Offen, seit die Stelle im Fall besteht:** Ihre 95.000 Euro senken das EBIT 2025 auf 0,805 Mio. Bei strenger Fortschreibung trägt der Investitionsspielraum dann nur rund 805.000 statt 900.000 Euro, nach der Migrationsreservierung bleiben 185.000 statt 280.000 — und die Stufen 1 bis 5 unten kosten 240.000. Die Summen dieser Datei sind **unverändert** gelassen; die Entscheidung darüber gehört in den Business Case (siehe [`zahlen.md`](zahlen.md), Investitionsspielraum, und [`ereignisse.md`](ereignisse.md), Woche 2.4).
 
 ## Das Ordnungsprinzip
 

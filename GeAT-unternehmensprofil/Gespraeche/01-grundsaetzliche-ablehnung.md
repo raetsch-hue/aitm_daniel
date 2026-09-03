@@ -19,17 +19,17 @@ herkunft: "Persona an menschen.md angedockt. Alle Personen des Ordners sind erfu
 
 ## Meine Rolle — und was daran neu ist
 
-Der „Ich" dieses Gesprächs ist der **AI and Digital Transformation Manager der GeAT**. Diese Stelle gibt es im Profil nicht, und ich führe sie für diese Übung neu ein. Das ist ausdrücklich eine **Änderung am Fall**, keine Auslegung.
+Der „Ich" dieses Gesprächs ist der **AI and Digital Transformation Manager der GeAT**. Diese Stelle gab es im Profil nicht; sie ist am 03.09.2026 als Rolle 15 in `menschen.md` eingetragen worden (siehe [`ereignisse.md`](../ereignisse.md), Woche 2.4). Das ist ausdrücklich eine **Änderung am Fall**, keine Auslegung.
 
 | Angabe | Wert | Herkunft |
 |---|---|---|
-| Rolle | AI and Digital Transformation Manager, neu geschaffen, Stelle seit Mai 2026 besetzt — **vier Monate im Haus** | generiert (Falländerung) |
-| Angesiedelt | bei der Geschäftsführung. Fachlich bei Vollmer (Vertrieb, Strategie), die das Vorhaben will. Die IT-Ressourcen liegen bei Achtelik, der die Migration verantwortet | generiert |
-| Macht / Interesse | 2 / 5. Vorschlagsrecht für Vorlagen, **kein Weisungsrecht in den Niederlassungen** | generiert |
+| Rolle | AI and Digital Transformation Manager, neu geschaffen, Stelle seit Mai 2026 besetzt — **vier Monate im Haus** | `real` (Falländerung), [`menschen.md`](../menschen.md) Rolle 15 |
+| Angesiedelt | bei der Geschäftsführung. Fachlich bei Vollmer (Vertrieb, Strategie), die das Vorhaben will. Die IT-Ressourcen liegen bei Achtelik, der die Migration verantwortet | angenommen |
+| Macht / Interesse | 2 / 5. Vorschlagsrecht für Vorlagen, **kein Weisungsrecht in den Niederlassungen** | angenommen |
 | Gremium | **keines.** Ein Lenkungsausschuss Digitalisierung existiert nicht — Vorlagen gehen dienstags in die Geschäftsführung, alles über 25.000 Euro quartalsweise in die Gesellschafterversammlung | belegt ([`menschen.md`](../menschen.md) Gremien, [`zahlen.md`](../zahlen.md)) |
-| Was mich nachts wach hält | Dass die Stelle geschaffen wurde, damit es eine gibt. Und dass die erste Vorlage über 25.000 Euro darüber entscheidet, ob sie in zwei Jahren noch existiert | generiert |
+| Was mich nachts wach hält | Dass die Stelle geschaffen wurde, damit es eine gibt. Und dass die erste Vorlage über 25.000 Euro darüber entscheidet, ob sie in zwei Jahren noch existiert | `Vorschlag, vom Fallbearbeiter zu bestätigen` (generierte-werte.md, Nr. 18) |
 
-**Die Folge für das Profil, die nachgezogen werden muss.** [`profil.md`](../profil.md) begründet Reifegrad **Strategie = 2** unter anderem mit *„Keine Rolle für Digitalisierung oder KI im Organigramm"*. Dieser Nachweis stimmt nicht mehr. Er ist zu ersetzen, **ohne dass sich die Stufe ändert**: „Die Rolle existiert seit vier Monaten — ohne eigenen Budgetposten, ohne Gremium und ohne Weisungsrecht." Eine Stelle ohne Budget und ohne Gremium ist kein Beleg für Stufe 3. Ebenso bleibt der Nachweis unter **People** („keine Rolle für Automatisierung") zu präzisieren. Und die Gremientabelle in [`menschen.md`](../menschen.md) trägt weiter „Lenkungsausschuss Digitalisierung: existiert nicht" — das ist nach dieser Änderung kein Widerspruch, sondern der Kern meiner Lage.
+**Die Folge für das Profil — am 03.09.2026 nachgezogen.** [`profil.md`](../profil.md) begründet Reifegrad **Strategie = 2** unter anderem mit *„Keine Rolle für Digitalisierung oder KI im Organigramm"*. Dieser Nachweis stimmte mit Rolle 15 nicht mehr und ist ersetzt worden, **ohne dass sich die Stufe ändert**: „Die Rolle existiert seit vier Monaten — ohne eigenen Budgetposten, ohne Gremium und ohne Weisungsrecht." Eine Stelle ohne Budget und ohne Gremium ist kein Beleg für Stufe 3. Ebenso ist der Nachweis unter **People** („keine Rolle für Automatisierung") präzisiert worden. Und die Gremientabelle in [`menschen.md`](../menschen.md) trägt weiter „Lenkungsausschuss Digitalisierung: existiert nicht" — das ist nach dieser Änderung kein Widerspruch, sondern der Kern meiner Lage.
 
 *(Nebenbefund im Ausgangsmaterial: [`profil.md`](../profil.md) und [`transformationsvorschlag.md`](../transformationsvorschlag.md) sprechen an drei Stellen von einem „Steuerkreis". Ein solches Gremium führt [`menschen.md`](../menschen.md) nicht. Dieselbe Lücke, schon vor meiner Änderung.)*
 
@@ -251,7 +251,7 @@ Alles Folgende ergibt sich **nicht** aus den Dateien des Ordners und ist von mir
 | „Sechzig Prozent der Anfragen im Druckbereich nicht bedient" | Von mir erzeugt. Belegt ist nur: Besetzungsquote 40 Prozent gesamt, 1.860 nicht besetzte Anfragen, kein Grund erfasst ([`systeme-daten.md`](../systeme-daten.md), [`transformationsvorschlag.md`](../transformationsvorschlag.md) 3d). Die Aufteilung nach Berufsfeld existiert nicht |
 | Dass Pfaff und Rehberg die Vorlage gelesen haben | Dramaturgisch nötig, im Ordner nicht angelegt |
 | Der Formulierungsvorschlag „Zahlen aus dem Rundenvergleich herausnehmen" | Meine Ableitung aus Muster 2, steht in keiner Datei |
-| **Die Rolle des „Ich" vollständig** — AI and Digital Transformation Manager, seit Mai 2026, bei der Geschäftsführung, Macht 2, kein Weisungsrecht, kein Gremium | Falländerung, oben unter „Meine Rolle" begründet. Im Profil existiert diese Rolle nicht; der Nachweis für Reifegrad Strategie = 2 muss deshalb ausgetauscht werden |
+| **Die Rolle des „Ich" vollständig** — AI and Digital Transformation Manager, seit Mai 2026, bei der Geschäftsführung, Macht 2, kein Weisungsrecht, kein Gremium | Falländerung, oben unter „Meine Rolle" begründet. Am 03.09.2026 als Rolle 15 in `menschen.md` eingetragen; der Nachweis für Reifegrad Strategie = 2 ist ausgetauscht, die Zahlen sind nachgezogen (69 Köpfe, EBIT 0,805 Mio, Marge 2,6 %) |
 | Dass Rehberg „drei Software-Einführungen, zwei Beratungen und eine Zusammenlegung" erlebt hat | Die Einführungen sind aus [`systeme-daten.md`](../systeme-daten.md) ableitbar (Branchensoftware 2013, Multiposting 2021, ATS-Modul 2023), die Zusammenlegung 2025 steht in [`profil.md`](../profil.md). **Die zwei Beratungen sind erfunden** |
 | Dass Steinbrück den Kennzahlenvergleich der Runde ändern könnte | Ableitung: er verantwortet die Besetzungsquote und ist Vertriebsleiter ([`menschen.md`](../menschen.md), Rolle 3). Die Niederlassungsleiterrunde ist laut [`menschen.md`](../menschen.md) „formal Information", entschieden wird in der Geschäftsführung — wer den Vergleich führt, steht nirgends |
 | 22 Jahre statt 19, männlich statt weiblich, Niederlassung statt Fachabteilung | Abweichung vom Beispiel-Prompt, oben unter Kurzinfo begründet |

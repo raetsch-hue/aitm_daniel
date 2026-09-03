@@ -1,10 +1,10 @@
 # Werte mit Herkunft `generiert`
 
-Stand: 2026-09-02. Sortiert nach der Kurswoche, die den Wert zuerst braucht (Zuordnung nach dem Feldkatalog in [`vorlagen/unternehmensprofil.md`](vorlagen/unternehmensprofil.md)).
+Stand: 2026-09-03. Sortiert nach der Kurswoche, die den Wert zuerst braucht (Zuordnung nach dem Feldkatalog in [`vorlagen/unternehmensprofil.md`](vorlagen/unternehmensprofil.md)).
 
 `generiert` heißt: mein Vorschlag, von dir noch nicht bestätigt. Vor der Verwendung in einem Artefakt wird daraus `angenommen` — oder der Wert wird gestrichen und das Streichen in [`ereignisse.md`](ereignisse.md) festgehalten.
 
-Zur Größenordnung: Das Profil enthält 17 `generiert`-Werte. Alles andere ist entweder mit Quelle belegt (`öffentlich`, 24 Angaben, überwiegend in `recherche.md`) oder aus Recherche und Benchmarks abgeleitet (`angenommen`). Zur Ertragslage der GeAT gibt es **keinen einzigen** öffentlichen Wert — das ist die wichtigste Einschränkung des Profils und steht im Kopf von `zahlen.md`.
+Zur Größenordnung: Das Profil enthält 19 `generiert`-Werte. Alles andere ist entweder mit Quelle belegt (`öffentlich`, 24 Angaben, überwiegend in `recherche.md`), aus Recherche und Benchmarks abgeleitet (`angenommen`) — oder in einem einzigen Fall `real`: Rolle 15 in `menschen.md`, der Fallbearbeiter selbst. Diese Rolle ist keine Annahme und steht deshalb nicht in der Tabelle unten; ihr **Kostenwert** dagegen schon (Nr. 19). Zur Ertragslage der GeAT gibt es **keinen einzigen** öffentlichen Wert — das ist die wichtigste Einschränkung des Profils und steht im Kopf von `zahlen.md`.
 
 | # | Wert | Datei | Braucht | Was zu entscheiden ist |
 |---:|---|---|---|---|
@@ -25,6 +25,8 @@ Zur Größenordnung: Das Profil enthält 17 `generiert`-Werte. Alles andere ist 
 | 15 | Parallele Initiative: Niederlassung Halle (Saale), Q2 2027, 240.000 Euro | `vorhaben.md` | W11 | Zweite konkurrierende Initiative neben der Migration. Frei erfunden |
 | 16 | Parallele Initiative: Ausbau GeAT Academy, kein Budget | `vorhaben.md` | W11 | Wie 15 |
 | 17 | Parallele Initiative: ISO 9001 Rezertifizierung und GVP-Audit Q2 2027, 30.000 Euro | `vorhaben.md` | W11, W12 | Der Termin ist gesetzt; dass ein Audit ansteht, ist wegen der Zertifizierung seit 2004 wahrscheinlich |
+| 18 | Rolle 15: **Haltung und Nachtgedanke** des AI and Digital Transformation Managers | `menschen.md` | W2, W4, W12 | Die Rolle selbst ist `real` und nicht zu bestätigen. Die beiden Spalten sind **mein Vorschlag über einen echten Menschen** und deshalb der einzige Eintrag in dieser Liste, den nur der Fallbearbeiter selbst bestätigen kann. Streichen ist hier eine gültige Antwort |
+| 19 | Vollkosten der Stelle Digitalisierung und KI: **95.000 Euro im Jahr** | `zahlen.md` | W6, W7 | Hängt an drei weiteren Zahlen: Personalaufwand Stammpersonal 4,695 Mio, EBIT 0,805 Mio, EBIT-Marge 2,6 Prozent. Und an einer Folgefrage, die der Business Case beantworten muss: bei strenger Fortschreibung sinkt der Investitionsspielraum von 900.000 auf rund 805.000, dann passen die 240.000 der Stufen 1 bis 5 nicht mehr in die verbleibenden 185.000. Der Wert 900.000 ist bewusst unverändert |
 
 ## Werte, die keine `generiert`-Kennzeichnung tragen, aber trotzdem geprüft werden müssen
 
@@ -33,7 +35,7 @@ Diese sind mit `angenommen` gekennzeichnet und wirken deshalb harmloser als sie 
 | Wert | Datei | Warum er kritisch ist |
 |---|---|---|
 | Umsatz 31,0 Mio und die gesamte GuV | `zahlen.md` | Aus Beschäftigtenzahl und Branchenbenchmark abgeleitet, nicht erhoben. Trägt jede Rechnung ab Woche 6 |
-| Beschäftigte 2025: 640 Zeitarbeitnehmer, 68 Stammpersonal | `zahlen.md`, `profil.md` | Fortschreibung des belegten Trends 2018 → 2021. Fünf Jahre Extrapolation |
+| Beschäftigte 2025: 640 Zeitarbeitnehmer, 69 Stammpersonal | `zahlen.md`, `profil.md` | Fortschreibung des belegten Trends 2018 → 2021. Fünf Jahre Extrapolation. Der 69. Kopf ist die Stelle aus Rolle 15 |
 | Sieben Standorte | `profil.md` | Website nennt sechs, Wikipedia acht. Ich habe sieben gewählt und den Widerspruch in `recherche.md` notiert |
 | Eigentümerstruktur „Investor" im Frontmatter | `profil.md` | Nicht belegt. Hängt mit Wert 4 zusammen: beide gemeinsam bestätigen oder gemeinsam ändern |
 | Besetzungsquote 40 Prozent (2023: 48) | `zahlen.md` | Die zentrale Kennzahl des Falls, und der Benchmark dafür ist selbst nur ein Erfahrungswert (35 bis 50 Prozent) |

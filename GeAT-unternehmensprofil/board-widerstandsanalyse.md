@@ -10,7 +10,7 @@ herkunft: alle Inhalte aus den Dateien dieses Ordners. Keine Zeile am realen Unt
 
 > **Was diese Datei ist.** Die sechs Board-Felder — *Beispiel klären · Widerstand einordnen · Ursachen verstehen · Einwand prüfen · Typ einordnen · Maßnahmen festlegen* — ausgefüllt für **einen** Widerstand: Muster 1 aus [`widerstandsmuster.md`](widerstandsmuster.md), personifiziert an Rehberg (NL Gotha) und Pfaff (Senior-Disposition).
 >
-> **Geltungsbereich.** Alle Personen und Haltungen des Profils sind in [`menschen.md`](menschen.md) ausdrücklich als erfunden gekennzeichnet. Die Analyse ist **in sich stimmig aus dem Profil abgeleitet**, nicht am realen Unternehmen validiert. Wer widersprechen will, bestreitet einen einzelnen Nachweis — das ist der Zweck der Bauweise.
+> **Geltungsbereich.** Alle Personen und Haltungen des Profils sind in [`menschen.md`](menschen.md) ausdrücklich als erfunden gekennzeichnet — außer Rolle 15, dem Fallbearbeiter selbst (`real`), die nach Erstellung dieser Datei nachgetragen wurde und hier nicht vorkommt. Die Analyse ist **in sich stimmig aus dem Profil abgeleitet**, nicht am realen Unternehmen validiert. Wer widersprechen will, bestreitet einen einzelnen Nachweis — das ist der Zweck der Bauweise.
 
 ## Warum dieses Muster für das Board
 

@@ -10,7 +10,7 @@ herkunft: abgeleitet aus den Dateien dieses Ordners. Kein Muster ist am realen U
 
 > **Was diese Datei ist.** Eine Ableitung: Welche Widerstände gegen das Vorhaben aus [`vorhaben.md`](vorhaben.md) sich aus dem vorliegenden Profil ergeben, woran jedes Muster im Profil hängt, und woher dieser Nachweis stammt. Sie ergänzt [`transformationsvorschlag.md`](transformationsvorschlag.md), der die Reihenfolge beschreibt — hier steht, **wogegen** diese Reihenfolge arbeitet.
 >
-> **Geltungsbereich.** Alle Personen, Haltungen und Kulturmerkmale des Profils sind `angenommen` oder `generiert` und in [`menschen.md`](menschen.md) ausdrücklich als erfunden gekennzeichnet. Die Muster sind deshalb **in sich stimmig aus dem Profil abgeleitet**, nicht am realen Unternehmen validiert. Wer widersprechen will, bestreitet einen einzelnen Nachweis in der Spalte „Nachweis im Profil" — das ist der Zweck der Bauweise.
+> **Geltungsbereich.** Alle Personen, Haltungen und Kulturmerkmale des Profils sind `angenommen` oder `generiert` und in [`menschen.md`](menschen.md) ausdrücklich als erfunden gekennzeichnet — außer Rolle 15, dem Fallbearbeiter selbst, die nach Erstellung dieser Analyse nachgetragen wurde und hier keine Typzuordnung erhält. Die Muster sind deshalb **in sich stimmig aus dem Profil abgeleitet**, nicht am realen Unternehmen validiert. Wer widersprechen will, bestreitet einen einzelnen Nachweis in der Spalte „Nachweis im Profil" — das ist der Zweck der Bauweise.
 
 ## Ableitungsregel
 
@@ -41,7 +41,7 @@ Ein Muster wird nur aufgenommen, wenn es an einer **prüfbaren Zeile im Profil**
 
 ### Zuordnung je Rolle
 
-Grundlage sind die Haltungsspalte und die Spalte „Was diese Person nachts wach hält" in [`menschen.md`](menschen.md). Alle Rollen dort sind erfunden; die Zuordnung erbt diesen Vorbehalt.
+Grundlage sind die Haltungsspalte und die Spalte „Was diese Person nachts wach hält" in [`menschen.md`](menschen.md). Alle Rollen dort sind erfunden; die Zuordnung erbt diesen Vorbehalt. **Ausnahme: Rolle 15** (AI and Digital Transformation Manager) ist der Fallbearbeiter selbst, `real`, und erhält **keine Typzuordnung** — die Typologie beschreibt Widerstand gegen ein Vorhaben, nicht dessen Verantwortlichen. Die Rolle ist nach Einführung der Stelle im Mai 2026 nachgetragen und in dieser Analyse noch nicht verarbeitet.
 
 | Rolle | Typ | Woran festgemacht | Konkreter Umgang |
 |---|---|---|---|

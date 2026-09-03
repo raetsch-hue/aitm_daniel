@@ -5,16 +5,16 @@ branche: Personaldienstleistung (Arbeitnehmerüberlassung, Personalvermittlung, 
 rechtsform: mbH (bis 2025 AG)
 eigentuemer: Investor   # nicht öffentlich belegt, angenommen
 gruendung: 1995
-mitarbeitende: 708      # 68 Stammpersonal + 640 Zeitarbeitnehmer im Jahresdurchschnitt
+mitarbeitende: 709      # 69 Stammpersonal + 640 Zeitarbeitnehmer im Jahresdurchschnitt
 standorte: [Aschersleben, Erfurt, Gera, Gotha, Heilbad Heiligenstadt, Jena]
 umsatz_mio_eur: 31.0
-stand: 2026-09-02
+stand: 2026-09-03
 herkunft_kopf: gemischt   # Name, Rechtsform, Gründung, Sitz = öffentlich; Beschäftigte, Umsatz, Eigentümer = angenommen
 ---
 
 # GeAT – Gesellschaft für Arbeitnehmerüberlassung Thüringen mbH
 
-> **Wie dieses Profil zu lesen ist.** GeAT existiert. Die Hülle — Firma, Sitz, Gründungsjahr, Leistungen, Zertifikate, Aufsicht — ist belegt und steht mit Quelle in [`recherche.md`](recherche.md). Der Kern — Zahlen, Haltungen, Kultur, Systemlandschaft, Vorgeschichte — ist **konstruiert**, weil er nie öffentlich ist. Jeder Wert trägt sein Kennzeichen. **Alle Personen in [`menschen.md`](menschen.md) sind erfunden**, auch dort, wo eine echte Person im Impressum steht.
+> **Wie dieses Profil zu lesen ist.** GeAT existiert. Die Hülle — Firma, Sitz, Gründungsjahr, Leistungen, Zertifikate, Aufsicht — ist belegt und steht mit Quelle in [`recherche.md`](recherche.md). Der Kern — Zahlen, Haltungen, Kultur, Systemlandschaft, Vorgeschichte — ist **konstruiert**, weil er nie öffentlich ist. Jeder Wert trägt sein Kennzeichen. **Alle Personen in [`menschen.md`](menschen.md) sind erfunden**, auch dort, wo eine echte Person im Impressum steht — **mit einer Ausnahme: Rolle 15**, der AI and Digital Transformation Manager, ist der Fallbearbeiter selbst und trägt Herkunft `real`.
 >
 > Jede Reifegradstufe ist an einen **prüfbaren Nachweis** gebunden, nicht an ein Adjektiv. Wer widersprechen will, bestreitet einen einzelnen Nachweis. Das ist der Zweck der Bauweise.
 
@@ -57,12 +57,12 @@ Skala: 1 = ad hoc, 2 = ansatzweise, 3 = definiert, 4 = gesteuert, 5 = optimiert.
 
 | Dimension | IST | ZIEL | Prüfbarer Nachweis für den IST-Wert | Herkunft |
 |---|---:|---:|---|---|
-| **Strategie** | 2 | 4 | Es gibt kein Digitalisierungsziel mit Budgetposten. Die einzige beschlossene Maßnahme mit Geld ist der Wechsel der Branchensoftware 2027, und der ist als Ersatzinvestition begründet, nicht als Vorhaben. Keine Rolle für Digitalisierung oder KI im Organigramm | angenommen |
+| **Strategie** | 2 | 4 | Es gibt kein Digitalisierungsziel mit Budgetposten. Die einzige beschlossene Maßnahme mit Geld ist der Wechsel der Branchensoftware 2027, und der ist als Ersatzinvestition begründet, nicht als Vorhaben. Seit Mai 2026 gibt es eine Rolle für Digitalisierung und KI ([`menschen.md`](menschen.md), Rolle 15) — **ohne eigenen Budgetposten, ohne Gremium und ohne Weisungsrecht.** Eine Stelle, die ihre Vorhaben einzeln durch die Geschäftsführung und die quartalsweise Gesellschafterversammlung tragen muss, ist kein Beleg für Stufe 3 | angenommen; die Rolle `real` |
 | **Technologie** | 2 | 4 | Ein Kernsystem (Branchensoftware seit 2013, gehostet) ohne offene Schnittstelle im Bestandsvertrag. Das Multiposting-Werkzeug für Stellenanzeigen hat **keine Verbindung** zum Bewerbermanagement: jede Anzeige wird zweimal gepflegt. Zwei Punkt-zu-Punkt-Übergaben, beide als Nachtjob per Datei | angenommen |
 | **Daten** | **2** | 3 | 41.000 Bewerberprofile, **63 Prozent ohne strukturierte Qualifikationsfelder** — der Lebenslauf liegt als PDF-Anhang, das Können steht im Freitext. 18.000 Profile älter als die den Bewerbern zugesagte Speicherdauer. Kein Datenverantwortlicher, keine Pflichtfeldregeln, kein Löschkonzept in Betrieb | angenommen |
 | **Kultur** | **2** | 3 | Die ATS-Einführung 2023 wurde nie ausgewertet, obwohl die Nutzung bei 34 Prozent liegt. In den letzten fünf Niederlassungsleiterrunden wurde die Besetzungsquote nicht als Kennzahl aufgerufen, obwohl sie in zwei Jahren um acht Punkte gefallen ist. Wer eine Besetzung „über Beziehung" macht, gilt als guter Disponent; wer sie über den Bestand macht, gilt als bequem | angenommen |
 | **Prozesse** | **2** | 4 | Der Pilotprozess durchläuft drei Systeme und vier manuelle Übertragungen. Stundenzettel kommen auf Papier und als Foto im Messenger. Der Prozess ist für ISO 9001 beschrieben; die Beschreibung enthält den Schritt „Abgleich mit dem Bewerberpool", der faktisch bei einem Drittel der Anfragen übersprungen wird | angenommen |
-| **People** | 3 | 4 | Fachkompetenz hoch: die vier Senior-Disponenten sind im Mittel 14 Jahre im Haus und kennen ihre Kundenbetriebe von innen. Aber: keine Rolle für Automatisierung, 1,5 IT-Stellen für sechs Niederlassungen plus Zentrale, und neun von 68 Stammkräften nutzen private KI-Konten für Anzeigentexte und Profilzusammenfassungen — mit Bewerberdaten darin | angenommen |
+| **People** | 3 | 4 | Fachkompetenz hoch: die vier Senior-Disponenten sind im Mittel 14 Jahre im Haus und kennen ihre Kundenbetriebe von innen. Aber: für Automatisierung gibt es **eine** Rolle, seit vier Monaten und ohne Team, 1,5 IT-Stellen für sechs Niederlassungen plus Zentrale, und neun von 69 Stammkräften nutzen private KI-Konten für Anzeigentexte und Profilzusammenfassungen — mit Bewerberdaten darin. Kein Beschäftigter im Haus hat eine dokumentierte Qualifizierung im Umgang mit KI-Vorschlägen | angenommen; die Rolle `real` |
 
 **Mittelwert 2,2.** Die Zahl erklärt nichts und steht hier nur, damit sie nicht anderswo als Argument auftaucht.
 
@@ -103,7 +103,7 @@ Median 11 Arbeitstage von Kundenanfrage bis Arbeitsbeginn, 2023 waren es 8 (`ang
 
 ### Problem 3: Die Marge trägt keine Investition mehr
 
-EBIT-Marge 2024: 4,6 Prozent. 2025: 2,9 Prozent (`angenommen`, Benchmark 2 bis 5 Prozent). Ursache ist der Volumenrückgang bei weitgehend gleichbleibenden Fixkosten für sechs Niederlassungen und die Zentrale, dazu tarifliche Lohnsteigerungen, die nicht vollständig weitergegeben werden konnten, und ein Anzeigenbudget, das mit sinkender Bewerberqualität steigt. Der Markt bestätigt das Muster: Die Top 25 meldeten für 2025 im Mittel 7,0 Prozent Umsatzrückgang (`öffentlich`, Lünendonk-Liste 2026). Der angenommene Rückgang der GeAT um 5,5 Prozent ist deshalb kein Beleg für einen Marktanteilsverlust, sondern liegt etwas besser als dieser Vergleichswert. Betroffen: die Gesellschafterversammlung, die Ausschüttung und Investition aus einem Topf zahlt. Bisher versucht: Zusammenlegung von zwei Niederlassungen 2025, brachte 180.000 Euro und Unruhe (`generiert`).
+EBIT-Marge 2024: 4,6 Prozent. 2025: 2,6 Prozent (`gerechnet`, Benchmark 2 bis 5 Prozent). Ursache ist der Volumenrückgang bei weitgehend gleichbleibenden Fixkosten für sechs Niederlassungen und die Zentrale, dazu tarifliche Lohnsteigerungen, die nicht vollständig weitergegeben werden konnten, ein Anzeigenbudget, das mit sinkender Bewerberqualität steigt, und 95.000 Euro für die neu geschaffene Stelle Digitalisierung und KI — **die Rolle, die das Vorhaben verantwortet, drückt selbst 0,3 Punkte auf die Marge, gegen die sie argumentieren muss.** Der Markt bestätigt das Muster: Die Top 25 meldeten für 2025 im Mittel 7,0 Prozent Umsatzrückgang (`öffentlich`, Lünendonk-Liste 2026). Der angenommene Rückgang der GeAT um 5,5 Prozent ist deshalb kein Beleg für einen Marktanteilsverlust, sondern liegt etwas besser als dieser Vergleichswert. Betroffen: die Gesellschafterversammlung, die Ausschüttung und Investition aus einem Topf zahlt. Bisher versucht: Zusammenlegung von zwei Niederlassungen 2025, brachte 180.000 Euro und Unruhe (`generiert`).
 
 ## Vorgeschichte
 
@@ -147,3 +147,5 @@ Warum es scheiterte: Für den Disponenten war die Datenpflege reine Zusatzarbeit
 | Zahl, die dem Piloten wehtut: von 900.000 Euro Investitionsspielraum über zwei Jahre sind 620.000 für die Softwaremigration reserviert. Für den Piloten bleiben 280.000 Euro, und alles über 25.000 Euro geht einzeln durch die Gesellschafterversammlung, die viermal im Jahr tagt | [`zahlen.md`](zahlen.md) |
 | **An unüblicher Stelle:** der Engpass der Fakturierung ist nicht das Matching, sondern der Papier-Stundenzettel. Die Sachbearbeiterin, die ihn seit 19 Jahren klärt, ist die einzige Person mit einer vollständigen Liste, welcher Kundenbetrieb welches Zeitformat akzeptiert — und sie kommt im Vorhaben nicht vor | [`menschen.md`](menschen.md), Rolle 11 · [`systeme-daten.md`](systeme-daten.md) |
 | **An unüblicher Stelle:** der Datenschutzbeauftragte ist extern und wird nach Stunden bezahlt. Er ist der einzige Beteiligte, dessen Aufwand mit der Sorgfalt des Vorhabens steigt — und der einzige, der bisher nichts unterschrieben hat | [`menschen.md`](menschen.md), Rolle 8 |
+| **An unüblicher Stelle:** die Rolle, die das Vorhaben verantwortet, ist selbst eine Reibung. Sie wurde für dieses Vorhaben geschaffen, kostet 95.000 Euro im Jahr und drückt damit 0,3 Punkte auf genau die Marge, mit der sie ihren Business Case rechnen muss. Sie hat Interesse 5 und Macht 2, kein Gremium und kein Budget — und ist der einzige Beteiligte, dessen Lage von der Entscheidung abhängt | [`menschen.md`](menschen.md), Rolle 15 · [`zahlen.md`](zahlen.md), Personalkosten und Investitionsspielraum |
+| **Zahl, die dem Vorschlag wehtut, neu seit der Stelle:** dieselbe Ableitung, die 900.000 Euro Investitionsspielraum ergab, trägt bei einem EBIT von 0,805 Mio nur noch rund 805.000. Nach der Migrationsreservierung bleiben dann 185.000 statt 280.000 — und die Stufen 1 bis 5 kosten 240.000 | [`zahlen.md`](zahlen.md), Investitionsspielraum, offener Punkt Woche 6/7 |

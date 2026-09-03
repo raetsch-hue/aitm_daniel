@@ -16,7 +16,7 @@ Der durchgehende Fall für alle Methoden des Kurses bis Woche 12: Change Managem
 >
 > **Alles andere ist konstruiert.** Umsatz, Ergebnis, Prozesskosten, Datenqualität, Systemlandschaft, Vorgeschichte, Kultur — dazu ist nichts öffentlich, und ein Modell erfindet es überzeugend. Jeder Wert trägt deshalb ein Kennzeichen: `öffentlich`, `angenommen` oder `generiert`.
 >
-> **Alle Personen sind erfunden.** Die Geschäftsführung der GeAT ist im Impressum und im Handelsregister öffentlich benannt. Dieser Name kommt in diesem Profil nicht vor, und das ist Absicht.
+> **Alle Personen sind erfunden — außer einer.** Die Geschäftsführung der GeAT ist im Impressum und im Handelsregister öffentlich benannt. Dieser Name kommt in diesem Profil nicht vor, und das ist Absicht. **Die Ausnahme ist Rolle 15 in `menschen.md`:** der AI and Digital Transformation Manager ist der Fallbearbeiter selbst und trägt Herkunft `real`. Die Stelle ist im Fall im Mai 2026 neu geschaffen; ihre Haltung und ihr Nachtgedanke sind ein Vorschlag und vom Fallbearbeiter zu bestätigen.
 >
 > **Nichts aus diesem Ordner gehört in ein Artefakt über eine reale Organisation.** Weder eine Zahl noch ein Zitat noch eine Einschätzung.
 
@@ -37,11 +37,12 @@ Dazu passt der Reifegrad: Die Branche liegt bei 46 Prozent regelmäßiger KI-Nut
 | [`recherche.md`](recherche.md) | Was öffentlich belegbar ist, mit Quelle und Abrufdatum. Branchenbenchmarks. Offene Fragen | immer |
 | [`profil.md`](profil.md) | Identität, Geschäftsmodell, fünf Kernprozesse, Reifegrad mit prüfbarem Nachweis, Wellen-Diagnose, drei brennende Probleme, Vorgeschichte, Marktumfeld, Regulatorik, Reibungsliste | W1, W3, W5 |
 | [`zahlen.md`](zahlen.md) | GuV-Skelett, Rohertrag je Überlassungsstunde, Personalkosten je Bereich, IT-Budget, Pilotprozess mit Zerlegung der Durchlaufzeit, Investitionsspielraum, Rechenproben | W6, W7 |
-| [`menschen.md`](menschen.md) | Sechs Gremien, 14 Rollen mit Macht, Interesse, Haltung und Zitat, sechs Segmente, fünf Kulturmerkmale mit Beleg | W2, W4, W12 |
+| [`menschen.md`](menschen.md) | Sechs Gremien, 15 Rollen mit Macht, Interesse, Haltung und Zitat (Rolle 15 ist der Fallbearbeiter, `real`), sechs Segmente, fünf Kulturmerkmale mit Beleg | W2, W4, W12 |
 | [`systeme-daten.md`](systeme-daten.md) | Systemlandschaft, Datenbestände mit Qualitätsbefund, Wissensquellen, Schatten-IT, Auftragsverarbeiter | W3, W5, W8 |
 | [`vorhaben.md`](vorhaben.md) | Der Pilot, Workflows heute und im Ziel, Risikoeinschätzung nach EU AI Act, parallele Initiativen, Eskalationsweg | W2, W6, W9, W11 |
 | [`ereignisse.md`](ereignisse.md) | Was sich im Kursverlauf geändert hat, je Zeile eine Woche | laufend |
-| [`generierte-werte.md`](generierte-werte.md) | Alle 17 `generiert`-Werte, sortiert nach der Woche, die sie zuerst braucht — plus die `angenommen`-Werte, die trotzdem geprüft werden müssen | jeden Freitag |
+| [`generierte-werte.md`](generierte-werte.md) | Alle 19 `generiert`-Werte, sortiert nach der Woche, die sie zuerst braucht — plus die `angenommen`-Werte, die trotzdem geprüft werden müssen | jeden Freitag |
+| `Gespraeche/` | Drei Persona-Gespräche zum KI-Kern mit Auswertung (Typ, Barriere, Berechtigung des Einwands, Prüfweg) und Kennzeichnung des Generierten | W12 |
 
 Zwei Referenzen liegen absichtlich **nicht** in diesem Ordner, weil sie zum Kurs gehören und nicht zum Fall: der **Feldkatalog** (`unternehmensprofil.md`) und das **Musterprofil** der fiktiven Mustermann Antriebstechnik GmbH. Beide stehen im geteilten Projekt „Werkbank: Unternehmensprofile". Der Feldkatalog liegt zusätzlich im Projektwissen dieses Falls, damit ein Modell die Feldstruktur ohne Umweg kennt.
 
@@ -75,5 +76,5 @@ Was **nicht** übernommen wurde: Hellwigs Didaktikteil (Ausbaustufen, Injects, D
 ## Nächste Schritte
 
 1. Die vier offenen Fragen aus `recherche.md` abarbeiten, mit Priorität auf der Branchensoftware.
-2. Die 17 `generiert`-Werte durchgehen. Wert 4 (Eigentümerstruktur) zuerst — er hängt an Wert im Frontmatter und verändert den Tonfall des ganzen Falls.
+2. Die 19 `generiert`-Werte durchgehen. Wert 4 (Eigentümerstruktur) zuerst — er hängt an Wert im Frontmatter und verändert den Tonfall des ganzen Falls. Wert 18 (Haltung und Nachtgedanke der Rolle 15) kann nur der Fallbearbeiter selbst bestätigen. Wert 19 (95.000 Euro für die neue Stelle) entscheidet über den Investitionsspielraum und damit darüber, ob die Stufen 1 bis 5 des Transformationsvorschlags noch hineinpassen.
 3. Stufe 3 des Feldkatalogs: die erste Methode gegen das Profil laufen lassen und die Lücken nachtragen.
