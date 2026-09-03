@@ -17,6 +17,7 @@
    also nur setzen, wenn der Pfad es nicht verrät.
    - coursebook: alles unterhalb von coursebook/  (Standard)
    - bibliothek: alles unterhalb von ../bibliothek/
+   - artefakte:  alles unterhalb von ../artefakte/
    ------------------------------------------------------------------ */
 
 var DOKUMENTE = [
@@ -101,6 +102,51 @@ var DOKUMENTE = [
   { datei: "../bibliothek/widerstand.md",
     titel: "Widerstand",
     bereich: "bibliothek" },
+
+  /* ================= ARTEFAKTE =================
+     Eigene Arbeitsergebnisse aus ../artefakte/.
+     Sortiert wird alphabetisch nach Titel — deshalb tragen die
+     Extra-Einträge eine Ziffer, damit sie in ihrer Reihenfolge stehen.  */
+
+  { datei: "../artefakte/checkliste.md",
+    titel: "Checkliste · Wissensüberprüfung (laufend)",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/extra/README.md",
+    titel: "Extra · 0 Übersicht",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/extra/01_modelle-und-verfahren.md",
+    titel: "Extra · 1 Modelle und Verfahren, die nur genannt wurden",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/extra/02_zahlen-und-befunde.md",
+    titel: "Extra · 2 Zahlen und Befunde, die nicht behandelt wurden",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/extra/03_spannungen-und-blinde-flecken.md",
+    titel: "Extra · 3 Spannungen und blinde Flecken",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-01/kursmaterial.md",
+    titel: "Woche 01 · Kursmaterial",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-01/lernziele.md",
+    titel: "Woche 01 · Lernziele",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-01/manual-of-me.md",
+    titel: "Woche 01 · Manual of Me",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-01/gegenrede.md",
+    titel: "Woche 01 · Gegenrede zum RPA-Pilot",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-02/kursmaterial.md",
+    titel: "Woche 02 · Kursmaterial",
+    bereich: "artefakte" },
 
   /* ================= BEISPIELE ================= */
 
