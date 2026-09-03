@@ -56,6 +56,22 @@ var DOKUMENTE = [
   { datei: "2.5/2.5_Die-Woche-wird-ein-Plan.md",
     titel: "2.5 · Die Woche wird ein Plan (Analyse)" },
 
+  // ---- Woche 3 ----
+  { datei: "3.1/3.1_KI-Plattformen-im-Vergleich.md",
+    titel: "3.1 · KI-Plattformen im Vergleich (Analyse)" },
+
+  { datei: "3.2/3.2_Data-Governance-und-RAG.md",
+    titel: "3.2 · Data Governance und RAG (Analyse)" },
+
+  { datei: "3.3/3.3_Implementierungspfade-und-Workspace.md",
+    titel: "3.3 · Implementierungspfade und Workspace (Analyse)" },
+
+  { datei: "3.4/3.4_Die-Entscheidung-vertreten.md",
+    titel: "3.4 · Die Entscheidung vertreten (Analyse)" },
+
+  { datei: "3.5/3.5_Synthese-Plattform-Daten-Umsetzung.md",
+    titel: "3.5 · Synthese: Plattform, Daten, Umsetzung (Analyse)" },
+
   // ---- Kurzfassungen ----
   { datei: "essentials/2.3_Essentials-Kraefte-sichtbar-machen.md",
     titel: "2.3 · Essentials: Kräfte sichtbar machen" },
@@ -65,6 +81,9 @@ var DOKUMENTE = [
 
   { datei: "essentials/2.5_Essentials-Die-Woche-wird-ein-Plan.md",
     titel: "2.5 · Essentials: Die Woche wird ein Plan" },
+
+  { datei: "essentials/3.0_Essentials-Woche-3.md",
+    titel: "3.0 · Essentials: Woche 3 komplett" },
 
   /* ================= BIBLIOTHEK =================
      Eigene Nachschlage-Einträge aus ../bibliothek/.
