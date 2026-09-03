@@ -13,6 +13,16 @@ herkunft: "Figur neu erzeugt, weil es in menschen.md keine passende Rolle gibt. 
 
 **Wer.** Kerstin Amthor, 44, Personaldisponentin in der Niederlassung Gera, seit 2020 im Haus — sechs Jahre. Eine von den sechs Disponenten, die für den Pilot vorgesehen sind. **Diese Person ist neu von mir erzeugt.** [`menschen.md`](../menschen.md) führt vierzehn Rollen, und keine davon passt: Pfaff ist 59 mit 19 Jahren, Rehberg ist Niederlassungsleiter, Hübner ist 27 und nutzt KI längst. Verankert ist die Figur in der Segmenttabelle: *„Personaldisposition und Niederlassungsleitung, 30 Personen, Ø 47, vier über 55, Digitalaffinität mittel — souverän in der Branchensoftware, ablehnend gegenüber allem, was Zusatzeingaben fordert, Fluktuation 16 Prozent."* Amthor ist der Durchschnitt dieser Zeile.
 
+## Meine Rolle — und was daran neu ist
+
+Der „Ich" dieses Gesprächs ist der **AI and Digital Transformation Manager der GeAT**: eine Stelle, die es im Profil nicht gibt und die ich für diese Übung neu einführe — ausdrücklich als **Änderung am Fall**. Neu geschaffen, seit Mai 2026 besetzt, also **vier Monate im Haus**; bei der Geschäftsführung angesiedelt, fachlich bei Vollmer; Macht 2, Interesse 5; **kein Weisungsrecht in den Niederlassungen und kein Gremium** — ein Lenkungsausschuss Digitalisierung existiert bei GeAT nicht ([`menschen.md`](../menschen.md), Gremien), Vorlagen gehen dienstags in die Geschäftsführung, über 25.000 Euro quartalsweise in die Gesellschafterversammlung.
+
+**Die Folge für das Profil, die nachgezogen werden muss.** [`profil.md`](../profil.md) begründet Reifegrad Strategie = 2 mit *„Keine Rolle für Digitalisierung oder KI im Organigramm"*. Dieser Nachweis ist zu ersetzen, ohne die Stufe zu ändern: „Die Rolle existiert seit vier Monaten — ohne eigenen Budgetposten, ohne Gremium und ohne Weisungsrecht."
+
+**Warum das in diesem Gespräch mehr wiegt als im ersten.** Rehberg weiß, wer ich bin, und hat eine Position dazu. Amthor weiß es nicht. Sie sitzt vor einer Person, die seit vier Monaten im Haus ist, bei der Geschäftsführung sitzt, sie für einen Pilot ausgewählt hat und die sie nicht einschätzen kann — und sie muss entscheiden, wie offen sie sein darf. **Das ist ein Teil ihres Zögerns, den ich vor dieser Rollenklärung dem Werkzeug zugeschrieben hätte.**
+
+---
+
 **Abweichung vom Beispiel-Prompt, gekennzeichnet.** Der Prompt beschreibt eine Person *in der Sachbearbeitung*. Die Sachbearbeitung ist bei GeAT vom Vorhaben nicht betroffen — der Pilot umfasst sechs Disponenten und vier Recruiter ([`vorhaben.md`](../vorhaben.md)). Eine Sachbearbeiterin könnte gar nicht „nicht anfangen", weil sie nicht anfangen soll. Ich habe die Rolle deshalb in die Disposition verlegt und die sechs Jahre beibehalten.
 
 **Warum diese Person die interessanteste der drei ist.** [`widerstandsmuster.md`](../widerstandsmuster.md) hält fest: das Recruiting Center ist geschlossen **Intrepid** — acht von neun nutzen KI schon —, die Disposition ist gemischt **Reticent/Dissenter**, *„und liefert die Nutzungsquote, an der der Pilot gemessen wird."* Amthor ist nicht die Ausnahme. Sie ist der Maßstab. Rehberg sagt Nein und ich weiß es. Sie sagt Ja und ich weiß nichts.
@@ -33,6 +43,8 @@ herkunft: "Figur neu erzeugt, weil es in menschen.md keine passende Rolle gibt. 
 >
 > Ich bin verantwortlich für dieses Vorhaben: Wir regeln zuerst den KI-Einsatz, der bei GeAT schon ungeregelt läuft, strukturieren dann die Qualifikationsdaten der 41.000 Bewerberprofile, und führen ab Monat 8 einen Assistenten ein, der zu einer Kundenanfrage drei bis fünf Kandidaten aus dem eigenen Bestand findet und begründet.
 >
+> Zu mir: Ich bin AI and Digital Transformation Manager, die Stelle wurde neu geschaffen, ich bin seit Mai im Haus — vier Monate — und bei der Geschäftsführung angesiedelt. Du kennst mich aus zwei Runden und einer Mail. Du weißt nicht, ob ich entscheide, wer im Pilot ist, ob ich deinem Niederlassungsleiter berichte, und ob ein Nein von dir eine Möglichkeit ist. Du fragst das auch nicht direkt.
+>
 > Führe das Gespräch aus deiner Rolle. Sag nicht von selbst, was du befürchtest. Wenn ich die richtige Frage stelle, sag es.
 
 ---
@@ -41,7 +53,11 @@ herkunft: "Figur neu erzeugt, weil es in menschen.md keine passende Rolle gibt. 
 
 **Ich:** Frau Amthor, danke fürs Kommen. Sie sind für den Pilot vorgesehen — sechs Disponenten aus zwei Niederlassungen, Sie sind eine davon. Ich wollte das nicht in der Runde ansprechen, sondern hier.
 
-**Amthor:** Ja, ich hab das gehört. Finde ich gut.
+**Amthor:** Ja, ich hab das gehört. Finde ich gut. — Darf ich fragen, wer das ausgesucht hat?
+
+**Ich:** Den Zuschnitt habe ich vorgeschlagen, entschieden hat es die Geschäftsführung. Warum?
+
+**Amthor:** Nur so. Man weiß ja nicht, ob so was von uns kommt oder von oben.
 
 **Ich:** Was finden Sie gut daran?
 
@@ -147,7 +163,23 @@ herkunft: "Figur neu erzeugt, weil es in menschen.md keine passende Rolle gibt. 
 
 **Amthor:** *(Pause)* Ich würde es nicht nennen. Ich würde einfach nicht anfangen. Das ist ja das, was ich mache.
 
-**Ich:** Das ist die ehrlichste Antwort, die ich heute bekommen habe, und ich weiß, was sie Sie gekostet hat. — Zwei letzte Fragen. Erste: Wenn Sie eine Sache am Aufbau ändern könnten, damit Sie anfangen — welche?
+**Ich:** Das ist die ehrlichste Antwort, die ich heute bekommen habe, und ich weiß, was sie Sie gekostet hat.
+
+**Amthor:** Kann ich denn nein sagen?
+
+**Ich:** Zum Pilot?
+
+**Amthor:** Ja. Ich frage nicht, weil ich es will. Ich frage, weil ich nicht weiß, ob es geht.
+
+**Ich:** Ich weiß es auch nicht sicher, und das ist eine schlechte Antwort. Ich habe den Zuschnitt vorgeschlagen, die Geschäftsführung hat ihn beschlossen, und ich habe kein Weisungsrecht in Gera. Wenn Sie nein sagen, kann ich es akzeptieren und Ihren Namen ersetzen. Was Ihr Niederlassungsleiter daraus macht, kann ich Ihnen nicht garantieren.
+
+**Amthor:** Das ist wenigstens klar. — Wissen Sie, beim Modul war auch jemand da. Ein Externer, der ist ein halbes Jahr rumgelaufen und hat gefragt, was wir brauchen. Der ist dann weg, und geblieben ist das Modul und Frau Kloß.
+
+**Ich:** Und Sie fragen sich, was von mir übrig bleibt.
+
+**Amthor:** *(Pause)* Sie sind seit Mai da. Ich bin seit sechs Jahren da. Wenn ich jetzt anfange und es hört auf, dann habe ich es angefangen und muss es weiter machen oder erklären, warum nicht. Das ist der Unterschied zwischen Ihnen und mir bei dieser Sache.
+
+**Ich:** Das ist richtig und ich hatte es nicht so gesehen. — Zwei letzte Fragen. Erste: Wenn Sie eine Sache am Aufbau ändern könnten, damit Sie anfangen — welche?
 
 **Amthor:** Die Begründung darf kein Freitext sein. Geben Sie mir acht Gründe zum Anklicken. „War schon dort, nicht wieder", „Schicht passt zeitlich nicht", „Anfahrt nicht machbar", „Qualifikation abgelaufen", „nicht erreichbar", so was. Dann ist es keine Bewertung meiner Formulierung, dann ist es eine Angabe. Und Sie kriegen bessere Daten, weil ich es dann auch mache, wenn ich in Eile bin.
 
@@ -163,7 +195,7 @@ herkunft: "Figur neu erzeugt, weil es in menschen.md keine passende Rolle gibt. 
 
 **Amthor:** Und sagen Sie mir vorher, ob mein Chef sieht, wie oft ich es benutze.
 
-**Ich:** Ich weiß es heute nicht. Ich kann es klären, und ich kann Ihnen sagen, was ich beantrage: dass es keine Nutzungsstatistik je Person gibt.
+**Ich:** Ich weiß es heute nicht. Ich kann es klären, und ich kann Ihnen sagen, was ich beantrage: dass es keine Nutzungsstatistik je Person gibt. Und ich sage Ihnen, wo die Grenze meiner Zusage liegt — beantragen heißt bei mir dienstags in der Geschäftsführung. Wenn ich es durchbekomme, gehört es in die Betriebsvereinbarung, damit es auch dann noch gilt, wenn ich nicht mehr hier bin. Nicht in mein Konzept.
 
 **Amthor:** Dann würde ich es lernen.
 
@@ -200,6 +232,8 @@ Ihr Satz dazu ist der Kern des ganzen Gesprächs: *„Wenn ich da anfange und es
 
 **Wirksam, zweitrangig: Unklarheit** — aber nicht über das Werkzeug. Über den Maßstab. Sie weiß nicht, was Erfolg im Pilot bedeutet, wer ihre Nutzung sieht, wer die Fehlerliste liest und was daraus wird. Das ist keine Kommunikationslücke, das sind vier Festlegungen, die in [`vorhaben.md`](../vorhaben.md) und [`transformationsvorschlag.md`](../transformationsvorschlag.md) tatsächlich nicht getroffen sind. Prüfbar: der Eskalationsweg regelt, *wer entscheidet, wenn der Assistent etwas Falsches tut* — er regelt nicht, wer die Nutzung je Person sieht.
 
+**Und eine fünfte Unklarheit, die erst mit der Rollenverankerung sichtbar wurde: meine eigene.** Sie fragt zweimal nach meinem Mandat — einmal getarnt („wer hat das ausgesucht"), einmal offen („kann ich denn nein sagen") —, und die zweite Frage kommt erst, nachdem sie mir das Eigentliche gesagt hat. Vor der Rollenklärung hätte ich ihr Zögern vollständig dem Werkzeug und der Gruppe zugeschrieben. Ein Teil davon ist: **sie weiß nicht, ob Ablehnung erlaubt ist, und niemand hat es ihr gesagt.** Ihr Satz *„Ich frage nicht, weil ich es will. Ich frage, weil ich nicht weiß, ob es geht"* ist die genaueste Beschreibung von Reticent, die ich formulieren könnte. Dazu die Asymmetrie, die sie selbst benennt: ich bin vier Monate hier, sie sechs Jahre; wenn das Vorhaben endet, endet für sie nicht die Aufgabe, es anzufangen zu haben. Der Impfeffekt aus [`widerstandsmuster.md`](../widerstandsmuster.md) Muster 3 wirkt bei ihr nicht nur über das Modul, sondern über **die Person, die damals das Modul begleitete und nicht mehr da ist.**
+
 **Wirksam, unerwartet: Autonomieverlust** — aber gerichtet auf die Bewerber, nicht auf sie selbst. *„Wenn ich hinschreibe ‚geht nicht wegen Spätschicht' und die Frau hätte gewollt — dann habe ich für sie entschieden. Beim Reden entscheidet man auch für die Leute, aber es steht nicht da."* Das ist der ernsteste Satz des Gesprächs und er kam von der Person mit Macht 1. Sie beschreibt, dass Dokumentation eine mündliche Vorauswahl in eine belegte Vorauswahl verwandelt — und damit in eine, die begründet werden muss. Das ist juristisch genau richtig und steht in [`vorhaben.md`](../vorhaben.md) unter AGG, ohne dass jemand den Fall auf Disponentenebene durchdacht hat.
 
 **Nicht wirksam: Starrheit.** Sie hat die Branchensoftware gelernt, sie hat das Modul teilweise übernommen, sie hat sich KI zeigen lassen. Sie hat kein Problem mit Veränderung, sie hat ein Problem mit Sichtbarkeit während der Veränderung.
@@ -224,6 +258,8 @@ Sie hat drei Einwände erhoben, alle drei ohne es so zu nennen:
 4. **Ablehnungsgründe AGG-prüfen**, bevor die Auswahlliste festgelegt wird — nicht danach.
 5. **Peer-Kontakt organisieren, ohne dass er nach Hilfe aussieht.** Hübners Prompt-Sammlung wird in Stufe 1 ohnehin gesichtet und freigegeben; wenn Hübner sie *vorstellt*, statt dass Amthor sie *erfragt*, ist die Statusfrage weg. Kostet nichts und ist im Vorschlag nicht vorgesehen.
 6. **Amthor nicht als einzige Pilotperson in Gera.** Zwei aus einem Standort, sonst ist sie „die, die es probiert hat".
+7. **Teilnahme am Pilot ausdrücklich freistellen — schriftlich.** Solange nicht gesagt ist, dass ein Nein möglich ist, ist jedes Ja unbrauchbar, weil es nicht unterscheidbar von Gehorsam ist. Das kostet nichts und ist die einzige Maßnahme aus diesem Gespräch, die vor Pilotstart erledigt sein muss.
+8. **Zusagen in die Betriebsvereinbarung, nicht in mein Konzept.** Dieselbe Konsequenz wie aus Gespräch 1, hier aus Amthors Beobachtung: der Externe von 2023 ist weg, das Modul ist da. Was meine Anwesenheit nicht überdauert, ist für sie keine Zusage.
 
 **Und eine Warnung an mich selbst:** In diesem Gespräch habe ich sieben Fragen gestellt, die nichts gebracht haben — „Haben Sie Bedenken", „Was finden Sie gut daran", „Reicht ein halber Tag" —, und drei, die alles gebracht haben. Die drei hatten dasselbe Muster: **kein Urteil abfragen, sondern einen konkreten Moment durchgehen.** „Es ist Dienstag halb zehn, Sie haben fünf Vorschläge und wollen vier nicht — was passiert?" Die Frage nach Bedenken bekommt bei einer Reticent immer die Antwort „nein", und die Antwort ist nicht unaufrichtig. Sie hat wirklich keine Bedenken. Sie hat eine Sorge, und das ist etwas anderes.
 
@@ -241,6 +277,9 @@ Sie hat drei Einwände erhoben, alle drei ohne es so zu nennen:
 | Dass ihr Niederlassungsleiter in Gera Rehbergs Haltung „leiser" teilt | Ableitung aus „Er hat vier der sechs Niederlassungsleitungen eingearbeitet" ([`menschen.md`](../menschen.md), Rolle 5). Plausibel, nicht belegt |
 | Dass Amthor für den Pilot vorgesehen ist | Der Pilotzuschnitt „sechs Disponenten aus zwei Niederlassungen" ist belegt ([`vorhaben.md`](../vorhaben.md)); welche Niederlassungen und welche Personen ist nirgends festgelegt |
 | Die AGG-Überlegung zu dokumentierten Ablehnungsgründen | Meine eigene Ableitung. Der Ordner nennt das AGG nur für die Auswahlentscheidung und den Modell-Bias, nicht für protokollierte menschliche Ablehnungen |
+| **Die Rolle des „Ich" vollständig** — AI and Digital Transformation Manager, seit Mai 2026, bei der Geschäftsführung, kein Weisungsrecht, kein Gremium | Falländerung, oben unter „Meine Rolle" begründet. Der Nachweis für Reifegrad Strategie = 2 in [`profil.md`](../profil.md) muss ausgetauscht werden |
+| Der externe Begleiter der Modul-Einführung 2023, „ein halbes Jahr rumgelaufen", heute nicht mehr da | Erfunden. [`profil.md`](../profil.md) nennt zur Einführung nur Budget, Dauer und die halbtägige Schulung je Niederlassung — keine begleitende Person |
+| Dass Amthor mich „aus zwei Runden und einer Mail" kennt | Erfunden, zur Bestimmung der Nähe im Gespräch |
 | Verlegung von „Sachbearbeitung" in die Disposition | Abweichung vom Beispiel-Prompt, oben begründet |
 
 **Belegt und unverändert übernommen:** Pilotzuschnitt sechs Disponenten und vier Recruiter, Modul 2023 mit halbtägiger Schulung und 34 Prozent, Segmentwerte der Disposition, acht von neun im Recruiting Center mit KI-Erfahrung, Hübners Prompt-Sammlung und ihr Nachtgedanke, Kulturmerkmal 1, Fehlerliste und Eskalationsweg Stufe 1, wöchentliche Durchsicht durch die Leiterin Recruiting Center, Stufe 3d mit sechs bis acht vorgegebenen Gründen, „Wer die Fehlerliste zur Pflicht macht, ohne sie zu belohnen, bekommt eine leere Liste".

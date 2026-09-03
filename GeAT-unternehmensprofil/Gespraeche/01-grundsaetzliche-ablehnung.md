@@ -17,6 +17,26 @@ herkunft: "Persona an menschen.md angedockt. Alle Personen des Ordners sind erfu
 
 **Was das Gespräch bringen sollte.** Nicht seine Zustimmung. Sondern die Antwort auf die Frage, ob seine Ablehnung eine Haltung ist oder ein Sachverhalt — und welcher Teil davon in meiner Vorlage nachgebessert werden muss, bevor sie in ein Gremium geht.
 
+## Meine Rolle — und was daran neu ist
+
+Der „Ich" dieses Gesprächs ist der **AI and Digital Transformation Manager der GeAT**. Diese Stelle gibt es im Profil nicht, und ich führe sie für diese Übung neu ein. Das ist ausdrücklich eine **Änderung am Fall**, keine Auslegung.
+
+| Angabe | Wert | Herkunft |
+|---|---|---|
+| Rolle | AI and Digital Transformation Manager, neu geschaffen, Stelle seit Mai 2026 besetzt — **vier Monate im Haus** | generiert (Falländerung) |
+| Angesiedelt | bei der Geschäftsführung. Fachlich bei Vollmer (Vertrieb, Strategie), die das Vorhaben will. Die IT-Ressourcen liegen bei Achtelik, der die Migration verantwortet | generiert |
+| Macht / Interesse | 2 / 5. Vorschlagsrecht für Vorlagen, **kein Weisungsrecht in den Niederlassungen** | generiert |
+| Gremium | **keines.** Ein Lenkungsausschuss Digitalisierung existiert nicht — Vorlagen gehen dienstags in die Geschäftsführung, alles über 25.000 Euro quartalsweise in die Gesellschafterversammlung | belegt ([`menschen.md`](../menschen.md) Gremien, [`zahlen.md`](../zahlen.md)) |
+| Was mich nachts wach hält | Dass die Stelle geschaffen wurde, damit es eine gibt. Und dass die erste Vorlage über 25.000 Euro darüber entscheidet, ob sie in zwei Jahren noch existiert | generiert |
+
+**Die Folge für das Profil, die nachgezogen werden muss.** [`profil.md`](../profil.md) begründet Reifegrad **Strategie = 2** unter anderem mit *„Keine Rolle für Digitalisierung oder KI im Organigramm"*. Dieser Nachweis stimmt nicht mehr. Er ist zu ersetzen, **ohne dass sich die Stufe ändert**: „Die Rolle existiert seit vier Monaten — ohne eigenen Budgetposten, ohne Gremium und ohne Weisungsrecht." Eine Stelle ohne Budget und ohne Gremium ist kein Beleg für Stufe 3. Ebenso bleibt der Nachweis unter **People** („keine Rolle für Automatisierung") zu präzisieren. Und die Gremientabelle in [`menschen.md`](../menschen.md) trägt weiter „Lenkungsausschuss Digitalisierung: existiert nicht" — das ist nach dieser Änderung kein Widerspruch, sondern der Kern meiner Lage.
+
+*(Nebenbefund im Ausgangsmaterial: [`profil.md`](../profil.md) und [`transformationsvorschlag.md`](../transformationsvorschlag.md) sprechen an drei Stellen von einem „Steuerkreis". Ein solches Gremium führt [`menschen.md`](../menschen.md) nicht. Dieselbe Lücke, schon vor meiner Änderung.)*
+
+**Warum die vier Monate im Gespräch mehr wiegen als die Rolle.** Rehberg ist 22 Jahre im Haus. Sein Satz aus [`menschen.md`](../menschen.md) — *„Wer mir vorschlagen will, wen ich schicke, hat noch nie in einer Werkhalle gestanden"* — war als Aussage über den Assistenten angelegt. Mit dieser Rollenverankerung ist er zuerst eine Aussage über mich, und er stimmt.
+
+---
+
 **Abweichung vom Beispiel-Prompt, gekennzeichnet.** Der Beispiel-Prompt beschreibt eine *Leiterin einer Fachabteilung mit 40 Personen, seit 19 Jahren im Unternehmen*. Eine Fachabteilung dieser Größe gibt es bei GeAT nicht: die Disposition zählt insgesamt 30 Personen über sechs Niederlassungen, die größte Verwaltungseinheit ist Lohn und Fakturierung mit 9 ([`menschen.md`](../menschen.md), Segmente). Ich habe die Persona deshalb auf die vorhandene Rolle mit derselben Funktion im Widerstandsgefüge gelegt: Rehberg, 22 Jahre im Haus statt 19, männlich statt weiblich, Verantwortung für eine Niederlassung statt für eine Fachabteilung. Die drei Eigenschaften des Prompts sind erhalten: gewachsene Fachlichkeit, Erleben des Vorhabens als Entwertung, höflich und unbeweglich.
 
 ---
@@ -31,6 +51,8 @@ herkunft: "Persona an menschen.md angedockt. Alle Personen des Ordners sind erfu
 >
 > Ich bin verantwortlich für dieses Vorhaben: Wir regeln zuerst den KI-Einsatz, der bei GeAT schon ungeregelt läuft, strukturieren dann die Qualifikationsdaten der 41.000 Bewerberprofile, und führen ab Monat 8 einen Assistenten ein, der zu einer Kundenanfrage drei bis fünf Kandidaten aus dem eigenen Bestand findet und begründet. Der Assistent bewertet nicht und lehnt nichts ab — der Disponent entscheidet; Pilot mit sechs Disponenten aus zwei Niederlassungen über sechs Monate.
 >
+> Zu mir: Ich bin AI and Digital Transformation Manager, die Stelle wurde neu geschaffen und ich bin seit Mai im Haus — vier Monate. Ich bin bei der Geschäftsführung angesiedelt, habe kein Weisungsrecht in deiner Niederlassung und kein Gremium; meine Vorlagen gehen dienstags in die Geschäftsführung und über 25.000 Euro quartalsweise in die Gesellschafterversammlung. Du weißt das.
+>
 > Führe das Gespräch aus deiner Rolle. Gib nicht nach, wenn ich nur Vorteile aufzähle. Wenn ich dir eine echte Frage stelle, antworte ehrlich.
 
 ---
@@ -39,9 +61,13 @@ herkunft: "Persona an menschen.md angedockt. Alle Personen des Ordners sind erfu
 
 **Ich:** Herr Rehberg, danke, dass Sie sich die Stunde nehmen. Ich bin verantwortlich für den KI-Teil des Transformationsprogramms: Wir regeln zuerst, was schon läuft — neun Kolleginnen und Kollegen nutzen private KI-Zugänge mit Lebensläufen darin, ohne Vertrag. Dann strukturieren wir die Qualifikationsdaten unserer 41.000 Profile. Und ab Monat acht kommt ein Assistent, der zu einer Anfrage drei bis fünf Kandidaten aus dem eigenen Bestand findet und begründet. Er bewertet nicht, er sortiert niemanden aus, er entscheidet nichts.
 
-**Rehberg:** Danke für die Zusammenfassung. Ich sage Ihnen gleich, wo ich stehe, damit Sie sich die Folien sparen: Ich bin dagegen. Nicht „noch nicht", nicht „nach der Migration". Dagegen.
+**Rehberg:** Danke für die Zusammenfassung. Sie sind seit Mai hier, richtig?
 
-**Ich:** Das ist ein klarer Anfang. Woran genau?
+**Ich:** Seit Mai, ja. Vier Monate.
+
+**Rehberg:** Dann sage ich Ihnen gleich, wo ich stehe, damit Sie sich die Folien sparen: Ich bin dagegen. Nicht „noch nicht", nicht „nach der Migration". Dagegen. Und ich sage Ihnen das jetzt und nicht in der Runde im Januar, weil Sie neu sind und weil es unfair wäre, es Sie erst dort erfahren zu lassen.
+
+**Ich:** Das nehme ich als Höflichkeit und nicht als Drohung. Woran genau?
 
 **Rehberg:** An der dritten Stufe, dem Assistenten. Und zwar aus zwei Gründen, von denen der erste rein handwerklich ist. Sie wollen ein Findewerkzeug auf 41.000 Profilen bauen. In Ihrer eigenen Unterlage steht, dass 63 Prozent davon kein strukturiertes Können enthalten. Das Können steht im PDF, im Freitext, in elf Schreibweisen von „Staplerschein". Sie bauen ein Werkzeug zum Finden in einem Bestand, in dem nichts zu finden ist.
 
@@ -59,7 +85,7 @@ herkunft: "Persona an menschen.md angedockt. Alle Personen des Ordners sind erfu
 
 **Ich:** Ja.
 
-**Rehberg:** Ich bin seit 2004 hier. Ich habe in den Betrieben, die ich betreue, selbst in der Halle gestanden — in fast allen. Ich weiß, dass bei einem bestimmten Kunden die Frühschicht offiziell um 6 anfängt und faktisch um 5:30, weil der Meister es so will, und dass jeder, den ich da hinschicke, ohne diese Information in der zweiten Woche kündigt. Ich weiß, wer bei wem nicht arbeiten kann, weil es 2019 einmal Streit gab. Ich weiß, welcher Meister einen Menschen mit gebrochenem Deutsch nimmt und welcher nicht, obwohl beide dasselbe Anforderungsprofil schicken. Nichts davon steht in einem Feld. In Ihrem Papier heißt das „Trainingsgrundlage, die kein Anbieter liefert". Ich nenne es meine Arbeit.
+**Rehberg:** Ich bin seit 2004 hier. Ich habe in den Betrieben, die ich betreue, selbst in der Halle gestanden — in fast allen. Sie waren in keiner, und das ist kein Vorwurf, Sie sind vier Monate hier. Aber es ist der Grund, warum Sie mir bei dieser Sache nichts erklären können. Ich weiß, dass bei einem bestimmten Kunden die Frühschicht offiziell um 6 anfängt und faktisch um 5:30, weil der Meister es so will, und dass jeder, den ich da hinschicke, ohne diese Information in der zweiten Woche kündigt. Ich weiß, wer bei wem nicht arbeiten kann, weil es 2019 einmal Streit gab. Ich weiß, welcher Meister einen Menschen mit gebrochenem Deutsch nimmt und welcher nicht, obwohl beide dasselbe Anforderungsprofil schicken. Nichts davon steht in einem Feld. In Ihrem Papier heißt das „Trainingsgrundlage, die kein Anbieter liefert". Ich nenne es meine Arbeit.
 
 **Ich:** Ich habe diesen Satz geschrieben. Er steht so in der Vorlage.
 
@@ -123,7 +149,7 @@ Erklären Sie das Modul von 2023 offiziell für gescheitert. Schriftlich, in der
 
 **Rehberg:** Ich widerspreche schon. Ich sage Ihnen nur, an welcher Stelle Sie es sich selbst schwer machen. Das eine ist eine Auswertung, die Sie nachholen können. Das andere — dass ein System meine Auswahl protokolliert — können Sie nicht wegverhandeln, weil Sie es brauchen. Deswegen bleibe ich dagegen.
 
-**Ich:** Letzte Frage, und die ist unangenehm. In der Vorlage stehen Sie namentlich. Als Pilotstandort. Nicht überzeugt — eingekauft.
+**Ich:** Noch eine Frage, und die ist unangenehm. In der Vorlage stehen Sie namentlich. Als Pilotstandort. Nicht überzeugt — eingekauft.
 
 **Rehberg:** *(kurzes Lachen)* Das steht da wirklich so?
 
@@ -131,7 +157,23 @@ Erklären Sie das Modul von 2023 offiziell für gescheitert. Schriftlich, in der
 
 **Rehberg:** Dann haben Sie mich schon richtig eingeschätzt und trotzdem eine falsche Frage gestellt. Sie können mich nicht einkaufen. Sie können mir eine Bedingung abkaufen: Während der sechs Pilotmonate werden die Zahlen meiner Niederlassung im Vergleich der Runde nicht geführt. Nicht besser gestellt — herausgenommen. Wenn ich sechs Monate lang ein Werkzeug teste, das mich langsamer macht, und gleichzeitig gegen fünf Niederlassungen verglichen werde, die es nicht testen, dann teste ich es nicht ernsthaft. Dann teste ich es so, dass ich gut aussehe. Und das ist für Sie das schlechteste Ergebnis, weil Sie es nicht merken.
 
-**Ich:** Das würde ich mitnehmen und beantragen.
+**Ich:** Das würde ich mitnehmen. Ich sage Ihnen auch, wohin: dienstags in die Geschäftsführung. Es kostet nichts, also braucht es die Gesellschafter nicht. Aber ich sage Ihnen ebenso, was ich nicht kann — ich kann es nicht entscheiden und ich kann es Ihrem Kennzahlenvergleich nicht selbst herausnehmen. Das macht Herr Steinbrück oder es macht niemand.
+
+**Rehberg:** Das wissen wir beide, und ich schätze, dass Sie es sagen. Es ist übrigens Ihr eigentliches Problem, nicht meins. Sie haben eine Stelle, die es vor Mai nicht gab, kein Gremium, das Ihnen den Rücken hält, und einen Lenkungsausschuss, den es nicht gibt. Jede Zusage, die Sie mir heute machen, hängt daran, dass Sie in zwei Jahren noch da sind.
+
+**Ich:** Und Sie sind es.
+
+**Rehberg:** Ich bin 2004 gekommen. Ich habe drei Software-Einführungen erlebt, zwei Beratungen und eine Zusammenlegung. Ich sage das nicht als Trotz, sondern damit Sie es einkalkulieren: Wer bei uns wartet, gewinnt oft, und das ist niemandes Schuld. Es liegt daran, dass die, die etwas wollen, wechseln, und die, die disponieren, bleiben.
+
+**Ich:** Dann frage ich Sie das, was ich mich selbst gefragt habe. Sehen Sie einen Interessenkonflikt bei mir?
+
+**Rehberg:** *(Pause)* Ja, und ich hätte es nicht von selbst gesagt. Ihre Stelle ist geschaffen worden, damit dieses Vorhaben jemanden hat. Wenn das Vorhaben nicht kommt, ist die Frage nach der Stelle die nächste. Das heißt nicht, dass Sie unehrlich argumentieren. Es heißt, dass Sie der Einzige hier sind, der nicht neutral sein kann, und Sie sollten das in Ihre Vorlage schreiben, bevor Frau Dr. Barth es sagt.
+
+**Ich:** Das ist der zweite Punkt heute, an dem Sie mir eine Vorlage retten, die Sie ablehnen.
+
+**Rehberg:** Ich lehne den Assistenten ab. Nicht Sie.
+
+**Ich:** Dann bringe ich Ihre Bedingung ein.
 
 **Rehberg:** Tun Sie das. Es ändert nichts an meiner Position zu Stufe 4. Ich sage Nein, und ich sage es im Januar in der Runde auch, und ich sage es dann mit denselben Sätzen. Zu Stufe 3 rede ich mit. Der Qualifikationskatalog ist überfällig, elf Schreibweisen von Staplerschein sind eine Peinlichkeit, und den Grund der Nichtbesetzung will ich selbst wissen — ich weiß bis heute nicht, warum wir letztes Jahr sechzig Prozent der Anfragen im Druckbereich nicht bedient haben, und ich müsste es wissen.
 
@@ -191,6 +233,8 @@ Vier Einwände, vier verschiedene Antworten:
 4. Fehlerliste **nicht** bei der Leiterin Recruiting Center — Rollenkollision.
 5. Herausnahme der Pilotniederlassungen aus dem Kennzahlenvergleich der Niederlassungsleiterrunde für die Pilotdauer.
 6. Ritschel in die Anforderungserhebung der Migration. Steht im Vorschlag als blinder Fleck ohne Maßnahme und ohne Verantwortlichen.
+7. **Meinen eigenen Interessenkonflikt in die Vorlage schreiben.** Die Stelle ist für dieses Vorhaben geschaffen worden; ich bin der Einzige unter den Beteiligten, dessen Position von der Entscheidung abhängt. Rehberg hat das benannt, ohne dass ich danach gefragt hätte — und der Hinweis, es vor Dr. Barth zu tun, ist der praktische Teil davon.
+8. **Zusagen an einen Nachfolger binden, nicht an mich.** Ohne Lenkungsausschuss hängt jede Vereinbarung, die ich heute treffe, an meiner Anwesenheit. Was tragen soll, gehört in die Rahmen-Betriebsvereinbarung oder in die Ausschreibung — die beiden Orte, die einen Wechsel überdauern.
 
 ---
 
@@ -207,6 +251,9 @@ Alles Folgende ergibt sich **nicht** aus den Dateien des Ordners und ist von mir
 | „Sechzig Prozent der Anfragen im Druckbereich nicht bedient" | Von mir erzeugt. Belegt ist nur: Besetzungsquote 40 Prozent gesamt, 1.860 nicht besetzte Anfragen, kein Grund erfasst ([`systeme-daten.md`](../systeme-daten.md), [`transformationsvorschlag.md`](../transformationsvorschlag.md) 3d). Die Aufteilung nach Berufsfeld existiert nicht |
 | Dass Pfaff und Rehberg die Vorlage gelesen haben | Dramaturgisch nötig, im Ordner nicht angelegt |
 | Der Formulierungsvorschlag „Zahlen aus dem Rundenvergleich herausnehmen" | Meine Ableitung aus Muster 2, steht in keiner Datei |
+| **Die Rolle des „Ich" vollständig** — AI and Digital Transformation Manager, seit Mai 2026, bei der Geschäftsführung, Macht 2, kein Weisungsrecht, kein Gremium | Falländerung, oben unter „Meine Rolle" begründet. Im Profil existiert diese Rolle nicht; der Nachweis für Reifegrad Strategie = 2 muss deshalb ausgetauscht werden |
+| Dass Rehberg „drei Software-Einführungen, zwei Beratungen und eine Zusammenlegung" erlebt hat | Die Einführungen sind aus [`systeme-daten.md`](../systeme-daten.md) ableitbar (Branchensoftware 2013, Multiposting 2021, ATS-Modul 2023), die Zusammenlegung 2025 steht in [`profil.md`](../profil.md). **Die zwei Beratungen sind erfunden** |
+| Dass Steinbrück den Kennzahlenvergleich der Runde ändern könnte | Ableitung: er verantwortet die Besetzungsquote und ist Vertriebsleiter ([`menschen.md`](../menschen.md), Rolle 3). Die Niederlassungsleiterrunde ist laut [`menschen.md`](../menschen.md) „formal Information", entschieden wird in der Geschäftsführung — wer den Vergleich führt, steht nirgends |
 | 22 Jahre statt 19, männlich statt weiblich, Niederlassung statt Fachabteilung | Abweichung vom Beispiel-Prompt, oben unter Kurzinfo begründet |
 
 **Ein Widerspruch, der aus den Quelldateien selbst kommt.** Rehbergs Bedingung nennt „fünf Niederlassungen", gegen die verglichen wird. Das setzt sechs Standorte voraus — so führen es [`profil.md`](../profil.md), [`zahlen.md`](../zahlen.md), [`recherche.md`](../recherche.md) und [`menschen.md`](../menschen.md) Rolle 5. [`menschen.md`](../menschen.md) nennt an zwei anderen Stellen („Sieben Niederlassungsleitungen", Kulturmerkmal 5 „Die Standorte sind sieben Firmen") sieben. Ich rechne durchgehend mit sechs; die Zahl ist im Ordner nicht einheitlich und sollte dort geklärt werden.

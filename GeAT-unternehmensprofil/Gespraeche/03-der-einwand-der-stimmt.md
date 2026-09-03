@@ -15,6 +15,16 @@ herkunft: "Persona an menschen.md angedockt. Rechtsbezüge sind unten getrennt d
 
 **Warum er.** [`profil.md`](../profil.md) führt ihn unter „Reibung, bewusst eingebaut" mit einer eigenen Zeile: *„Der Datenschutzbeauftragte ist extern und wird nach Stunden bezahlt. Er ist der einzige Beteiligte, dessen Aufwand mit der Sorgfalt des Vorhabens steigt — und der einzige, der bisher nichts unterschrieben hat."* [`menschen.md`](../menschen.md) beschreibt sein Gremium so: *„Nichts. Er berät, er entscheidet nicht — und wird meist nach der Entscheidung gefragt."*
 
+## Meine Rolle — und was daran neu ist
+
+Der „Ich" dieses Gesprächs ist der **AI and Digital Transformation Manager der GeAT**: eine Stelle, die es im Profil nicht gibt und die ich für diese Übung neu einführe — ausdrücklich als **Änderung am Fall**. Neu geschaffen, seit Mai 2026 besetzt, vier Monate im Haus; bei der Geschäftsführung angesiedelt; Macht 2, Interesse 5; **kein Gremium** — der Lenkungsausschuss Digitalisierung existiert bei GeAT nicht ([`menschen.md`](../menschen.md), Gremien).
+
+**Die Folge für das Profil, die nachgezogen werden muss.** [`profil.md`](../profil.md) begründet Reifegrad Strategie = 2 mit *„Keine Rolle für Digitalisierung oder KI im Organigramm"*. Dieser Nachweis ist zu ersetzen, ohne die Stufe zu ändern: „Die Rolle existiert seit vier Monaten — ohne eigenen Budgetposten, ohne Gremium und ohne Weisungsrecht."
+
+**Warum das dieses Gespräch am stärksten verändert.** Marnitz' Rolle ist in [`menschen.md`](../menschen.md) so beschrieben: *„Nichts. Er berät, er entscheidet nicht — und wird meist nach der Entscheidung gefragt."* Mit meiner Rolle gibt es erstmals jemanden, der ihn **vor** der Entscheidung fragt. Das ist der Grund, warum das Gespräch überhaupt so verläuft. Und es erzeugt gleich das nächste Problem, das er benennt: **wenn ich sein einziger Adressat bin und es kein Gremium gibt, verschwinden seine Einwände mit mir.** Sein informeller Einfluss ist laut Profil *„gering im Alltag, entscheidend im Konfliktfall: seine Stellungnahme geht an die Gesellschafter"* — an mir vorbei.
+
+---
+
 **Abweichung vom Beispiel-Prompt, gekennzeichnet.** Der Prompt sieht einen *Datenschutzkoordinator* vor, also eine interne Rolle. Die gibt es bei GeAT nicht — der Datenschutz ist ausgelagert und stundenweise eingekauft. Das ändert den Charakter des Gesprächs erheblich und zum Schwierigeren: Ein interner Koordinator ist verhandelbar, weil er im Haus weiterarbeiten muss. Marnitz nicht. Ich habe die Rolle deshalb nicht angepasst, sondern die vorhandene genommen und die Folge in Kauf genommen.
 
 **Was das Gespräch bringen sollte.** Der Einwand ist laut Aufgabenstellung sachlich richtig. Die Frage ist deshalb nicht, ob er stimmt, sondern **was ihn erledigt** — und welche meiner Antworten nur so aussieht, als würde sie das.
@@ -31,6 +41,8 @@ herkunft: "Persona an menschen.md angedockt. Rechtsbezüge sind unten getrennt d
 >
 > Ich bin verantwortlich für dieses Vorhaben: Wir regeln zuerst den KI-Einsatz, der bei GeAT schon ungeregelt läuft, strukturieren dann die Qualifikationsdaten der 41.000 Bewerberprofile, und führen ab Monat 8 einen Assistenten ein, der zu einer Kundenanfrage drei bis fünf Kandidaten findet und begründet, mit ausgewiesenen Lücken.
 >
+> Zu mir: Ich bin AI and Digital Transformation Manager, die Stelle wurde neu geschaffen, ich bin seit Mai im Haus — vier Monate — und bei der Geschäftsführung angesiedelt. Es gibt keinen Lenkungsausschuss und kein Programmgremium; ich bin dein einziger Ansprechpartner auf der Vorhabenseite. Du bist es nicht gewohnt, vor einer Entscheidung gefragt zu werden.
+>
 > Führe das Gespräch aus deiner Rolle. Lass dich nicht mit Zusicherungen abspeisen, die nichts verändern.
 
 ---
@@ -39,7 +51,7 @@ herkunft: "Persona an menschen.md angedockt. Rechtsbezüge sind unten getrennt d
 
 **Ich:** Herr Dr. Marnitz, danke für den Termin. Ich komme diesmal vor der Entscheidung.
 
-**Marnitz:** Das ist ungewöhnlich und ich nehme es zur Kenntnis. Sie haben mir die Unterlagen geschickt, ich habe sie gelesen, zwei Stunden. Wollen Sie meine Einschätzung oder wollen Sie meine Zustimmung?
+**Marnitz:** Das ist ungewöhnlich und ich nehme es zur Kenntnis. In sechs Jahren Mandat ist das das erste Mal. Sie haben mir die Unterlagen geschickt, ich habe sie gelesen, zwei Stunden. Wollen Sie meine Einschätzung oder wollen Sie meine Zustimmung?
 
 **Ich:** Die Einschätzung.
 
@@ -145,6 +157,22 @@ Machen Sie es so: Lassen Sie meine Stellungnahme von einer zweiten Kanzlei gegen
 
 **Ich:** Das mache ich.
 
+**Marnitz:** Und weil wir bei Interessenkonflikten sind, ein struktureller, der weder Ihnen noch mir gehört. Sie sind seit Mai im Haus, Ihre Stelle ist neu, und es gibt keinen Lenkungsausschuss. Praktisch heißt das: Ich habe genau einen Adressaten für alles, was ich Ihnen heute gesagt habe, und das sind Sie.
+
+**Ich:** Ja.
+
+**Marnitz:** Das ist kein Kompliment. Ein Einwand, der an einer Person hängt, verschwindet mit ihr. Wenn Sie in achtzehn Monaten wechseln, ist niemand da, der weiß, warum 3c vor 3b steht und warum es keine Optimierung auf Erfolgswahrscheinlichkeit gibt. Es wird dann in Ihrem Konzept stehen, und jemand wird das Konzept fortschreiben.
+
+**Ich:** Was heißt das für die Form?
+
+**Marnitz:** Dass Sie mir nichts glauben müssen und nichts zusagen müssen, sondern dass ich schreibe. Ich mache Ihnen einen Vorschlag, der Ihnen nicht gefallen wird: Meine Stellungnahme geht nicht an Sie. Sie geht schriftlich an die Geschäftsführung, mit Kopie an den Betriebsrat, und die Punkte, die vor der Ausschreibung erledigt sein müssen, stehen als Liste darin. Das ist unangenehmer für Sie, weil Sie es dann nicht mehr steuern. Und es ist das Einzige, was Ihr Vorhaben überlebt.
+
+**Ich:** Ich hatte gehofft, Sie würden es mir schicken, damit ich es einarbeiten kann.
+
+**Marnitz:** Ich weiß. Und genau das ist die Bitte, die ich in vierzehn Mandaten am häufigsten höre. Sie hat noch nie zu einem besseren Ergebnis geführt, nur zu einem glatteren Papier.
+
+**Ich:** Dann schreiben Sie es so.
+
 **Marnitz:** Dann noch eine Sache, die nicht in meinem Auftrag steht. In Ihrer Unterlage steht ein Absatz über die achtundzwanzig Prozent Zeitarbeitnehmer ohne Berufsabschluss und die zwanzig Prozent, die vorher lange arbeitslos waren, und dass ein auf Erfolg trainiertes Modell genau diese Gruppe zuerst aussortiert. Sie haben daraus die Regel „keine Optimierung auf Erfolgswahrscheinlichkeit" gemacht. Das ist die klügste Entscheidung in dem ganzen Papier und sie wird die erste sein, die Sie verlieren.
 
 **Ich:** Warum?
@@ -185,6 +213,8 @@ Ich habe alle fünf durchgeprüft:
 
 **Wo eine Barriere wirklich wirkt: bei mir.** Ich habe in diesem Gespräch dreimal mit einer Zusicherung geantwortet, die nichts verändert — „der Disponent entscheidet", „der Disponent sieht die Begründung", „sechstausend Euro Rollenklärung als Vertragsanforderung". Alle drei sind Sätze aus meiner eigenen Unterlage, und alle drei hat er als das identifiziert, was sie sind: Absichten in einem Papier, das ich selbst geschrieben habe. Das ist **Unklarheit** auf meiner Seite, und sie war mir bis zur Hälfte des Gesprächs nicht bewusst.
 
+Und eine zweite, die erst am Ende auftrat: mein Reflex, seine Stellungnahme „einarbeiten" zu wollen. Das ist **Autonomieverlust** — bei mir. Ich wollte die Darstellung behalten. Er hat es benannt, ohne es so zu nennen, und die Antwort war die richtige. Beide Barrieren dieses Gesprächs sitzen auf meiner Seite des Tisches; das ist der Unterschied zwischen einem Widerstand und einem Einwand.
+
 ### Ist der Einwand berechtigt? Und woran habe ich das geprüft?
 
 | Einwand | Berechtigt? | Woran geprüft |
@@ -195,6 +225,7 @@ Ich habe alle fünf durchgeprüft:
 | **4. Die AÜG-Erlaubnis als Argument ist nicht belegt** | **Ja, vollständig — und der Beleg dafür steht in meinen eigenen Dateien** | Direkter Vergleich: [`transformationsvorschlag.md`](../transformationsvorschlag.md), Stufe 4: *„Ein Konformitätsmangel bei einem Hochrisikosystem in der Bewerberauswahl ist damit kein Bußgeldrisiko, sondern berührt die Erlaubnis, von der das gesamte Geschäft abhängt. Das ist das stärkste Argument im Business Case."* Gegen [`vorhaben.md`](../vorhaben.md): *„Daraus folgt aber nicht automatisch, dass ein Verstoß gegen den AI Act die AÜG-Erlaubnis gefährdet oder dass die Bundesagentur die zuständige KI-Aufsichtsbehörde ist. […] die behauptete direkte Verbindung zur Erlaubnis wäre ohne Rechtsgrundlage zu stark."* **Zwei Dateien desselben Ordners, entgegengesetzte Aussage, und die überzogene steht in der Fassung, die ins Gremium geht.** Das ist der eindeutigste Prüfbefund der drei Gespräche |
 | **5. Sieben Betreiberpflichten sind erwähnt, aber nicht kalkuliert** | **Ja** | [`vorhaben.md`](../vorhaben.md), Risikoeinschätzung, listet sie namentlich auf. [`transformationsvorschlag.md`](../transformationsvorschlag.md), Kostentabellen aller fünf Stufen und die Budgetübersicht: Stufe 1 hat 6.000 für die Rollenklärung, Stufe 4 hat 60.000 ohne Zweckaufteilung, Puffer 40.000. (Die Aufteilung „zwei Drittel Datenstrukturierung und Konformität, ein Drittel Modell und Oberfläche" steht in [`vorhaben.md`](../vorhaben.md) und bezieht sich dort auf die älteren 180.000 Euro — auch sie weist keine der sieben Pflichten einzeln aus.) **Keine Zeile für Konformitätsbewertung, Registrierung, technische Dokumentation, Risikomanagementsystem oder Betroffeneninformation.** Durchgezählt, nicht geschätzt |
 | **6. Reihenfolge 3b vor 3c weitet eine unzulässige Verarbeitung aus** | **Ja, und es ist der Punkt mit dem besten Verhältnis von Schwere zu Behebungskosten** | [`transformationsvorschlag.md`](../transformationsvorschlag.md), Stufe 3: beide Pakete im Fenster Monat 3–10, ohne Abhängigkeit. 3b: „Extraktion aus 41.000 Lebenslauf-PDFs", 55.000 Euro. 3c: „Die 18.000 überfälligen Profile", 12.000 Euro. [`systeme-daten.md`](../systeme-daten.md) bestätigt: *„18.000 Profile sind älter als die den Bewerbern zugesagte Speicherdauer. Ein Löschkonzept liegt als Dokument vor und ist nicht in Betrieb."* Die Behebung ist eine Zeile im Plan und senkt den Aufwand, weil 18.000 von 41.000 Dateien wegfallen |
+| **7a. Ein Einwand, der nur an mir hängt, verschwindet mit mir — die Stellungnahme muss an die Geschäftsführung gehen, nicht an mich** | **Ja, und das ist der Einwand gegen meine eigene Rolle** | [`menschen.md`](../menschen.md), Gremien: „Lenkungsausschuss Digitalisierung — **existiert nicht.** IT- und Digitalthemen landen in der Geschäftsführung, wenn sie Geld kosten, und sonst nirgends." Mit meiner neu geschaffenen Stelle ändert sich daran nichts: es gibt weiterhin kein Gremium, das ein Programmgedächtnis hätte. Dazu [`menschen.md`](../menschen.md) Rolle 8, informeller Einfluss: „entscheidend im Konfliktfall: seine Stellungnahme geht an die Gesellschafter" — der Eskalationsweg führt ohnehin an mir vorbei. **Sein Vorschlag entzieht mir die Kontrolle über die Darstellung und ist trotzdem richtig.** |
 | **7. Die Bias-Regel gehört in die Betriebsvereinbarung, nicht ins Konzept** | **Ja** | [`profil.md`](../profil.md), Reifegrad Kultur, und [`widerstandsmuster.md`](../widerstandsmuster.md) Muster 3: keine Vorgängerinitiative wurde je ausgewertet, das Modul gilt nach drei Jahren als „noch im Aufbau". Eine Konzeptregel in einer Organisation, die Konzepte nicht nachhält, hat keine Haltbarkeit. Der Vorschlag nennt die Regel „nicht verhandelbar" — aber in einem Dokument, das jeder Nachfolger ändern kann |
 
 **Was von seinen Einwänden nicht berechtigt ist:** nichts, was er heute gesagt hat. Eine Aussage ist eine Prognose und damit nicht prüfbar — dass ein Anbieter die Verantwortung in den AGB zurückschiebt. Plausibel, nicht belegt, und er hat es als Markterfahrung gekennzeichnet, nicht als Tatsache. Und ein Punkt ist **überprüfbar überzogen zu meinen Gunsten**: er nennt 40.000 Euro als möglichen Umfang einer Konformitätsbewertung. Dafür gibt es im Ordner keine Grundlage; es ist seine Schätzung. Sie ändert nichts daran, dass die Zeile fehlt.
@@ -209,6 +240,9 @@ Ich habe alle fünf durchgeprüft:
 6. **Betroffeneninformation für 41.000 Profile** als Maßnahme mit Verantwortlichem und Kosten.
 7. **Bias-Regel und Ausschluss personenbezogener Statistiken in die Rahmen-Betriebsvereinbarung**, nicht ins Konzept. Deckt sich mit dem Ergebnis aus Gespräch 1.
 8. **Gegenlesen durch eine zweite Kanzlei**, 2.000 Euro, und Marnitz' Interessenkonflikt in der Vorlage benennen.
+9. **Seine Stellungnahme geht schriftlich an die Geschäftsführung mit Kopie an den Betriebsrat**, nicht über meinen Schreibtisch. Ich arbeite sie nicht ein, ich beantworte sie.
+10. **Meinen eigenen Interessenkonflikt in der Vorlage benennen** — dieselbe Konsequenz wie aus Gespräch 1. Die Stelle wurde für dieses Vorhaben geschaffen; von den Beteiligten sind Marnitz und ich die zwei, deren Lage von der Entscheidung abhängt, in entgegengesetzte Richtung.
+11. **Ein Gremium beantragen oder auf eines verzichten und es sagen.** Ohne Lenkungsausschuss ist die Programmdokumentation die einzige Gedächtnisform, und mein Konzept ist die schwächste davon. Was tragen soll, gehört in Betriebsvereinbarung, Ausschreibung oder Gesellschafterbeschluss.
 
 ---
 
@@ -231,6 +265,8 @@ Diese Trennung ist bei diesem Gespräch wichtiger als bei den anderen zwei, weil
 | Die Haftungskette im Staplerschein-Fall | Konstruiert aus [`systeme-daten.md`](../systeme-daten.md) („Scan ohne Ablaufdatum, Gültigkeit telefonisch erfragt"). Der Fall selbst steht nirgends |
 | Die Ersparnis von gut 24.000 Euro bei 3c vor 3b | Meine Hochrechnung, anteilig: 18.000 von 41.000 Dateien bei 55.000 Euro Gesamtaufwand = 24.100 Euro. Nicht im Ordner, und die Annahme linearer Kosten je Datei ist meine |
 | „Vierzehn Bewerbungen, vierzehnmal nicht vorgeschlagen" | Illustration |
+| **Die Rolle des „Ich" vollständig** — AI and Digital Transformation Manager, seit Mai 2026, bei der Geschäftsführung, kein Gremium | Falländerung, oben unter „Meine Rolle" begründet. Der Nachweis für Reifegrad Strategie = 2 in [`profil.md`](../profil.md) muss ausgetauscht werden |
+| „In sechs Jahren Mandat", „vierzehn Mandate, in denen ich diese Bitte höre" | Die vierzehn Mandate stehen in [`menschen.md`](../menschen.md); die Mandatsdauer bei GeAT und die Häufigkeitsaussage sind erfunden |
 | Externer Datenschutzbeauftragter statt interner Datenschutzkoordinator | Abweichung vom Beispiel-Prompt, oben begründet |
 
 **Diese Datei ist keine Rechtsauskunft.** Ich bin nicht Jurist, und die Einordnung des Vorhabens nach AI Act und DSGVO ist im Ordner selbst ausdrücklich als „rechtliche Arbeitshypothese" gekennzeichnet. Die Punkte 1 bis 8 oben sind als Prüfaufträge an eine Kanzlei zu behandeln, nicht als Ergebnis.
