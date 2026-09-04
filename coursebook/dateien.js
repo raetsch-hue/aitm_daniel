@@ -105,11 +105,39 @@ var DOKUMENTE = [
 
   /* ================= ARTEFAKTE =================
      Eigene Arbeitsergebnisse aus ../artefakte/.
-     Sortiert wird alphabetisch nach Titel — deshalb tragen die
-     Extra-Einträge eine Ziffer, damit sie in ihrer Reihenfolge stehen.  */
+     Der folgende Block wird von coursetools/inhalt-bauen.py erzeugt.  */
+
+  /* >>> ARTEFAKTE-ANFANG (11 Dokumente, 2026-09-04)
+      Automatisch erzeugt von coursetools/inhalt-bauen.py.
+      Nicht von Hand aendern - Aenderungen gehen beim naechsten Lauf
+      verloren. Anzeigetitel stellt man im Skript unter TITEL ein.  */
+
+  { datei: "../artefakte/INHALT.md",
+    titel: "Alle Themen · Inhaltsverzeichnis",
+    bereich: "artefakte" },
 
   { datei: "../artefakte/checkliste.md",
     titel: "Checkliste · Wissensüberprüfung (laufend)",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-01/gegenrede.md",
+    titel: "Woche 01 · Gegenrede zum RPA-Pilot",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-01/kursmaterial.md",
+    titel: "Woche 01 · Kursmaterial",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-01/lernziele.md",
+    titel: "Woche 01 · Lernziele",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-01/manual-of-me.md",
+    titel: "Woche 01 · Manual of Me",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-02/kursmaterial.md",
+    titel: "Woche 02 · Kursmaterial",
     bereich: "artefakte" },
 
   { datei: "../artefakte/extra/README.md",
@@ -127,26 +155,7 @@ var DOKUMENTE = [
   { datei: "../artefakte/extra/03_spannungen-und-blinde-flecken.md",
     titel: "Extra · 3 Spannungen und blinde Flecken",
     bereich: "artefakte" },
-
-  { datei: "../artefakte/woche-01/kursmaterial.md",
-    titel: "Woche 01 · Kursmaterial",
-    bereich: "artefakte" },
-
-  { datei: "../artefakte/woche-01/lernziele.md",
-    titel: "Woche 01 · Lernziele",
-    bereich: "artefakte" },
-
-  { datei: "../artefakte/woche-01/manual-of-me.md",
-    titel: "Woche 01 · Manual of Me",
-    bereich: "artefakte" },
-
-  { datei: "../artefakte/woche-01/gegenrede.md",
-    titel: "Woche 01 · Gegenrede zum RPA-Pilot",
-    bereich: "artefakte" },
-
-  { datei: "../artefakte/woche-02/kursmaterial.md",
-    titel: "Woche 02 · Kursmaterial",
-    bereich: "artefakte" },
+  /* <<< ARTEFAKTE-ENDE */
 
   /* ================= BEISPIELE ================= */
 

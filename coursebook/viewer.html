@@ -296,13 +296,24 @@
     drop.innerHTML='<div class="err">'+html+'</div>';
   }
 
+  // YAML-Kopf abschneiden. Ohne das rendert marked ihn als Setext-Ueberschrift
+  // ("Text, darunter ---" ist in Markdown eine H2), und jedes Artefakt beginnt
+  // mit einer riesigen Zeile voller Metadaten. Coursebook-Dateien haben keinen
+  // Kopf, dort aendert sich nichts.
+  function ohneKopf(md){
+    var t = String(md||'');
+    if(!/^---\r?\n/.test(t)) return t;
+    var m = t.match(/^---\r?\n[\s\S]*?\r?\n---[ \t]*\r?\n?/);
+    return m ? t.slice(m[0].length) : t;
+  }
+
   function render(md, label, path){
     if(typeof marked==='undefined'){
       fail('Der Markdown-Renderer konnte nicht geladen werden (keine Internetverbindung?). '+
            'Die Seite braucht cdnjs.cloudflare.com beim ersten Laden.');
       return;
     }
-    out.innerHTML=marked.parse(md);
+    out.innerHTML=marked.parse(ohneKopf(md));
     out.querySelectorAll('table').forEach(function(t){
       var w=document.createElement('div'); w.className='tablewrap';
       t.parentNode.insertBefore(w,t); w.appendChild(t);
@@ -677,14 +688,24 @@
              '<code>python -m http.server</code> und öffne '+
              '<code>http://localhost:8000/coursebook/viewer.html</code>.');
       } else if(/^\.\.\//.test(f.path)){
-        // Pfad fuehrt aus coursebook/ heraus. Ein Server, der IN coursebook
-        // gestartet wurde, liefert dafuer nichts - er kennt nur seinen Ordner.
-        fail('<strong>'+f.name+'</strong> liegt ausserhalb von <code>coursebook</code> '+
-             '(<code>'+f.path+'</code>) und ist von hier nicht erreichbar.<br><br>'+
-             'Starte den Server eine Ebene höher, in <code>aitm_daniel</code>:<br>'+
-             '<code>python -m http.server</code> und öffne '+
-             '<code>http://localhost:8000/coursebook/viewer.html</code>.<br>'+
-             'Alternativ die Datei über „Ordner einlesen …" holen.');
+        // Pfad fuehrt aus coursebook/ heraus. Zwei verschiedene Ursachen:
+        // lokal ein Server, der IN coursebook gestartet wurde; auf GitHub
+        // Pages dagegen Jekyll, das .md-Dateien MIT YAML-Kopf zu .html
+        // rendert und die rohe .md gar nicht erst veroeffentlicht.
+        var aufPages = /github\.io$/i.test(location.hostname);
+        fail('<strong>'+f.name+'</strong> ist unter <code>'+f.path+'</code> '+
+             'nicht erreichbar (404).<br><br>'+
+             (aufPages
+               ? 'Auf GitHub Pages ist die haeufigste Ursache <strong>Jekyll</strong>: '+
+                 'Markdown-Dateien mit YAML-Kopf werden zu <code>.html</code> gerendert, '+
+                 'die rohe <code>.md</code> wird nicht ausgeliefert. Abhilfe ist eine '+
+                 'leere Datei <code>.nojekyll</code> im Wurzelverzeichnis des Repos.'
+               : 'Lokal ist die haeufigste Ursache ein Server, der <em>in</em> '+
+                 '<code>coursebook</code> gestartet wurde. Starte ihn eine Ebene hoeher, '+
+                 'in <code>aitm_daniel</code>:<br>'+
+                 '<code>python -m http.server</code> und oeffne '+
+                 '<code>http://localhost:8000/coursebook/viewer.html</code>.<br>'+
+                 'Alternativ die Datei ueber „Ordner einlesen …" holen.'));
       } else {
         fail('<strong>'+f.name+'</strong> gibt es nicht (mehr).<br><br>'+
              'Gesucht unter <code>'+f.path+'</code>. Entweder die Datei dorthin legen, '+
@@ -903,7 +924,7 @@
     if(b === 'alle' || (b && bereichDef(b))) bereichAktiv = b;
   })();
 
-  var BUILD = '2026-09-01a';
+  var BUILD = '2026-09-03c';
   document.getElementById('build').textContent = 'Viewer ' + BUILD;
 
   // 1. Liste aus dateien.js, das als <script> geladen wurde. Funktioniert
