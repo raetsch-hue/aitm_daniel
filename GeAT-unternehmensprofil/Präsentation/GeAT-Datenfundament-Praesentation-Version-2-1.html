@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GeAT – Stufe 3: Datenfundament. Präsentation zum Transformationsvorhaben.">
+  <title>GeAT · Datenfundament</title>
+  <style>
+    :root {
+      --ink: #eef4ff;
+      --muted: #9baac2;
+      --navy: #07111f;
+      --navy-2: #0b1829;
+      --panel: rgba(18, 35, 57, .78);
+      --line: rgba(171, 197, 229, .16);
+      --blue: #4d8dff;
+      --cyan: #42d5c6;
+      --orange: #ff9d57;
+      --red: #ff6f7d;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .28);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 84% 14%, rgba(77, 141, 255, .16), transparent 28%),
+        radial-gradient(circle at 14% 90%, rgba(66, 213, 198, .10), transparent 26%),
+        var(--navy);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .24;
+      background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black, transparent 70%);
+    }
+
+    button { font: inherit; }
+    button:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+
+    .deck { position: relative; height: 100%; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: clamp(1rem, 2.4vh, 2rem);
+      padding: clamp(1.25rem, 4vw, 4.5rem) clamp(1.25rem, 6vw, 7rem) clamp(4.8rem, 9vh, 6.5rem);
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(36px);
+      transition: opacity .35s ease, transform .35s ease, visibility .35s;
+    }
+    .slide.active { visibility: visible; opacity: 1; transform: translateX(0); }
+    .slide.exit-left { transform: translateX(-36px); }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+    .eyebrow::before { content: ""; width: 2.25rem; height: 2px; background: var(--cyan); }
+
+    h1, h2, p { margin: 0; }
+    h1 {
+      max-width: 1000px;
+      font-size: clamp(3rem, 7vw, 7.2rem);
+      line-height: .94;
+      letter-spacing: -.055em;
+      font-weight: 760;
+    }
+    h2 {
+      max-width: 980px;
+      font-size: clamp(2.2rem, 4.5vw, 5.2rem);
+      line-height: 1;
+      letter-spacing: -.045em;
+      font-weight: 740;
+    }
+    .accent { color: var(--cyan); }
+    .subhead {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.6vw, 1.45rem);
+      line-height: 1.55;
+    }
+
+    .title-layout, .content-layout {
+      align-self: center;
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(280px, .68fr);
+      gap: clamp(2rem, 6vw, 7rem);
+      align-items: center;
+    }
+    .title-copy { display: grid; gap: 1.6rem; }
+
+    .number-card {
+      position: relative;
+      min-height: 330px;
+      padding: 2.1rem;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: linear-gradient(145deg, rgba(22, 46, 74, .92), rgba(10, 24, 41, .68));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .number-card::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border: 42px solid rgba(66, 213, 198, .14);
+      border-radius: 50%;
+      right: -80px;
+      bottom: -90px;
+    }
+    .big-number { font-size: clamp(4rem, 8vw, 7.5rem); line-height: .9; font-weight: 780; letter-spacing: -.07em; }
+    .number-label { margin-top: 1rem; color: var(--muted); font-size: 1.15rem; line-height: 1.45; }
+    .pill {
+      display: inline-flex;
+      margin-top: 2.2rem;
+      padding: .65rem .9rem;
+      color: var(--cyan);
+      background: rgba(66, 213, 198, .09);
+      border: 1px solid rgba(66, 213, 198, .22);
+      border-radius: 999px;
+      font-weight: 750;
+    }
+
+    .slide-head { display: grid; gap: .85rem; }
+    .kicker { color: var(--blue); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+    .stage-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: .5rem;
+      padding: .5rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(8, 21, 36, .72);
+    }
+    .stage-item {
+      min-width: 0;
+      padding: .65rem .75rem;
+      border-radius: 11px;
+      color: var(--muted);
+      font-size: clamp(.72rem, .95vw, .88rem);
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+    }
+    .stage-item b { color: var(--ink); margin-right: .25rem; }
+    .stage-item.active {
+      color: var(--navy);
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      box-shadow: 0 8px 24px rgba(66, 213, 198, .14);
+    }
+    .stage-item.active b { color: var(--navy); }
+    .stage-rule { margin-top: .65rem; color: var(--muted); font-size: .82rem; text-align: center; }
+    .content-layout { align-self: stretch; }
+    .points { display: grid; gap: clamp(.75rem, 1.6vh, 1.2rem); }
+    .point {
+      display: grid;
+      grid-template-columns: 2.7rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      padding: clamp(.85rem, 1.4vw, 1.25rem);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(12, 28, 47, .68);
+    }
+    .point-index {
+      width: 2.7rem;
+      height: 2.7rem;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      color: var(--cyan);
+      background: rgba(66, 213, 198, .10);
+      font-weight: 800;
+    }
+    .point strong { display: block; margin-bottom: .15rem; color: white; font-size: clamp(1rem, 1.35vw, 1.25rem); }
+    .point span { color: var(--muted); font-size: clamp(.92rem, 1.15vw, 1.08rem); line-height: 1.4; }
+
+    .visual {
+      height: 100%;
+      min-height: 310px;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: linear-gradient(145deg, rgba(18, 39, 64, .88), rgba(9, 23, 39, .72));
+      box-shadow: var(--shadow);
+    }
+    .visual svg { width: 100%; max-height: 360px; overflow: visible; }
+    .visual text { font-family: inherit; }
+
+    .quote {
+      align-self: end;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid var(--cyan);
+      color: #d8e6fa;
+      background: linear-gradient(90deg, rgba(66, 213, 198, .08), transparent 72%);
+      font-size: clamp(.95rem, 1.35vw, 1.2rem);
+      line-height: 1.45;
+    }
+
+    .timeline { width: 100%; display: grid; gap: 1rem; }
+    .phase { display: grid; grid-template-columns: 2.4rem 1fr; gap: .85rem; align-items: center; }
+    .phase-dot { width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border-radius: 50%; background: var(--blue); font-weight: 800; }
+    .phase:nth-child(2) .phase-dot { background: #6979f8; }
+    .phase:nth-child(3) .phase-dot { background: #2eb9bb; }
+    .phase:nth-child(4) .phase-dot { background: var(--cyan); color: var(--navy); }
+    .phase-card { padding: .75rem 1rem; border: 1px solid var(--line); border-radius: 13px; background: rgba(6, 18, 31, .5); }
+    .phase-card strong { display: block; }
+    .phase-card small { color: var(--muted); font-size: .88rem; }
+
+    .metric-grid { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .metric { padding: 1.15rem; border: 1px solid var(--line); border-radius: 17px; background: rgba(6, 18, 31, .5); }
+    .metric-value { font-size: clamp(1.6rem, 2.8vw, 2.7rem); font-weight: 780; letter-spacing: -.04em; }
+    .metric-value b { color: var(--cyan); }
+    .metric-label { margin-top: .35rem; color: var(--muted); font-size: .92rem; line-height: 1.35; }
+
+    .backup-badge {
+      display: inline-flex;
+      width: max-content;
+      padding: .35rem .65rem;
+      border: 1px solid rgba(255, 157, 87, .35);
+      border-radius: 999px;
+      color: var(--orange);
+      background: rgba(255, 157, 87, .08);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: .7rem;
+      font-weight: 800;
+    }
+    .cost-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    .cost-table th, .cost-table td { padding: .72rem .8rem; border-bottom: 1px solid var(--line); text-align: left; }
+    .cost-table th { color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
+    .cost-table td { color: #dce8f8; font-size: clamp(.86rem, 1vw, 1rem); }
+    .cost-table td:first-child { width: 3.2rem; color: var(--muted); font-weight: 800; }
+    .cost-table td:last-child, .cost-table th:last-child { text-align: right; white-space: nowrap; }
+    .cost-table tr.active-row td { color: var(--ink); background: rgba(66, 213, 198, .08); }
+    .cost-table tr.active-row td:first-child { color: var(--cyan); }
+    .cost-table tfoot td { color: white; border: 0; font-weight: 800; }
+    .budget-box { width: 100%; display: grid; gap: .85rem; }
+    .budget-main { padding: 1.4rem; border: 1px solid rgba(66, 213, 198, .28); border-radius: 18px; background: rgba(66, 213, 198, .08); }
+    .budget-main strong { display: block; color: var(--cyan); font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -.04em; }
+    .budget-main span, .budget-open span { color: var(--muted); line-height: 1.4; }
+    .budget-open { padding: 1.2rem 1.4rem; border: 1px solid rgba(255, 157, 87, .28); border-radius: 18px; background: rgba(255, 157, 87, .07); }
+    .budget-open strong { display: block; margin-bottom: .25rem; color: var(--orange); font-size: 1.25rem; }
+
+    .controls {
+      position: fixed;
+      z-index: 20;
+      left: clamp(1.25rem, 3vw, 3rem);
+      right: clamp(1.25rem, 3vw, 3rem);
+      bottom: 1.25rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1.2rem;
+      align-items: center;
+    }
+    .nav-group { display: flex; gap: .5rem; }
+    .icon-btn {
+      width: 2.9rem;
+      height: 2.9rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--ink);
+      background: rgba(11, 24, 41, .88);
+      cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .icon-btn:hover { transform: translateY(-2px); border-color: rgba(66, 213, 198, .55); background: #12243a; }
+    .icon-btn:disabled { opacity: .3; cursor: not-allowed; transform: none; }
+    .progress-wrap { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center; }
+    .progress { height: 3px; overflow: hidden; border-radius: 3px; background: rgba(255,255,255,.1); }
+    .progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--blue), var(--cyan)); transition: width .35s ease; }
+    .counter { color: var(--muted); font-variant-numeric: tabular-nums; font-size: .85rem; }
+
+    .notes {
+      position: fixed;
+      z-index: 30;
+      left: 50%;
+      bottom: 5.2rem;
+      width: min(760px, calc(100vw - 2rem));
+      transform: translate(-50%, 24px);
+      padding: 1.25rem 1.4rem;
+      border: 1px solid rgba(66, 213, 198, .25);
+      border-radius: 18px;
+      background: rgba(5, 15, 27, .96);
+      box-shadow: var(--shadow);
+      visibility: hidden;
+      opacity: 0;
+      transition: .25s ease;
+    }
+    .notes.open { visibility: visible; opacity: 1; transform: translate(-50%, 0); }
+    .notes-label { margin-bottom: .45rem; color: var(--cyan); text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; font-weight: 800; }
+    .notes p { color: #d7e1ef; line-height: 1.55; }
+
+    .hint { position: fixed; right: clamp(1.25rem, 3vw, 3rem); top: 1.25rem; color: var(--muted); font-size: .78rem; }
+    .hint kbd { padding: .15rem .38rem; border: 1px solid var(--line); border-radius: 5px; color: var(--ink); background: rgba(255,255,255,.05); }
+
+    @media (max-width: 900px) {
+      body { overflow: auto; }
+      .slide { overflow-y: auto; padding-bottom: 6rem; }
+      .title-layout, .content-layout { grid-template-columns: 1fr; align-content: start; }
+      .title-layout { padding-top: 6vh; }
+      .number-card, .visual { min-height: 230px; }
+      .visual { display: none; }
+      .stage-strip { grid-template-columns: 1fr; }
+      .stage-item { text-align: left; }
+      .content-layout { align-self: start; }
+      .hint { display: none; }
+    }
+    @media (max-width: 560px) {
+      .slide { gap: 1rem; padding: 1.2rem 1rem 5.5rem; }
+      h1 { font-size: clamp(2.7rem, 15vw, 4rem); }
+      h2 { font-size: clamp(2rem, 10vw, 3rem); }
+      .point { grid-template-columns: 2.25rem 1fr; padding: .75rem; }
+      .point-index { width: 2.25rem; height: 2.25rem; }
+      .metric-grid { grid-template-columns: 1fr; }
+      .controls { grid-template-columns: auto 1fr; }
+      .progress-wrap { grid-column: 1 / -1; grid-row: 1; }
+      .controls > .icon-btn { justify-self: end; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+    @media print {
+      body { overflow: visible; background: #fff; color: #111; }
+      body::before, .controls, .hint, .notes { display: none; }
+      .deck { height: auto; }
+      .slide { position: relative; visibility: visible; opacity: 1; transform: none; min-height: 100vh; page-break-after: always; color: #111; background: #fff; }
+      .point, .visual, .number-card { color: #111; background: #f6f8fb; border-color: #ccd5e0; box-shadow: none; }
+      .point span, .subhead, .number-label, .metric-label { color: #42526a; }
+      .point strong { color: #111; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active" data-note="Ich zeige heute bewusst nicht den KI-Assistenten, sondern seine wichtigste Voraussetzung. Die Leitidee lautet: Erst Daten und Anreize in Ordnung bringen – dann kann KI verlässlich unterstützen.">
+      <div class="eyebrow">Transformationsvorhaben · Stufe 3</div>
+      <div class="title-layout">
+        <div class="title-copy">
+          <h1>Das <span class="accent">Datenfundament</span> vor der KI.</h1>
+          <p class="subhead">Wie GeAT Bewerberdaten strukturiert, die Migration vorbereitet und ein Scheitern wie 2023 verhindert.</p>
+        </div>
+        <aside class="number-card">
+          <div class="big-number">63<span class="accent">%</span></div>
+          <p class="number-label">der Bewerberprofile haben keine strukturierten Qualifikationsfelder.</p>
+          <div class="pill">Entscheidung Q4/2026</div>
+        </aside>
+      </div>
+      <p class="quote">Erst Daten und Anreize in Ordnung bringen – dann kann KI einen verlässlichen Nutzen schaffen.</p>
+    </section>
+
+    <section class="slide" data-note="GeAT vermittelt die Fähigkeiten von Menschen, hat diese Fähigkeiten aber häufig nur als Freitext gespeichert. Deshalb bereinigen, strukturieren und ergänzen wir die Daten. Das ist keine KI-Spielerei, sondern eine Voraussetzung für die neue Branchensoftware.">
+      <header class="slide-head"><div class="kicker">01 · Vorhaben</div><h2>Wir verkaufen Können – haben es aber kaum <span class="accent">strukturiert</span>.</h2></header>
+      <div>
+        <div class="stage-strip" aria-label="Fünf Stufen des Transformationsvorschlags">
+          <div class="stage-item"><b>1</b> Regelwerk</div>
+          <div class="stage-item"><b>2</b> Anzeigenbudget</div>
+          <div class="stage-item active"><b>3</b> Datenfundament</div>
+          <div class="stage-item"><b>4</b> Assistent</div>
+          <div class="stage-item"><b>5</b> Zielkonflikt</div>
+        </div>
+        <p class="stage-rule">Sortiert nach Vorleistung, nicht nach Wichtigkeit: Jede Stufe macht die nächste möglich.</p>
+      </div>
+      <div class="content-layout">
+        <div class="points">
+          <div class="point"><div class="point-index">41k</div><div><strong>Bewerberprofile</strong><span>63 % ohne strukturierte Qualifikationen</span></div></div>
+          <div class="point"><div class="point-index">18k</div><div><strong>Überfällige Profile</strong><span>Speicherfrist überschritten, Löschkonzept nicht umgesetzt</span></div></div>
+          <div class="point"><div class="point-index">4</div><div><strong>Arbeitspakete</strong><span>Vereinheitlichen · Löschen · Strukturieren · Gründe erfassen</span></div></div>
+          <div class="point"><div class="point-index">€</div><div><strong>110.000 Euro</strong><span>Monat 3–10 · Entscheidung im Q4/2026</span></div></div>
+        </div>
+        <div class="visual" aria-label="Vom unstrukturierten Bestand zum geordneten Datenfundament">
+          <svg viewBox="0 0 420 330" role="img">
+            <defs><linearGradient id="g1" x1="0" x2="1"><stop stop-color="#4d8dff"/><stop offset="1" stop-color="#42d5c6"/></linearGradient></defs>
+            <g fill="none" stroke="rgba(238,244,255,.18)" stroke-width="2"><path d="M76 78h190M76 135h150M76 192h205"/><circle cx="50" cy="78" r="12"/><circle cx="50" cy="135" r="12"/><circle cx="50" cy="192" r="12"/></g>
+            <path d="M135 258h150" stroke="url(#g1)" stroke-width="12" stroke-linecap="round"/><path d="M260 235l30 23-30 23" fill="none" stroke="#42d5c6" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="302" y="54" width="72" height="160" rx="16" fill="rgba(66,213,198,.10)" stroke="#42d5c6"/><path d="M322 91h32M322 124h32M322 157h32" stroke="#42d5c6" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <p class="quote">Ohne ein sauberes Datenfundament liefert auch ein guter KI-Assistent keine verlässlichen Ergebnisse.</p>
+    </section>
+
+    <section class="slide" data-note="Der Zeitdruck kommt nicht vom KI-Markt. Anfang 2027 wird die neue Branchensoftware ausgeschrieben. Werden die benötigten Datenfelder jetzt definiert, sind sie direkt Teil des neuen Systems – später müssten wir sie teuer nachrüsten.">
+      <header class="slide-head"><div class="kicker">02 · Dringlichkeit</div><h2>Der Termin kommt von der <span class="accent">Migration</span>, nicht vom KI-Hype.</h2></header>
+      <div class="content-layout">
+        <div class="points">
+          <div class="point"><div class="point-index">2</div><div><strong>Datenreife heute</strong><span>Ziel ist zunächst die belastbare Stufe 3</span></div></div>
+          <div class="point"><div class="point-index">Q1</div><div><strong>Ausschreibung 2027</strong><span>Q4/2026 ist das letzte Entscheidungsfenster davor</span></div></div>
+          <div class="point"><div class="point-index">−8</div><div><strong>Besetzungsquote</strong><span>48 → 40 % bei gleichzeitig 8 → 11 Tagen</span></div></div>
+          <div class="point"><div class="point-index">1×</div><div><strong>Jetzt richtig beschaffen</strong><span>Direkt integrieren statt später doppelt bezahlen</span></div></div>
+        </div>
+        <div class="visual">
+          <svg viewBox="0 0 420 330" role="img" aria-label="Zeitfenster bis zur Ausschreibung 2027">
+            <path d="M52 205h316" stroke="rgba(238,244,255,.2)" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="95" cy="205" r="13" fill="#4d8dff"/><circle cx="215" cy="205" r="17" fill="#42d5c6"/><circle cx="337" cy="205" r="13" fill="#4d8dff"/>
+            <path d="M215 68v105" stroke="#42d5c6" stroke-width="3" stroke-dasharray="7 7"/><rect x="145" y="40" width="140" height="48" rx="12" fill="rgba(66,213,198,.12)" stroke="#42d5c6"/>
+            <text x="215" y="70" text-anchor="middle" fill="#eef4ff" font-size="18" font-weight="700">Entscheidung</text>
+            <text x="95" y="245" text-anchor="middle" fill="#9baac2" font-size="16">Heute</text><text x="215" y="245" text-anchor="middle" fill="#42d5c6" font-size="16" font-weight="700">Q4/2026</text><text x="337" y="245" text-anchor="middle" fill="#9baac2" font-size="16">Q1/2027</text>
+            <text x="337" y="272" text-anchor="middle" fill="#9baac2" font-size="14">Ausschreibung</text>
+          </svg>
+        </div>
+      </div>
+      <p class="quote">Die Ausschreibung ist die Gelegenheit, die benötigten Datenfelder einmal zu bezahlen statt zweimal.</p>
+    </section>
+
+    <section class="slide" data-note="Die zentrale Gruppe ist die Disposition. Solange nur erfolgreiche Besetzungen zählen, ist Datenpflege zusätzliche Arbeit. Kommunikation allein löst das nicht – wir müssen die Rahmenbedingungen und damit den Anreiz verändern.">
+      <header class="slide-head"><div class="kicker">03 · Betroffene</div><h2>Das Problem ist kein Wissensdefizit. Es ist ein <span class="accent">Anreizproblem</span>.</h2></header>
+      <div class="content-layout">
+        <div class="points">
+          <div class="point"><div class="point-index">23</div><div><strong>Disposition</strong><span>Datenpflege kostet Zeit, zählt aber nicht als Leistung</span></div></div>
+          <div class="point"><div class="point-index">6</div><div><strong>Niederlassungsleitungen</strong><span>Kennzahlen werden nicht konsequent eingefordert</span></div></div>
+          <div class="point"><div class="point-index">4</div><div><strong>Geschäftsführung</strong><span>Fürchtet eine zweite Baustelle und fordert schnelle Amortisation</span></div></div>
+          <div class="point"><div class="point-index">+</div><div><strong>Recruiting, IT, Sachbearbeitung</strong><span>Offen – brauchen Vorgaben, Kapazität und Beteiligung</span></div></div>
+        </div>
+        <div class="visual">
+          <svg viewBox="0 0 420 330" role="img" aria-label="ADKAR-Hürden der wichtigsten Gruppen">
+            <text x="36" y="55" fill="#9baac2" font-size="14">HÜRDE</text>
+            <text x="36" y="107" fill="#eef4ff" font-size="17" font-weight="700">Disposition</text><rect x="184" y="84" width="190" height="32" rx="9" fill="rgba(255,157,87,.18)"/><rect x="184" y="84" width="164" height="32" rx="9" fill="#ff9d57"/><text x="197" y="106" fill="#07111f" font-size="14" font-weight="800">ANREIZ</text>
+            <text x="36" y="171" fill="#eef4ff" font-size="17" font-weight="700">Leitung</text><rect x="184" y="148" width="190" height="32" rx="9" fill="rgba(77,141,255,.18)"/><rect x="184" y="148" width="138" height="32" rx="9" fill="#4d8dff"/><text x="197" y="170" fill="#eef4ff" font-size="14" font-weight="800">VERANKERUNG</text>
+            <text x="36" y="235" fill="#eef4ff" font-size="17" font-weight="700">IT</text><rect x="184" y="212" width="190" height="32" rx="9" fill="rgba(66,213,198,.18)"/><rect x="184" y="212" width="113" height="32" rx="9" fill="#42d5c6"/><text x="197" y="234" fill="#07111f" font-size="14" font-weight="800">KAPAZITÄT</text>
+          </svg>
+        </div>
+      </div>
+      <p class="quote">Wo Anreiz und Verankerung fehlen, reicht ein Kommunikationsplan nicht aus.</p>
+    </section>
+
+    <section class="slide" data-note="Wir setzen an zwei Stellen an. Erstens wird Datenpflege als Teil der Arbeitsleistung anerkannt. Zweitens integrieren wir das Datenfundament in die ohnehin geplante Migration. So entsteht keine zweite Baustelle, sondern eine bessere Vorbereitung.">
+      <header class="slide-head"><div class="kicker">04 · Ansatzpunkte</div><h2>Zwei Führungsentscheidungen lösen die stärksten <span class="accent">Bremsen</span>.</h2></header>
+      <div class="content-layout">
+        <div class="points">
+          <div class="point"><div class="point-index">1</div><div><strong>Datenpflege zählt</strong><span>Bestandspflege in die Zielvereinbarung aufnehmen</span></div></div>
+          <div class="point"><div class="point-index">2</div><div><strong>Migration statt Nebenprojekt</strong><span>Stufe 3 als Vorbereitung des neuen Systems beschließen</span></div></div>
+          <div class="point"><div class="point-index">+</div><div><strong>Verfügbarkeit als Feld</strong><span>Damit parallele Excel-Listen wirklich entfallen können</span></div></div>
+          <div class="point"><div class="point-index">0€</div><div><strong>Zunächst kein Softwarekauf</strong><span>Die beiden wichtigsten Hebel sind Entscheidungen</span></div></div>
+        </div>
+        <div class="visual">
+          <svg viewBox="0 0 420 330" role="img" aria-label="Zwei Hebel beseitigen die Bremsen">
+            <circle cx="210" cy="165" r="68" fill="rgba(66,213,198,.10)" stroke="#42d5c6" stroke-width="2"/><text x="210" y="157" text-anchor="middle" fill="#eef4ff" font-size="18" font-weight="800">DATEN-</text><text x="210" y="181" text-anchor="middle" fill="#eef4ff" font-size="18" font-weight="800">FUNDAMENT</text>
+            <rect x="28" y="75" width="128" height="62" rx="14" fill="rgba(77,141,255,.16)" stroke="#4d8dff"/><text x="92" y="101" text-anchor="middle" fill="#eef4ff" font-size="15" font-weight="700">Ziel-</text><text x="92" y="121" text-anchor="middle" fill="#eef4ff" font-size="15">vereinbarung</text>
+            <rect x="264" y="75" width="128" height="62" rx="14" fill="rgba(66,213,198,.14)" stroke="#42d5c6"/><text x="328" y="101" text-anchor="middle" fill="#eef4ff" font-size="15" font-weight="700">System-</text><text x="328" y="121" text-anchor="middle" fill="#eef4ff" font-size="15">migration</text>
+            <path d="M148 126l35 22M272 126l-35 22" stroke="#9baac2" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <p class="quote">Nicht mehr Druck erzeugen – die Ursachen des Widerstands beseitigen.</p>
+    </section>
+
+    <section class="slide" data-note="Das Vorgehen folgt Kotters acht Schritten, hier zu vier Arbeitsblöcken verdichtet. Wir schaffen Dringlichkeit und eine Koalition, definieren Zielbild und Regeln, erzielen mit der Löschung einen sichtbaren Erfolg und verankern alles in verbindlichen Dokumenten.">
+      <header class="slide-head"><div class="kicker">05 · Vorgehen</div><h2>Kotters acht Schritte – in vier klaren <span class="accent">Arbeitsblöcken</span>.</h2></header>
+      <div class="content-layout">
+        <div class="points">
+          <div class="point"><div class="point-index">1–2</div><div><strong>Dringlichkeit & Koalition</strong><span>Modul 2023 auswerten · Arbeitsgruppe einsetzen</span></div></div>
+          <div class="point"><div class="point-index">3–5</div><div><strong>Zielbild & Hindernisse</strong><span>Vier Ziele setzen · Datenschutz klären · Anreize ändern</span></div></div>
+          <div class="point"><div class="point-index">6–7</div><div><strong>Erfolg & Konsolidierung</strong><span>Zuerst 18.000 Profile löschen · Gründe auswerten</span></div></div>
+          <div class="point"><div class="point-index">8</div><div><strong>Dauerhaft verankern</strong><span>Ausschreibung · Betriebsvereinbarung · Zielvereinbarung</span></div></div>
+        </div>
+        <div class="visual">
+          <div class="timeline" aria-label="Vier Arbeitsblöcke nach Kotter">
+            <div class="phase"><div class="phase-dot">1</div><div class="phase-card"><strong>Verstehen</strong><small>September–Oktober 2026</small></div></div>
+            <div class="phase"><div class="phase-dot">2</div><div class="phase-card"><strong>Entscheiden</strong><small>Q4/2026</small></div></div>
+            <div class="phase"><div class="phase-dot">3</div><div class="phase-card"><strong>Umsetzen</strong><small>Monat 3–10</small></div></div>
+            <div class="phase"><div class="phase-dot">4</div><div class="phase-card"><strong>Verankern</strong><small>vor Ausschreibung Q1/2027</small></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="quote">Was bleiben soll, gehört in verbindliche Regeln – nicht nur in ein Konzeptpapier.</p>
+    </section>
+
+    <section class="slide" data-note="Der stärkste Einwand lautet: Ein ähnlicher Versuch ist schon einmal gescheitert. Das stimmt. Deshalb ändern wir zuerst die Messgröße, werten den alten Versuch aus und vereinfachen die Eingabe. Ohne diese Voraussetzungen starten wir nicht.">
+      <header class="slide-head"><div class="kicker">06 · Einwand</div><h2>„Warum sollte es diesmal <span class="accent">anders</span> sein?“</h2></header>
+      <div class="content-layout">
+        <div class="points">
+          <div class="point"><div class="point-index">’23</div><div><strong>95.000 Euro ohne Wirkung</strong><span>Datenpflege passte nicht zur Zielvereinbarung</span></div></div>
+          <div class="point"><div class="point-index">✓</div><div><strong>Der Einwand stimmt</strong><span>Es fehlte kein Werkzeug, sondern ein Anreiz</span></div></div>
+          <div class="point"><div class="point-index">3×</div><div><strong>Prüfbare Unterschiede</strong><span>Messgröße ändern · Altprojekt auswerten · Eingabe vereinfachen</span></div></div>
+          <div class="point"><div class="point-index">!</div><div><strong>Klare Konsequenz</strong><span>Ohne neue Zielvereinbarung kein Start</span></div></div>
+        </div>
+        <div class="visual">
+          <svg viewBox="0 0 420 330" role="img" aria-label="Ursache von 2023 wird vor dem Neustart verändert">
+            <rect x="52" y="78" width="136" height="176" rx="20" fill="rgba(255,111,125,.10)" stroke="#ff6f7d"/><text x="120" y="120" text-anchor="middle" fill="#ff6f7d" font-size="16" font-weight="800">2023</text><text x="120" y="157" text-anchor="middle" fill="#eef4ff" font-size="35" font-weight="800">95k €</text><text x="120" y="190" text-anchor="middle" fill="#9baac2" font-size="14">Werkzeug da</text><text x="120" y="212" text-anchor="middle" fill="#9baac2" font-size="14">Anreiz fehlt</text>
+            <path d="M204 166h38" stroke="#9baac2" stroke-width="4"/><path d="M230 153l16 13-16 13" fill="none" stroke="#9baac2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="260" y="78" width="108" height="176" rx="20" fill="rgba(66,213,198,.10)" stroke="#42d5c6"/><text x="314" y="120" text-anchor="middle" fill="#42d5c6" font-size="16" font-weight="800">DIESMAL</text><path d="M287 165l18 18 38-44" fill="none" stroke="#42d5c6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><text x="314" y="219" text-anchor="middle" fill="#eef4ff" font-size="14">Ursache zuerst</text><text x="314" y="239" text-anchor="middle" fill="#eef4ff" font-size="14">ändern</text>
+          </svg>
+        </div>
+      </div>
+      <p class="quote">Keine neue Erfolgsgeschichte versprechen – die alte Fehlerursache nachprüfbar beseitigen.</p>
+    </section>
+
+    <section class="slide" data-note="Wir messen, ob gute Daten wirklich entstehen – nicht nur, ob Funktionen bereitstehen. Parallel achten wir auf Warnsignale wie Excel-Listen. Bleibt die Strukturquote in Monat 6 unter 55 Prozent, stoppen wir die teure Altbestandsaufbereitung.">
+      <header class="slide-head"><div class="kicker">07 · Wirkungsnachweis</div><h2>Wir messen Verhalten und Datenqualität – nicht nur <span class="accent">Projektfortschritt</span>.</h2></header>
+      <div class="content-layout">
+        <div class="points">
+          <div class="point"><div class="point-index">80</div><div><strong>Neue Profile</strong><span>Strukturquote von 37 auf 80 %</span></div></div>
+          <div class="point"><div class="point-index">70</div><div><strong>Altbestand</strong><span>Strukturquote von 37 auf 70 %</span></div></div>
+          <div class="point"><div class="point-index">0</div><div><strong>Überfällige Profile</strong><span>18.000 vollständig und regelkonform löschen</span></div></div>
+          <div class="point"><div class="point-index">55</div><div><strong>Abbruchschwelle</strong><span>Unter 55 % in Monat 6: stoppen und Ursachen klären</span></div></div>
+        </div>
+        <div class="visual">
+          <div class="metric-grid" aria-label="Zielkennzahlen">
+            <div class="metric"><div class="metric-value">37 → <b>80%</b></div><div class="metric-label">Struktur bei Neuanlage</div></div>
+            <div class="metric"><div class="metric-value">37 → <b>70%</b></div><div class="metric-label">Struktur im Bestand</div></div>
+            <div class="metric"><div class="metric-value">18k → <b>0</b></div><div class="metric-label">Überfällige Profile</div></div>
+            <div class="metric"><div class="metric-value">0 → <b>&gt;90%</b></div><div class="metric-label">Nichtbesetzungsgrund</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="quote">Unter 55 % Strukturquote in Monat 6 wird die teure Bestandsaufbereitung nicht beauftragt.</p>
+    </section>
+
+    <section class="slide" data-note="Mein Fazit: GeAT braucht vor einem KI-Assistenten ein belastbares Datenfundament. Die Migration bietet dafür das richtige Zeitfenster. Entscheidend sind jetzt klare Anreize, verbindliche Regeln und messbare Abbruchkriterien.">
+      <div class="eyebrow">Fazit</div>
+      <div class="title-layout">
+        <div class="title-copy">
+          <h1>Erst <span class="accent">Ordnung</span>.<br>Dann Intelligenz.</h1>
+          <p class="subhead">Die Migration schafft das Zeitfenster. Zielvereinbarung, Verantwortlichkeiten und Abbruchkriterien schaffen die Umsetzung.</p>
+        </div>
+        <aside class="number-card">
+          <div class="big-number">3</div>
+          <p class="number-label">Orte der Verankerung</p>
+          <div class="pill">Ausschreibung</div>
+          <div class="pill">Betriebsvereinbarung</div>
+          <div class="pill">Zielvereinbarung</div>
+        </aside>
+      </div>
+      <p class="quote">Das Datenfundament ist kein Nebenprojekt der KI – es ist die Voraussetzung für ihren Nutzen.</p>
+    </section>
+
+    <section class="slide" data-note="Diese Folie ist als Backup gedacht. Der gesamte Transformationsvorschlag umfasst fünf aufeinander aufbauende Stufen und 240.000 Euro. Im Fall sind zunächst 280.000 Euro verfügbar; wegen einer neuen Stelle wird jedoch eine Reduzierung auf 185.000 Euro geprüft. Diese Budgetfrage muss vor der Gesamtfreigabe geklärt werden.">
+      <header class="slide-head">
+        <div class="backup-badge">Backup · nur bei Rückfrage</div>
+        <div class="kicker">Kostenübersicht</div>
+        <h2>Fünf Stufen, <span class="accent">240.000 Euro</span> Gesamtbedarf.</h2>
+      </header>
+      <div class="content-layout">
+        <div>
+          <table class="cost-table">
+            <thead><tr><th>Stufe</th><th>Inhalt</th><th>Kosten</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Regelwerk vor Werkzeug</td><td>22.000 €</td></tr>
+              <tr><td>2</td><td>Anzeigenbudget sichtbar machen</td><td>30.000 €</td></tr>
+              <tr class="active-row"><td>3</td><td><strong>Datenfundament</strong></td><td><strong>110.000 €</strong></td></tr>
+              <tr><td>4</td><td>Der Assistent</td><td>60.000 €</td></tr>
+              <tr><td>5</td><td>Den Zielkonflikt bezahlen</td><td>18.000 €</td></tr>
+            </tbody>
+            <tfoot><tr><td></td><td>Gesamt</td><td>240.000 €</td></tr></tfoot>
+          </table>
+        </div>
+        <div class="visual">
+          <div class="budget-box">
+            <div class="budget-main"><strong>280.000 €</strong><span>bisher angenommener Investitionsspielraum</span></div>
+            <div class="budget-open"><strong>185.000 €?</strong><span>Reduzierung wegen der neuen Stelle noch zu klären</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="quote">Die Gesamtfinanzierung ist bei 280.000 Euro möglich; bei 185.000 Euro muss priorisiert werden.</p>
+    </section>
+  </main>
+
+  <div class="hint"><kbd>←</kbd> <kbd>→</kbd> navigieren · <kbd>N</kbd> Sprechtext · <kbd>F</kbd> Vollbild</div>
+  <aside class="notes" id="notes" aria-hidden="true"><div class="notes-label">Sprechtext</div><p id="noteText"></p></aside>
+  <nav class="controls" aria-label="Präsentationssteuerung">
+    <div class="nav-group">
+      <button class="icon-btn" id="prev" aria-label="Vorherige Folie">←</button>
+      <button class="icon-btn" id="next" aria-label="Nächste Folie">→</button>
+    </div>
+    <div class="progress-wrap"><div class="progress" aria-hidden="true"><span id="progress"></span></div><div class="counter" id="counter"></div></div>
+    <button class="icon-btn" id="fullscreen" aria-label="Vollbild umschalten">⛶</button>
+  </nav>
+
+  <script>
+    (() => {
+      const slides = [...document.querySelectorAll('.slide')];
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      const progress = document.getElementById('progress');
+      const counter = document.getElementById('counter');
+      const notes = document.getElementById('notes');
+      const noteText = document.getElementById('noteText');
+      let current = Math.max(0, Math.min(slides.length - 1, Number(location.hash.slice(1)) || 0));
+      let touchStart = null;
+
+      function render(old = current) {
+        slides.forEach((slide, index) => {
+          slide.classList.toggle('active', index === current);
+          slide.classList.toggle('exit-left', index < current);
+          slide.setAttribute('aria-hidden', index === current ? 'false' : 'true');
+        });
+        prev.disabled = current === 0;
+        next.disabled = current === slides.length - 1;
+        progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+        counter.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+        noteText.textContent = slides[current].dataset.note || '';
+        history.replaceState(null, '', `#${current}`);
+      }
+
+      function go(step) {
+        const nextIndex = Math.max(0, Math.min(slides.length - 1, current + step));
+        if (nextIndex !== current) { const old = current; current = nextIndex; render(old); }
+      }
+
+      function toggleNotes() {
+        const open = notes.classList.toggle('open');
+        notes.setAttribute('aria-hidden', String(!open));
+      }
+
+      prev.addEventListener('click', () => go(-1));
+      next.addEventListener('click', () => go(1));
+      document.getElementById('fullscreen').addEventListener('click', () => {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+        else document.exitFullscreen?.();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (['ArrowRight', 'PageDown', ' '].includes(event.key)) { event.preventDefault(); go(1); }
+        if (['ArrowLeft', 'PageUp'].includes(event.key)) { event.preventDefault(); go(-1); }
+        if (event.key.toLowerCase() === 'n') toggleNotes();
+        if (event.key.toLowerCase() === 'f') document.getElementById('fullscreen').click();
+        if (event.key === 'Escape' && notes.classList.contains('open')) toggleNotes();
+      });
+      document.addEventListener('touchstart', (event) => { touchStart = event.changedTouches[0].clientX; }, { passive: true });
+      document.addEventListener('touchend', (event) => {
+        if (touchStart === null) return;
+        const delta = event.changedTouches[0].clientX - touchStart;
+        if (Math.abs(delta) > 60) go(delta < 0 ? 1 : -1);
+        touchStart = null;
+      }, { passive: true });
+      render();
+    })();
+  </script>
+</body>
+</html>
