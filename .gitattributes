@@ -1,0 +1,8 @@
+# Zeilenenden systemunabhängig festlegen.
+# Verhindert, dass ein Bootwechsel Windows/Linux das ganze Repo als geaendert zeigt.
+* text=auto eol=lf
+
+# Windows-Hilfsskripte brauchen CRLF, sonst bricht cmd.exe.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
