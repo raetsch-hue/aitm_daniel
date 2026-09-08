@@ -1,0 +1,199 @@
+==============================================================================
+DATENQUALITÄTSBERICHT
+==============================================================================
+Datei          : bewerberdatenbank.csv
+Datensätze     : 1284
+Spalten        : 14 (bewerber_id, name, geburtsdatum, plz, ort, telefon, email, qualifikation, berufsfeld, niederlassung, eingang_datum, letzter_kontakt, einwilligung_bis, status)
+Format         : Trennzeichen „;“, Kodierung utf-8-sig
+Spaltentypen   : bewerber_id=id, name=text, geburtsdatum=datum, plz=kennung, ort=kategorie, telefon=kennung, email=text, qualifikation=text, berufsfeld=kategorie, niederlassung=kategorie, eingang_datum=datum, letzter_kontakt=datum, einwilligung_bis=datum, status=kategorie
+Stichtag       : 2026-09-08, Altersschwelle 730 Tage
+
+------------------------------------------------------------------------------
+VOLLSTÄNDIGKEIT — 6 Prüfungen, 5 mit Treffern
+------------------------------------------------------------------------------
+!!  [V1] Fehlende Werte je Spalte
+      Prüfung : leere Zellen, spaltenweise gezählt
+      Treffer : 21 von 17976 Zellen
+      Zeilen  : 19 betroffene Datensätze (1,48 % der Datei)
+      · Spalte `email`: 9 leer (0,7 %), z. B. BW-01130 (Z89), BW-01296 (Z255), BW-01389 (Z343)
+      · Spalte `telefon`: 6 leer (0,5 %), z. B. BW-01216 (Z175), BW-01454 (Z400), BW-01981 (Z915)
+      · Spalte `qualifikation`: 5 leer (0,4 %), z. B. BW-01423 (Z377), BW-01596 (Z535), BW-01654 (Z593)
+      · Spalte `geburtsdatum`: 1 leer (0,1 %), z. B. BW-01126 (Z85)
+
+!!  [V2] Platzhalter statt Inhalt
+      Prüfung : Werte wie „k.A.“, „-“, „siehe Lebenslauf“ — Feld gefüllt, Aussage keine
+      Treffer : 2 von 17976 Zellen
+      Zeilen  : 2 betroffene Datensätze (0,16 % der Datei)
+      · Spalte `telefon`: 1 Platzhalter, z. B. BW-02045 (Z979) = „keine“
+      · Spalte `qualifikation`: 1 Platzhalter, z. B. BW-01990 (Z924) = „wird nachgereicht“
+
+OK  [V3] Zeilen mit mehreren Lücken
+      Prüfung : Datensätze mit mindestens 3 leeren oder Platzhalter-Feldern
+      Treffer : 0 von 1284 Datensätze
+
+!!  [V4] Lücken in der laufenden Nummerierung (`bewerber_id`)
+      Prüfung : erwartet 1311 Datensätze zwischen der kleinsten und der größten Nummer, vorhanden 1284
+      Treffer : 27 von 1311 Nummern im Wertebereich
+      · BW-01065 bis BW-01066 fehlen (2 Nummern)
+      · BW-01298 bis BW-01302 fehlen (5 Nummern)
+      · BW-01429 fehlt
+      · BW-01431 bis BW-01437 fehlen (7 Nummern)
+      · BW-01539 bis BW-01540 fehlen (2 Nummern)
+      · BW-01553 bis BW-01557 fehlen (5 Nummern)
+      · BW-01759 bis BW-01763 fehlen (5 Nummern)
+
+!!  [V5.1] Fehlende Ausprägungen in `ort` gegenüber kundendatenbank.csv
+      Prüfung : Werteliste beider Dateien vergleichen: was steht dort und hier nicht?
+      Treffer : 5 von 26 Ausprägungen in der Vergleichsdatei
+      · „Aschersleben“ kommt in kundendatenbank.csv 40x vor, in dieser Datei nie
+      · „Bernburg“ kommt in kundendatenbank.csv 15x vor, in dieser Datei nie
+      · „Ohrdruf“ kommt in kundendatenbank.csv 15x vor, in dieser Datei nie
+      · „Quedlinburg“ kommt in kundendatenbank.csv 22x vor, in dieser Datei nie
+      · „Staßfurt“ kommt in kundendatenbank.csv 33x vor, in dieser Datei nie
+
+!!  [V5.2] Fehlende Ausprägungen in `niederlassung` gegenüber kundendatenbank.csv
+      Prüfung : Werteliste beider Dateien vergleichen: was steht dort und hier nicht?
+      Treffer : 1 von 6 Ausprägungen in der Vergleichsdatei
+      · „Aschersleben“ kommt in kundendatenbank.csv 109x vor, in dieser Datei nie
+
+------------------------------------------------------------------------------
+KONSISTENZ — 6 Prüfungen, 3 mit Treffern
+------------------------------------------------------------------------------
+OK  [K1] Exakte Dubletten
+      Prüfung : Datensätze, die in allen Feldern außer der Nummer übereinstimmen
+      Treffer : 0 von 1284 Datensätze
+
+OK  [K2] Unscharfe Dubletten
+      Prüfung : derselbe Betrieb oder dieselbe Person zweimal, mit abweichender Schreibweise (Vergleich ohne Groß-/Kleinschreibung, Umlaute, Sonderzeichen und Leerzeichen, Rechtsform bleibt erhalten; zusätzlich Ähnlichkeit ab 95 Prozent bei gleicher Rechtsform). Gezählt wird nur, wenn mindestens zwei weitere unterscheidungskräftige Felder übereinstimmen — Spalten mit wenigen Ausprägungen zählen dabei nicht
+      Treffer : 0 von Spalten: `name`, `email`
+
+!!  [K3] Schreibvarianten desselben Werts
+      Prüfung : kategoriale Spalten: Werte, die nach Faltung zusammenfallen (Groß-/Kleinschreibung, Umlaute, Satzzeichen, Leerzeichen)
+      Treffer : 3 von 1284 Datensätze
+      Zeilen  : 3 betroffene Datensätze (0,23 % der Datei)
+      · Spalte `niederlassung`: Einzelwert „Heilbad Heiligenst.“ ähnelt einem häufigen Wert — z. B. BW-01472 (Z418)
+      · Spalte `status`: „Im Pool“ (503x) auch als „IM POOL“ (1x), „im pool“ (1x) — z. B. BW-01240 (Z199), BW-01385 (Z339)
+
+!!  [K4] Schreibvarianten in Freitextfeldern
+      Prüfung : Freitext an Trennzeichen zerlegt; seltene Bausteine, die einem häufigen Baustein ähneln (Ähnlichkeit ab 82 Prozent)
+      Treffer : 3 von 1284 Datensätze
+      Zeilen  : 3 betroffene Datensätze (0,23 % der Datei)
+      · Spalte `qualifikation`: „Stapler (Schein“ (1x) neben „Staplerschein“ (135x) — z. B. BW-01944 (Z878)
+      · Spalte `qualifikation`: „Staplerscheim“ (1x) neben „Staplerschein“ (135x) — z. B. BW-02017 (Z951)
+      · Spalte `qualifikation`: „Gabelstaplerschein“ (1x) neben „Staplerschein“ (135x) — z. B. BW-02125 (Z1059)
+
+!!  [K5] Gemischte Schreibweisen bei Datum und Zahl
+      Prüfung : je Spalte das häufigste Format als Leitformat, alles andere als Abweichung
+      Treffer : 3 von 1284 Datensätze
+      Zeilen  : 3 betroffene Datensätze (0,23 % der Datei)
+      · Spalte `eingang_datum`: 2 Werte im Format %d.%m.%Y statt %Y-%m-%d — z. B. BW-01336 (Z290) = 21.6.2026; BW-01675 (Z614) = 29.3.2025
+      · Spalte `einwilligung_bis`: 1 Werte im Format %d.%m.%Y statt %Y-%m-%d — z. B. BW-01511 (Z457) = 19.7.2029
+
+OK  [K6] Mehrfach vergebene Nummern (`bewerber_id`)
+      Prüfung : dieselbe Datensatznummer in mehr als einer Zeile
+      Treffer : 0 von 1284 Datensätze
+
+------------------------------------------------------------------------------
+AKTUALITÄT — 4 Prüfungen, 3 mit Treffern
+------------------------------------------------------------------------------
+!!  [A1] Datumsfelder älter als die Schwelle
+      Prüfung : Ereignis- und Kontaktdaten (`eingang_datum`, `letzter_kontakt`) vor dem 2024-09-08, also älter als 730 Tage bezogen auf den Stichtag 2026-09-08
+      Treffer : 25 von 2568 Datumswerte
+      Zeilen  : 15 betroffene Datensätze (1,17 % der Datei)
+      · Spalte `eingang_datum`: 10 Werte vor 2024-09-08 (0,8 %), ältester 2019-04-04 bei BW-02297 (Z1231)
+      · Spalte `letzter_kontakt`: 15 Werte vor 2024-09-08 (1,2 %), ältester 2019-04-20 bei BW-02297 (Z1231)
+
+OK  [A2] Datum in der Zukunft
+      Prüfung : Ereignisfelder (kein Fristfeld) mit einem Datum nach dem Stichtag
+      Treffer : 0 von 1284 Datensätze
+
+!!  [A3] Abgelaufene Fristen
+      Prüfung : Spalten mit Fristbezug (`einwilligung_bis`), deren Datum vor dem Stichtag liegt
+      Treffer : 10 von 1284 Datensätze
+      Zeilen  : 10 betroffene Datensätze (0,78 % der Datei)
+      · BW-01078 (Z37): `einwilligung_bis` = 2021-04-20 abgelaufen, Status „Im Pool“
+      · BW-01272 (Z231): `einwilligung_bis` = 2024-07-17 abgelaufen, Status „Im Pool“
+      · BW-01311 (Z265): `einwilligung_bis` = 2024-05-08 abgelaufen, Status „Neu“
+      · BW-01475 (Z421): `einwilligung_bis` = 2021-07-16 abgelaufen, Status „Im Pool“
+      · BW-01611 (Z550): `einwilligung_bis` = 2022-11-21 abgelaufen, Status „Im Pool“
+      · BW-01901 (Z835): `einwilligung_bis` = 2022-04-10 abgelaufen, Status „Im Pool“
+      · BW-02048 (Z982): `einwilligung_bis` = 2024-01-02 abgelaufen, Status „Im Pool“
+      · BW-02059 (Z993): `einwilligung_bis` = 2024-12-18 abgelaufen, Status „Im Pool“
+      · BW-02264 (Z1198): `einwilligung_bis` = 2021-08-06 abgelaufen, Status „Im Pool“
+      · BW-02297 (Z1231): `einwilligung_bis` = 2021-04-04 abgelaufen, Status „Neu“
+
+!!  [A4] Zeitliche Lücken in der Reihe
+      Prüfung : Monate ohne Eintrag innerhalb des dicht belegten Zeitraums (ältestes Zwanzigstel abgeschnitten) und Abstände von mindestens 14 Tagen zwischen zwei aufeinanderfolgenden Einträgen
+      Treffer : 1 von Zeitreihe je Datumsspalte
+      · Spalte `eingang_datum`: 40 Tage ohne Eintrag zwischen 2025-12-18 und 2026-01-27
+
+------------------------------------------------------------------------------
+GENAUIGKEIT — 7 Prüfungen, 6 mit Treffern
+------------------------------------------------------------------------------
+OK  [G1] Zahlen außerhalb des plausiblen Bereichs
+      Prüfung : Grenzen aus den Daten selbst: bei Messgrößen unteres und oberes Quartil ± dreifacher Quartilsabstand, bei Zählgrößen das Dreifache des 99er-Perzentils
+      Treffer : 0 von 1284 Datensätze
+
+!!  [G2] Postleitzahlen mit falscher Länge
+      Prüfung : fünf Ziffern erwartet; vier Ziffern deuten auf eine verlorene führende Null
+      Treffer : 4 von 1284 Datensätze
+      Zeilen  : 4 betroffene Datensätze (0,31 % der Datei)
+      · BW-01090 (Z49): `plz` = „7407“ ist keine fünfstellige Postleitzahl
+      · BW-01681 (Z620): `plz` = „7580“ ist keine fünfstellige Postleitzahl
+      · BW-01787 (Z721): `plz` = „7318“ ist keine fünfstellige Postleitzahl
+      · BW-02129 (Z1063): `plz` = „7768“ ist keine fünfstellige Postleitzahl
+
+!!  [G3] Unbrauchbare E-Mail-Adressen
+      Prüfung : genau ein @, Punkt in der Domain, keine Leerzeichen
+      Treffer : 3 von 1284 Datensätze
+      Zeilen  : 3 betroffene Datensätze (0,23 % der Datei)
+      · BW-01229 (Z188): `email` = „jens.dietrich@googlemailcom“
+      · BW-01426 (Z380): `email` = „uwe.schreiber@webde“
+      · BW-02340 (Z1274): `email` = „franziska.pohl.t-online.de“
+
+!!  [G4] Telefonnummern mit zu wenigen Ziffern
+      Prüfung : mindestens neun Ziffern erwartet (Vorwahl plus Rufnummer)
+      Treffer : 1 von 1284 Datensätze
+      Zeilen  : 1 betroffene Datensätze (0,08 % der Datei)
+      · BW-02045 (Z979): `telefon` = „keine“ hat 0 Ziffern
+
+!!  [G5] Unplausible Datumswerte
+      Prüfung : Geburtsdatum: Alter zwischen 15 und 75 Jahren; sonstige Datumsfelder zwischen 1990 und Stichtag plus zehn Jahre
+      Treffer : 2 von 1284 Datensätze
+      Zeilen  : 2 betroffene Datensätze (0,16 % der Datei)
+      · BW-01331 (Z285): `geburtsdatum` = 1938-11-09, Alter 88 Jahre — über 75
+      · BW-01356 (Z310): `geburtsdatum` = 1938-11-09, Alter 88 Jahre — über 75
+
+!!  [G6] Zeichensatzschäden
+      Prüfung : Zeichenfolgen wie Ã¼ oder â€ — ein Umlaut, der einmal falsch kodiert gespeichert wurde
+      Treffer : 2 von 17976 Zellen
+      Zeilen  : 2 betroffene Datensätze (0,16 % der Datei)
+      · BW-01374 (Z328): `name` = „Schulz, LarsÃ¤“
+      · BW-02271 (Z1205): `name` = „Vollmer, AnjaÃ¤“
+
+!!  [G7] Überzählige Leerzeichen
+      Prüfung : Werte mit Leerzeichen am Anfang oder Ende oder mit doppeltem Leerzeichen — für jeden exakten Vergleich ein anderer Wert
+      Treffer : 2 von 17976 Zellen
+      Zeilen  : 2 betroffene Datensätze (0,16 % der Datei)
+      · BW-01110 (Z69): `name` = „Beck,  Erik“ (Leerzeichen am Rand oder doppelt)
+      · BW-01779 (Z713): `name` = „Martin,  Rene“ (Leerzeichen am Rand oder doppelt)
+
+==============================================================================
+ZUSAMMENFASSUNG
+==============================================================================
+Dimension           Treffer     Zeilen Prüfungen mit Befund
+Vollständigkeit          56         21 V1, V2, V4, V5.1, V5.2
+Konsistenz                9          9 K3, K4, K5
+Aktualität               36         15 A1, A3, A4
+Genauigkeit              14         14 G2, G3, G4, G5, G6, G7
+
+Datensätze mit mindestens einem Befund: 58 von 1284 = 4,52 Prozent
+
+Ein Befund ist noch kein Fehler. V1 und A1 treffen auch Zeilen, in denen das
+Fehlen fachlich richtig ist — ein Interessent hat keinen Verrechnungssatz, ein
+inaktiver Kunde keine neue Anfrage. Der Bericht zählt, die Bewertung bleibt
+fachlich und gehört zur Rolle, die für den Bestand einsteht.
+
+Zu lesen mit ERLAEUTERUNG-pruefungen-und-rag.md: dort steht je Prüfung in einem
+Satz, was der Befund für ein RAG-System bedeutet.
+==============================================================================

@@ -39,8 +39,10 @@ Dazu passt der Reifegrad: Die Branche liegt bei 46 Prozent regelmäßiger KI-Nut
 | [`zahlen.md`](zahlen.md) | GuV-Skelett, Rohertrag je Überlassungsstunde, Personalkosten je Bereich, IT-Budget, Pilotprozess mit Zerlegung der Durchlaufzeit, Investitionsspielraum, Rechenproben | W6, W7 |
 | [`menschen.md`](menschen.md) | Sechs Gremien, 15 Rollen mit Macht, Interesse, Haltung und Zitat (Rolle 15 ist der Fallbearbeiter, `real`), sechs Segmente, fünf Kulturmerkmale mit Beleg | W2, W4, W12 |
 | [`systeme-daten.md`](systeme-daten.md) | Systemlandschaft, Datenbestände mit Qualitätsbefund, Wissensquellen, Schatten-IT, Auftragsverarbeiter | W3, W5, W8 |
+| [`datenverantwortung.md`](datenverantwortung.md) | Wer für welchen Datenbestand accountable ist (formal: niemand), kritische Befunde priorisiert, Data-Owner-Vorschlag, Sofortmaßnahmen ohne Beschluss | W3, W5, W8 |
 | [`vorhaben.md`](vorhaben.md) | Der Pilot, Workflows heute und im Ziel, Risikoeinschätzung nach EU AI Act, parallele Initiativen, Eskalationsweg | W2, W6, W9, W11 |
 | [`ereignisse.md`](ereignisse.md) | Was sich im Kursverlauf geändert hat, je Zeile eine Woche | laufend |
+| [`daten/`](daten/) | Zwei generierte Übungsdatensätze als CSV (Bewerber, Kunden) mit eingebauten Datenqualitätsproblemen, dazu Datenblatt, Prüfskript, RAG-Erläuterung und separates Lösungsblatt | W3, W5, W8 |
 | [`generierte-werte.md`](generierte-werte.md) | Alle 19 `generiert`-Werte, sortiert nach der Woche, die sie zuerst braucht — plus die `angenommen`-Werte, die trotzdem geprüft werden müssen | jeden Freitag |
 | `Gespraeche/` | Drei Persona-Gespräche zum KI-Kern mit Auswertung (Typ, Barriere, Berechtigung des Einwands, Prüfweg) und Kennzeichnung des Generierten | W12 |
 

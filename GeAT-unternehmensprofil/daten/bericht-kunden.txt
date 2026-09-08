@@ -1,0 +1,234 @@
+==============================================================================
+DATENQUALITÄTSBERICHT
+==============================================================================
+Datei          : kundendatenbank.csv
+Datensätze     : 1040
+Spalten        : 15 (kunde_id, firmenname, branche, plz, ort, ansprechpartner, email, niederlassung, betreuer, kundenstatus, rahmenvertrag, verrechnungssatz_std, letzte_anfrage, anfragen_2025, besetzungen_2025)
+Format         : Trennzeichen „;“, Kodierung utf-8-sig
+Spaltentypen   : kunde_id=id, firmenname=text, branche=kategorie, plz=kennung, ort=kategorie, ansprechpartner=text, email=text, niederlassung=kategorie, betreuer=kategorie, kundenstatus=kategorie, rahmenvertrag=kategorie, verrechnungssatz_std=zahl, letzte_anfrage=datum, anfragen_2025=zahl, besetzungen_2025=zahl
+Stichtag       : 2026-09-08, Altersschwelle 730 Tage
+
+------------------------------------------------------------------------------
+VOLLSTÄNDIGKEIT — 6 Prüfungen, 4 mit Treffern
+------------------------------------------------------------------------------
+!!  [V1] Fehlende Werte je Spalte
+      Prüfung : leere Zellen, spaltenweise gezählt
+      Treffer : 233 von 15600 Zellen
+      Zeilen  : 231 betroffene Datensätze (22,21 % der Datei)
+      · Spalte `verrechnungssatz_std`: 222 leer (21,3 %), z. B. KD-0006 (Z7), KD-0009 (Z10), KD-0010 (Z11)
+      · Spalte `ansprechpartner`: 6 leer (0,6 %), z. B. KD-0060 (Z61), KD-0440 (Z441), KD-0531 (Z532)
+      · Spalte `email`: 5 leer (0,5 %), z. B. KD-0025 (Z26), KD-0163 (Z164), KD-0272 (Z273)
+
+OK  [V2] Platzhalter statt Inhalt
+      Prüfung : Werte wie „k.A.“, „-“, „siehe Lebenslauf“ — Feld gefüllt, Aussage keine
+      Treffer : 0 von 15600 Zellen
+
+OK  [V3] Zeilen mit mehreren Lücken
+      Prüfung : Datensätze mit mindestens 3 leeren oder Platzhalter-Feldern
+      Treffer : 0 von 1040 Datensätze
+
+!!  [V4] Lücken in der laufenden Nummerierung (`kunde_id`)
+      Prüfung : erwartet 1058 Datensätze zwischen der kleinsten und der größten Nummer, vorhanden 1040
+      Treffer : 18 von 1058 Nummern im Wertebereich
+      · KD-0834 bis KD-0851 fehlen (18 Nummern)
+
+!!  [V5.1] Fehlende Ausprägungen in `ort` gegenüber bewerberdatenbank.csv
+      Prüfung : Werteliste beider Dateien vergleichen: was steht dort und hier nicht?
+      Treffer : 4 von 25 Ausprägungen in der Vergleichsdatei
+      · „Dingelstädt“ kommt in bewerberdatenbank.csv 19x vor, in dieser Datei nie
+      · „Kahla“ kommt in bewerberdatenbank.csv 16x vor, in dieser Datei nie
+      · „Ronneburg“ kommt in bewerberdatenbank.csv 16x vor, in dieser Datei nie
+      · „Waltershausen“ kommt in bewerberdatenbank.csv 23x vor, in dieser Datei nie
+
+!!  [V5.2] Fehlende Ausprägungen in `niederlassung` gegenüber bewerberdatenbank.csv
+      Prüfung : Werteliste beider Dateien vergleichen: was steht dort und hier nicht?
+      Treffer : 2 von 7 Ausprägungen in der Vergleichsdatei
+      · „Erfurt Zentrale“ kommt in bewerberdatenbank.csv 2x vor, in dieser Datei nie
+      · „Heilbad Heiligenst.“ kommt in bewerberdatenbank.csv 1x vor, in dieser Datei nie
+
+------------------------------------------------------------------------------
+KONSISTENZ — 10 Prüfungen, 6 mit Treffern
+------------------------------------------------------------------------------
+OK  [K1] Exakte Dubletten
+      Prüfung : Datensätze, die in allen Feldern außer der Nummer übereinstimmen
+      Treffer : 0 von 1040 Datensätze
+
+!!  [K2] Unscharfe Dubletten
+      Prüfung : derselbe Betrieb oder dieselbe Person zweimal, mit abweichender Schreibweise (Vergleich ohne Groß-/Kleinschreibung, Umlaute, Sonderzeichen und Leerzeichen, Rechtsform bleibt erhalten; zusätzlich Ähnlichkeit ab 95 Prozent bei gleicher Rechtsform). Gezählt wird nur, wenn mindestens zwei weitere unterscheidungskräftige Felder übereinstimmen — Spalten mit wenigen Ausprägungen zählen dabei nicht
+      Treffer : 6 von Spalten: `firmenname`, `ansprechpartner`
+      Zeilen  : 6 betroffene Datensätze (0,58 % der Datei)
+      · KD-0212 (Z213): „Zimmermann Offsetdruck GmbH & Co. KG“ ↔ KD-0631 (Z632): „Zimmermann Offsetdruck GmbH & Co KG“
+      · KD-0277 (Z278): „Elektrotechnik Beck eK“ ↔ KD-0301 (Z302): „Elektrotechnik Beck e.K.“
+      · KD-0318 (Z319): „Jenaer Umschlaglager GmbH & Co KG“ ↔ KD-1001 (Z984): „Jenaer Umschlaglager GmbH & Co. KG“
+      · KD-0423 (Z424): „Bad Langensalzaer Backwaren GmbH“ ↔ KD-1046 (Z1029): „Bad Langensalzaer Backwaren GmbH.“
+      · KD-0436 (Z437): „Becker Schaltanlagen GmbH & Co. KG“ ↔ KD-0493 (Z494): „Becker Schaltanlagen GmbH & Co KG“
+      · KD-0633 (Z634): „Präzisionstechnik Wolf GmbH“ ↔ KD-0761 (Z762): „Präzisionstechnik Wolf GmbH.“
+
+!!  [K3] Schreibvarianten desselben Werts
+      Prüfung : kategoriale Spalten: Werte, die nach Faltung zusammenfallen (Groß-/Kleinschreibung, Umlaute, Satzzeichen, Leerzeichen)
+      Treffer : 2 von 1040 Datensätze
+      Zeilen  : 2 betroffene Datensätze (0,19 % der Datei)
+      · Spalte `betreuer`: Einzelwert „MARX“ ähnelt einem häufigen Wert — z. B. KD-0108 (Z109)
+      · Spalte `betreuer`: Einzelwert „HILLE“ ähnelt einem häufigen Wert — z. B. KD-0141 (Z142)
+
+!!  [K4] Schreibvarianten in Freitextfeldern
+      Prüfung : Freitext an Trennzeichen zerlegt; seltene Bausteine, die einem häufigen Baustein ähneln (Ähnlichkeit ab 82 Prozent)
+      Treffer : 33 von 1040 Datensätze
+      Zeilen  : 33 betroffene Datensätze (3,17 % der Datei)
+      · Spalte `email`: „info@elektromontage.de“ (2x) neben „office@elektromontage.de“ (6x) — z. B. KD-0084 (Z85), KD-0170 (Z171)
+      · Spalte `email`: „hr@verpackungswer.de“ (2x) neben „info@verpackungswer.de“ (5x) — z. B. KD-0130 (Z131), KD-0554 (Z555)
+      · Spalte `email`: „hr@logistikzentru.de“ (2x) neben „info@logistikzentru.de“ (7x) — z. B. KD-0234 (Z235), KD-0251 (Z252)
+      · Spalte `email`: „info@anlagenbau.de“ (2x) neben „hr@anlagenbau.de“ (8x) — z. B. KD-0267 (Z268), KD-0680 (Z681)
+      · Spalte `email`: „personal@berger.de“ (1x) neben „personal@thueringer.de“ (5x) — z. B. KD-0308 (Z309)
+      · Spalte `email`: „office@logistikzentru.de“ (1x) neben „info@logistikzentru.de“ (7x) — z. B. KD-0347 (Z348)
+      · Spalte `email`: „personal@rudolstadter.de“ (1x) neben „personal@arnstadter.de“ (6x) — z. B. KD-0350 (Z351)
+      · Spalte `email`: „personal@stein.de“ (1x) neben „personal@thueringer.de“ (5x) — z. B. KD-0424 (Z425)
+      · Spalte `email`: „verwaltung@meier.de“ (2x) neben „verwaltung@molkerei.de“ (5x) — z. B. KD-0485 (Z486), KD-0961 (Z944)
+      · Spalte `email`: „kontakt@elektrotechnik.de“ (2x) neben „personal@elektrotechnik.de“ (5x) — z. B. KD-0501 (Z502), KD-0657 (Z658)
+      · Spalte `email`: „personal@distributionsz.de“ (2x) neben „kontakt@distributionsz.de“ (7x) — z. B. KD-0503 (Z504), KD-0829 (Z830)
+      · Spalte `email`: „office@kunststofftech.de“ (2x) neben „info@kunststofftech.de“ (13x) — z. B. KD-0508 (Z509), KD-0517 (Z518)
+      · Spalte `email`: „personal@zerspanungstec.de“ (2x) neben „hr@zerspanungstec.de“ (5x) — z. B. KD-0624 (Z625), KD-0926 (Z909)
+      · Spalte `email`: „personal@meier.de“ (1x) neben „personal@thueringer.de“ (5x) — z. B. KD-0655 (Z656)
+      · Spalte `email`: „hr@kunststofftech.de“ (2x) neben „info@kunststofftech.de“ (13x) — z. B. KD-0673 (Z674), KD-0856 (Z839)
+      · Spalte `email`: „verwaltung@schuster.de“ (1x) neben „verwaltung@tischlerei.de“ (8x) — z. B. KD-0736 (Z737)
+      · Spalte `email`: „verwaltung@schreiber.de“ (1x) neben „verwaltung@tischlerei.de“ (8x) — z. B. KD-0866 (Z849)
+      · Spalte `email`: „verwaltung@koehler.de“ (1x) neben „verwaltung@molkerei.de“ (5x) — z. B. KD-0939 (Z922)
+      · Spalte `email`: „verwaltung@ohrdrufer.de“ (1x) neben „verwaltung@druckerei.de“ (9x) — z. B. KD-0955 (Z938)
+      · Spalte `email`: „kontakt@berger.de“ (1x) neben „kontakt@thueringer.de“ (6x) — z. B. KD-0971 (Z954)
+
+!!  [K5] Gemischte Schreibweisen bei Datum und Zahl
+      Prüfung : je Spalte das häufigste Format als Leitformat, alles andere als Abweichung
+      Treffer : 3 von 1040 Datensätze
+      Zeilen  : 3 betroffene Datensätze (0,29 % der Datei)
+      · Spalte `verrechnungssatz_std`: Komma und Punkt als Dezimaltrennzeichen gemischt (815 zu 3) — z. B. KD-0283 (Z284) = 32.88; KD-0446 (Z447) = 26.35
+
+OK  [K6] Mehrfach vergebene Nummern (`kunde_id`)
+      Prüfung : dieselbe Datensatznummer in mehr als einer Zeile
+      Treffer : 0 von 1040 Datensätze
+
+!!  [K7.1] Fachliche Regel `besetzungen_2025<=anfragen_2025`
+      Prüfung : vorgegebene Regel, zeilenweise geprüft
+      Treffer : 2 von 1040 Datensätze
+      Zeilen  : 2 betroffene Datensätze (0,19 % der Datei)
+      · KD-0295 (Z296): besetzungen_2025 = 8, anfragen_2025 = 7
+      · KD-0380 (Z381): besetzungen_2025 = 15, anfragen_2025 = 13
+
+!!  [K7.2] Fachliche Regel `verrechnungssatz_std>=18`
+      Prüfung : vorgegebene Regel, zeilenweise geprüft
+      Treffer : 2 von 1040 Datensätze
+      Zeilen  : 2 betroffene Datensätze (0,19 % der Datei)
+      · KD-0336 (Z337): verrechnungssatz_std = 2,95, 18 = 18.0
+      · KD-0808 (Z809): verrechnungssatz_std = 2,95, 18 = 18.0
+
+OK  [K7.3] Fachliche Regel `verrechnungssatz_std<=60`
+      Prüfung : vorgegebene Regel, zeilenweise geprüft
+      Treffer : 0 von 1040 Datensätze
+
+OK  [K7.4] Fachliche Regel `anfragen_2025>=0`
+      Prüfung : vorgegebene Regel, zeilenweise geprüft
+      Treffer : 0 von 1040 Datensätze
+
+------------------------------------------------------------------------------
+AKTUALITÄT — 4 Prüfungen, 3 mit Treffern
+------------------------------------------------------------------------------
+!!  [A1] Datumsfelder älter als die Schwelle
+      Prüfung : Ereignis- und Kontaktdaten (`letzte_anfrage`) vor dem 2024-09-08, also älter als 730 Tage bezogen auf den Stichtag 2026-09-08
+      Treffer : 399 von 1040 Datumswerte
+      Zeilen  : 399 betroffene Datensätze (38,37 % der Datei)
+      · Spalte `letzte_anfrage`: 399 Werte vor 2024-09-08 (38,4 %), ältester 2019-04-09 bei KD-0447 (Z448)
+
+!!  [A2] Datum in der Zukunft
+      Prüfung : Ereignisfelder (kein Fristfeld) mit einem Datum nach dem Stichtag
+      Treffer : 2 von 1040 Datensätze
+      Zeilen  : 2 betroffene Datensätze (0,19 % der Datei)
+      · KD-0175 (Z176): `letzte_anfrage` = 2027-08-14 liegt nach dem Stichtag
+      · KD-0768 (Z769): `letzte_anfrage` = 2027-07-15 liegt nach dem Stichtag
+
+OK  [A3] Abgelaufene Fristen
+      Prüfung : Spalten mit Fristbezug (keine erkannt), deren Datum vor dem Stichtag liegt
+      Treffer : 0 von 1040 Datensätze
+
+!!  [A4] Zeitliche Lücken in der Reihe
+      Prüfung : Monate ohne Eintrag innerhalb des dicht belegten Zeitraums (ältestes Zwanzigstel abgeschnitten) und Abstände von mindestens 14 Tagen zwischen zwei aufeinanderfolgenden Einträgen
+      Treffer : 33 von Zeitreihe je Datumsspalte
+      · Spalte `letzte_anfrage`: 13 Monate ohne Eintrag mitten in der Reihe (04/2025, 08/2025, 09/2025, 10/2025, 10/2026, 11/2026)
+      · Spalte `letzte_anfrage`: 25 Tage ohne Eintrag zwischen 2020-05-21 und 2020-06-15
+      · Spalte `letzte_anfrage`: 14 Tage ohne Eintrag zwischen 2020-10-02 und 2020-10-16
+      · Spalte `letzte_anfrage`: 14 Tage ohne Eintrag zwischen 2020-10-16 und 2020-10-30
+      · Spalte `letzte_anfrage`: 19 Tage ohne Eintrag zwischen 2021-03-26 und 2021-04-14
+      · Spalte `letzte_anfrage`: 15 Tage ohne Eintrag zwischen 2021-07-29 und 2021-08-13
+      · Spalte `letzte_anfrage`: 14 Tage ohne Eintrag zwischen 2021-09-18 und 2021-10-02
+      · Spalte `letzte_anfrage`: 20 Tage ohne Eintrag zwischen 2021-12-10 und 2021-12-30
+      · Spalte `letzte_anfrage`: 17 Tage ohne Eintrag zwischen 2022-02-08 und 2022-02-25
+      · Spalte `letzte_anfrage`: 17 Tage ohne Eintrag zwischen 2022-03-24 und 2022-04-10
+      · Spalte `letzte_anfrage`: 15 Tage ohne Eintrag zwischen 2022-04-18 und 2022-05-03
+      · Spalte `letzte_anfrage`: 28 Tage ohne Eintrag zwischen 2022-08-06 und 2022-09-03
+      · Spalte `letzte_anfrage`: 17 Tage ohne Eintrag zwischen 2022-12-22 und 2023-01-08
+      · Spalte `letzte_anfrage`: 14 Tage ohne Eintrag zwischen 2023-03-04 und 2023-03-18
+      · Spalte `letzte_anfrage`: 16 Tage ohne Eintrag zwischen 2023-03-23 und 2023-04-08
+      · Spalte `letzte_anfrage`: 15 Tage ohne Eintrag zwischen 2023-05-18 und 2023-06-02
+      · Spalte `letzte_anfrage`: 23 Tage ohne Eintrag zwischen 2023-07-10 und 2023-08-02
+      · Spalte `letzte_anfrage`: 16 Tage ohne Eintrag zwischen 2023-08-02 und 2023-08-18
+      · Spalte `letzte_anfrage`: 16 Tage ohne Eintrag zwischen 2023-09-17 und 2023-10-03
+      · Spalte `letzte_anfrage`: 17 Tage ohne Eintrag zwischen 2023-10-27 und 2023-11-13
+      · Spalte `letzte_anfrage`: 15 Tage ohne Eintrag zwischen 2023-11-26 und 2023-12-11
+
+------------------------------------------------------------------------------
+GENAUIGKEIT — 7 Prüfungen, 3 mit Treffern
+------------------------------------------------------------------------------
+!!  [G1] Zahlen außerhalb des plausiblen Bereichs
+      Prüfung : Grenzen aus den Daten selbst: bei Messgrößen unteres und oberes Quartil ± dreifacher Quartilsabstand, bei Zählgrößen das Dreifache des 99er-Perzentils
+      Treffer : 2 von 1040 Datensätze
+      Zeilen  : 2 betroffene Datensätze (0,19 % der Datei)
+      · Spalte `verrechnungssatz_std`: 2 Werte außerhalb [14.55; 44.20] — z. B. KD-0336 (Z337) = 2,95; KD-0808 (Z809) = 2,95
+
+!!  [G2] Postleitzahlen mit falscher Länge
+      Prüfung : fünf Ziffern erwartet; vier Ziffern deuten auf eine verlorene führende Null
+      Treffer : 3 von 1040 Datensätze
+      Zeilen  : 3 betroffene Datensätze (0,29 % der Datei)
+      · KD-0138 (Z139): `plz` = „6484“ ist keine fünfstellige Postleitzahl
+      · KD-0456 (Z457): `plz` = „7318“ ist keine fünfstellige Postleitzahl
+      · KD-0782 (Z783): `plz` = „6449“ ist keine fünfstellige Postleitzahl
+
+OK  [G3] Unbrauchbare E-Mail-Adressen
+      Prüfung : genau ein @, Punkt in der Domain, keine Leerzeichen
+      Treffer : 0 von 1040 Datensätze
+
+OK  [G4] Telefonnummern mit zu wenigen Ziffern
+      Prüfung : mindestens neun Ziffern erwartet (Vorwahl plus Rufnummer)
+      Treffer : 0 von 1040 Datensätze
+
+OK  [G5] Unplausible Datumswerte
+      Prüfung : Geburtsdatum: Alter zwischen 15 und 75 Jahren; sonstige Datumsfelder zwischen 1990 und Stichtag plus zehn Jahre
+      Treffer : 0 von 1040 Datensätze
+
+!!  [G6] Zeichensatzschäden
+      Prüfung : Zeichenfolgen wie Ã¼ oder â€ — ein Umlaut, der einmal falsch kodiert gespeichert wurde
+      Treffer : 2 von 15600 Zellen
+      Zeilen  : 2 betroffene Datensätze (0,19 % der Datei)
+      · KD-0110 (Z111): `firmenname` = „FlÃ¤ischwerk Apolda e.K.“
+      · KD-0712 (Z713): `firmenname` = „Ludwig PrÃ¤zisionsteile GmbH“
+
+OK  [G7] Überzählige Leerzeichen
+      Prüfung : Werte mit Leerzeichen am Anfang oder Ende oder mit doppeltem Leerzeichen — für jeden exakten Vergleich ein anderer Wert
+      Treffer : 0 von 15600 Zellen
+
+==============================================================================
+ZUSAMMENFASSUNG
+==============================================================================
+Dimension           Treffer     Zeilen Prüfungen mit Befund
+Vollständigkeit         257        231 V1, V4, V5.1, V5.2
+Konsistenz               48         48 K2, K3, K4, K5, K7.1, K7.2
+Aktualität              434        401 A1, A2, A4
+Genauigkeit               7          7 G1, G2, G6
+
+Datensätze mit mindestens einem Befund: 598 von 1040 = 57,50 Prozent
+
+Ein Befund ist noch kein Fehler. V1 und A1 treffen auch Zeilen, in denen das
+Fehlen fachlich richtig ist — ein Interessent hat keinen Verrechnungssatz, ein
+inaktiver Kunde keine neue Anfrage. Der Bericht zählt, die Bewertung bleibt
+fachlich und gehört zur Rolle, die für den Bestand einsteht.
+
+Zu lesen mit ERLAEUTERUNG-pruefungen-und-rag.md: dort steht je Prüfung in einem
+Satz, was der Befund für ein RAG-System bedeutet.
+==============================================================================

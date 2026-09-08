@@ -103,15 +103,11 @@ var DOKUMENTE = [
     titel: "Widerstand",
     bereich: "bibliothek" },
 
-  { datei: "../bibliothek/datenqualitaet-governance.md",
-    titel: "Datenqualität, RAG & Governance",
-    bereich: "bibliothek" },
-
   /* ================= ARTEFAKTE =================
      Eigene Arbeitsergebnisse aus ../artefakte/.
      Der folgende Block wird von coursetools/inhalt-bauen.py erzeugt.  */
 
-  /* >>> ARTEFAKTE-ANFANG (12 Dokumente, 2026-09-07)
+  /* >>> ARTEFAKTE-ANFANG (11 Dokumente, 2026-09-08)
       Automatisch erzeugt von coursetools/inhalt-bauen.py.
       Nicht von Hand aendern - Aenderungen gehen beim naechsten Lauf
       verloren. Anzeigetitel stellt man im Skript unter TITEL ein.  */
@@ -158,10 +154,6 @@ var DOKUMENTE = [
 
   { datei: "../artefakte/extra/03_spannungen-und-blinde-flecken.md",
     titel: "Extra · 3 Spannungen und blinde Flecken",
-    bereich: "artefakte" },
-
-  { datei: "../artefakte/woche-03/datenqualitaet-zwei-fragen.md",
-    titel: "Woche 03 · Zwei Fragen zu Datenqualität und Governance",
     bereich: "artefakte" },
   /* <<< ARTEFAKTE-ENDE */
 
