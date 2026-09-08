@@ -42,6 +42,7 @@ Dazu passt der Reifegrad: Die Branche liegt bei 46 Prozent regelmäßiger KI-Nut
 | [`datenverantwortung.md`](datenverantwortung.md) | Wer für welchen Datenbestand accountable ist (formal: niemand), kritische Befunde priorisiert, Data-Owner-Vorschlag, Sofortmaßnahmen ohne Beschluss | W3, W5, W8 |
 | [`vorhaben.md`](vorhaben.md) | Der Pilot, Workflows heute und im Ziel, Risikoeinschätzung nach EU AI Act, parallele Initiativen, Eskalationsweg | W2, W6, W9, W11 |
 | [`ereignisse.md`](ereignisse.md) | Was sich im Kursverlauf geändert hat, je Zeile eine Woche | laufend |
+| [`agent-konzept-bestandswaechter.md`](agent-konzept-bestandswaechter.md) | Agent-Konzept auf den bereinigten Beständen: was empfohlen wird, was nicht, und warum kein Assistent für alle 69 | W3, W8, W10 |
 | [`raci-datenpflege.md`](raci-datenpflege.md) | RACI-Matrix für fünf Datenpflege-Aufgaben, je Zeile genau ein Accountable, plus die Rolle, die dafür fehlt | W3, W5, W8 |
 | [`daten/`](daten/) | Zwei generierte Übungsdatensätze als CSV (Bewerber, Kunden) mit eingebauten Datenqualitätsproblemen, dazu Datenblatt, Prüfskript, RAG-Erläuterung und separates Lösungsblatt | W3, W5, W8 |
 | [`generierte-werte.md`](generierte-werte.md) | Alle 19 `generiert`-Werte, sortiert nach der Woche, die sie zuerst braucht — plus die `angenommen`-Werte, die trotzdem geprüft werden müssen | jeden Freitag |
