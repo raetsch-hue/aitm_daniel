@@ -1,0 +1,20 @@
+> **Offline-Kopie** aus dem Hugging-Face-MCP-Kurs, Kapitel „1. Introduction to Model Context Protocol“.
+> Original online: <https://huggingface.co/learn/mcp-course/unit1/certificate> · Quelltext: `AI_Course/mcp-course/units/unit1/certificate.mdx`
+> Aufbereitet von `coursetools/mcp-course-aufbereiten.py` — MDX-Bausteine
+> wurden zu Markdown umgebaut, der Text ist unverändert.
+
+# Get your certificate!
+
+Well done! You've completed the first unit of the MCP course. Now it's time to take the exam to get your certificate.
+
+Below is a quiz to check your understanding of the unit. 
+
+<iframe
+	src="https://mcp-course-unit-1-quiz.hf.space"
+	frameborder="0"
+	width="850"
+	height="450"
+></iframe>
+
+> [!TIP]
+> If you're struggling to use the quiz above, go to the space directly [on the Hugging Face Hub](https://huggingface.co/spaces/mcp-course/unit_1_quiz). If you find errors, you can report them in the space's [Community tab](https://huggingface.co/spaces/mcp-course/unit_1_quiz/discussions).

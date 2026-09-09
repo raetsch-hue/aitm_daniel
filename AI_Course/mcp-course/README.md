@@ -32,7 +32,8 @@ läuft nur eingeloggt auf dem Hub, nicht offline.
 |---|---|
 | `INHALT.md` | Inhaltsverzeichnis in offizieller Lesereihenfolge, verlinkt auf die Einzelseiten |
 | `mcp-course-komplett.md` | alle 36 Seiten in einem Dokument, zum Durchlesen und Volltextsuchen |
-| `units/` | Kursseiten als MDX, Originaldateien und -namen (Unit 0 bis 3.1) |
+| `units/` | Kursseiten als MDX, Originaldateien und -namen (Unit 0 bis 3.1) — **Quelle der Wahrheit** |
+| `viewer/` | dieselben 36 Seiten als Markdown für `coursebook/viewer.html`; erzeugt, nicht von Hand pflegen |
 | `units/_toctree.yml` | offizielles Inhaltsverzeichnis, Grundlage der beiden Dateien oben |
 | `projects/` | lauffähiger Beispielcode zu Unit 3 (`starter/` und `solution/`, Python + `pyproject.toml`) |
 | `bilder/` | 26 gespiegelte Abbildungen, plus `quellen.tsv` mit Zuordnung lokal ↔ Original-URL |
@@ -45,11 +46,32 @@ jede Ersetzung nachvollziehbar.
 
 ## Einstieg
 
-1. `INHALT.md` öffnen und der Reihenfolge folgen, oder
-2. `mcp-course-komplett.md` am Stück lesen.
+1. Im Viewer: `coursebook/viewer.html` öffnen, oben im Umschalter **Bereich → MCP-Kurs**.
+   Die 36 Seiten stehen dort in Kursreihenfolge, Suche und Lesezeichen wie bei den
+   übrigen Bereichen.
+2. Im Editor: `INHALT.md` öffnen und der Reihenfolge folgen, oder
+3. Am Stück: `mcp-course-komplett.md`.
 
 Praktischer Teil: `projects/unit3/build-mcp-server/starter/` ist der Startpunkt,
 `…/solution/` die Musterlösung.
+
+## Wie der Viewer eingebunden ist
+
+`coursebook/viewer.html` rendert Markdown, kein MDX. Deshalb erzeugt
+`coursetools/mcp-course-aufbereiten.py` aus `units/*.mdx` die Fassung unter `viewer/`:
+
+- MDX-Bausteine werden zu Markdown — `<hfoptions>`/`<hfoption>` zu „Variante: python“,
+  `<Youtube>` zu einem Videolink, `<Question>` zu einer Antwortliste mit eingeklappter
+  Auflösung (`<details>`), damit die Quizfragen zum Selbsttest taugen.
+- Bildpfade werden auf `coursebook/` umgerechnet, weil dort gerendert wird.
+- Code-Blöcke bleiben unangetastet. Sonst würde etwa `<Tool …>` in einem Beispiel-Log
+  mit umgeschrieben.
+
+Der Fliesstext bleibt Wort für Wort stehen. Das Skript löscht `viewer/` bei jedem Lauf
+und schreibt es neu — Änderungen dort gehen verloren, sie gehören in `units/`.
+Es pflegt ausserdem den Block zwischen den Markern `MCP-COURSE-ANFANG` und
+`MCP-COURSE-ENDE` in `coursebook/dateien.js`, analog zu `inhalt-bauen.py`
+für die Artefakte.
 
 ## Lücken und Vorbehalte
 
@@ -76,6 +98,11 @@ curl -sSL -o /tmp/mcp-course.tar.gz \
   https://codeload.github.com/huggingface/mcp-course/tar.gz/refs/heads/main
 ```
 
-Danach entpacken, `units/en/` und `projects/` ersetzen, Bilder erneut spiegeln und
-`INHALT.md` / `mcp-course-komplett.md` neu erzeugen. Der Ablauf ist in der Sitzung vom
-2026-09-09 dokumentiert.
+Danach entpacken, `units/en/` und `projects/` ersetzen, Bilder erneut spiegeln,
+`INHALT.md` / `mcp-course-komplett.md` neu erzeugen und zum Schluss
+
+```bash
+python3 coursetools/mcp-course-aufbereiten.py
+```
+
+laufen lassen. Das erneuert `viewer/` und den Block in `coursebook/dateien.js`.
