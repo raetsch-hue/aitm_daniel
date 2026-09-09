@@ -2,8 +2,8 @@
 
 **Was du wissen musst — und wie stark es zählt**
 Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
-Stand: 09.09.2026 · gewichtet sind die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2 und 3.4
-*Noch nicht gewichtet: 2.3, 2.4, 2.5, 3.1, 3.2, 3.3, 3.5. Die Analysen dazu liegen vollständig vor, die Kurzfassungen in `coursebook/essentials/` — dieser Index holt sie nach.*
+Stand: 09.09.2026 · gewichtet sind die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2, 3.3 und 3.4
+*Noch nicht gewichtet: 2.3, 2.4, 2.5, 3.1, 3.2, 3.5. Die Analysen dazu liegen vollständig vor, die Kurzfassungen in `coursebook/essentials/` — dieser Index holt sie nach.*
 
 ---
 
@@ -164,6 +164,40 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument — auch
 
 ---
 
+## Tag 3.3 — Vom Plan zur Praxis: Implementierungspfade und Reifegrade
+
+→ [Zum vollständigen Dokument](#3.3/3.3_Implementierungspfade-und-Workspace.md)
+
+**Sonderstatus:** Der Tag ist umgebaut. Der Foliensatz hat **keinen Fachblock mehr** — der Stoff liegt in einer **Pflichtlektüre** (rund 1.500 Wörter). Wer nur die Folien liest, bekommt Retro, Hack Time und Reading Time, aber nicht den Inhalt. Das geführte Hands-on ist auf Freitag verschoben.
+
+| Gewicht | Punkt | Warum diese Einstufung |
+|---|---|---|
+| ●●● | [Passung schlägt Funktionsumfang](#3.3/3.3_Implementierungspfade-und-Workspace.md#f1) | Der Satz, der im Pitch trägt. Man wird nicht gefragt „ist die gut?", sondern **„warum die und nicht die andere?"** — darauf ist „mehr Funktionen" keine Antwort |
+| ●●● | [Pilot ≠ Produktion: der Übergang scheitert, **weil der Pilot zu gut war**](#3.3/3.3_Implementierungspfade-und-Workspace.md#f5) | Motivierte Erstnutzer, saubere Testdaten, kurzer Draht zum Projektteam — keine dieser Bedingungen gilt im Betrieb. Und die Antwort auf *„habt ihr das getestet?"*: „im Piloten unter diesen Bedingungen, und für die Produktion fehlt uns noch das hier" |
+| ●●● | [Datenvorbereitung frisst 40–60 % der Projektzeit](#3.3/3.3_Implementierungspfade-und-Workspace.md#f2) | Wer im Business Case 20 % ansetzt, hat sich nicht verkalkuliert, sondern die Projektstruktur falsch beschrieben. Die Brücke zu 3.2 |
+| ●●● | [Die Kernzahlen sind falsch zugeschrieben](#3.3/3.3_Implementierungspfade-und-Workspace.md#f2) | **42 % gilt für 2025, nicht 2024 (2024: 17 %)**, Quelle S&P Global, nicht McKinsey und nicht Promethium. Richtig zitiert wird die Aussage stärker: eine Verdopplung in einem Jahr |
+| ●●● | [Die MIT-Zeiträume](#3.3/3.3_Implementierungspfade-und-Workspace.md#f4) | 3–6 · 6–12 · 12–24 · ab 24 Monate. Die Antwort auf „wie lange dauert das?", auf die ein „das kommt darauf an" nicht reicht |
+| ●● | [Der Reifegrad bestimmt den Einstiegspunkt](#3.3/3.3_Implementierungspfade-und-Workspace.md#f1) | Ein Pfad ist kein Standard, sondern eine Anpassung. Und: ein Pfad scheitert anderswo, **ohne dass jemand einen Fehler gemacht hätte** — das nimmt einer Schuldfrage die Grundlage |
+| ●● | [Der zweite Zuschnittsfehler: die falsche Reifestufe](#3.3/3.3_Implementierungspfade-und-Workspace.md#f4) | *Eine Plattform kaufen, die für eine Stufe gebaut ist, auf der man nicht steht* — derselbe Fehler wie der Kategorienfehler aus 1.4, **nur zeitlich statt sachlich.** Beide liegen **vor** der Matrix |
+| ●● | [Die vier OpenAI-Phasen und ihre Fallen](#3.3/3.3_Implementierungspfade-und-Workspace.md#f3) | Die Fallen sind die Diagnoseliste, nicht die Reihenfolge. Tool-first, fehlendes Champions-Netz, alles gleichzeitig, kein Technikteam |
+| ●● | [Die Retro als Werkzeug](#3.3/3.3_Implementierungspfade-und-Workspace.md#f7) | Start / Stop / Continue, eine halbe Stunde, kein Werkzeug — **liefert, was in Statusberichten nie steht.** Dieselbe Mechanik wie die Feedback-Regel von 3.4 |
+| ●● | [Der Datenkatalog](#3.3/3.3_Implementierungspfade-und-Workspace.md#f6) | *Inhaltsverzeichnis, nicht das Buch.* **Ohne Katalog beginnt jedes Projekt mit derselben Woche Suchen** — der Grund, warum Pfade in Phase 1 stecken bleiben |
+| ●● | [Rollout-Timeline und ihr Mechanismus](#3.3/3.3_Implementierungspfade-und-Workspace.md#f4) | 18–36 Monate für Großunternehmen. Entscheidend ist die Begründung: **die Zahl der Zustimmenden**, nicht die Technik — damit ist die kurze Variante für eine Behörde nicht wählbar |
+| ● | [AI Champion als Rückkanal](#3.3/3.3_Implementierungspfade-und-Workspace.md#f5) | Keine IT-Rolle. Neu: bringt Rückmeldungen **in die Projektsteuerung** ein. Ohne Zeitbudget existiert die Rolle nur auf dem Papier |
+| ● | [Der Selbsttest ohne Protokoll](#3.3/3.3_Implementierungspfade-und-Workspace.md#f10) | Fünf Fragen vorher aufschreiben, zwei davon unbeantwortbar — dann ist das Ergebnis eine Quote und keine Anekdote |
+
+**Die Fälle, die du parat haben solltest** → [Beispiele im Detail](#3.3/3.3_Implementierungspfade-und-Workspace.md#f9)
+
+| Fall | Wofür er steht | Gewicht |
+|---|---|---|
+| [**Deutsche Telekom**](#3.3/3.3_Implementierungspfade-und-Workspace.md#f9) | Nicht die überlegenste Lösung, sondern die passende. Neu: **Single-Tenant mit EU-Hosting** war regulatorisch erforderlich — damit ein benennbares Ausschlusskriterium statt einer Haltungsfrage | ●●● |
+| [**Zillow Offers**](#3.3/3.3_Implementierungspfade-und-Workspace.md#f9) | Der Übergang, der scheitert, weil im Pilotmarkt alles stimmte. „Scale" braucht **Monitoring als eigene Zeile** | ●●● |
+| [**BBVA**](#3.3/3.3_Implementierungspfade-und-Workspace.md#f9) | 3.000 → 11.000 Lizenzen in fünf Monaten — und neu: **83 % wöchentliche Nutzung.** Lizenzen sind Verbreitung, wöchentliche Nutzung ist Adoption | ●● |
+| [**Figma**](#3.3/3.3_Implementierungspfade-und-Workspace.md#f9) | „Compliance Fast Path": der Vorhabenname benennt das Problem, nicht das Tool. **Wer „RPA-Pilot" sagt, hat einen Werkzeugnamen** | ●● |
+| [**Kotters zwölf Projekte**](#3.3/3.3_Implementierungspfade-und-Workspace.md#f9) | Die Siegeserklärung ist ein **Ressourcenereignis**: sie beendet Aufmerksamkeit, Budget und Rollen. Deshalb bricht Adoption in Phase 4 ein | ●● |
+
+---
+
 ## Tag 3.4 — Die Entscheidung vertreten: Vendor Evaluation
 
 → [Zum vollständigen Dokument](#3.4/3.4_Die-Entscheidung-vertreten.md)
@@ -216,6 +250,9 @@ Die drei Tage sind kein Nebeneinander. Vier Verbindungen tragen den ganzen Kurs:
 | **Kraftfeld (2.1) → Verfahren (Ergänzung 2.2)** | 2.1 liefert den Grundgedanken und ein fertiges Beispiel, die Ergänzung das Herstellungsverfahren mit Bewertung, Priorisierung und Maßnahmenzeile. Dasselbe Werkzeug, einmal erklärt und einmal bedienbar |
 | **Kotters blinder Fleck (2.2) → Kraftfeld (Ergänzung 2.2)** | Kotter berücksichtigt finanzielle und politische Kräfte nicht — das ist Toolsheros eigener Einwand, und die Force-Field-Analyse ist die dort empfohlene Abhilfe. Deshalb gehören beide in denselben Nachmittag |
 | **B = f(P, E) (2.1) → „E-Mail geht schneller" (Ergänzung 2.2)** | Eine Überzeugung wird nicht durch Argumente gewonnen, sondern durch eine geänderte Vereinbarung, die ihr den Gegenstand nimmt. Die Feldtheorie als konkrete Maßnahme |
+| **Kategorienfehler (1.4) → falsche Reifestufe (3.3)** | Zwei Zuschnittsfehler, sachlich und zeitlich. Eine Bewertungsmatrix fängt keinen von beiden ab, weil beide **vor** ihr liegen — deshalb gehört die Kategorien- und Reifegradfrage vor das Scoring |
+| **Retro (3.3) → Feedback-Regeln (3.4)** | Dieselbe Mechanik in zwei Formaten: gesammelt wird zuerst, sortiert danach; was mehrfach kommt, zählt; und wer etwas nicht umsetzt, begründet es. Die Begründungspflicht schützt beide Formate vor Folgenlosigkeit |
+| **40–60 % Datenvorbereitung (3.3) → Governance (3.2)** | Dieselbe Aussage als Zeit- und als Rollenfrage. Wer Governance für ein Nebenthema hält, hat die Hälfte des Projekts nicht eingeplant — und schreibt die Verzögerung später der Technik zu |
 | **Matrix (3.3) → Pitch (3.4) → Übergabe (3.5)** | Dieselbe Entscheidung in drei Zuständen: gerechnet, verteidigt, übergeben. Jeder Schritt deckt Lücken des vorigen auf — und nur der dritte konfrontiert sie mit einem echten Entscheiderpublikum |
 | **Gegenposition (3.4) → Widerstand ist eine Information (2.4)** | Derselbe Gedanke aus zwei Richtungen. Wer die Gegenargumente selbst nennt, behandelt Widerspruch als Information statt als Angriff — und wer im Pitch keinen erzeugt, hat auch nichts erfahren |
 | **Erfolgskriterium (1.5) → „stärkste Gegenargumente, nicht freundliche Kritik" (3.4)** | Dieselbe Stellschraube, auf eine Rolle angewendet. Ohne das Kriterium liefert ein Modell Zustimmung mit Verbesserungsvorschlägen |
@@ -232,6 +269,7 @@ Die drei Tage sind kein Nebeneinander. Vier Verbindungen tragen den ganzen Kurs:
 | **30 Minuten** | Zusätzlich alle ●●●-Punkte dieses Index |
 | **2 Stunden** | Die drei Dokumente einmal ganz, ●-Punkte überspringen |
 | **Vor dem Mittwoch-Block** | [Ergänzung 2.2, Abschnitt 4](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug) und die [sechs Prüffragen](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#6-vorbereitung-auf-den-nachmittag). Das ist Pflicht, nicht Kür — es spart im Block rund zwanzig Minuten |
+| **Vor einer Roadmap-Zusage** | [Die MIT-Zeiträume](#3.3/3.3_Implementierungspfade-und-Workspace.md#f4) und der Mechanismus dahinter: die Zahl der Zustimmenden begrenzt, nicht die Technik. Dazu [Pilot ≠ Produktion](#3.3/3.3_Implementierungspfade-und-Workspace.md#f5) — eine Zusage über Produktion, die auf Pilotbedingungen beruht, ist die häufigste Fehlplanung |
 | **Vor einem Pitch** | [Das Vier-Abschnitts-Format](#3.4/3.4_Die-Entscheidung-vertreten.md#g4), [die vier blinden Flecken](#3.4/3.4_Die-Entscheidung-vertreten.md#g10) und die [Sensitivitätsprüfung](#3.4/3.4_Die-Entscheidung-vertreten.md#g11). Die Gegenargumente **vor** die Empfehlung ziehen — dann fallen sie nicht hinten weg |
 | **Vor einem Steuerkreis** | [Die drei Framing-Fragen](#1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md#9-werkzeugkasten-für-den-transformation-manager), die [Rückwärtsdiagnose](#2.2/2.2_Kotter-8-Schritte-Modell.md#9-werkzeugkasten-für-den-transformation-manager) und die Formulierungstabellen aus 1.4, 2.1 und 2.2 |
 

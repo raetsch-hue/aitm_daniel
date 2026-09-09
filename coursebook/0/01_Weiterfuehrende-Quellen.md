@@ -2,8 +2,8 @@
 
 **Höchstens drei pro Thema — nur was den Aufwand wirklich lohnt**
 Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
-Umfasst die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2 und 3.4
-Links der Tage 1.4 bis 2.2 geprüft am 01.09.2026, die des Tages 3.4 am 09.09.2026
+Umfasst die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2, 3.3 und 3.4
+Links der Tage 1.4 bis 2.2 geprüft am 01.09.2026, die der Tage 3.3 und 3.4 am 09.09.2026
 
 ---
 
@@ -17,7 +17,7 @@ Es gibt zu jedem dieser Themen hunderte Artikel und Videos. Die meisten wiederho
 
 Jeder Link wurde zum jeweils oben genannten Datum geprüft. Paywalls und Sprache sind vermerkt.
 
-> **Grenze dieser Liste:** Sie deckt bisher nicht alle Kurstage ab. Für 2.3 bis 3.3 und 3.5 stehen die kommentierten Quellen in den jeweiligen Tagesdokumenten, jeweils im letzten Abschnitt — sie sind hier noch nicht auf drei zusammengezogen und nicht gewichtet.
+> **Grenze dieser Liste:** Sie deckt bisher nicht alle Kurstage ab. Für 2.3 bis 3.2 und 3.5 stehen die kommentierten Quellen in den jeweiligen Tagesdokumenten, jeweils im letzten Abschnitt — sie sind hier noch nicht auf drei zusammengezogen und nicht gewichtet.
 
 ---
 
@@ -190,6 +190,43 @@ Human Relations 1(1), 5–41.
 **Was du daraus mitnimmst:** Für die praktische Arbeit nichts, was nicht auch in den ersten beiden Quellen steht. Relevant, wenn du korrekt zitieren musst — und als Beleg dafür, dass die Kraftfeldanalyse **tatsächlich** von Lewin stammt, anders als das 3-Stufen-Modell ([Burnes-Vorbehalt](#2.1/01_Change-Management-Lewin-ADKAR.md#2-kurt-lewin-person-werk-und-was-davon-wirklich-von-ihm-stammt)).
 
 > **Wenn du nur eine Sache liest:** die Force-Field-Seite — und zwar heute, nicht nach dem Block. Sie ist die einzige Quelle dieser ganzen Liste, die morgen Nachmittag Zeit spart.
+
+---
+
+## Tag 3.3 — Implementierungspfade und Reifegrade
+
+> **Vorbemerkung, die den Abschnitt erklärt.** Der Stoff des Tages steht seit dem Umbau in einer **Pflichtlektüre** — [Wie KI in Produktion kommt](https://neuefische-teaching.github.io/AIDTM/coursebook/woche-3/lektuere-implementierungspfade-w3.html). Sie ist keine weiterführende Quelle, sondern die Primärquelle; wer nur die Folien liest, hat den Tag nicht gehabt. Die drei Adressen hier sind das, was **hinter** der Lektüre liegt: einmal der Beleg für ihre Kernzahl, zweimal die Originale ihrer beiden Frameworks.
+
+### 1. S&P Global Market Intelligence, Abbruchquoten bei KI-Initiativen ●●●
+
+Erhebung 2025, über 1.000 Unternehmen in Nordamerika und Europa.
+🔗 https://www.ciodive.com/news/AI-project-fail-data-SPGlobal/742590/ · Englisch, frei (Berichterstattung; die Erhebung selbst ist kostenpflichtig)
+
+**Warum diese Quelle:** Sie erfüllt das erste Auswahlkriterium dieser Liste in Reinform — **Primärquelle zu etwas, das im Kurs nur als Behauptung auftaucht.** Die 42-%-Zahl trägt den ganzen Tag und war innerhalb von acht Tagen zwei verschiedenen Häusern zugeschrieben: erst einem Software-Anbieter, dann McKinsey. Belegt ist sie bei S&P Global — **und zwar für 2025.** Der Wert für 2024, den der Kurs nennt, lag bei **17 %**.
+
+**Was du daraus mitnimmst:** Eine zitierfähige Fassung, die stärker ist als die falsche: *„42 % der Unternehmen haben 2025 die meisten ihrer KI-Initiativen abgebrochen — 2024 waren es 17 % (S&P Global Market Intelligence)."* Aus einem Standwert wird eine **Verdopplung in einem Jahr**, und das ist das bessere Argument. Zwei weitere Angaben aus derselben Erhebung, die der Kurs nicht nennt: im Schnitt **46 % der Proof-of-Concepts** verworfen, und als Haupthindernisse **Kosten, Datenschutz und Sicherheitsrisiken** — nicht fehlende Funktionen.
+
+**Vorbehalt:** Umfragewerte, keine Messungen — wie bei allen Zahlen dieser Art. Als Größenordnung und als Trend brauchbar, als Nachweis nicht. Die verlinkte Seite ist Berichterstattung über die Erhebung; wer die Zahl in eine Vorlage schreibt, sollte die Fundstelle mit Erhebungsjahr angeben und nicht die Berichterstattung zitieren.
+
+### 2. MIT Sloan Center for Information Systems Research (CISR) ●●
+
+🔗 https://cisr.mit.edu · Englisch, frei
+
+**Warum diese Quelle:** Das Reifegradmodell mit den vier Stufen **und ihren Zeiträumen** — 3–6, 6–12, 12–24, ab 24 Monate. Die Zeiträume sind der zitierfähige Teil und die Antwort auf die Frage, die in jedem Vorstandsgespräch kommt und auf die ein „das kommt darauf an" nicht reicht.
+
+**Was du daraus mitnimmst:** Die Verteidigung gegen zu optimistische Roadmaps — und den Fehler, den das Modell sichtbar macht: *eine Plattform kaufen, die für eine Stufe gebaut ist, auf der man nicht steht.* Das ist der Kategorienfehler aus Tag 1.4, **zeitlich statt sachlich**, und er liegt genau wie jener **vor** der Bewertungsmatrix.
+
+**Wenn die Zeit knapp ist:** Die Zeiträume und die Stufennamen stehen aufbereitet in [3.3, Abschnitt 4](#3.3/3.3_Implementierungspfade-und-Workspace.md#f4). Die Seite selbst lohnt nur, wenn du korrekt zitieren musst.
+
+### 3. OpenAI Enterprise, *AI in the Enterprise* (November 2025) ●●
+
+**Warum diese Quelle:** Das Vier-Phasen-Framework mit den Fallbeispielen Figma und BBVA. Der Wert liegt nicht in der Phasenfolge, die ist naheliegend, sondern in den **typischen Fallen je Phase** — sie sind als Diagnoseliste verwendbar, und „Tool-first statt Problem-first" ist die Frage aus Tag 3.1, einen Schritt früher gestellt.
+
+**Was du daraus mitnimmst:** Zwei Sätze, die im eigenen Vorhaben sofort greifen. Erstens: der Vorhabenname verrät die Falle — wer „RPA-Pilot" sagt, hat einen Werkzeugnamen, nicht ein Problem. Zweitens: **die Phasen überlappen sich**, das Champions-Netz muss weiter wachsen, sonst bricht die Adoption in Phase 4 ein.
+
+**Vorbehalt:** **Anbieterpublikation** über die eigenen Unternehmenskunden. Die Fallzahlen sind benannt und damit nachprüfbar, die Auswahl der Fälle ist es nicht — es sind Erfolge. Wer daraus zitiert, sollte die Herkunft nennen; für eine Aussage über Scheiterquoten ist Quelle 1 zuständig.
+
+> **Wenn du nur eine Sache liest:** die Pflichtlektüre — sie ist keine Empfehlung, sondern der Stoff. Und danach, wenn du die 42 % irgendwo verwenden willst: Quelle 1, fünf Minuten, und die Zahl hält.
 
 ---
 
