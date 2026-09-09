@@ -103,6 +103,14 @@ var DOKUMENTE = [
     titel: "Widerstand",
     bereich: "bibliothek" },
 
+  { datei: "../bibliothek/datenqualitaet-governance.md",
+    titel: "Datenqualität, RAG & Governance",
+    bereich: "bibliothek" },
+
+  { datei: "../bibliothek/vendor-evaluation.md",
+    titel: "Vendor Evaluation",
+    bereich: "bibliothek" },
+
   /* ================= ARTEFAKTE =================
      Eigene Arbeitsergebnisse aus ../artefakte/.
      Der folgende Block wird von coursetools/inhalt-bauen.py erzeugt.  */
