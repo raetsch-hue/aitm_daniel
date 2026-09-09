@@ -17,7 +17,7 @@ Es gibt zu jedem dieser Themen hunderte Artikel und Videos. Die meisten wiederho
 
 Jeder Link wurde zum jeweils oben genannten Datum geprüft. Paywalls und Sprache sind vermerkt.
 
-> **Grenze dieser Liste:** Sie deckt bisher nicht alle Kurstage ab. Für 2.3 bis 3.2 und 3.5 stehen die kommentierten Quellen in den jeweiligen Tagesdokumenten, jeweils im letzten Abschnitt — sie sind hier noch nicht auf drei zusammengezogen und nicht gewichtet.
+> **Grenze dieser Liste:** Sie deckt bisher nicht alle Kurstage ab. Die Woche-3-Dokumente führen ihre Quellen inzwischen selbst vollständig und kommentiert. Für 2.3 bis 3.2 und 3.5 stehen die kommentierten Quellen in den jeweiligen Tagesdokumenten, jeweils im letzten Abschnitt — sie sind hier noch nicht auf drei zusammengezogen und nicht gewichtet.
 
 ---
 

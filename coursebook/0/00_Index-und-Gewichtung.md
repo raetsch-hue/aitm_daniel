@@ -5,6 +5,8 @@ Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
 Stand: 09.09.2026 · gewichtet sind die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2, 3.3 und 3.4
 *Noch nicht gewichtet: 2.3, 2.4, 2.5, 3.1, 3.2, 3.5. Die Analysen dazu liegen vollständig vor, die Kurzfassungen in `coursebook/essentials/` — dieser Index holt sie nach.*
 
+> **Hinweis zum Charakter der Woche-3-Dokumente (09.09.2026):** `coursebook/3.1/` bis `coursebook/3.5/` sind seit dem Umbau **vollständiger Kursinhalt**, nicht mehr Analyse der Folien: Definitionen, Tabellen, Glossare, Aufträge, Prompts und Fallbeispiele stehen dort im Volltext, mit Statusangabe je Beleg. Jedes Dokument trennt sichtbar zwischen **Kursinhalt**, **Belegen, die der Kurs nicht liefert** und **eigener Kritik**. Nicht enthalten ist bewusst nur der Tagesablauf.
+
 ---
 
 ## Wie dieses Dokument zu lesen ist
