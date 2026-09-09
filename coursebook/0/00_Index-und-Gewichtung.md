@@ -2,7 +2,8 @@
 
 **Was du wissen musst — und wie stark es zählt**
 Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
-Stand: 01.09.2026 · umfasst die Tage 1.4, 1.5, 2.1, 2.2 und die Ergänzung zu 2.2
+Stand: 09.09.2026 · gewichtet sind die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2 und 3.4
+*Noch nicht gewichtet: 2.3, 2.4, 2.5, 3.1, 3.2, 3.3, 3.5. Die Analysen dazu liegen vollständig vor, die Kurzfassungen in `coursebook/essentials/` — dieser Index holt sie nach.*
 
 ---
 
@@ -20,7 +21,7 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument — auch
 
 ---
 
-## Die Kurzfassung: neun Sätze für den ganzen Stoff
+## Die Kurzfassung: zehn Sätze für den ganzen Stoff
 
 1. **Die Kategorie entscheidet, nicht die Technologie.** RPA, Predictive ML, GenAI und Agentic AI lösen verschiedene Probleme — der häufigste teure Fehler ist die falsche Kategorie, nicht der falsche Anbieter.
 2. **Der Reifegrad begrenzt, was möglich ist.** Nicht der Durchschnitt zählt, sondern die schwächste relevante Dimension.
@@ -31,6 +32,7 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument — auch
 7. **Alles, was du zweimal tippst, gehört nicht in den Prompt.** Kontext gehört in Dateien, nicht in Chatverläufe.
 8. **Die Vorbereitung ist die halbe Veränderung.** Vier von Kotters acht Schritten liegen vor der ersten sichtbaren Änderung — und dort scheitern die meisten Vorhaben.
 9. **Hemmende Kräfte abbauen schlägt treibende verstärken.** Eine weitere Mail ist eine treibende Kraft; ein weggeräumtes Hindernis bewegt mehr — und ein Kraftfeld ohne Maßnahmenzeile hat gar nichts bewegt.
+10. **Eine Empfehlung ohne benannte Gegenposition ist keine Empfehlung, sondern eine Meinung.** Es gibt keine richtige Matrix, nur eine begründete und eine unbegründete — und begründet heißt: die Gewichtung ist aus dem Kontext hergeleitet, nicht nachträglich passend gemacht.
 
 ---
 
@@ -162,6 +164,41 @@ Die Titel springen direkt an die passende Stelle im jeweiligen Dokument — auch
 
 ---
 
+## Tag 3.4 — Die Entscheidung vertreten: Vendor Evaluation
+
+→ [Zum vollständigen Dokument](#3.4/3.4_Die-Entscheidung-vertreten.md)
+
+**Sonderstatus:** *„Heute kommt kein neuer Stoff."* Der Tag bringt kein Modell, sondern ein **Verfahren** — die Matrix aus 3.3 wird verteidigt. Deshalb ist hier fast alles ●●●: was man an einem solchen Tag nicht mitnimmt, holt kein späterer Foliensatz nach.
+
+| Gewicht | Punkt | Warum diese Einstufung |
+|---|---|---|
+| ●●● | [Eine Empfehlung ohne benannte Gegenposition ist eine Meinung](#3.4/3.4_Die-Entscheidung-vertreten.md#g1) | Der Satz, der aus einer Präsentation ein Entscheidungsangebot macht. Gegenargumente sind **Pflichtbestandteil, nicht Kür** |
+| ●●● | [Datenproblem oder Argumentationsproblem](#3.4/3.4_Die-Entscheidung-vertreten.md#g3) | Vor jedem Nachbessern zu entscheiden. **Blindes Nachbessern trifft meist das falsche** — und kostet die Zeit, die für das echte Problem fehlt |
+| ●●● | [Das Vier-Abschnitts-Format mit Zeitbudget](#3.4/3.4_Die-Entscheidung-vertreten.md#g4) | Kontext, Gewichtung, Empfehlung samt Gegenargumenten, nächster Schritt. Die Reihenfolge führt die Logik der Entscheidung vor, nicht nur ihr Ergebnis |
+| ●●● | [Die zwei Feedback-Regeln](#3.4/3.4_Die-Entscheidung-vertreten.md#g7) | Mehrfach genannt schlägt einmal genannt. Und: nicht jedes Feedback umsetzen, aber **begründen können, warum nicht** — das macht aus Feedback eine dokumentierte Entscheidung statt einer Fleißaufgabe |
+| ●●● | [Was eine Matrix nicht misst — vier blinde Flecken](#3.4/3.4_Die-Entscheidung-vertreten.md#g10) | Eigentümerwechsel, Exit-Kosten, Einführungskosten, Durchsetzungsrisiko. Keiner davon ist als Score abbildbar, alle vier entscheiden. Gehören in „Offene Fragen" und in den nächsten Schritt |
+| ●● | [Pitch: kein Vortrag, sondern ein Entscheidungsangebot](#3.4/3.4_Die-Entscheidung-vertreten.md#g2) | Dreht das Erfolgskriterium um: ein Pitch, nach dem niemand widerspricht, hat nichts angeboten |
+| ●● | [Bewertungsmatrix: robust **gegenüber anderen Prioritäten**](#3.4/3.4_Die-Entscheidung-vertreten.md#g2) | Der neue Glossarbegriff. Sagt, wofür die Matrix gebaut wird — nicht um die Wahrheit zu finden, sondern um eine Entscheidung verteidigen zu können |
+| ●● | [Die drei Prompts des Tages](#3.4/3.4_Die-Entscheidung-vertreten.md#g5) | Selbsttest vor dem Pitch, Priorisierung des Feedbacks, Prüfung des eigenen Bibliothekseintrags. Der dritte ist der beste und **auf jeden `bibliothek/`-Eintrag übertragbar** |
+| ●● | [Feedback-Bogen, Frage 3](#3.4/3.4_Die-Entscheidung-vertreten.md#g6) | „Was genau, wo, wie?" — nicht „mehr Details". **Das ist kein Feedback, sondern eine Vertagung** |
+| ●● | [Sensitivitätsprüfung — die Lücke des Tages](#3.4/3.4_Die-Entscheidung-vertreten.md#g11) | Wenn die Gewichtung entscheidet, ist Robustheit die nächste Frage. ±10 Prozentpunkte, zwei Minuten, und der Pitch bekommt eine Entscheidungsaussage statt einer Punktzahl |
+| ● | [Die Kernaussage steht in zwei Fassungen](#3.4/3.4_Die-Entscheidung-vertreten.md#g1) | Folie und Tagesseite widersprechen sich: „situationsadäquat" beschreibt, „begründet oder unbegründet" prüft. Nur die zweite Fassung taugt als Maßstab |
+| ● | [Nullvariante und Entscheidungslog](#3.4/3.4_Die-Entscheidung-vertreten.md#g11) | Zwei Ergänzungen, die aus einer Kursübung eine Vorlage machen. Erste Rückfrage jeder Freigabeinstanz: *und wenn wir nichts tun?* |
+
+**Die Fälle, die du parat haben solltest** → [Beispiele im Detail](#3.4/3.4_Die-Entscheidung-vertreten.md#g9)
+
+| Fall | Wofür er steht | Gewicht |
+|---|---|---|
+| [**Broadcom & VMware**](#3.4/3.4_Die-Entscheidung-vertreten.md#g9) | Der Anbieter, den du bewertest, ist nicht der, der dich in drei Jahren bedient. Lock-in ist ein **Eigentümerrisiko**, keine Preisfrage | ●●● |
+| [**Watson am MD Anderson**](#3.4/3.4_Die-Entscheidung-vertreten.md#g9) | 2,4 Mio. USD Ausgangsvertrag, zwölf Verlängerungen, rund 62 Mio. USD, nie eingesetzt. **Die Governance versagte bei den Verlängerungen, nicht bei der Auswahl** | ●●● |
+| [**Lidl „eLWIS"**](#3.4/3.4_Die-Entscheidung-vertreten.md#g9) | Passung schlägt Anpassung: ~201 Mio. EUR geplant, ~500 Mio. verbraucht, 2018 abgebrochen. Die härtere Frage lautet nicht „warum nicht die mit den meisten Funktionen", sondern „warum passen wir sie nicht einfach an" | ●● |
+| [**ChatGPT in Italien**](#3.4/3.4_Die-Entscheidung-vertreten.md#g9) | Sperre 2023, Bußgeld 2024, Aufhebung 2026 wegen Unzuständigkeit. **Konformität vertraglich sichern, nicht aufsichtsrechtlich erhoffen** — und Verfügbarkeit in einer Jurisdiktion ist ein Betriebsrisiko | ●● |
+| [**ERP einer Großstadtverwaltung**](#3.4/3.4_Die-Entscheidung-vertreten.md#g10) | Einführungskosten sind schlechter prognostizierbar als Preise: 19 → rund 100 Mio. GBP. **Beitragender Faktor, nicht Hauptursache** — wer es anders erzählt, wird korrigiert | ● |
+
+Klarna, Air Canada, Deutsche Telekom und Ford/Mulally kommen im Dokument ebenfalls vor, tragen ihre Gewichtung aber schon in 1.4 bzw. 2.2. In 3.4 sind sie jeweils einem **Pitch-Zug** zugeordnet — sie belegen nicht mehr das Thema, sondern beantworten eine konkrete Rückfrage.
+
+---
+
 ## Die Querverbindungen — hier entsteht der eigentliche Wert
 
 Die drei Tage sind kein Nebeneinander. Vier Verbindungen tragen den ganzen Kurs:
@@ -179,6 +216,11 @@ Die drei Tage sind kein Nebeneinander. Vier Verbindungen tragen den ganzen Kurs:
 | **Kraftfeld (2.1) → Verfahren (Ergänzung 2.2)** | 2.1 liefert den Grundgedanken und ein fertiges Beispiel, die Ergänzung das Herstellungsverfahren mit Bewertung, Priorisierung und Maßnahmenzeile. Dasselbe Werkzeug, einmal erklärt und einmal bedienbar |
 | **Kotters blinder Fleck (2.2) → Kraftfeld (Ergänzung 2.2)** | Kotter berücksichtigt finanzielle und politische Kräfte nicht — das ist Toolsheros eigener Einwand, und die Force-Field-Analyse ist die dort empfohlene Abhilfe. Deshalb gehören beide in denselben Nachmittag |
 | **B = f(P, E) (2.1) → „E-Mail geht schneller" (Ergänzung 2.2)** | Eine Überzeugung wird nicht durch Argumente gewonnen, sondern durch eine geänderte Vereinbarung, die ihr den Gegenstand nimmt. Die Feldtheorie als konkrete Maßnahme |
+| **Matrix (3.3) → Pitch (3.4) → Übergabe (3.5)** | Dieselbe Entscheidung in drei Zuständen: gerechnet, verteidigt, übergeben. Jeder Schritt deckt Lücken des vorigen auf — und nur der dritte konfrontiert sie mit einem echten Entscheiderpublikum |
+| **Gegenposition (3.4) → Widerstand ist eine Information (2.4)** | Derselbe Gedanke aus zwei Richtungen. Wer die Gegenargumente selbst nennt, behandelt Widerspruch als Information statt als Angriff — und wer im Pitch keinen erzeugt, hat auch nichts erfahren |
+| **Erfolgskriterium (1.5) → „stärkste Gegenargumente, nicht freundliche Kritik" (3.4)** | Dieselbe Stellschraube, auf eine Rolle angewendet. Ohne das Kriterium liefert ein Modell Zustimmung mit Verbesserungsvorschlägen |
+| **Blinde Flecken der Matrix (3.4) → die vier Übergabefragen (3.5)** | *Was kostet es, wer betreibt es, wie lange dauert es, wer hat das schon gemacht* — genau die vier Größen, die keine Matrixspalte misst. Wer sie in 3.4 unter „Offene Fragen" schreibt, hat 3.5 vorweggenommen |
+| **Rote Flagge „DSGVO-konform ohne AVV" (3.1) → ChatGPT in Italien (3.4)** | Aus der Prüfregel wird ein Beleg: die Durchsetzung dauerte fast drei Jahre und endete an einer Zuständigkeitsfrage. Konformität gehört in den Vertrag, nicht in die Hoffnung |
 
 ---
 
@@ -190,6 +232,7 @@ Die drei Tage sind kein Nebeneinander. Vier Verbindungen tragen den ganzen Kurs:
 | **30 Minuten** | Zusätzlich alle ●●●-Punkte dieses Index |
 | **2 Stunden** | Die drei Dokumente einmal ganz, ●-Punkte überspringen |
 | **Vor dem Mittwoch-Block** | [Ergänzung 2.2, Abschnitt 4](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#4-die-force-field-analyse-als-arbeitswerkzeug) und die [sechs Prüffragen](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md#6-vorbereitung-auf-den-nachmittag). Das ist Pflicht, nicht Kür — es spart im Block rund zwanzig Minuten |
+| **Vor einem Pitch** | [Das Vier-Abschnitts-Format](#3.4/3.4_Die-Entscheidung-vertreten.md#g4), [die vier blinden Flecken](#3.4/3.4_Die-Entscheidung-vertreten.md#g10) und die [Sensitivitätsprüfung](#3.4/3.4_Die-Entscheidung-vertreten.md#g11). Die Gegenargumente **vor** die Empfehlung ziehen — dann fallen sie nicht hinten weg |
 | **Vor einem Steuerkreis** | [Die drei Framing-Fragen](#1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md#9-werkzeugkasten-für-den-transformation-manager), die [Rückwärtsdiagnose](#2.2/2.2_Kotter-8-Schritte-Modell.md#9-werkzeugkasten-für-den-transformation-manager) und die Formulierungstabellen aus 1.4, 2.1 und 2.2 |
 
 ---

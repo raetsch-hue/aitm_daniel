@@ -2,7 +2,8 @@
 
 **Höchstens drei pro Thema — nur was den Aufwand wirklich lohnt**
 Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
-Geprüft am 01.09.2026 · umfasst die Tage 1.4, 1.5, 2.1, 2.2 und die Ergänzung zu 2.2
+Umfasst die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2 und 3.4
+Links der Tage 1.4 bis 2.2 geprüft am 01.09.2026, die des Tages 3.4 am 09.09.2026
 
 ---
 
@@ -14,7 +15,9 @@ Es gibt zu jedem dieser Themen hunderte Artikel und Videos. Die meisten wiederho
 - Es liefert die **Gegenposition**, die deine Argumentation belastbar macht
 - Es ist **direkt anwendbar** — du kannst es morgen benutzen
 
-Jeder Link wurde am 01.09.2026 geprüft. Paywalls und Sprache sind vermerkt.
+Jeder Link wurde zum jeweils oben genannten Datum geprüft. Paywalls und Sprache sind vermerkt.
+
+> **Grenze dieser Liste:** Sie deckt bisher nicht alle Kurstage ab. Für 2.3 bis 3.3 und 3.5 stehen die kommentierten Quellen in den jeweiligen Tagesdokumenten, jeweils im letzten Abschnitt — sie sind hier noch nicht auf drei zusammengezogen und nicht gewichtet.
 
 ---
 
@@ -187,6 +190,46 @@ Human Relations 1(1), 5–41.
 **Was du daraus mitnimmst:** Für die praktische Arbeit nichts, was nicht auch in den ersten beiden Quellen steht. Relevant, wenn du korrekt zitieren musst — und als Beleg dafür, dass die Kraftfeldanalyse **tatsächlich** von Lewin stammt, anders als das 3-Stufen-Modell ([Burnes-Vorbehalt](#2.1/01_Change-Management-Lewin-ADKAR.md#2-kurt-lewin-person-werk-und-was-davon-wirklich-von-ihm-stammt)).
 
 > **Wenn du nur eine Sache liest:** die Force-Field-Seite — und zwar heute, nicht nach dem Block. Sie ist die einzige Quelle dieser ganzen Liste, die morgen Nachmittag Zeit spart.
+
+---
+
+## Tag 3.4 — Vendor Evaluation: die Entscheidung vertreten
+
+> **Andere Rolle als die übrigen Abschnitte.** Der Kurstag bringt keinen neuen Stoff, sondern ein Verfahren. Diese drei Adressen liefern deshalb nicht Hintergrund zum Stoff, sondern die **Gegenprobe zum Verfahren**: eine gegen den Missbrauch der Gewichtung, eine gegen wirkungsloses Feedback, eine gegen die zu kurze Kriterienliste. Der Tagesseite sind fünf Quellen beigegeben; die beiden hier nicht aufgenommenen sind unter Nummer 2 vermerkt.
+
+### 1. Hammond, Keeney & Raiffa (1998): The Hidden Traps in Decision Making ●●●
+
+Harvard Business Review, September–Oktober 1998.
+🔗 https://hbr.org/1998/09/the-hidden-traps-in-decision-making-2 · Englisch, teilweise kostenpflichtig
+
+**Warum diese Quelle:** Sie beschreibt genau den Fehler, den die Kernaussage des Tages ermöglicht. Wenn die Gewichtung über die Empfehlung entscheidet, ist die Gewichtung auch die Stelle, an der sich unbemerkt manipulieren lässt — die Autoren führen das als *Confirming-Evidence-* und *Anchoring-*Falle: man setzt die Gewichte, bis das Ergebnis herauskommt, das man ohnehin wollte, und hält das Ergebnis anschließend für hergeleitet.
+
+**Was du daraus mitnimmst:** Den Grund, warum eine Matrix ohne **Sensitivitätsprüfung** keine Absicherung ist, sondern eine Begründungsmaschine. Das Gegenmittel steht in [3.4 · Was fehlt](#3.4/3.4_Die-Entscheidung-vertreten.md#g11): das wichtigste Kriterium um ±10 Prozentpunkte verschieben und prüfen, ob der Gewinner kippt. Zwei Minuten Arbeit, und aus einer Punktzahl wird eine Entscheidungsaussage.
+
+**Vorbehalt:** Managementklassiker von 1998, keine empirische Arbeit — die einzelnen Fallen sind seither in der Entscheidungsforschung unterschiedlich gut bestätigt. Als Prüfraster brauchbar, als Beleg für einen Effektumfang nicht.
+
+### 2. Hattie & Timperley (2007): The Power of Feedback ●●
+
+Review of Educational Research 77(1), 81–112.
+🔗 https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/hattie-and-timperley-2007.pdf · Englisch, Fachaufsatz, frei
+
+**Warum diese Quelle:** Die Grundlagenarbeit dazu, welches Feedback wirkt und welches nicht. Sie liefert die Begründung für die scheinbar kleinliche Regel im Feedback-Bogen des Tages: „mehr Details" und „besser strukturieren" sind kein Feedback. Feedback wirkt, wenn es die Lücke zwischen Ist und Soll **benennbar** macht — Rückmeldungen zur Person wirken am schwächsten, Rückmeldungen zur Aufgabe und zum Vorgehen am stärksten.
+
+**Was du daraus mitnimmst:** Eine Sprachregelung für jedes Review, das du selbst gibst: die Stelle, das Soll, der nächste Schritt. Und die Einsicht, warum *„bezieht sich auf das Artefakt und nicht auf die Person"* im Glossar steht — das ist keine Höflichkeitsregel, sondern der Wirksamkeitsbefund.
+
+**Zusatz, die vierte Quelle der Tagesseite:** Topping (2005), *Trends in Peer Learning* — 🔗 https://andymatuschak.org/files/2005%20Topping.pdf. Beantwortet die Anschlussfrage, **unter welchen Bedingungen Peer-Feedback scheitert**, und begründet die Lücke in [3.4 · Was fehlt, 11.5](#3.4/3.4_Die-Entscheidung-vertreten.md#g11): Bewertende müssen vorher an einem Beispiel kalibriert werden, sonst streuen die Bögen mehr als sie zeigen.
+
+### 3. TechnologyMatch: The Essential IT Vendor Selection Criteria and Checklist (2024) ●
+
+🔗 https://technologymatch.com/blog/the-essential-it-vendor-selection-criteria-and-checklist · Englisch, frei
+
+**Warum diese Quelle:** Sie ist **direkt anwendbar** — das dritte Auswahlkriterium dieser Liste. Neun Kriterienkategorien mit gewichteter Bewertung, und der Ertrag liegt nicht im Rahmen selbst, sondern im Abgleich: Die fünf oder sechs Kriterien des Kurses lassen sich daran auf Lücken prüfen, und die Lücken sind vorhersagbar dieselben — **Betrieb, Support, Exit**. Genau die Felder, die in [3.4 · Was eine Matrix nicht misst](#3.4/3.4_Die-Entscheidung-vertreten.md#g10) als blinde Flecken stehen.
+
+**Was du daraus mitnimmst:** Eine Checkliste für die halbe Stunde vor der Abgabe einer Vorlage. Nicht um die Matrix zu verlängern — sondern um zu entscheiden, was bewusst **nicht** bewertet wurde und in „Offene Fragen" gehört.
+
+**Vorbehalt:** Anbieterblog, kein neutraler Rahmen und keine Primärquelle. Als Prüfliste brauchbar, in einer Arbeit nicht zitierfähig. Die fünfte Quelle der Tagesseite — der Research-In-Action-Report von 2021 — ist hier nicht aufgenommen: nur auf Anfrage erhältlich, fünf Jahre alt, und die Zahlen daraus stehen bereits in Tag 3.1.
+
+> **Wenn du nur eine Sache liest:** Hammond, Keeney & Raiffa. Es ist der einzige Text, der die zentrale Aussage des Tages nicht bestätigt, sondern angreift — und deshalb der einzige, der die eigene Matrix belastbarer macht.
 
 ---
 

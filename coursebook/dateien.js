@@ -107,7 +107,7 @@ var DOKUMENTE = [
      Eigene Arbeitsergebnisse aus ../artefakte/.
      Der folgende Block wird von coursetools/inhalt-bauen.py erzeugt.  */
 
-  /* >>> ARTEFAKTE-ANFANG (12 Dokumente, 2026-09-08)
+  /* >>> ARTEFAKTE-ANFANG (12 Dokumente, 2026-09-09)
       Automatisch erzeugt von coursetools/inhalt-bauen.py.
       Nicht von Hand aendern - Aenderungen gehen beim naechsten Lauf
       verloren. Anzeigetitel stellt man im Skript unter TITEL ein.  */

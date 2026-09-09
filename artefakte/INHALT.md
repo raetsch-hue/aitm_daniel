@@ -1,6 +1,6 @@
 ---
 artefakt: Inhaltsverzeichnis
-stand: 2026-09-08
+stand: 2026-09-09
 status: automatisch erzeugt von coursetools/inhalt-bauen.py
 zweck: alle Themen der Artefakte an einer Stelle, mit Sprung zur Überschrift
 ---
@@ -220,4 +220,4 @@ Alle Dokumente unterhalb von `artefakte/`, aufgeschlüsselt bis zur dritten Übe
 
 ---
 
-*Erzeugt am 2026-09-08 aus 11 Dokumenten. Neu erzeugen: `python coursetools/inhalt-bauen.py`*
+*Erzeugt am 2026-09-09 aus 11 Dokumenten. Neu erzeugen: `python coursetools/inhalt-bauen.py`*
