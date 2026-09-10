@@ -12,6 +12,13 @@ herkunft: externes Review. Die Gegenprüfung in Abschnitt 3 ist eigene Einschät
 
 # Review des Pitch, Fassung 1 — was das „Sofort" verhindert
 
+> **Begriffshinweis (10.09.2026, nach dem Review).** Dieses Review benutzt durchgehend das Wort
+> **„Gate"**, weil der Vorschlag es so nannte. In der geltenden Fassung, in der Präsentation und in
+> den Sprechunterlagen heißt es **„Bedingung"** — „Gate" klingt im deutschen Beschlusskontext
+> fremd, und „Hinderungsgrund" wäre falsch, weil es die Aussage umdreht: eine Bedingung muss
+> erfüllt werden, damit es losgeht, ein Hinderungsgrund spricht dagegen. Ebenso ersetzt:
+> **Seats → Zugänge · EU-Plattform → Langdock · bedingtes Go → bedingte Freigabe.**
+>
 > **Was diese Datei ist.** Das Review, das den Umbau von Fassung 1 auf Fassung 2 ausgelöst hat,
 > plus die Prüfung, an welchen Stellen ich ihm **nicht** gefolgt bin und warum. Beide Teile gehören
 > zusammen: ein Review ungeprüft zu übernehmen ist derselbe Fehler wie es zu ignorieren.

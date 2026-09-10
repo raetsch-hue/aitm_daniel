@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>C-Level Pitch · Plattformempfehlung und Projektfreigabe</title>
+<style>
+  :root{
+    --bg:#071512;
+    --bg2:#0e2c24;
+    --fg:#f5f2e8;
+    --muted:#c8d5cd;
+    --accent:#b7f4cf;
+    --accent2:#ffd173;
+    --danger:#ff9580;
+    --line:rgba(245,242,232,.18);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;overflow:hidden}
+  .deck{width:100vw;height:100vh;position:relative;background:
+    radial-gradient(circle at 8% 10%,rgba(183,244,207,.18),transparent 30%),
+    radial-gradient(circle at 78% 86%,rgba(255,209,115,.11),transparent 28%),
+    linear-gradient(135deg,var(--bg),var(--bg2));}
+  .slide{position:absolute;inset:0;padding:6.2vh 7.2vw;display:none;opacity:0;transition:opacity .25s ease;}
+  .slide.active{display:flex;opacity:1;flex-direction:column;justify-content:center;}
+  .kicker{font-size:clamp(16px,1.55vw,22px);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:2.2vh}
+  h1{font-size:clamp(54px,8vw,112px);line-height:.92;margin:0;letter-spacing:-.07em;max-width:1060px}
+  h2{font-size:clamp(43px,5.8vw,86px);line-height:.96;margin:0 0 3vh;letter-spacing:-.06em;max-width:1120px}
+  .big{font-size:clamp(58px,9vw,132px);line-height:.84;letter-spacing:-.08em;font-weight:900;margin:0}
+  .mid{font-size:clamp(26px,3.2vw,44px);line-height:1.1;letter-spacing:-.03em;font-weight:750;margin:0;max-width:1030px}
+  .small{font-size:clamp(18px,2vw,28px);line-height:1.24;color:var(--muted);max-width:1000px;margin-top:2.2vh}
+  .accent{color:var(--accent)} .gold{color:var(--accent2)} .danger{color:var(--danger)}
+  .row{display:flex;gap:4.5vw;align-items:stretch;flex-wrap:wrap;margin-top:3vh}
+  .fact{border-top:1px solid var(--line);padding-top:2vh;min-width:220px;flex:1}
+  .fact .num{font-size:clamp(42px,6vw,92px);font-weight:900;letter-spacing:-.07em;line-height:.88;color:var(--accent)}
+  .fact .label{font-size:clamp(17px,1.8vw,25px);color:var(--muted);margin-top:1vh;line-height:1.18}
+  .list{display:grid;gap:2.2vh;margin-top:2vh;max-width:1040px}
+  .item{font-size:clamp(24px,3vw,42px);font-weight:800;letter-spacing:-.04em;line-height:1.08;border-left:6px solid var(--accent);padding-left:1.8vw}
+  .item span{color:var(--muted);font-weight:650}
+  .thin{font-weight:500;color:var(--muted)}
+  .decision{font-size:clamp(30px,4.6vw,68px);font-weight:900;letter-spacing:-.06em;line-height:1.02;max-width:1080px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:4.5vw;align-items:center}
+  .arrow{font-size:clamp(38px,6vw,88px);font-weight:900;color:var(--accent2);letter-spacing:-.08em}
+  .footer{position:absolute;left:7.2vw;right:7.2vw;bottom:4vh;display:flex;justify-content:space-between;align-items:center;color:rgba(245,242,232,.52);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+  .progress{height:3px;background:rgba(245,242,232,.16);position:absolute;left:0;right:0;bottom:0}
+  .bar{height:100%;background:var(--accent);width:0%}
+  .notePanel{position:fixed;right:18px;bottom:18px;width:min(520px,42vw);max-height:46vh;overflow:auto;background:rgba(5,15,13,.92);border:1px solid var(--line);border-radius:18px;padding:18px 20px;color:#f5f2e8;display:none;box-shadow:0 20px 60px rgba(0,0,0,.45);font-size:15px;line-height:1.4;z-index:20;white-space:pre-wrap}
+  .notePanel.show{display:block}
+  .notePanel b{color:var(--accent)}
+  .hint{position:fixed;top:18px;right:22px;color:rgba(245,242,232,.46);font-size:13px;letter-spacing:.08em;text-transform:uppercase;z-index:10}
+  .stamp{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.65rem 1rem;color:var(--muted);font-size:clamp(15px,1.3vw,18px);font-weight:700;margin-top:3.2vh}
+  @media (max-width:800px){.slide{padding:7vh 7vw}.split{grid-template-columns:1fr}.notePanel{width:calc(100vw - 36px);max-height:50vh}.row{gap:2vh}.fact{min-width:45%}}
+  @media print{body{overflow:visible;background:white}.deck{height:auto;background:white;color:#111}.slide{position:relative;display:flex!important;opacity:1!important;height:100vh;page-break-after:always;background:linear-gradient(135deg,#071512,#0e2c24);color:#f5f2e8}.hint,.notePanel,.progress{display:none!important}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+  <div class="hint">←/→ · N Notizen · F Vollbild</div>
+
+  <section class="slide active" data-title="Titel" data-notes="Start ruhig und knapp. Nicht erklären, dass es um eine KI-Spielerei geht. Framing setzen: Entscheidung, Risiko, begrenzter Betrag.">
+    <div class="kicker">C-Level Pitch · 7 Minuten</div>
+    <h1>Plattformfreigabe statt KI-Experiment</h1>
+    <p class="small">Bedingtes Go für eine DSGVO-konforme EU-Plattform</p>
+    <div class="stamp">W03 A · Glied 6 von 6 · 10.09.2026</div>
+  </section>
+
+  <section class="slide" data-title="Beschluss" data-notes="BLUF. Der Beschluss steht am Anfang. Danach erst begründen. Wichtig: Geschäftsführung ist freigabefähig, weil der Betrag unter 25.000 Euro liegt.">
+    <div class="kicker">Was ich heute brauche</div>
+    <p class="big">9.000 €</p>
+    <p class="mid">für 20 Seats · 3 Standorte · unter 3 Gates</p>
+    <p class="small">Heute entscheiden — nicht nach der nächsten Sitzung.</p>
+  </section>
+
+  <section class="slide" data-title="Risiko" data-notes="Das Kernframing: Wir kaufen keine KI-Funktion. Wir beenden eine Verarbeitung ohne Rechtsgrundlage. Kein Vorwurf an die Mitarbeitenden, sondern fehlendes zulässiges Werkzeug.">
+    <div class="kicker">Der Grund</div>
+    <h2>Ein laufendes Haftungsrisiko</h2>
+    <div class="row">
+      <div class="fact"><div class="num">9</div><div class="label">private KI-Konten</div></div>
+      <div class="fact"><div class="num">1 Jahr</div><div class="label">Nutzung im Alltag</div></div>
+      <div class="fact"><div class="num">0</div><div class="label">AV-Vertrag / Rechtsgrundlage</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Lösung" data-notes="Hier nicht zu technisch werden. Entscheidend ist: Es ist klein, schnell, migrationsfest. Keine Schnittstelle und kein Entwicklungsauftrag.">
+    <div class="kicker">Wie es geht</div>
+    <h2>Browserbasiert. Migrationsfest. Kein Entwicklungsauftrag.</h2>
+    <div class="row">
+      <div class="fact"><div class="num">≤10 h</div><div class="label">IT-Aufwand</div></div>
+      <div class="fact"><div class="num">69</div><div class="label">Bildschirmarbeitsplätze</div></div>
+      <div class="fact"><div class="num">185k</div><div class="label">freier Investitionsspielraum</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Start und Stop" data-notes="Start mit den neun, die schon heute Bedarf haben. Das Abbruchkriterium vor dem Beschluss nennen, damit es nicht wie nachträgliche Absicherung wirkt.">
+    <div class="kicker">Wann</div>
+    <h2>Start nächste Woche — mit hartem Stop</h2>
+    <div class="decision"><span class="gold">90 Tage</span> Probe. Danach nur weiter, wenn das Risiko wirklich weg ist.</div>
+    <p class="small">Abbruch, wenn nicht 0 Lebensläufe in Diensten ohne Vertrag liegen oder weniger als 2 von 3 Standorten wöchentlich arbeiten.</p>
+  </section>
+
+  <section class="slide" data-title="Alternativen" data-notes="Keine Punktetabelle zeigen. C-Level braucht nicht jeden Score, sondern die Ausschlusslogik. Die Nullvariante bewusst ernst nehmen, aber für heute ablehnen.">
+    <div class="kicker">Warum nicht die Alternativen?</div>
+    <div class="list">
+      <div class="item">Vertex AI <span>ist Entwicklerplattform</span></div>
+      <div class="item">Copilot <span>erreicht die 41.000 Profile nicht</span></div>
+      <div class="item">Kernsystem-KI <span>kommt zu spät</span></div>
+      <div class="item">Nichts tun <span>macht Nutzung unsichtbar</span></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Robustheit" data-notes="Die Zahlen knapp nennen. Wichtig: Entscheidung ist nicht nur Score, sondern Sensitivität. Gleichzeitig die Kippschwelle offen nennen, weil das Vertrauen erzeugt.">
+    <div class="kicker">Warum die Empfehlung trägt</div>
+    <div class="split">
+      <div>
+        <p class="big accent">3,49</p>
+        <p class="small">EU-Plattform</p>
+      </div>
+      <div>
+        <p class="big thin">3,09</p>
+        <p class="small">Copilot</p>
+      </div>
+    </div>
+    <p class="mid" style="margin-top:4vh">16 von 16 Varianten bleiben stabil.</p>
+    <p class="small">Kippt nur, wenn Adoption + Einführung von 17 % auf 31 % steigen.</p>
+  </section>
+
+  <section class="slide" data-title="Gegenargument" data-notes="Das stärkste Gegenargument selbst aussprechen. Nicht defensiv. Der Satz 'Wer heute sagt nicht noch ein Werkzeug, hat recht' ist wichtig.">
+    <div class="kicker">Das stärkste Gegenargument</div>
+    <h2>2023 war teuer — und wurde kaum genutzt</h2>
+    <div class="row">
+      <div class="fact"><div class="num danger">95k</div><div class="label">Bewerbermanagement-Modul</div></div>
+      <div class="fact"><div class="num danger">34 %</div><div class="label">Nutzung</div></div>
+      <div class="fact"><div class="num danger">2026</div><div class="label">erstmals gemessen</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Anders" data-notes="Zwei Sätze, an denen du dich messen lässt: Erstens Nutzer existieren schon. Zweitens Abbruchkriterium steht vorher fest.">
+    <div class="kicker">Diesmal anders</div>
+    <div class="list">
+      <div class="item">Bedarf existiert bereits <span>— wir legalisieren ihn</span></div>
+      <div class="item">Abbruchkriterium steht vorher <span>— nicht danach</span></div>
+      <div class="item">Keine zweite Baustelle <span>— 10 Stunden, keine Schnittstelle</span></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Gates" data-notes="Die offenen Punkte nicht als Unsicherheit verkaufen, sondern als Bedingungen. Vor dem ersten Euro müssen alle drei Gates geschlossen sein.">
+    <div class="kicker">Vor dem ersten Euro</div>
+    <h2>3 Gates</h2>
+    <div class="list">
+      <div class="item">Datenschutz <span>schriftliche Freigabe + AVV + Löschung</span></div>
+      <div class="item">Marktprüfung <span>2 Referenzen unter 150 Beschäftigten</span></div>
+      <div class="item">Einführung <span>über die 9 Nutzer, nicht Beratung</span></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Migration" data-notes="Zweitbeschluss: Nicht überfordern, aber terminkritisch machen. Es geht darum, die Migrationsausschreibung diese Woche zu prüfen, solange Anforderungen noch aufgenommen werden können.">
+    <div class="kicker">Zweitbeschluss</div>
+    <h2>Migration jetzt absichern</h2>
+    <p class="mid">Auftrag an die IT-Leitung: diese Woche klären und aufnehmen.</p>
+    <p class="small">Offene Schnittstelle · Datenfeldarchitektur im Standard · Zeitnachweisformate der Kundenbetriebe</p>
+  </section>
+
+  <section class="slide" data-title="Reihenfolge" data-notes="Nur kurz, falls Zeit ist. Die Löschung der 18.000 Profile vor Strukturierung zeigt, dass Governance vor KI steht. Data Steward als fehlende Rolle erwähnen, nicht beschließen lassen.">
+    <div class="kicker">Reihenfolge</div>
+    <h2>Erst bereinigen. Dann strukturieren. Dann automatisieren.</h2>
+    <div class="row">
+      <div class="fact"><div class="num">18k</div><div class="label">Profile über Speicherfrist löschen</div></div>
+      <div class="fact"><div class="num">24k</div><div class="label">vermeidbarer Strukturierungsaufwand</div></div>
+      <div class="fact"><div class="num">1</div><div class="label">Data Steward fehlt</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Beschlussantrag" data-notes="Jetzt nur noch drei Sätze. Nicht weiter rechtfertigen. Ruhig und langsam sprechen.">
+    <div class="kicker">Beschlussantrag</div>
+    <div class="list">
+      <div class="item">Bedingtes Go <span>20 Seats · ≤ 9.000 €/Jahr</span></div>
+      <div class="item">90-Tage-Abbruchkriterium <span>protokolliert</span></div>
+      <div class="item">IT-Auftrag <span>Migration diese Woche prüfen</span></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Zustimmung" data-notes="Schluss: Datenschutz ja bedeutet nächste Woche rechtskonform. Datenschutz nein bedeutet null Euro ausgegeben und klare Ursache. Dann nicht weich auslaufen lassen: Ich habe eine Empfehlung, keine Sicherheit. Widersprechen Sie mir — oder stimmen Sie dem bedingten Go zu.">
+    <div class="kicker">Entscheidung jetzt möglich</div>
+    <div class="split">
+      <div>
+        <p class="arrow">DSB stimmt zu</p>
+        <p class="small">nächste Woche rechtskonform</p>
+      </div>
+      <div>
+        <p class="arrow">DSB stimmt nicht zu</p>
+        <p class="small">0 € ausgegeben · Ursache klar</p>
+      </div>
+    </div>
+    <p class="decision" style="margin-top:5vh">Stimmen Sie dem bedingten Go zu?</p>
+  </section>
+
+  <div class="footer"><span id="titleNow">Titel</span><span id="countNow">1 / 14</span></div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+</div>
+<div class="notePanel" id="notes"></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+let i=0;
+const notes=document.getElementById('notes');
+function show(n){
+  i=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+  document.getElementById('titleNow').textContent=slides[i].dataset.title||'';
+  document.getElementById('countNow').textContent=(i+1)+' / '+slides.length;
+  document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';
+  notes.textContent=slides[i].dataset.notes||'';
+  location.hash='slide-'+(i+1);
+}
+function toggleNotes(){notes.classList.toggle('show');}
+document.addEventListener('keydown',e=>{
+  if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1)}
+  if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}
+  if(e.key.toLowerCase()==='n') toggleNotes();
+  if(e.key.toLowerCase()==='f') document.documentElement.requestFullscreen?.();
+  if(e.key==='Home') show(0);
+  if(e.key==='End') show(slides.length-1);
+});
+const m=location.hash.match(/slide-(\d+)/); if(m) i=parseInt(m[1],10)-1; show(i);
+</script>
+</body>
+</html>

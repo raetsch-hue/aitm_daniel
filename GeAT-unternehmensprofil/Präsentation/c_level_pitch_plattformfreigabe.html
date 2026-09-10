@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>C-Level Pitch · Plattformfreigabe Langdock · Fassung 2</title>
+<style>
+  :root{
+    --bg:#071512;
+    --bg2:#0e2c24;
+    --fg:#f5f2e8;
+    --muted:#c8d5cd;
+    --accent:#b7f4cf;
+    --accent2:#ffd173;
+    --danger:#ff9580;
+    --line:rgba(245,242,232,.18);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;overflow:hidden}
+  .deck{width:100vw;height:100vh;position:relative;background:
+    radial-gradient(circle at 8% 10%,rgba(183,244,207,.18),transparent 30%),
+    radial-gradient(circle at 78% 86%,rgba(255,209,115,.11),transparent 28%),
+    linear-gradient(135deg,var(--bg),var(--bg2));}
+  .slide{position:absolute;inset:0;padding:6.2vh 7.2vw;display:none;opacity:0;transition:opacity .25s ease;}
+  .slide.active{display:flex;opacity:1;flex-direction:column;justify-content:center;}
+  .kicker{font-size:clamp(16px,1.55vw,22px);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:2.2vh}
+  h1{font-size:clamp(54px,8vw,112px);line-height:.92;margin:0;letter-spacing:-.07em;max-width:1060px}
+  h2{font-size:clamp(43px,5.8vw,86px);line-height:.96;margin:0 0 3vh;letter-spacing:-.06em;max-width:1120px}
+  .big{font-size:clamp(58px,9vw,132px);line-height:.84;letter-spacing:-.08em;font-weight:900;margin:0}
+  .mid{font-size:clamp(26px,3.2vw,44px);line-height:1.1;letter-spacing:-.03em;font-weight:750;margin:0;max-width:1030px}
+  .small{font-size:clamp(18px,2vw,28px);line-height:1.24;color:var(--muted);max-width:1000px;margin-top:2.2vh}
+  .accent{color:var(--accent)} .gold{color:var(--accent2)} .danger{color:var(--danger)}
+  .row{display:flex;gap:4.5vw;align-items:stretch;flex-wrap:wrap;margin-top:3vh}
+  .fact{border-top:1px solid var(--line);padding-top:2vh;min-width:220px;flex:1}
+  .fact .num{font-size:clamp(42px,6vw,92px);font-weight:900;letter-spacing:-.07em;line-height:.88;color:var(--accent)}
+  .fact .label{font-size:clamp(17px,1.8vw,25px);color:var(--muted);margin-top:1vh;line-height:1.18}
+  .list{display:grid;gap:2.2vh;margin-top:2vh;max-width:1040px}
+  .item{font-size:clamp(24px,3vw,42px);font-weight:800;letter-spacing:-.04em;line-height:1.08;border-left:6px solid var(--accent);padding-left:1.8vw}
+  .item span{color:var(--muted);font-weight:650}
+  .thin{font-weight:500;color:var(--muted)}
+  .decision{font-size:clamp(30px,4.6vw,68px);font-weight:900;letter-spacing:-.06em;line-height:1.02;max-width:1080px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:4.5vw;align-items:center}
+  .arrow{font-size:clamp(38px,6vw,88px);font-weight:900;color:var(--accent2);letter-spacing:-.08em}
+  .footer{position:absolute;left:7.2vw;right:7.2vw;bottom:4vh;display:flex;justify-content:space-between;align-items:center;color:rgba(245,242,232,.52);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+  .progress{height:3px;background:rgba(245,242,232,.16);position:absolute;left:0;right:0;bottom:0}
+  .bar{height:100%;background:var(--accent);width:0%}
+  .notePanel{position:fixed;right:18px;bottom:18px;width:min(520px,42vw);max-height:46vh;overflow:auto;background:rgba(5,15,13,.92);border:1px solid var(--line);border-radius:18px;padding:18px 20px;color:#f5f2e8;display:none;box-shadow:0 20px 60px rgba(0,0,0,.45);font-size:15px;line-height:1.4;z-index:20;white-space:pre-wrap}
+  .notePanel.show{display:block}
+  .notePanel b{color:var(--accent)}
+  .hint{position:fixed;top:18px;right:22px;color:rgba(245,242,232,.46);font-size:13px;letter-spacing:.08em;text-transform:uppercase;z-index:10}
+  .stamp{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.65rem 1rem;color:var(--muted);font-size:clamp(15px,1.3vw,18px);font-weight:700;margin-top:3.2vh}
+  @media (max-width:800px){.slide{padding:7vh 7vw}.split{grid-template-columns:1fr}.notePanel{width:calc(100vw - 36px);max-height:50vh}.row{gap:2vh}.fact{min-width:45%}}
+  @media print{body{overflow:visible;background:white}.deck{height:auto;background:white;color:#111}.slide{position:relative;display:flex!important;opacity:1!important;height:100vh;page-break-after:always;background:linear-gradient(135deg,#071512,#0e2c24);color:#f5f2e8}.hint,.notePanel,.progress{display:none!important}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+  <div class="hint">←/→ · N Notizen · F Vollbild</div>
+
+  <section class="slide active" data-title="Titel" data-notes="Ruhig und knapp. Kein Wort über KI-Möglichkeiten. Framing sofort setzen: Entscheidung, Risiko, begrenzter Betrag. Nicht rechtfertigen, dass man hier steht.">
+    <div class="kicker">C-Level Pitch · 7 Minuten</div>
+    <h1>Plattformfreigabe statt KI-Experiment</h1>
+    <p class="small">Bedingte Freigabe für Langdock — 20 Zugänge, 9.000 € im Jahr</p>
+    <div class="stamp">W03 A · Glied 6 von 6 · Fassung 2 · 10.09.2026</div>
+  </section>
+
+  <section class="slide" data-title="Beschluss" data-notes="BLUF: der Beschluss steht am Anfang, die Begründung danach. Zwei Dinge auseinanderhalten: (1) Ich brauche eine Freigabe, weil die Rolle kein eigenes Budget hat — jede Ausgabe ist eine Vorlage. (2) Die 25.000 sind nicht die Grenze, ab der man fragen muss, sondern die Grenze zwischen Geschäftsführung (dienstags) und Gesellschafterversammlung (quartalsweise). Der Zuschnitt auf 9.000 ist deshalb eine Entscheidung, nicht ein Zufall: bei 26.000 verliert das Vorhaben ein Quartal, und der Verstoß läuft weiter. Die drei Bedingungen hier nur benennen, erklärt auf Folie 10.">
+    <div class="kicker">Was ich heute brauche</div>
+    <p class="big">9.000 €</p>
+    <p class="mid">20 Zugänge · 3 Standorte · unter drei Bedingungen</p>
+    <p class="small">Ich habe kein eigenes Budget — jede Ausgabe geht über Ihren Tisch. <span class="accent">Bewusst unter 25.000 € zugeschnitten:</span> darüber entscheidet die Gesellschafterversammlung, und die tagt quartalsweise.</p>
+  </section>
+
+  <section class="slide" data-title="Risiko" data-notes="Kernframing: Wir kaufen keine KI-Funktion, wir beenden eine Verarbeitung ohne Rechtsgrundlage. Kein Vorwurf an die neun — es fehlte ein zulässiges Werkzeug. Diese Folie ist der Grund, warum der Betrag klein sein darf.">
+    <div class="kicker">Der Grund</div>
+    <h2>Ein laufendes Haftungsrisiko</h2>
+    <div class="row">
+      <div class="fact"><div class="num danger">9</div><div class="label">private KI-Konten mit Bewerberlebensläufen</div></div>
+      <div class="fact"><div class="num danger">1 Jahr</div><div class="label">Nutzung im Alltag</div></div>
+      <div class="fact"><div class="num danger">0</div><div class="label">Auftragsverarbeitungsverträge, keine Rechtsgrundlage</div></div>
+    </div>
+    <p class="small"><span class="accent">Der Beschluss ist ein Tausch:</span> 9 private Konten raus, 20 dienstliche rein.</p>
+  </section>
+
+  <section class="slide" data-title="Lösung" data-notes="Nicht technisch werden. Die Folie beweist eine Sache: das Vorhaben ist klein. Zehn Stunden, weil die eineinhalb IT-Stellen bis Q1 2027 in der Migration gebunden sind. Migrationsfest heißt: hängt nicht an der Branchensoftware, überlebt den Systemwechsel — als einzige geprüfte Option. Die 185.000 sind eine KORREKTUR: im Haus laufen 280.000 um. Nicht als verfügbares Budget anbieten.">
+    <div class="kicker">Wie es geht</div>
+    <h2>Browserbasiert. Migrationsfest. Kein Entwicklungsauftrag.</h2>
+    <div class="row">
+      <div class="fact"><div class="num">≤10 h</div><div class="label">IT-Aufwand insgesamt</div></div>
+      <div class="fact"><div class="num">0</div><div class="label">Schnittstellen, kein Entwicklungsauftrag</div></div>
+      <div class="fact"><div class="num">9k</div><div class="label">von 185.000 € Spielraum — korrigiert, nicht 280.000</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Start und Stop" data-notes="Start mit den neun, die den Bedarf schon haben. Das Abbruchkriterium VOR dem Beschluss nennen, sonst wirkt es wie nachträgliche Absicherung. Beide Bedingungen müssen erfüllt sein, nicht eine von beiden.">
+    <div class="kicker">Wann</div>
+    <h2>Start nächste Woche — mit hartem Stop</h2>
+    <div class="decision"><span class="gold">90 Tage</span> Probe. Weiter nur, wenn <span class="accent">beides</span> gilt:</div>
+    <div class="list" style="margin-top:2.6vh">
+      <div class="item">Kein Lebenslauf <span>liegt mehr in einem privaten Konto</span></div>
+      <div class="item">Mindestens 2 von 3 Standorten <span>arbeiten wöchentlich damit</span></div>
+    </div>
+    <p class="small">Sonst Kündigung zum Quartalsende, mit protokolliertem Grund.</p>
+  </section>
+
+  <section class="slide" data-title="Alternativen" data-notes="Keine Punktetabelle. Das Gremium braucht die Ausschlusslogik, nicht die Scores. Die Nullvariante ernst nehmen: sie ist für die nächste Stufe die zweitbeste bewertete Option. Für heute scheitert sie an einem Satz — ein Verbot ohne Ersatz beendet nicht die Nutzung, nur die Sichtbarkeit.">
+    <div class="kicker">Warum nicht die Alternativen?</div>
+    <div class="list">
+      <div class="item">Vertex AI <span>ist eine Entwicklerplattform — wir haben kein Data-Science-Team</span></div>
+      <div class="item">Copilot <span>erreicht unsere 41.000 Bewerberprofile nicht, sie liegen nicht in Microsoft 365</span></div>
+      <div class="item">Kernsystem-KI <span>kommt erst nach der Migration — der Verstoß läuft heute</span></div>
+      <div class="item">Nichts tun <span>beendet nicht die Nutzung, nur die Sichtbarkeit</span></div>
+    </div>
+    <p class="decision" style="margin-top:3.4vh">→ Bleibt <span class="accent">Langdock</span>: 20 Zugänge, 9.000 €.</p>
+  </section>
+
+  <section class="slide" data-title="Robustheit" data-notes="Skala nennen: 1 bis 5. Die 16 Varianten sind eine Robustheitsprobe — jedes Gewicht um zehn Prozentpunkte nach oben und unten verschoben, jedes Mal neu gerechnet. Die Empfehlung hängt also nicht an meiner Gewichtung. Die Kippschwelle offen aussprechen, sie erzeugt das Vertrauen: es gibt genau eine Annahme, bei der ich falsch liege.">
+    <div class="kicker">Warum die Empfehlung trägt</div>
+    <div class="split">
+      <div>
+        <p class="big accent">3,49</p>
+        <p class="small">Langdock · von 5</p>
+      </div>
+      <div>
+        <p class="big thin">3,09</p>
+        <p class="small">Copilot · von 5</p>
+      </div>
+    </div>
+    <p class="mid" style="margin-top:3.4vh">Jedes Gewicht ±10 Punkte verschoben: <span class="accent">16 von 16 Varianten halten.</span></p>
+    <p class="small">Eine Annahme kippt sie: wenn Einführungsaufwand statt 17 % <span class="gold">31 %</span> wiegt, wäre Copilot richtig — und ich falsch.</p>
+  </section>
+
+  <section class="slide" data-title="Gegenargument" data-notes="Das stärkste Gegenargument selbst aussprechen, nicht defensiv. Der Satz zählt: Wer heute sagt 'nicht noch ein Werkzeug', hat recht — mit der Erfahrung. Erst danach die zwei Unterschiede.">
+    <div class="kicker">Das stärkste Gegenargument — unser eigenes</div>
+    <h2>2023 war teuer und wurde kaum genutzt</h2>
+    <div class="row">
+      <div class="fact"><div class="num danger">95k</div><div class="label">für ein Bewerbermanagement-Modul</div></div>
+      <div class="fact"><div class="num danger">34 %</div><div class="label">nutzen es</div></div>
+      <div class="fact"><div class="num danger">2026</div><div class="label">erstmals gemessen — wegen eines ISO-Audits</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Anders" data-notes="Zwei Sätze, an denen man sich messen lässt. Der erste ist der wichtigere: wir wecken keinen Bedarf, wir legalisieren einen. Das ist die einzige Adoptionsgeschichte, die nach 2023 noch Kredit hat.">
+    <div class="kicker">Diesmal anders</div>
+    <div class="list">
+      <div class="item">Die Nutzer sind schon da <span>— wir wecken keinen Bedarf, wir legalisieren einen</span></div>
+      <div class="item">Das Abbruchkriterium stand vorher <span>— Sie haben es vor dem Beschluss gehört</span></div>
+      <div class="item">Keine zweite Baustelle <span>— 10 Stunden IT, keine Schnittstelle, migrationsfest</span></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Bedingungen" data-notes="Die offenen Punkte nicht als Unsicherheit vortragen, sondern als Bedingungen. Alle drei müssen erfüllt sein, bevor Geld fließt. Bedingung 2 heißt: es liegt noch kein Angebot vor, alle Bewertungen stammen aus Herstellerunterlagen. Bedingung 3 sichert eine echte Lücke ab — der Einführungsaufwand ist nicht beziffert, und genau der könnte die Empfehlung umdrehen. Das offen sagen.">
+    <div class="kicker">Vor dem ersten Euro</div>
+    <h2>Drei Bedingungen</h2>
+    <div class="list">
+      <div class="item">Datenschutz <span>schriftliche Freigabe des Datenschutzbeauftragten · AV-Vertrag vorgelegt · Löschung nachweisbar</span></div>
+      <div class="item">Angebot und Referenzen <span>bisher nur Herstellerunterlagen. Zwei Referenzkunden unter 150 Beschäftigten — sonst keine Beauftragung</span></div>
+      <div class="item">Einführungsaufwand <span>nicht beziffert. Die 9 schulen ihre Teams, keine externe Beratung. Über 10 h IT wird berichtet, nicht verrechnet</span></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Zweitbeschluss" data-notes="Zweite, eigenständige Entscheidung in derselben Sitzung — es geht nicht um Geld. Ich weiß nicht, wie weit die Ausschreibung ist, und kann es nicht selbst klären. Die IT-Leitung kann es. Deshalb bitte ich um einen Auftrag. Terminkritisch machen, aber nicht dramatisieren.">
+    <div class="kicker">Zweitbeschluss — kein Geld, ein Auftrag</div>
+    <h2>Migration jetzt absichern</h2>
+    <p class="mid">Ist die Ausschreibung <span class="accent">noch offen</span>, kosten drei Anforderungen nichts.<br>Ist sie <span class="danger">zu</span>, kosten sie später einen Änderungsauftrag ohne Wettbewerb.</p>
+    <p class="small">Offene Schnittstelle · Datenfeldarchitektur im Standard · Zeitnachweisformate der Kundenbetriebe</p>
+  </section>
+
+  <section class="slide" data-title="Reihenfolge" data-notes="Nur wenn Zeit ist. Kernaussage: Governance vor KI. Die 18.000 Profile liegen über der zugesagten Speicherdauer und müssen gelöscht werden. Wer erst strukturiert und dann löscht, zahlt Aufbereitung für Daten, die verschwinden — rund 24.000 Euro. Der zweite Grund ist der wichtigere: man unterlegt keine unzulässige Verarbeitung mit Budget. Der fehlende Data Steward nur mündlich, nicht zur Entscheidung.">
+    <div class="kicker">Reihenfolge</div>
+    <h2>Erst bereinigen. Dann strukturieren. Dann automatisieren.</h2>
+    <div class="row">
+      <div class="fact"><div class="num">18k</div><div class="label">Profile über der Speicherfrist — zuerst löschen</div></div>
+      <div class="fact"><div class="num">24k</div><div class="label">€ gespart: keine Aufbereitung für Daten, die gelöscht werden müssen</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Beschlussantrag" data-notes="Jetzt nur noch drei Punkte. Nicht weiter rechtfertigen. Ruhig und langsam sprechen, dann eine Pause lassen.">
+    <div class="kicker">Beschlussantrag</div>
+    <div class="list">
+      <div class="item">Bedingte Freigabe <span>20 Zugänge · ≤ 9.000 € im Jahr · unter den drei Bedingungen</span></div>
+      <div class="item">Abbruchkriterium nach 90 Tagen <span>so beschlossen und protokolliert</span></div>
+      <div class="item">Auftrag an die IT-Leitung <span>Stand der Migrationsausschreibung bis Freitag klären, die drei Anforderungen aufnehmen</span></div>
+    </div>
+  </section>
+
+  <section class="slide" data-title="Zustimmung" data-notes="Der Schluss zeigt: beide Ausgänge sind tragbar, es gibt kein Szenario, in dem die heutige Zustimmung schadet. Genau das ist der Grund, heute zu entscheiden statt zu vertagen. Nicht weich auslaufen lassen: 'Ich habe eine Empfehlung, keine Sicherheit. Widersprechen Sie mir — oder stimmen Sie zu.'">
+    <div class="kicker">Entscheidung jetzt möglich</div>
+    <div class="split">
+      <div>
+        <p class="arrow">Datenschutz sagt ja</p>
+        <p class="small">nächste Woche rechtskonform</p>
+      </div>
+      <div>
+        <p class="arrow">Datenschutz sagt nein</p>
+        <p class="small">0 € ausgegeben · Ursache dokumentiert</p>
+      </div>
+    </div>
+    <p class="decision" style="margin-top:4.4vh">Stimmen Sie der <span class="accent">bedingten Freigabe</span> zu?</p>
+  </section>
+
+  <div class="footer"><span id="titleNow">Titel</span><span id="countNow">1 / 14</span></div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+</div>
+<div class="notePanel" id="notes"></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+let i=0;
+const notes=document.getElementById('notes');
+function show(n){
+  i=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+  document.getElementById('titleNow').textContent=slides[i].dataset.title||'';
+  document.getElementById('countNow').textContent=(i+1)+' / '+slides.length;
+  document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';
+  notes.textContent=slides[i].dataset.notes||'';
+  location.hash='slide-'+(i+1);
+}
+function toggleNotes(){notes.classList.toggle('show');}
+document.addEventListener('keydown',e=>{
+  if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1)}
+  if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}
+  if(e.key.toLowerCase()==='n') toggleNotes();
+  if(e.key.toLowerCase()==='f') document.documentElement.requestFullscreen?.();
+  if(e.key==='Home') show(0);
+  if(e.key==='End') show(slides.length-1);
+});
+const m=location.hash.match(/slide-(\d+)/); if(m) i=parseInt(m[1],10)-1; show(i);
+</script>
+</body>
+</html>

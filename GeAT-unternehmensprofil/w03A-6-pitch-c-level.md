@@ -6,8 +6,8 @@ basis_fuer: offen — nächstes Glied wäre der Business Case in W06
 woche: 03
 datum: 2026-09-10
 status: ✔ GELTENDE FASSUNG. Sprechfassung, 7 Minuten Kern plus Reserve. Nicht gehalten
-zweck: die Plattformempfehlung vor der Geschäftsführung vertreten und ein sofortiges, bedingtes Go erreichen
-grundlage: vorlagen/pitch-c-level.md (die zehn Kriterien), coursebook/3.4 (Vier-Abschnitts-Format), w03A-6-pitch-c-level-review.md (BLUF, Kürzung, Gates)
+zweck: die Plattformempfehlung vor der Geschäftsführung vertreten und eine sofortige, bedingte Freigabe erreichen
+grundlage: vorlagen/pitch-c-level.md (die zehn Kriterien), coursebook/3.4 (Vier-Abschnitts-Format), w03A-6-pitch-c-level-review.md (BLUF, Kürzung, Bedingungen)
 herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. Alle Beträge sind angenommen oder generiert, kein Angebot liegt vor
 ---
 
@@ -15,13 +15,13 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 
 **Format:** BLUF vorn, dann Herleitung. **7 Minuten Kern**, Reserve bis 10.
 **Adressat:** Geschäftsführung, zur Kenntnis die Gesellschaftervertretung.
-**Ziel:** **bedingtes Go** über 20 Seats, ≤ 9.000 € im Jahr — heute, nicht nach der nächsten Sitzung.
+**Ziel:** **bedingte Freigabe** über 20 Zugänge, ≤ 9.000 € im Jahr — heute, nicht nach der nächsten Sitzung.
 
 > **Was sich gegenüber [Fassung 1](w03A-6-pitch-c-level-fassung-1.md) geändert hat:** die
 > Reihenfolge und die Form der offenen Punkte, **nicht der Inhalt.** Jede Zahl gilt weiter. Grund
 > und Gegenprüfung stehen in [`w03A-6-pitch-c-level-review.md`](w03A-6-pitch-c-level-review.md).
 > Kurz: WAS, WIE und WANN stehen jetzt in den ersten zwei Minuten; die Gewichtungsherleitung ist
-> von drei Minuten auf einen Absatz gekürzt; und aus „vier Dinge weiß ich nicht" sind **drei Gates
+> von drei Minuten auf einen Absatz gekürzt; und aus „vier Dinge weiß ich nicht" sind **drei Bedingungen
 > und ein Zweitbeschluss** geworden.
 
 > **Prüfliste vor dem Halten** — die zehn Kriterien aus
@@ -29,7 +29,7 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 > (9.000 € liegen unter 25.000 €) · Nullvariante mit Preis ✔ · stärkstes Gegenargument selbst
 > genannt ✔ · Herleitung statt Scores ✔ · Ausschlusskriterien vorab ✔ · Sensitivität ✔ · die
 > verlangte Zahl mit Herkunft ✔ · nächster Schritt mit Abbruchkriterium ✔ · offene Fragen als
-> Gates ✔
+> Bedingungen ✔
 
 ---
 
@@ -37,8 +37,15 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 
 ### 1a · WAS und WARUM — 0:00 bis 0:45
 
-> **Ich brauche heute von Ihnen die Freigabe für neuntausend Euro im Jahr. Die Entscheidung liegt
-> bei Ihnen allein — wir sind unter der Freigabegrenze von 25.000.**
+> **Ich brauche heute von Ihnen die Freigabe für neuntausend Euro im Jahr.** Ich brauche sie, weil
+> diese Stelle kein eigenes Budget hat — jede Ausgabe geht als Vorlage über Ihren Tisch, auch eine
+> kleine.
+>
+> **Und ich habe den Betrag bewusst unter 25.000 zugeschnitten.** Nicht um Ihnen etwas zu
+> erleichtern, sondern wegen des Takts: **darunter entscheiden Sie am Dienstag, darüber die
+> Gesellschafterversammlung — und die tagt quartalsweise.** Bei sechsundzwanzigtausend Euro
+> verlieren wir bis zur nächsten Sitzung ein Quartal, und der Verstoß läuft in diesem Quartal
+> weiter.
 >
 > Und ich beantrage das nicht für ein KI-Experiment, sondern **um ein laufendes Haftungsrisiko zu
 > beenden: Neun unserer Beschäftigten arbeiten seit etwa einem Jahr mit privaten KI-Konten.
@@ -48,7 +55,7 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 > Das ist kein Vorwurf an die neun. Sie haben ein Werkzeug benutzt, weil ihre Arbeit damit schneller
 > geht, und niemand hat ihnen ein zulässiges gegeben.
 >
-> **WAS wir tun: 20 Seats einer DSGVO-konformen EU-Plattform vom Typ Langdock, drei Standorte,
+> **WAS wir tun: 20 Zugänge zu Langdock, einer DSGVO-konformen EU-Plattform, drei Standorte,
 > 9.000 Euro im Jahr.** Der Satz, um den es geht: **Wir beschaffen keine KI-Funktion. Wir beenden
 > eine Verarbeitung ohne Rechtsgrundlage.**
 
@@ -104,7 +111,7 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 > nicht, aus einem Grund, der nichts mit KI zu tun hat: **Ein Verbot ohne Ersatz beendet nicht den
 > Zustand, es beendet die Beobachtung.** Die Nutzung wandert zurück und wird unsichtbar.
 >
-> Übrig bleibt die EU-Plattform. Sie führt mit **3,49 vor Copilot mit 3,09** — und weil ein
+> Übrig bleibt Langdock. Es führt mit **3,49 von 5 vor Copilot mit 3,09** — und weil ein
 > Punktwert keine Entscheidung ist, habe ich jedes Gewicht um zehn Prozentpunkte verschoben:
 > **in allen sechzehn Varianten bleibt dieselbe Empfehlung vorn, sogar wenn ich Compliance auf null
 > setze.** Sie kippt an genau einer Stelle, und die nenne ich Ihnen: **Wenn Adoption und
@@ -139,30 +146,30 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 
 ---
 
-## Abschnitt 4 · Drei Gates und ein Zweitbeschluss — 4:45 bis 6:30
+## Abschnitt 4 · Drei Bedingungen und ein Zweitbeschluss — 4:45 bis 6:30
 
 > Ich habe vier Punkte, die ich heute **nicht** abschließend beantworten kann. Ich lege sie Ihnen
 > nicht als Zweifel vor, sondern **als Bedingungen, die vor dem ersten Euro erfüllt sein müssen.**
 > Wenn eine davon nicht erfüllt wird, kommt das Vorhaben nicht zustande — und Sie haben trotzdem
 > heute entschieden.
 >
-> **Gate 1 — Datenschutz.** Bevor der erste Beschäftigte sich einloggt, liegt die **schriftliche
+> **Erste Bedingung — Datenschutz.** Bevor der erste Beschäftigte sich einloggt, liegt die **schriftliche
 > Freigabe unseres Datenschutzbeauftragten** auf dem Tisch, einschließlich der Aussage, ob eine
 > Datenschutz-Folgenabschätzung nötig ist. **Gibt er sie nicht, fließt kein Euro.** Dazu drei
 > Nachweise, keiner verhandelbar: Auftragsverarbeitungsvertrag **vorgelegt**, nicht zugesichert ·
 > Protokollierung begrenzbar, mit einer Betriebsvereinbarung, die Leistungskontrolle ausschließt ·
 > EU-Verarbeitung und nachweisbare Löschung.
 >
-> **Gate 2 — Marktprüfung.** Alle meine Bewertungen beruhen auf Herstellerunterlagen; **ein Angebot
+> **Zweite Bedingung — Angebot und Referenzen.** Alle meine Bewertungen beruhen auf Herstellerunterlagen; **ein Angebot
 > liegt nicht vor.** Bedingung: **zwei Referenzkunden im deutschsprachigen Raum unter 150
 > Beschäftigten**, als Ausschreibungsbedingung. Kommen sie nicht, wird nicht beauftragt.
 >
-> **Gate 3 — Einführung, und hier bin ich ehrlich unvollständig.** Ich habe den Einführungsaufwand
+> **Dritte Bedingung — Einführungsaufwand, und hier bin ich ehrlich unvollständig.** Ich habe den Einführungsaufwand
 > meiner eigenen Empfehlung **nicht beziffert** — neuer Lieferant, neue Oberfläche, neue
 > Nutzerverwaltung. Das ist genau die Schwäche, die ich Copilot vorhalte, und **wenn dieser Aufwand
 > ein Gewicht über 31 Prozent rechtfertigt, ist meine Empfehlung falsch.** Deshalb die Bedingung:
 > **die Einführung läuft über die neun, nicht über externe Beratung.** Sie sind bereits Nutzer, sie
-> schulen ihre Teams. Übersteigt der Aufwand zehn Stunden IT, ist das Gate gerissen und wir
+> schulen ihre Teams. Übersteigt der Aufwand zehn Stunden IT, ist die Bedingung gerissen und wir
 > berichten es Ihnen, statt es zu verrechnen.
 >
 > **Und der Zweitbeschluss, um den ich Sie zusätzlich bitte — er ist terminkritisch und ich kann
@@ -187,7 +194,7 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 
 > **Was ich Sie bitte, heute zu beschließen — drei Sätze:**
 >
-> 1. **Das bedingte Go für 20 Seats, ≤ 9.000 Euro im Jahr**, unter den drei Gates aus Abschnitt 4.
+> 1. **Die bedingte Freigabe für 20 Zugänge, ≤ 9.000 Euro im Jahr**, unter den drei Bedingungen aus Abschnitt 4.
 > 2. **Das Abbruchkriterium nach 90 Tagen**, so wie ich es genannt habe.
 > 3. **Den Auftrag an die IT-Leitung**, diese Woche den Stand der Migrationsausschreibung zu klären
 >    und die drei Anforderungen aufzunehmen.
@@ -206,11 +213,11 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 | 1 WAS, WIE, WANN | 2:15 | **nichts streichen.** Das ist der Grund für den Umbau |
 | 2 Warum die Alternativen ausscheiden | 1:00 | Kernsystem-Option und Sensitivität auf je einen Halbsatz. **Nullvariante und Kippschwelle bleiben** |
 | 3 Das Gegenargument von 2023 | 1:30 | Einwand 2 streichen (steht in Abschnitt 1b), Einwand 3 auf einen Satz |
-| 4 Gates und Zweitbeschluss | 1:45 | Löschung und Data Steward streichen. **Die drei Gates und der Zweitbeschluss bleiben** |
+| 4 Bedingungen und Zweitbeschluss | 1:45 | Löschung und Data Steward streichen. **Die drei Bedingungen und der Zweitbeschluss bleiben** |
 | 5 Beschlussantrag | 0:30 | **nichts streichen** |
 
 > **Was auch bei 3 Minuten stehen bleibt:** die BLUF aus 1a · das Abbruchkriterium aus 1c · das
-> Gegenargument von 2023 mit den zwei Antworten darauf · Gate 1 · der Beschlussantrag.
+> Gegenargument von 2023 mit den zwei Antworten darauf · die erste Bedingung · der Beschlussantrag.
 
 > **Die Reihenfolge ist Absicht und folgt Coursebook 3.4:** Gegenargumente **vor** der Bitte um den
 > Beschluss. Wer erst zeigt, was gegen die eigene Wahl spricht, und dann fragt, wirkt geprüft und

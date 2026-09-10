@@ -49,6 +49,8 @@ Dazu passt der Reifegrad: Die Branche liegt bei 46 Prozent regelmäßiger KI-Nut
 | [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) | **Kette W03 A, Glied 1. ⚠ ÜBERHOLT.** Erstfassung der Plattform- und Werkzeugwahl. Nur noch für den Fassungsvergleich lesen | — |
 | [`w03A-2-ki-analyse-review.md`](w03A-2-ki-analyse-review.md) | **Kette W03 A, Glied 2.** Review der Erstfassung: sachliche Fehler, methodische Schwächen, budgetäre Widersprüche | W3 |
 | [`w03A-6-pitch-c-level-fassung-1.md`](w03A-6-pitch-c-level-fassung-1.md) | **Kette W03 A, Glied 6, Fassung 1. ⚠ ÜBERHOLT.** Erstfassung des Pitch, vier Abschnitte, 7–10 Minuten. Inhaltlich unverändert gültig, aber nicht auf ein sofortiges Go gebaut. Nur noch für den Fassungsvergleich lesen | — |
+| [`w03A-6-pitch-sprechzettel.md`](w03A-6-pitch-sprechzettel.md) | **Kette W03 A, Glied 6, Beiblatt.** Sprechzettel in Stichpunkten, ein Blatt für die Hand am Rednerpult. Mit Notfallpfad und sechs vorbereiteten Antworten auf Rückfragen | W3 |
+| [`w03A-6-pitch-sprechfassung-volltext.md`](w03A-6-pitch-sprechfassung-volltext.md) | **Kette W03 A, Glied 6, Beiblatt.** Volltext zum Üben, mit markierten Folienwechseln, Pausen und Zeitmarken. Plus 3-Minuten-Notfallpfad | W3 |
 | [`w03A-6-pitch-c-level-review.md`](w03A-6-pitch-c-level-review.md) | **Kette W03 A, Glied 6, Zwischenglied.** Review des Pitch auf ein sofortiges Go: BLUF, Kürzung von Abschnitt 2, offene Punkte als Gates. Mit Gegenprüfung — vier Vorschläge wurden abgewandelt statt übernommen | W3 |
 | [`w03A-3-ki-analyse-fassung-2-gueltig.md`](w03A-3-ki-analyse-fassung-2-gueltig.md) | **Kette W03 A, Glied 3. ✔ GELTENDE FASSUNG.** Gewichtung K1–K8 und L0–L6, sechs Optionen. **Hieraus zitieren, nicht aus Glied 1** | W3, W6, W7 |
 | [`w03B-2-agent-neubewertung-nach-bereinigung.md`](w03B-2-agent-neubewertung-nach-bereinigung.md) | **Kette W03 B, Glied 2.** Messung der sechs Agentenregeln gegen die bereinigten Bestände: fünf finden null. Empfiehlt einen Fristenwächter statt des Bestandswächters | W3, W8 |
@@ -93,6 +95,9 @@ profil · zahlen · systeme-daten · menschen · vorhaben · transformationsvors
                        └─ w03A-6-pitch-c-level-fassung-1.md   Sprechfassung  ⚠ ÜBERHOLT
                             └─ w03A-6-pitch-c-level-review.md      Review: BLUF, Kürzung, Gates
                                  └─ w03A-6-pitch-c-level.md            ✔ GELTENDE FASSUNG (2)
+                                      ├─ Praesentation/c_level_pitch_plattformfreigabe.html   14 Folien
+                                      ├─ w03A-6-pitch-sprechzettel.md          Stichpunkte, ein Blatt
+                                      └─ w03A-6-pitch-sprechfassung-volltext.md   Volltext zum Ueben
 ```
 
 **Wer Gewichte oder Scores zitiert, zitiert `w03A-3`.** Glied 4 prüft, ändert aber nichts: es
