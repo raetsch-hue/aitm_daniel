@@ -86,7 +86,9 @@ herkunft: verdichtet aus w03A-6-pitch-c-level.md. Jede Zahl ist in w03A-3 bis w0
 - **Keine Zweifel, sondern Bedingungen. Alle drei vor dem ersten Euro**
 - **Datenschutz:** schriftliche Freigabe des Datenschutzbeauftragten, AV-Vertrag **vorgelegt**, Löschung nachweisbar. **Ohne Freigabe fließt kein Euro**
 - **Angebot und Referenzen:** bisher nur Herstellerunterlagen, kein Angebot. Zwei Referenzkunden unter 150 Beschäftigten, sonst keine Beauftragung
-- **Einführungsaufwand:** **habe ich nicht beziffert** — das ist genau die Schwäche, die ich Copilot vorhalte. Die 9 schulen ihre Teams, keine Beratung. Über 10 h wird berichtet, nicht verrechnet
+- **Einführungsaufwand: habe ich nicht beziffert** — genau die Schwäche, die ich Copilot vorhalte
+  - **deshalb** Schulung durch die 9, keine externe Beratung
+  - **und** reißt der Aufwand die 10 Stunden IT, **erfahren Sie es** — es verschwindet nicht in einer anderen Position
 - *Die Ehrlichkeit bei Punkt 3 offen aussprechen. Sie kostet nichts und trägt alles*
 
 ## 11 · Zweitbeschluss — 45 Sek

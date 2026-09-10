@@ -170,8 +170,8 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 > Nutzerverwaltung. Das ist genau die Schwäche, die ich Copilot vorhalte, und **wenn dieser Aufwand
 > ein Gewicht über 31 Prozent rechtfertigt, ist meine Empfehlung falsch.** Deshalb die Bedingung:
 > **die Einführung läuft über die neun, nicht über externe Beratung.** Sie sind bereits Nutzer, sie
-> schulen ihre Teams. Übersteigt der Aufwand zehn Stunden IT, ist die Bedingung gerissen und wir
-> berichten es Ihnen, statt es zu verrechnen.
+> schulen ihre Teams. **Und wenn der Aufwand die zehn Stunden IT reißt, erfahren Sie es** — er
+> verschwindet nicht in einer anderen Budgetposition.
 >
 > **Und der Zweitbeschluss, um den ich Sie zusätzlich bitte — er ist terminkritisch und ich kann
 > ihn nicht selbst erledigen:** Ich weiß nicht, wie weit unsere **Migrationsausschreibung** ist.

@@ -201,8 +201,8 @@ herkunft: Sprechtext. Jede Zahl ist in w03A-3 bis w03A-5 nachgewiesen. Beträge 
 > eigenen Empfehlung nicht beziffert.** Neuer Lieferant, neue Oberfläche, neue Nutzerverwaltung. Das
 > ist genau die Schwäche, die ich Copilot vorhalte — **und es ist der Punkt, an dem meine Empfehlung
 > kippen könnte.** Deshalb die Bedingung: **die Einführung läuft über die neun, nicht über externe
-> Beratung.** Sie sind bereits Nutzer, sie schulen ihre Teams. **Übersteigt der Aufwand zehn Stunden
-> IT, berichten wir es Ihnen, statt es zu verrechnen.**
+> Beratung.** Sie sind bereits Nutzer, sie schulen ihre Teams. **Und wenn der Aufwand die zehn
+> Stunden IT reißt, erfahren Sie es** — er verschwindet nicht in einer anderen Budgetposition.
 
 ---
 
