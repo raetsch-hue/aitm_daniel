@@ -12,10 +12,7 @@ herkunft: verdichtet aus w03A-6-pitch-c-level.md. Jede Zahl ist in w03A-3 bis w0
 
 # Sprechzettel — 14 Folien, 7 Minuten
 
-> **Wie das Blatt zu benutzen ist.** Ein Punkt pro Zeile, jede Zeile ist eine Aussage, die man
-> aussprechen kann. **Fett = muss fallen.** Der Volltext steht in
-> [`w03A-6-pitch-sprechfassung-volltext.md`](w03A-6-pitch-sprechfassung-volltext.md), die Herleitung
-> in [`w03A-6-pitch-c-level.md`](w03A-6-pitch-c-level.md).
+> **Wie das Blatt zu benutzen ist.** Ein Punkt pro Zeile, jede Zeile ist eine Aussage, die man aussprechen kann. **Fett = muss fallen.** Der Volltext steht in [`w03A-6-pitch-sprechfassung-volltext.md`](w03A-6-pitch-sprechfassung-volltext.md), die Herleitung in [`w03A-6-pitch-c-level.md`](w03A-6-pitch-c-level.md).
 >
 > **Wenn nur 3 Minuten bleiben:** Folien 1 → 2 → 3 → 5 → 8 → 10 → 13 → 14.
 
