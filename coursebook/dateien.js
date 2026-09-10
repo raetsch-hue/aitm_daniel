@@ -115,7 +115,7 @@ var DOKUMENTE = [
      Eigene Arbeitsergebnisse aus ../artefakte/.
      Der folgende Block wird von coursetools/inhalt-bauen.py erzeugt.  */
 
-  /* >>> ARTEFAKTE-ANFANG (12 Dokumente, 2026-09-09)
+  /* >>> ARTEFAKTE-ANFANG (13 Dokumente, 2026-09-10)
       Automatisch erzeugt von coursetools/inhalt-bauen.py.
       Nicht von Hand aendern - Aenderungen gehen beim naechsten Lauf
       verloren. Anzeigetitel stellt man im Skript unter TITEL ein.  */
@@ -148,6 +148,14 @@ var DOKUMENTE = [
     titel: "Woche 02 · Kursmaterial",
     bereich: "artefakte" },
 
+  { datei: "../artefakte/woche-03/lektuere-implementierungspfade-kritik.md",
+    titel: "Woche 03 · Kritik der Lektüre Implementierungspfade und Reifegrade",
+    bereich: "artefakte" },
+
+  { datei: "../artefakte/woche-03/datenqualitaet-zwei-fragen.md",
+    titel: "Woche 03 · Zwei Fragen zu Datenqualität und Governance",
+    bereich: "artefakte" },
+
   { datei: "../artefakte/extra/README.md",
     titel: "Extra · 0 Übersicht",
     bereich: "artefakte" },
@@ -162,10 +170,6 @@ var DOKUMENTE = [
 
   { datei: "../artefakte/extra/03_spannungen-und-blinde-flecken.md",
     titel: "Extra · 3 Spannungen und blinde Flecken",
-    bereich: "artefakte" },
-
-  { datei: "../artefakte/woche-03/datenqualitaet-zwei-fragen.md",
-    titel: "Woche 03 · Zwei Fragen zu Datenqualität und Governance",
     bereich: "artefakte" },
   /* <<< ARTEFAKTE-ENDE */
 

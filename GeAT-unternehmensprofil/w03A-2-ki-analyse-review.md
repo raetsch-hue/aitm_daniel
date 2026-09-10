@@ -1,14 +1,17 @@
 ---
 titel: Review und kritische Würdigung der KI-Analyse GeAT mbH
-bezug: KI_Analyse.md gegen profil.md, zahlen.md, systeme-daten.md, menschen.md, vorhaben.md, transformationsvorschlag.md, ereignisse.md, Gespraeche/
+bezug: w03A-1-ki-analyse-fassung-1.md gegen profil.md, zahlen.md, systeme-daten.md, menschen.md, vorhaben.md, transformationsvorschlag.md, ereignisse.md, Gespraeche/
 pruefer: Unabhängige Transformations- und Governance-Prüfung
 stand: 2026-09-07
 status: Abschlussbericht zur Entscheidungsvorlage
+kette: W03 A · KI-Analyse — Glied 2 von 6
+baut_auf: w03A-1-ki-analyse-fassung-1.md
+basis_fuer: w03A-3-ki-analyse-fassung-2-gueltig.md
 ---
 
-# Review und kritische Würdigung der KI-Analyse (`KI_Analyse.md`)
+# Review und kritische Würdigung der KI-Analyse (`w03A-1-ki-analyse-fassung-1.md`)
 
-> **Gegenstand dieser Prüfung:** Detaillierte Analyse und Bewertung des Dokuments [`KI_Analyse.md`](KI_Analyse.md) (Stand: 07.09.2026, Woche 03) auf Basis des gesamten Unternehmensprofils der GeAT mbH (Identität, Finanzgerüst, System- und Datenlandschaft, Stakeholder-Gefüge, Vorhaben und Transformationsplanung).
+> **Gegenstand dieser Prüfung:** Detaillierte Analyse und Bewertung des Dokuments [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) (Stand: 07.09.2026, Woche 03) auf Basis des gesamten Unternehmensprofils der GeAT mbH (Identität, Finanzgerüst, System- und Datenlandschaft, Stakeholder-Gefüge, Vorhaben und Transformationsplanung).
 >
 > **Ziel:** Identifikation aller sachlichen Fehler, methodischen Schwächen, budgetären Widersprüche, regulatorischen Fehleinschätzungen und organisatorischen Risiken, bevor die Vorlage die Geschäftsführung oder die Gesellschafterversammlung erreicht.
 
@@ -39,7 +42,7 @@ status: Abschlussbericht zur Entscheidungsvorlage
 
 ## 1. Management Summary & Gesamtfazit
 
-Die in [`KI_Analyse.md`](KI_Analyse.md) vorgelegte Entscheidungsvorlage von Rolle 15 (AI and Digital Transformation Manager Theo Rätsch) zeichnet sich durch ein hohes methodisches Problembewusstsein aus. Sie bricht mit der gängigen Praxis naiver Werkzeugauswahlen, indem sie:
+Die in [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) vorgelegte Entscheidungsvorlage von Rolle 15 (AI and Digital Transformation Manager Theo Rätsch) zeichnet sich durch ein hohes methodisches Problembewusstsein aus. Sie bricht mit der gängigen Praxis naiver Werkzeugauswahlen, indem sie:
 - strikt zwischen dem sofortigen Handlungsbedarf (Stufe 1: Schatten-IT legalisieren) und dem späteren Ausbau (Stufe 4: Besetzungsassistent) trennt,
 - drei unverzichtbare K.-o.-Tore (AVV, § 87 BetrVG, EU-Verarbeitung) vor das Scoring schaltet,
 - die TCO-Kostenzeile rechnerisch erfasst, statt sie subjektiv zu bewerten, und
@@ -51,7 +54,7 @@ Ein Abgleich mit den Primärdateien des Unternehmensprofils ([`profil.md`](profi
 
 ```mermaid
 graph TD
-    A[KI_Analyse.md - Status: Kritisch] --> B[Sachliche Fehler]
+    A[w03A-1-ki-analyse-fassung-1.md - Status: Kritisch] --> B[Sachliche Fehler]
     A --> C[Methodische Schwächen]
     A --> D[Governance- & Kulturrisiken]
     
@@ -69,7 +72,7 @@ graph TD
     D --> D3[Rebound-Risiko der 9 Schattennutzer]
 ```
 
-1. **Sachliche Regression:** Obwohl in Woche 2.4 ([`ereignisse.md`](ereignisse.md) Zeile 13) und im Gespräch mit dem externen Datenschutzbeauftragten Dr. Marnitz ([`Gespraeche/03-der-einwand-der-stimmt.md`](Gespraeche/03-der-einwand-der-stimmt.md) Zeile 114–118) der juristische Fehlschluss aufgedeckt wurde, dass KI-Verstöße automatisch die AÜG-Erlaubnis der Bundesagentur für Arbeit gefährden, taucht diese unhaltbare Behauptung in `KI_Analyse.md` (Zeile 126–127) wieder als „stärkstes Argument im Business Case“ auf.
+1. **Sachliche Regression:** Obwohl in Woche 2.4 ([`ereignisse.md`](ereignisse.md) Zeile 13) und im Gespräch mit dem externen Datenschutzbeauftragten Dr. Marnitz ([`Gespraeche/03-der-einwand-der-stimmt.md`](Gespraeche/03-der-einwand-der-stimmt.md) Zeile 114–118) der juristische Fehlschluss aufgedeckt wurde, dass KI-Verstöße automatisch die AÜG-Erlaubnis der Bundesagentur für Arbeit gefährden, taucht diese unhaltbare Behauptung in `w03A-1-ki-analyse-fassung-1.md` (Zeile 126–127) wieder als „stärkstes Argument im Business Case“ auf.
 2. **Finanzielle Scheinwelt:** Die Analyse kalkuliert mit einem Investitionsspielraum von 280.000 €, ignoriert dabei jedoch die in [`zahlen.md`](zahlen.md) und [`transformationsvorschlag.md`](transformationsvorschlag.md) dokumentierte Tatsache, dass die Personalkosten von Rolle 15 (95.000 €) das EBIT auf 0,805 Mio. € gedrückt haben. Der reale Spielraum nach Abzug der Migrationsreservierung (620.000 €) beträgt **lediglich 185.000 €**. Die Stufen 1–3 und 5 verbrauchen bereits 180.000 €. Für Stufe 4 (veranschlagt mit 60.000 €) verbleiben rechnerisch exakt 5.000 €.
 3. **Methodischer Bruch bei Option D:** Option D (KI-Funktionen des künftigen Branchensoftware-Anbieters) gewinnt Teil B mit 3,43 Punkten. Diese Bewertung beruht auf der Vergabe von Bestnoten (Score 4) an ein System, dessen Anbieter und Produktportfolio GeAT überhaupt noch nicht kennt. Dies verletzt die eingangs definierten Skalenanker frontal.
 4. **Verzerrte Nutzwertanalyse (Nullvarianten-Paradoxon):** Weil in Matrix B kein Kriterium für die funktionale Problemlösungskompetenz (Senkung der 11 Tage Besetzungsdauer, Anhebung der Besetzungsquote von 40 % auf 45 %) existiert, landet die Nullvariante (Option E, „Nichts tun“) mit 3,25 Punkten auf Platz 2.
@@ -82,7 +85,7 @@ Würde dieses Papier heute der Geschäftsführung oder Gesellschaftervertreterin
 
 ### Fehler 1: Der widerlegte AÜG-Erlaubnis-Mythos (Bundesagentur für Arbeit)
 
-In [`KI_Analyse.md`](KI_Analyse.md) (Zeilen 126–127) schreibt der Verfasser:
+In [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) (Zeilen 126–127) schreibt der Verfasser:
 > *„Dazu die Doppelrolle der Aufsicht: Die Erlaubnis nach AÜG erteilt und überwacht die Bundesagentur für Arbeit (öffentlich, Impressum). Ein Konformitätsmangel bei einem Hochrisikosystem in der Bewerberauswahl ist damit kein Bußgeldrisiko, sondern berührt die Erlaubnis, von der das gesamte Geschäft abhängt. Das ist das stärkste Argument im Business Case und kommt in keinem Anbietergespräch vor.“*
 
 #### Befund & Profilwiderspruch
@@ -99,7 +102,7 @@ Dass dieser Fehler am 07.09.2026 unverändert in der Analyse steht, ist ein verh
 
 ### Fehler 2: Budgetäre Blindheit – Verdrängung des geschrumpften Investitionsspielraums
 
-In [`KI_Analyse.md`](KI_Analyse.md) wird Stufe 4 für Q2/2027 mit 60.000 € veranschlagt (Zeilen 215, 230). In Tabelle 10.1 (Zeile 19) notiert der Autor unter Punkt 6 lediglich beiläufig:
+In [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) wird Stufe 4 für Q2/2027 mit 60.000 € veranschlagt (Zeilen 215, 230). In Tabelle 10.1 (Zeile 19) notiert der Autor unter Punkt 6 lediglich beiläufig:
 > *„Trägt der Investitionsspielraum die Taktung noch? 900.000 € sind aus einem EBIT von 0,9 Mio abgeleitet; bei 0,805 Mio bleiben nach der Migrationsreservierung 185.000 statt 280.000, und die Stufen 1 bis 5 kosten 240.000 -> Ziegenhorn, Business Case Woche 6“*
 
 #### Die mathematische Realität des Profils
@@ -132,7 +135,7 @@ In Abschnitt 1 definiert der Verfasser strenge Skalenanker zur Vermeidung von Wi
 - **Score 1:** *„nicht vorgesehen“*
 
 #### Der methodische Bruch in Matrix B
-In Matrix B ([`KI_Analyse.md`](KI_Analyse.md) Zeile 242–249) bewertet der Autor Option D (Branchensoftware 2027):
+In Matrix B ([`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) Zeile 242–249) bewertet der Autor Option D (Branchensoftware 2027):
 - **L1 (AI-Act-Betreiberfähigkeit):** **Score 4** (Begründung: GeAT bleibt Betreiber, Anbieter trägt Pflichten)
 - **L2 (Zugang zu Daten / RAG):** **Score 4** (Begründung: System hat direkten Datenzugriff)
 - **L4 (Kosten über 3 Jahre):** **Score 4** (Begründung: 620.000 € Migration decken das ab)
@@ -149,7 +152,7 @@ In Matrix B ([`KI_Analyse.md`](KI_Analyse.md) Zeile 242–249) bewertet der Auto
 
 ### Fehler 4: Ausblendung der gesetzlichen Betreiberpflichten nach Art. 26/27 EU AI Act
 
-Der Verfasser baut seine gesamte Argumentation für Option D darauf auf, dass GeAT durch den Kauf einer Standard-Funktion „nur Betreiber“ bleibe und die regulatorische Last beim Softwareanbieter liege ([`KI_Analyse.md`](KI_Analyse.md) Zeilen 219, 265, 332).
+Der Verfasser baut seine gesamte Argumentation für Option D darauf auf, dass GeAT durch den Kauf einer Standard-Funktion „nur Betreiber“ bleibe und die regulatorische Last beim Softwareanbieter liege ([`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) Zeilen 219, 265, 332).
 
 #### Das regulatorische Versäumnis
 Das ist eine gefährliche rechtliche Halbwahrheit. Der EU AI Act weist dem **Betreiber (Deployer)** eines Hochrisikosystems nach Art. 26 und Art. 27 massive eigene Pflichten zu, die kein Softwarehersteller der Welt für GeAT übernehmen kann:
@@ -160,7 +163,7 @@ Das ist eine gefährliche rechtliche Halbwahrheit. Der EU AI Act weist dem **Bet
 5. **Art. 26 Abs. 11a (Transparenz gegenüber Bewerbern):** Bewerber müssen nachweislich darüber informiert werden, dass sie einem KI-Auswahlsystem unterliegen.
 6. **Art. 27 (Grundrechte-Folgenabschätzung / FRIA):** Vor Inbetriebnahme muss GeAT eine detaillierte Folgenabschätzung für die Grundrechte durchführen.
 
-In [`KI_Analyse.md`](KI_Analyse.md) werden diese Betreiberpflichten mit keinem Cent budgetiert und organisatorisch ignoriert. Dr. Marnitz hat dies im Gespräch ([`Gespraeche/03-der-einwand-der-stimmt.md`](Gespraeche/03-der-einwand-der-stimmt.md) Zeile 130) explizit vorgerechnet: *„Sieben Pflichten [...] Keine dieser sieben Pflichten hat dort eine eigene Zeile.“* Option D befreit GeAT keineswegs von der regulatorischen Verantwortung.
+In [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) werden diese Betreiberpflichten mit keinem Cent budgetiert und organisatorisch ignoriert. Dr. Marnitz hat dies im Gespräch ([`Gespraeche/03-der-einwand-der-stimmt.md`](Gespraeche/03-der-einwand-der-stimmt.md) Zeile 130) explizit vorgerechnet: *„Sieben Pflichten [...] Keine dieser sieben Pflichten hat dort eine eigene Zeile.“* Option D befreit GeAT keineswegs von der regulatorischen Verantwortung.
 
 ---
 
@@ -195,7 +198,7 @@ Weil die Nutzwertanalyse blind für den geschäftlichen Nutzen ist, belohnt sie 
 
 ### Schwäche 2: Zeitliche und operative Illusion bei der Migrationsausschreibung
 
-Empfehlung 2 ([`KI_Analyse.md`](KI_Analyse.md) Zeilen 324–341) fordert, bis Q4/2026 sechs hochkomplexe Anforderungen (u. a. Haftungsübernahme nach AI Act, offene API, konfigurierbare Bias-Logik nach Erfüllungsgrad, Nichtbesetzungsgründe) in die Migrationsausschreibung des Branchensoftware-Nachfolgers zu verhandeln.
+Empfehlung 2 ([`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) Zeilen 324–341) fordert, bis Q4/2026 sechs hochkomplexe Anforderungen (u. a. Haftungsübernahme nach AI Act, offene API, konfigurierbare Bias-Logik nach Erfüllungsgrad, Nichtbesetzungsgründe) in die Migrationsausschreibung des Branchensoftware-Nachfolgers zu verhandeln.
 
 #### Realitätscheck gegen den Projektzeitplan
 
@@ -216,14 +219,14 @@ timeline
 
 ### Schwäche 3: TCO-Verzerrung und asymmetrischer Maßstab bei M365 Copilot
 
-In Abschnitt 4.4 ([`KI_Analyse.md`](KI_Analyse.md) Zeilen 143–156) und Matrix A wendet der Verfasser bei Option B (M365 Copilot) im Vergleich zu Option A (EU-Plattform) systematisch zweierlei Maß an:
+In Abschnitt 4.4 ([`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) Zeilen 143–156) und Matrix A wendet der Verfasser bei Option B (M365 Copilot) im Vergleich zu Option A (EU-Plattform) systematisch zweierlei Maß an:
 
 1. **Künstliche Dramatisierung der Kosten:**
    - Für Option A rechnet der Verfasser die Kosten brav für den engen Zuschnitt von **20 Seats (4.800–7.200 €/Jahr)** vor.
    - Bei Option B blendet er als Schreckgespenst sofort den Vollrollout von **69 Seats (24.840 €/Jahr)** ein, um zu behaupten, Copilot sprenge die Freigabegrenze der Geschäftsführung von 25.000 € (Zeile 155).
    - **Tatsache:** 20 Seats Copilot kosten bei 30 €/Monat exakt **7.200 €/Jahr** – und liegen damit exakt im Fenster von Option A und unter dem Stufe-1-Budgetansatz von 9.000 €!
 2. **Vorgeschobenes Berechtigungsargument:**
-   - Copilot wird bei K1 (Compliance) auf Score 3 abgewertet, weil GeATs SharePoint-Berechtigungen ungeprüft seien ([`KI_Analyse.md`](KI_Analyse.md) Zeile 180).
+   - Copilot wird bei K1 (Compliance) auf Score 3 abgewertet, weil GeATs SharePoint-Berechtigungen ungeprüft seien ([`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) Zeile 180).
    - **Tatsache:** Für Stufe 1 (reine Anzeigentexte und Profilzusammenfassungen, wo Recruiter Texte manuell eingeben) greift Copilot gar nicht auf SharePoint zu, sondern fungiert als reiner Chat-Assistent im Browser/Word!
    - Gleichzeitig ignoriert der Verfasser, dass bei Option A (Drittanbieter SaaS) ein völlig neuer Lieferant angelegt, SSO konfiguriert, eine neue Nutzerverwaltung gepflegt und Mitarbeitende auf eine neue Plattform geschult werden müssen.
 3. **M365-Basislizenz als offene Flanke:**
@@ -233,7 +236,7 @@ In Abschnitt 4.4 ([`KI_Analyse.md`](KI_Analyse.md) Zeilen 143–156) und Matrix 
 
 ### Schwäche 4: Technische Naivität beim Datenfundament und RAG auf Altdaten
 
-In Teil B stützt sich die Empfehlung für den Assistenten auf die Annahme, das System könne per Retrieval-Augmented Generation (RAG) 41.000 Profile und Lebenslauf-PDFs standortübergreifend durchsuchen ([`KI_Analyse.md`](KI_Analyse.md) Zeile 214).
+In Teil B stützt sich die Empfehlung für den Assistenten auf die Annahme, das System könne per Retrieval-Augmented Generation (RAG) 41.000 Profile und Lebenslauf-PDFs standortübergreifend durchsuchen ([`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) Zeile 214).
 
 #### Technische Realität laut Unternehmensprofil
 - **63 % der Profile unstrukturiert:** Das Können steht im Freitext ([`systeme-daten.md`](systeme-daten.md) Zeile 25).
@@ -294,7 +297,7 @@ flowchart TD
 
 ### Bedenken 2: Verschärfung des internen Grabens (Recruiting Center vs. Niederlassungen)
 
-Die Empfehlung 1 zielt darauf ab, 20 Lizenzen von Option A primär für das **Recruiting Center Erfurt (Yvonne Kloß)** und den Innendienst zu beschaffen ([`KI_Analyse.md`](KI_Analyse.md) Zeile 317).
+Die Empfehlung 1 zielt darauf ab, 20 Lizenzen von Option A primär für das **Recruiting Center Erfurt (Yvonne Kloß)** und den Innendienst zu beschaffen ([`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) Zeile 317).
 
 #### Kulturelle Sprengkraft laut Profil
 1. **Der schwelende Konflikt:** Yvonne Kloß will den Bewerberbestand zentralisieren; Uwe Rehberg (NL Gotha, Macht 4) verteidigt die dezentrale Beziehungspflege ([`menschen.md`](menschen.md) Zeile 46).
@@ -320,14 +323,14 @@ In [`transformationsvorschlag.md`](transformationsvorschlag.md) (Zeilen 190–19
 - Der Engpass der Fakturierung ist der **Papier-Stundenzettel**: 22 % Nachkorrekturen, vier Tage Klärungsaufwand pro Monat, 17.700 € reine Personalkosten plus Liquiditätsverzögerungen.
 - Die einzige Wissensträgerin ist **Doreen Ritschel (Rolle 11)** mit ihrem Pinnwand-Ausdruck.
 
-In [`KI_Analyse.md`](KI_Analyse.md) erwähnt Rätsch diesen Sachverhalt zwar in einer Tabellenzeile zu Empfehlung 2, tut ihn aber ansonsten ab, weil er *„kein KI-Fall ist“*.
+In [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) erwähnt Rätsch diesen Sachverhalt zwar in einer Tabellenzeile zu Empfehlung 2, tut ihn aber ansonsten ab, weil er *„kein KI-Fall ist“*.
 Für die Geschäftsführung Achtelik/Vollmer und die Niederlassungsleiter ist dies jedoch der brennendste Prozesskonflikt. Wer als Digital Manager zehntausende Euro für Textgeneratoren im Recruiting fordert, während die Abrechnung im Papierchaos versinkt, verliert das Mandat als pragmatischer Problemlöser.
 
 ---
 
 ## 5. Kategorie IV: Konkreter Redline- und Handlungskatalog
 
-Um [`KI_Analyse.md`](KI_Analyse.md) vor der Einreichung in der Geschäftsführung zu retten, müssen folgende Korrekturen zwingend vorgenommen werden:
+Um [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) vor der Einreichung in der Geschäftsführung zu retten, müssen folgende Korrekturen zwingend vorgenommen werden:
 
 ```mermaid
 graph LR
@@ -339,7 +342,7 @@ graph LR
 ```
 
 ### 1. Juristische Bereinigung (AÜG-Fehler tilgen)
-- **Sofortige Streichung** von Zeile 126–127 in [`KI_Analyse.md`](KI_Analyse.md).
+- **Sofortige Streichung** von Zeile 126–127 in [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md).
 - **Ersetzung durch:** Sachliche Darstellung der echten Compliance-Risiken: Bußgelder nach DSGVO/AI Act, AGG-Klagen abgelehnter Bewerber mit Beweislastumkehr, Untersagungsverfügungen der KI-Marktaufsicht und Reputationsschäden.
 
 ### 2. Budgetäre Re-Kalkulation (185.000-€-Realität)
@@ -372,4 +375,4 @@ graph LR
 
 ## Fazit
 
-[`KI_Analyse.md`](KI_Analyse.md) ist ein methodisch ambitioniertes, im Kern jedoch durch gefährliche Detailfehler, budgetäres Wunschdenken und unvollständige Stakeholder-Absicherung bedrohtes Papier. Wird es in der vorliegenden Form präsentiert, droht Rolle 15 das Schicksal des gescheiterten Moduls von 2023. Werden die in diesem Review herausgearbeiteten Fehler und Bedenken eingearbeitet, wird daraus eine unangreifbare, belastbare Transformationsstrategie.
+[`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) ist ein methodisch ambitioniertes, im Kern jedoch durch gefährliche Detailfehler, budgetäres Wunschdenken und unvollständige Stakeholder-Absicherung bedrohtes Papier. Wird es in der vorliegenden Form präsentiert, droht Rolle 15 das Schicksal des gescheiterten Moduls von 2023. Werden die in diesem Review herausgearbeiteten Fehler und Bedenken eingearbeitet, wird daraus eine unangreifbare, belastbare Transformationsstrategie.

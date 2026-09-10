@@ -52,6 +52,7 @@ GRUPPEN = [
     ("",         "Übergreifend"),
     ("woche-01", "Woche 01 · KI-Vorhaben bewerten und mit dem Modell arbeiten"),
     ("woche-02", "Woche 02 · Change Management"),
+    ("woche-03", "Woche 03 · Datenqualität, Governance und Implementierungspfade"),
     ("extra",    "Extra · was nicht behandelt wurde"),
 ]
 

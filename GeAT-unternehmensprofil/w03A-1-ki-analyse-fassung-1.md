@@ -7,6 +7,9 @@ woche: 03
 status: Entwurf, zur Vorlage in der Geschäftsführung
 verantwortlich: Rolle 15 (AI and Digital Transformation Manager) — Macht 2, kein Budget, kein Gremium
 herkunft: abgeleitet — Gewichtungen sind begründete Setzungen, Scores sind Einschätzungen auf Herstellerunterlagen, Preise sind prüfpflichtige Listenwerte
+kette: W03 A · KI-Analyse (Plattform- und Werkzeugwahl) — Glied 1 von 6
+baut_auf: profil.md, zahlen.md, systeme-daten.md, menschen.md, vorhaben.md, transformationsvorschlag.md; Coursebook 3.1
+basis_fuer: w03A-2-ki-analyse-review.md. ÜBERHOLT von w03A-3 — nicht mehr zitieren, nur noch fuer den Fassungsvergleich lesen
 ---
 
 # KI-Analyse GeAT mbH — welches Werkzeug, und warum nicht die anderen

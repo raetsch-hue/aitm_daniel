@@ -2,7 +2,7 @@
 ordner: GeAT-unternehmensprofil
 firma: GeAT – Gesellschaft für Arbeitnehmerüberlassung Thüringen mbH, Erfurt
 typ: real (Hülle belegt, Kern konstruiert)
-stand: 2026-09-02
+stand: 2026-09-10
 verwendung: Übungsfall für alle Methoden bis Kurswoche 12
 ---
 
@@ -42,7 +42,19 @@ Dazu passt der Reifegrad: Die Branche liegt bei 46 Prozent regelmäßiger KI-Nut
 | [`datenverantwortung.md`](datenverantwortung.md) | Wer für welchen Datenbestand accountable ist (formal: niemand), kritische Befunde priorisiert, Data-Owner-Vorschlag, Sofortmaßnahmen ohne Beschluss | W3, W5, W8 |
 | [`vorhaben.md`](vorhaben.md) | Der Pilot, Workflows heute und im Ziel, Risikoeinschätzung nach EU AI Act, parallele Initiativen, Eskalationsweg | W2, W6, W9, W11 |
 | [`ereignisse.md`](ereignisse.md) | Was sich im Kursverlauf geändert hat, je Zeile eine Woche | laufend |
-| [`agent-konzept-bestandswaechter.md`](agent-konzept-bestandswaechter.md) | Agent-Konzept auf den bereinigten Beständen: was empfohlen wird, was nicht, und warum kein Assistent für alle 69 | W3, W8, W10 |
+| [`w03A-4-use-case-und-sensitivitaet.md`](w03A-4-use-case-und-sensitivitaet.md) | **Kette W03 A, Glied 4.** Prüfung der Plattformentscheidung: Use Case aus dem Datenbestand, Score nachgerechnet, Sensitivität über 30 Varianten plus Kippschwellen. Ändert kein Gewicht | W3, W6 |
+| [`w03A-5-entscheidungsvorlage.md`](w03A-5-entscheidungsvorlage.md) | **Kette W03 A, Glied 5.** Handlungsempfehlung für die Geschäftsführung, zwei Seiten: Empfehlung mit Maßstab, vier entkräftete Gegenargumente, die ersten 90 Tage mit Beleg, fünf offene Fragen, Beschlussvorschlag | W3, W6 |
+| [`w03A-6-pitch-c-level.md`](w03A-6-pitch-c-level.md) | **Kette W03 A, Glied 6. ✔ GELTENDE FASSUNG (2).** Sprechfassung für das C-Level: BLUF vorn, 7 Minuten Kern. Offene Punkte als drei Gates plus Zweitbeschluss. Mit Zeitkontrolle und Notfallkürzung | W3 |
+| [`w03B-1-agent-konzept-bestandswaechter.md`](w03B-1-agent-konzept-bestandswaechter.md) | **Kette W03 B, Glied 1.** Agent-Konzept auf den bereinigten Beständen: was empfohlen wird, was nicht, und warum kein Assistent für alle 69 | W3, W8, W10 |
+| [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) | **Kette W03 A, Glied 1. ⚠ ÜBERHOLT.** Erstfassung der Plattform- und Werkzeugwahl. Nur noch für den Fassungsvergleich lesen | — |
+| [`w03A-2-ki-analyse-review.md`](w03A-2-ki-analyse-review.md) | **Kette W03 A, Glied 2.** Review der Erstfassung: sachliche Fehler, methodische Schwächen, budgetäre Widersprüche | W3 |
+| [`w03A-6-pitch-c-level-fassung-1.md`](w03A-6-pitch-c-level-fassung-1.md) | **Kette W03 A, Glied 6, Fassung 1. ⚠ ÜBERHOLT.** Erstfassung des Pitch, vier Abschnitte, 7–10 Minuten. Inhaltlich unverändert gültig, aber nicht auf ein sofortiges Go gebaut. Nur noch für den Fassungsvergleich lesen | — |
+| [`w03A-6-pitch-c-level-review.md`](w03A-6-pitch-c-level-review.md) | **Kette W03 A, Glied 6, Zwischenglied.** Review des Pitch auf ein sofortiges Go: BLUF, Kürzung von Abschnitt 2, offene Punkte als Gates. Mit Gegenprüfung — vier Vorschläge wurden abgewandelt statt übernommen | W3 |
+| [`w03A-3-ki-analyse-fassung-2-gueltig.md`](w03A-3-ki-analyse-fassung-2-gueltig.md) | **Kette W03 A, Glied 3. ✔ GELTENDE FASSUNG.** Gewichtung K1–K8 und L0–L6, sechs Optionen. **Hieraus zitieren, nicht aus Glied 1** | W3, W6, W7 |
+| [`w03B-2-agent-neubewertung-nach-bereinigung.md`](w03B-2-agent-neubewertung-nach-bereinigung.md) | **Kette W03 B, Glied 2.** Messung der sechs Agentenregeln gegen die bereinigten Bestände: fünf finden null. Empfiehlt einen Fristenwächter statt des Bestandswächters | W3, W8 |
+| [`w03C-1-plattformkriterien-kennzahlen-stakeholder.md`](w03C-1-plattformkriterien-kennzahlen-stakeholder.md) | **Kette W03 C, Glied 1.** Die sechs Plattformkriterien für das Kursboard: je Kriterium Kennzahlen, Stakeholder-Anforderungen und Belege. Konsolidiert die vier verstreuten Kennzahlen-Tabellen und weist fünf Widersprüche aus | W3, W6 |
+| [`w03C-2-dsgvo-ai-act-auszug.md`](w03C-2-dsgvo-ai-act-auszug.md) | **Kette W03 C, Glied 2.** Auszug aus Glied 1, Kriterium 1 allein vortragbar: AI-Act-Einordnung, Anbieter-Betreiber-Unterscheidung, Bias-Rechnung. Kein eigenständiges Ergebnis | W3, W5 |
+| [`w03C-3-reifegradstufe-building-pilots.md`](w03C-3-reifegradstufe-building-pilots.md) | **Kette W03 C, Glied 3.** Reifegradstufe für das zweite Kursboard: warum Stufe 2 nachgeholt und nicht erreicht wird, die vier Eintrittskarten aus Glied 2, und warum GeAT in keine Zeitkategorie des MIT-Modells fällt | W3, W6 |
 | [`raci-datenpflege.md`](raci-datenpflege.md) | RACI-Matrix für fünf Datenpflege-Aufgaben, je Zeile genau ein Accountable, plus die Rolle, die dafür fehlt | W3, W5, W8 |
 | [`daten/`](daten/) | Zwei generierte Übungsdatensätze als CSV (Bewerber, Kunden) mit eingebauten Datenqualitätsproblemen, dazu Datenblatt, Prüfskript, RAG-Erläuterung und separates Lösungsblatt | W3, W5, W8 |
 | [`generierte-werte.md`](generierte-werte.md) | Alle 19 `generiert`-Werte, sortiert nach der Woche, die sie zuerst braucht — plus die `angenommen`-Werte, die trotzdem geprüft werden müssen | jeden Freitag |
@@ -51,6 +63,108 @@ Dazu passt der Reifegrad: Die Branche liegt bei 46 Prozent regelmäßiger KI-Nut
 Zwei Referenzen liegen absichtlich **nicht** in diesem Ordner, weil sie zum Kurs gehören und nicht zum Fall: der **Feldkatalog** (`unternehmensprofil.md`) und das **Musterprofil** der fiktiven Mustermann Antriebstechnik GmbH. Beide stehen im geteilten Projekt „Werkbank: Unternehmensprofile". Der Feldkatalog liegt zusätzlich im Projektwissen dieses Falls, damit ein Modell die Feldstruktur ohne Umweg kennt.
 
 **Nie den ganzen Ordner in einen Prompt geben.** Der Feldkatalog verteilt das Profil auf sechs Dateien, damit ein Modell nur die liest, die es braucht. Für eine Stakeholder-Analyse reichen `profil.md` und `menschen.md`; für den Business Case `zahlen.md` und `vorhaben.md`.
+
+## Dokumentketten
+
+**Hier wird nachgehalten, welches Dokument auf welchem aufbaut.** Ein Ergebnis, das ein anderes
+voraussetzt, steht sonst im luftleeren Raum: man liest es, ohne zu wissen, dass seine Zahlen
+woanders begründet sind — und ändert es, ohne das Vorgängerdokument mitzuändern.
+
+### Die Regel
+
+| | |
+|---|---|
+| **Dateiname** | `wNN` Kurswoche · `A/B/C` Kette innerhalb der Woche · `-N-` Position. Alphabetisch sortiert steht damit jede Kette in ihrer Lesereihenfolge |
+| **Frontmatter** | jedes Glied trägt `kette:`, `baut_auf:`, `basis_fuer:`. `basis_fuer: offen` heißt: letztes Glied, hier geht es weiter |
+| **Überholte Glieder** | bleiben liegen und werden **im Namen und im Frontmatter** als überholt gekennzeichnet. Nicht löschen — der Fassungsvergleich ist der Lernertrag |
+| **Änderungen** | wandern ins **früheste** betroffene Glied. Wer ein Auszugsdokument korrigiert, ohne das Elterndokument zu korrigieren, erzeugt zwei Wahrheiten |
+| **Auszüge** | tragen oben einen Kennzeichnungskasten: Herkunft, führende Quelle, „keine neuen Zahlen" |
+| **Eintragung hier** | jede Kette bekommt eine Zeile unten. Ein Glied ohne Eintrag gilt als vergessen, nicht als eigenständig |
+
+### Kette W03 A · KI-Analyse — die Plattform- und Werkzeugwahl
+
+```
+profil · zahlen · systeme-daten · menschen · vorhaben · transformationsvorschlag   (Bestand)
+   └─ w03A-1-ki-analyse-fassung-1.md              Erstfassung  ⚠ ÜBERHOLT
+        └─ w03A-2-ki-analyse-review.md            Review gegen die Erstfassung
+             └─ w03A-3-ki-analyse-fassung-2-gueltig.md   ✔ GELTENDE FASSUNG
+                  └─ w03A-4-use-case-und-sensitivitaet.md   Prüfung: Use Case + Sensitivität
+                       ├─ w03A-5-entscheidungsvorlage.md      2 Seiten für die Geschäftsführung
+                       └─ w03A-6-pitch-c-level-fassung-1.md   Sprechfassung  ⚠ ÜBERHOLT
+                            └─ w03A-6-pitch-c-level-review.md      Review: BLUF, Kürzung, Gates
+                                 └─ w03A-6-pitch-c-level.md            ✔ GELTENDE FASSUNG (2)
+```
+
+**Wer Gewichte oder Scores zitiert, zitiert `w03A-3`.** Glied 4 prüft, ändert aber nichts: es
+liefert den Use Case aus dem Datenbestand und die Sensitivitätsprobe, die in `w03A-3` fehlte.
+Glieder 5 und 6 sind die Ausgabeformate derselben Prüfung: Vorlage und Pitch.
+
+**Der Pitch hat seit dem 10.09.2026 zwei Fassungen, nach demselben Muster wie Glied 1 bis 3:**
+Fassung 1 → Review → geltende Fassung. **Wer den Pitch hält, hält `w03A-6-pitch-c-level.md`.**
+Geändert haben sich Reihenfolge und Form, **nicht die Zahlen** — jede Zahl aus Fassung 1 gilt
+weiter und ist in `w03A-3` bis `w03A-5` nachgewiesen. `basis_fuer: offen` — das nächste Glied wäre der Business Case in W06.
+
+**Wer Gewichte oder Scores zitiert, zitiert `w03A-3`.** Fassung 2 hat vier Gewichte geändert, MCP
+als Kriterium gestrichen, einen Rechenfehler der Erstfassung korrigiert und eine sechste Option
+(Option F) ergänzt, die Teil B gewinnt.
+
+### Kette W03 B · Agent auf den bereinigten Beständen
+
+```
+w03A-3 (Plattformwahl) · raci-datenpflege · daten/
+   └─ w03B-1-agent-konzept-bestandswaechter.md    Konzept: der Bestandswächter
+        └─ w03B-2-agent-neubewertung-nach-bereinigung.md   Messung gegen die bereinigten Daten
+```
+
+**Glied 1 gilt weiter, seine Begründung nicht.** Auf dem bereinigten Bestand finden fünf der sechs
+Regeln null Fälle; Glied 2 empfiehlt stattdessen einen Fristenwächter mit zwei Regeln. Glied 1
+trägt dazu einen Nachtrag. `basis_fuer: offen` — das nächste Glied wäre die zweite Prüfmessung.
+
+### Kette W03 C · Plattformkriterien und Reifegrad (Kursboards)
+
+```
+w03A-3 (geltende Gewichtung K1–K8)
+   └─ w03C-1-plattformkriterien-kennzahlen-stakeholder.md   Board 1: sechs Kriterien
+        └─ w03C-2-dsgvo-ai-act-auszug.md                    Auszug: Kriterium 1 allein
+             └─ w03C-3-reifegradstufe-building-pilots.md     Board 2: Stufe 2 Building Pilots
+```
+
+`basis_fuer: offen` — das nächste Glied wäre der Business Case in W06.
+
+### Kette · Datenqualitätsübung
+
+```
+daten/README.md → daten/pruefe_datenqualitaet.py → daten/AUFLOESUNG-datenqualitaet.md
+   → daten/KORREKTUR-dokumentation.md → *-korrigiert.csv
+```
+
+Abgeschlossen. Beide korrigierten Bestände bestehen 23 von 24 Prüfungen; der Rest ist Prüfung A1
+und fachlich richtig.
+
+### Noch ohne Präfix, weil die Kurswoche nicht deklariert ist
+
+Diese vier bilden nachweislich eine Kette — die Reihenfolge steht in ihren eigenen
+`bezug:`-Angaben —, tragen aber kein `woche:` im Frontmatter. Ein Präfix wäre hier geraten, nicht
+belegt:
+
+```
+transformationsvorschlag.md
+   ├─ widerstandsmuster.md
+   │    └─ board-widerstandsanalyse.md
+   └─ storyline-stufe-3-datenfundament.md
+        └─ storyline-stufe-3-kurzfassung.md
+```
+
+**Offen:** Sobald die Kurswoche für diese vier feststeht, werden sie zu `wNN…` umbenannt und hier
+als eigene Kette geführt.
+
+### Bestandsdateien — keine Kettenglieder
+
+`recherche.md` · `profil.md` · `zahlen.md` · `menschen.md` · `systeme-daten.md` · `vorhaben.md` ·
+`datenverantwortung.md` · `raci-datenpflege.md` · `ereignisse.md` · `generierte-werte.md`
+
+Sie werden **fortgeschrieben, nicht abgeleitet**, und tragen deshalb kein `kette:`. Wer aus ihnen
+ein datiertes Ergebnis zieht, beginnt eine neue Kette — und trägt sie hier ein.
 
 ## Die Reibung, die eingebaut ist
 

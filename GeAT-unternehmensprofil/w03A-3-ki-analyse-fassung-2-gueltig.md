@@ -1,17 +1,20 @@
 ---
 titel: KI-Analyse GeAT mbH — Plattform- und Werkzeugwahl, nachgebesserte Fassung
-bezug: Erstfassung KI_Analyse.md · Review KI_Analyse_Review.md · Gespraeche/03-der-einwand-der-stimmt.md · ereignisse.md Woche 2.4 · profil.md, zahlen.md, systeme-daten.md, menschen.md, vorhaben.md, transformationsvorschlag.md
+bezug: Erstfassung w03A-1-ki-analyse-fassung-1.md · Review w03A-2-ki-analyse-review.md · Gespraeche/03-der-einwand-der-stimmt.md · ereignisse.md Woche 2.4 · profil.md, zahlen.md, systeme-daten.md, menschen.md, vorhaben.md, transformationsvorschlag.md
 typ: Analyse und Entscheidungsvorlage, nicht beschlossen
 datum: 2026-09-07
 woche: 03
-status: Fassung 2, ersetzt KI_Analyse.md
+status: Fassung 2, ersetzt w03A-1-ki-analyse-fassung-1.md
 verantwortlich: Rolle 15 (AI and Digital Transformation Manager) — Macht 2, kein Budget, kein Gremium
 herkunft: abgeleitet — Gewichtungen sind begründete Setzungen, Scores sind Einschätzungen auf Herstellerunterlagen, Preise sind prüfpflichtige Listenwerte, Rechtsaussagen sind Arbeitshypothesen
+kette: W03 A · KI-Analyse — Glied 3 von 6, GELTENDE FASSUNG
+baut_auf: w03A-1-ki-analyse-fassung-1.md (Erstfassung) · w03A-2-ki-analyse-review.md (Review)
+basis_fuer: w03A-4-use-case-und-sensitivitaet.md (Pruefung: Use Case und Sensitivitaet) · w03B-1-agent-konzept-bestandswaechter.md · w03C-1-plattformkriterien-kennzahlen-stakeholder.md
 ---
 
 # KI-Analyse GeAT mbH — nachgebesserte Fassung
 
-> **Was diese Datei ist.** Fassung 2 der Plattform- und Werkzeugwahl. Sie ersetzt [`KI_Analyse.md`](KI_Analyse.md) und arbeitet zwei Quellen ein, die in der Erstfassung fehlten: das Review in [`KI_Analyse_Review.md`](KI_Analyse_Review.md) und die **Nachbesserungen aus Woche 2.4**, die laut [`ereignisse.md`](ereignisse.md) offen sind und in [`Gespraeche/03-der-einwand-der-stimmt.md`](Gespraeche/03-der-einwand-der-stimmt.md) im Wortlaut stehen.
+> **Was diese Datei ist.** Fassung 2 der Plattform- und Werkzeugwahl. Sie ersetzt [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) und arbeitet zwei Quellen ein, die in der Erstfassung fehlten: das Review in [`w03A-2-ki-analyse-review.md`](w03A-2-ki-analyse-review.md) und die **Nachbesserungen aus Woche 2.4**, die laut [`ereignisse.md`](ereignisse.md) offen sind und in [`Gespraeche/03-der-einwand-der-stimmt.md`](Gespraeche/03-der-einwand-der-stimmt.md) im Wortlaut stehen.
 >
 > **Das Ergebnis hat sich geändert, nicht nur die Begründung.** Teil A behält seinen Sieger mit deutlich kleinerem Abstand. **Teil B hat einen anderen Sieger** — und er kommt nicht aus dem Review, sondern aus dem Gespräch mit dem Datenschutzbeauftragten, das die Erstfassung nicht gelesen hatte.
 >
@@ -45,8 +48,8 @@ Ich habe jeden Punkt des Reviews gegen die Primärdateien geprüft, bevor ich ih
 
 | Review-Punkt | Warum er nicht trägt |
 |---|---|
-| **Fehler 1** · „Der AÜG-Erlaubnis-Mythos steht in `KI_Analyse.md` Zeile 126–127" | **Fehlzuschreibung.** Der zitierte Satz steht nicht in `KI_Analyse.md`, sondern in [`transformationsvorschlag.md`](transformationsvorschlag.md) **Zeile 126** — das Review hat die Zeilennummer der falschen Datei gelesen. `KI_Analyse.md` nennt das AÜG genau einmal, in Kontextzeile 3, rein deskriptiv und ohne Kausalbehauptung. **Der Fehler ist echt, aber er steht in einer anderen Datei** — und er ist in [`ereignisse.md`](ereignisse.md) Woche 2.4 bereits als offene Nachbesserung vermerkt. [Abschnitt 2.3](#23-was-in-transformationsvorschlagmd-noch-zu-streichen-ist) liefert den Ersatztext, damit der Punkt nicht ein drittes Mal auftaucht |
-| **Fehler 2, Teilbehauptung** · „Die Analyse kalkuliert mit einem Investitionsspielraum von 280.000 €" | **Falsch.** `KI_Analyse.md` nennt 280.000 € an genau einer Stelle — Zeile 364, im offenen Punkt 6, und dort ausdrücklich als den Wert, der auf 185.000 € zu korrigieren ist. Der Vorwurf lautet richtig: *die Konsequenz wurde benannt und nicht gezogen.* So steht er in 0.1 |
+| **Fehler 1** · „Der AÜG-Erlaubnis-Mythos steht in `w03A-1-ki-analyse-fassung-1.md` Zeile 126–127" | **Fehlzuschreibung.** Der zitierte Satz steht nicht in `w03A-1-ki-analyse-fassung-1.md`, sondern in [`transformationsvorschlag.md`](transformationsvorschlag.md) **Zeile 126** — das Review hat die Zeilennummer der falschen Datei gelesen. `w03A-1-ki-analyse-fassung-1.md` nennt das AÜG genau einmal, in Kontextzeile 3, rein deskriptiv und ohne Kausalbehauptung. **Der Fehler ist echt, aber er steht in einer anderen Datei** — und er ist in [`ereignisse.md`](ereignisse.md) Woche 2.4 bereits als offene Nachbesserung vermerkt. [Abschnitt 2.3](#23-was-in-transformationsvorschlagmd-noch-zu-streichen-ist) liefert den Ersatztext, damit der Punkt nicht ein drittes Mal auftaucht |
+| **Fehler 2, Teilbehauptung** · „Die Analyse kalkuliert mit einem Investitionsspielraum von 280.000 €" | **Falsch.** `w03A-1-ki-analyse-fassung-1.md` nennt 280.000 € an genau einer Stelle — Zeile 364, im offenen Punkt 6, und dort ausdrücklich als den Wert, der auf 185.000 € zu korrigieren ist. Der Vorwurf lautet richtig: *die Konsequenz wurde benannt und nicht gezogen.* So steht er in 0.1 |
 | **Fehler 3, Nachrechnung** · „Option D sinkt von 3,43 auf 2,23" | **Rechenfehler.** Setzt man L1, L2, L4 und L5 auf 2, ergibt die Gewichtung B der Erstfassung **1,97**, nicht 2,23. Die Richtung stimmt, die Zahl nicht. Fassung 2 rechnet neu und kommt bei anderer Korrektur auf **2,36** |
 | **Fehler 4, Punkt 6** · „Art. 27 FRIA: GeAT muss eine Grundrechte-Folgenabschätzung durchführen" | **Trägt für GeAT nicht.** Die Pflicht nach Art. 27 richtet sich an Betreiber, die öffentliche Stellen sind oder öffentliche Dienste erbringen, sowie an Betreiber der Systeme nach Annex III Nr. 5 Buchst. b und c (Kreditwürdigkeit, Risikobewertung in der Lebens- und Krankenversicherung). GeAT ist ein privater Verleiher unter **Annex III Nr. 4**. Eine **Datenschutz-Folgenabschätzung nach Art. 35 DSGVO** ist dagegen fällig und in Fassung 2 aufgenommen (`Rechtshypothese`) |
 | **Fehler 4, Nummerierung** · „Art. 26 Abs. 11a" | Existiert nicht. Die Unterrichtung der Arbeitnehmervertretung ist **Art. 26 Abs. 7**, die Information der betroffenen Personen **Art. 26 Abs. 11**. Korrigiert in [Abschnitt 2.1](#21-die-betreiberpflichten-die-in-keiner-kostenzeile-stehen) (`Rechtshypothese`) |
@@ -185,7 +188,7 @@ Fassung 1 hat diese Rechnung in die Tabelle „Offene Punkte" gestellt. Das war 
 
 ### 4.1 Kontext, unverändert bis auf zwei Zeilen
 
-Die zehn Kontextzeilen aus Fassung 1 gelten weiter ([`KI_Analyse.md`](KI_Analyse.md), 4.1). Zwei kommen hinzu:
+Die zehn Kontextzeilen aus Fassung 1 gelten weiter ([`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md), 4.1). Zwei kommen hinzu:
 
 | Nr | Neue Kontextzeile | Herkunft |
 |---:|---|---|
@@ -499,8 +502,8 @@ Aus Bedenken 1 des Reviews, und es ist der Punkt, an dem ich als Rolle 15 mit Ma
 
 | Datum | Änderung | Grund |
 |---|---|---|
-| 2026-09-07 | Fassung 1 (`KI_Analyse.md`): Gewichtung A und B fixiert, vor dem Scoring | — |
-| 2026-09-07 | **Fassung 2.** Gewichtung A: K3 +2, K5 +1, K6 −4 (MCP entfernt), K7 +1. Gewichtung B: L0 neu (20 %), L1 −5, L2 −7, L3 −3, L5 −2, L6 −1, Adoption gestrichen | Review `KI_Analyse_Review.md` Schwächen 1, 3b, 5 · Kennzahlkorrektur gegen `vorhaben.md` |
+| 2026-09-07 | Fassung 1 (`w03A-1-ki-analyse-fassung-1.md`): Gewichtung A und B fixiert, vor dem Scoring | — |
+| 2026-09-07 | **Fassung 2.** Gewichtung A: K3 +2, K5 +1, K6 −4 (MCP entfernt), K7 +1. Gewichtung B: L0 neu (20 %), L1 −5, L2 −7, L3 −3, L5 −2, L6 −1, Adoption gestrichen | Review `w03A-2-ki-analyse-review.md` Schwächen 1, 3b, 5 · Kennzahlkorrektur gegen `vorhaben.md` |
 | 2026-09-07 | **Fassung 2.** Option D: L1 4→2, L2 4→3, L4 4→3, K7 4→3. Option A: K3 3→2. Option B: K4 2→3. **Option F neu aufgenommen** | Ankerdisziplin (Review Fehler 3) · `Gespraeche/03` (AGB-Argument, sechste Option) |
 | 2026-09-07 | **Fassung 2.** Neue Abschnitte 2 (Rechtsrahmen), 3 (Budget), 0 (Prüfprotokoll). Abbruchkriterium ersetzt, Sitzverteilung auf drei Standorte, Empfehlung 2 von sechs auf drei Anforderungen, Empfehlung 3 und 4 neu | Review Fehler 2 und 4, Bedenken 1–4 · Nachbesserungen aus `ereignisse.md` Woche 2.4 |
 
@@ -508,4 +511,4 @@ Aus Bedenken 1 des Reviews, und es ist der Punkt, an dem ich als Rolle 15 mit Ma
 
 **Noch offen, nicht in dieser Datei zu erledigen:** der AÜG-Satz in [`transformationsvorschlag.md`](transformationsvorschlag.md) Zeile 126 ([Abschnitt 2.3](#23-was-in-transformationsvorschlagmd-noch-zu-streichen-ist)), und der Eintrag dieser Fassung in [`ereignisse.md`](ereignisse.md).
 
-**Verwandte Dateien:** [`KI_Analyse.md`](KI_Analyse.md) (Fassung 1, ersetzt) · [`KI_Analyse_Review.md`](KI_Analyse_Review.md) (Prüfbericht) · [`Gespraeche/03-der-einwand-der-stimmt.md`](Gespraeche/03-der-einwand-der-stimmt.md) (Quelle von Option F und der drei Dokumente) · [`transformationsvorschlag.md`](transformationsvorschlag.md) · [`vorhaben.md`](vorhaben.md) · [`systeme-daten.md`](systeme-daten.md) · [`zahlen.md`](zahlen.md) · [`menschen.md`](menschen.md) · [`ereignisse.md`](ereignisse.md) · [Coursebook 3.1](../coursebook/3.1/3.1_KI-Plattformen-im-Vergleich.md)
+**Verwandte Dateien:** [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) (Fassung 1, ersetzt) · [`w03A-2-ki-analyse-review.md`](w03A-2-ki-analyse-review.md) (Prüfbericht) · [`Gespraeche/03-der-einwand-der-stimmt.md`](Gespraeche/03-der-einwand-der-stimmt.md) (Quelle von Option F und der drei Dokumente) · [`transformationsvorschlag.md`](transformationsvorschlag.md) · [`vorhaben.md`](vorhaben.md) · [`systeme-daten.md`](systeme-daten.md) · [`zahlen.md`](zahlen.md) · [`menschen.md`](menschen.md) · [`ereignisse.md`](ereignisse.md) · [Coursebook 3.1](../coursebook/3.1/3.1_KI-Plattformen-im-Vergleich.md)

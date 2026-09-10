@@ -1,22 +1,33 @@
 ---
 titel: Agent-Konzept — der Bestandswächter, und warum kein Assistent für alle 69
-bezug: daten/KORREKTUR-dokumentation.md, daten/pruefe_datenqualitaet.py, raci-datenpflege.md, datenverantwortung.md, KI_Analyse.md, transformationsvorschlag.md
+bezug: daten/KORREKTUR-dokumentation.md, daten/pruefe_datenqualitaet.py, raci-datenpflege.md, datenverantwortung.md, w03A-1-ki-analyse-fassung-1.md, transformationsvorschlag.md
 typ: Konzept und Entscheidungsvorlage, nicht beschlossen
 datum: 2026-09-08
 woche: 03
 status: Entwurf zur Vorlage in der Geschäftsführung
 verantwortlich: Rolle 15 (AI and Digital Transformation Manager) — interessierte Partei, siehe Gegenargumente
 herkunft: abgeleitet. Aufwände und Kosten sind gekennzeichnete Schätzungen, keine Angebote
+kette: W03 B · Agent auf den bereinigten Bestaenden — Glied 1 von 2
+baut_auf: w03A-3-ki-analyse-fassung-2-gueltig.md (Plattformwahl) · raci-datenpflege.md · daten/
+basis_fuer: w03B-2-agent-neubewertung-nach-bereinigung.md — die Begruendung dieses Konzepts ist dort ueberholt
 ---
 
 # Agent-Konzept: der Bestandswächter
+
+> **Nachtrag 2026-09-10 — die Begründung dieses Konzepts ist überholt.** Auf den fertigen
+> bereinigten Beständen finden fünf der sechs Regeln aus Abschnitt 2 null Fälle. Was übrig bleibt,
+> ist ein kleinerer Agent mit zwei Fristenregeln, und eine davon hat keine Datengrundlage. Die
+> Messung und der geänderte Vorschlag stehen in
+> [`w03B-2-agent-neubewertung-nach-bereinigung.md`](w03B-2-agent-neubewertung-nach-bereinigung.md).
+> Abschnitte 2, 5, 6, 9 und 10 dieses Konzepts bleiben gültig; Abschnitt 1 und 4 sind dort
+> neu bewertet.
 
 > **Auftrag.** Welcher Agent lässt sich mit den bereinigten Datenbeständen bauen, den das ganze
 > Unternehmen oder ein großer Teil davon nutzt? Grundlage sind
 > [`daten/bewerberdatenbank-korrigiert.csv`](daten/bewerberdatenbank-korrigiert.csv) und
 > [`daten/kundendatenbank-korrigiert.csv`](daten/kundendatenbank-korrigiert.csv), die
 > Zuständigkeiten aus [`raci-datenpflege.md`](raci-datenpflege.md) und die Plattformwahl aus
-> [`KI_Analyse.md`](KI_Analyse.md).
+> [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md).
 
 ## Die Antwort vorweg
 
@@ -43,7 +54,7 @@ Kandidaten findet, filtert oder in eine Reihenfolge bringt, ist Annex III Nr. 4.
 Funktion beim Branchenanbieter, bleibt GeAT **Betreiber**. Baut GeAT sie selbst, wird GeAT
 **Anbieter** — mit Konformitätsbewertung, technischer Dokumentation und Qualitätsmanagementsystem,
 bei 1,5 IT-Stellen, die bis Q1/2027 in der Migration stecken. Genau dieser Unterschied entscheidet
-in [`KI_Analyse.md`](KI_Analyse.md), Teil B, die Plattformfrage für Stufe 4 — und er entscheidet
+in [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md), Teil B, die Plattformfrage für Stufe 4 — und er entscheidet
 hier gegen den offensichtlichen Agenten.
 
 **Zweitens: 69 Seats sind das gesamte IT-Projektbudget.** Die Analyse rechnet es für Copilot vor:
@@ -161,7 +172,7 @@ Führungssystem  ──(wöchentlicher Export, wie heute 14 Berichte)──▶  
 Vier Festlegungen dazu:
 
 - **Plattform: keine neue Entscheidung.** Der Agent läuft auf der integrierten EU-Plattform, die
-  [`KI_Analyse.md`](KI_Analyse.md) für Stufe 1 empfiehlt — Multi-Tenant SaaS in der EU, REST und
+  [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) für Stufe 1 empfiehlt — Multi-Tenant SaaS in der EU, REST und
   MCP vorhanden, AVV als Standardangebot. Kein zweiter Anbieter, kein zweiter Vertrag.
 - **Datenzugriff über Werkzeuge, nicht über Einbettung.** Der Agent stellt Abfragen an die
   geprüften Tabellen und bekommt Zeilen zurück. Es wird **kein** Bewerberbestand in einen

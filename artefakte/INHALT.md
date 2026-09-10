@@ -1,6 +1,6 @@
 ---
 artefakt: Inhaltsverzeichnis
-stand: 2026-09-09
+stand: 2026-09-10
 status: automatisch erzeugt von coursetools/inhalt-bauen.py
 zweck: alle Themen der Artefakte an einer Stelle, mit Sprung zur Überschrift
 ---
@@ -19,11 +19,12 @@ Alle Dokumente unterhalb von `artefakte/`, aufgeschlüsselt bis zur dritten Übe
 | [Woche 01 · Lernziele](#artefakte/woche-01/lernziele.md) | 2026-08-28 | 2 |
 | [Woche 01 · Manual of Me](#artefakte/woche-01/manual-of-me.md) | 2026-08-28 | 6 |
 | [Woche 02 · Kursmaterial](#artefakte/woche-02/kursmaterial.md) | 2026-09-03 | 22 |
+| [Woche 03 · Kritik der Lektüre Implementierungspfade und Reifegrade](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md) | 2026-09-10 | 14 |
+| [Woche 03 · Zwei Fragen zu Datenqualität und Governance](#artefakte/woche-03/datenqualitaet-zwei-fragen.md) | 2026-09-07 | 15 |
 | [Extra · 0 Übersicht](#artefakte/extra/README.md) | 2026-09-03 | 2 |
 | [Extra · 1 Modelle und Verfahren, die nur genannt wurden](#artefakte/extra/01_modelle-und-verfahren.md) | 2026-09-03 | 10 |
 | [Extra · 2 Zahlen und Befunde, die nicht behandelt wurden](#artefakte/extra/02_zahlen-und-befunde.md) | 2026-09-03 | 9 |
 | [Extra · 3 Spannungen und blinde Flecken](#artefakte/extra/03_spannungen-und-blinde-flecken.md) | 2026-09-03 | 12 |
-| [Woche 03 · Zwei Fragen zu Datenqualität und Governance](#artefakte/woche-03/datenqualitaet-zwei-fragen.md) | 2026-09-07 | 15 |
 
 ---
 
@@ -137,6 +138,51 @@ Alle Dokumente unterhalb von `artefakte/`, aufgeschlüsselt bis zur dritten Übe
 - [5. Checkliste zur Wissensüberprüfung](#artefakte/woche-02/kursmaterial.md#5-checkliste-zur-wissensüberprüfung)
 - [Übertragung in andere Projekte](#artefakte/woche-02/kursmaterial.md#übertragung-in-andere-projekte)
 
+## Woche 03 · Datenqualität, Governance und Implementierungspfade
+
+### [Woche 03 · Kritik der Lektüre Implementierungspfade und Reifegrade](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md)
+
+*die Lektüre gegen die betriebliche Realität im öffentlichen Dienst stellen und die angreifbaren Zahlen kennen, bevor sie im Plenum zitiert werden*
+
+`artefakte/woche-03/lektuere-implementierungspfade-kritik.md` · Stand 2026-09-10
+
+- [Executive Summary: Kernergebnis auf einen Blick](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#executive-summary-kernergebnis-auf-einen-blick)
+- [1. Detailanalyse: Was ist ungenau oder sachlich fragwürdig?](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#1-detailanalyse-was-ist-ungenau-oder-sachlich-fragwürdig)
+  - [1.1 Mathematischer Logikfehler & Quellen-Fehlzuordnung bei den Abbruchquoten](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#11-mathematischer-logikfehler--quellen-fehlzuordnung-bei-den-abbruchquoten)
+  - [1.2 Scheingenauigkeit: Die „35-Prozent-Regel“ von McKinsey](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#12-scheingenauigkeit-die-35-prozent-regel-von-mckinsey)
+  - [1.3 Konzeptueller Widerspruch der Zeithorizonte (OpenAI vs. MIT CISR)](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#13-konzeptueller-widerspruch-der-zeithorizonte-openai-vs-mit-cisr)
+- [2. Was fehlt grundlegend? (Die blinden Flecken)](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#2-was-fehlt-grundlegend-die-blinden-flecken)
+  - [2.1 Regulatorik, Compliance & Mitbestimmung (Der deutsche/europäische Kontext)](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#21-regulatorik-compliance--mitbestimmung-der-deutscheeuropäische-kontext)
+  - [2.2 Fehlende Kriterien für „Produktionsreife“ (Non-Functional Requirements)](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#22-fehlende-kriterien-für-produktionsreife-non-functional-requirements)
+  - [2.3 Überhöhung und Engführung des Datenkatalogs](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#23-überhöhung-und-engführung-des-datenkatalogs)
+  - [2.4 Inhaltsleere Fallstudie: Deutsche Telekom](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#24-inhaltsleere-fallstudie-deutsche-telekom)
+  - [2.5 Differenzierung nach Use-Case-Typen fehlt](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#25-differenzierung-nach-use-case-typen-fehlt)
+- [3. Didaktische Schwachstellen im Kurskontext](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#3-didaktische-schwachstellen-im-kurskontext)
+- [4. Konkrete Argumentationshilfen für die Empfehlungsverteidigung (Donnerstag)](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#4-konkrete-argumentationshilfen-für-die-empfehlungsverteidigung-donnerstag)
+- [5. Fazit](#artefakte/woche-03/lektuere-implementierungspfade-kritik.md#5-fazit)
+
+### [Woche 03 · Zwei Fragen zu Datenqualität und Governance](#artefakte/woche-03/datenqualitaet-zwei-fragen.md)
+
+*die beiden Leitfragen des Vormittags aus der Aktenlage beantworten, statt sie im Plenum zu improvisieren*
+
+`artefakte/woche-03/datenqualitaet-zwei-fragen.md` · Stand 2026-09-07
+
+- [1. Frage 1 — Welche der vier Dimensionen trifft uns am härtesten?](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#1-frage-1--welche-der-vier-dimensionen-trifft-uns-am-härtesten)
+  - [Die Antwort in einem Satz](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#die-antwort-in-einem-satz)
+  - [Warum Konsistenz, aus der Aktenlage](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#warum-konsistenz-aus-der-aktenlage)
+  - [Woran wir es merken — und woran wir es nicht merken](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#woran-wir-es-merken--und-woran-wir-es-nicht-merken)
+  - [Der Gegenkandidat, den ich nicht wegdiskutiere](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#der-gegenkandidat-den-ich-nicht-wegdiskutiere)
+  - [Was die Frage entscheiden würde](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#was-die-frage-entscheiden-würde)
+- [2. Frage 2 — Wer ist Accountable für unsere kritischste Datendomäne?](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#2-frage-2--wer-ist-accountable-für-unsere-kritischste-datendomäne)
+  - [Die Antwort](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#die-antwort)
+  - [Welche Domäne ich für die kritischste halte](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#welche-domäne-ich-für-die-kritischste-halte)
+  - [Was stattdessen existiert](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#was-stattdessen-existiert)
+  - [Wer es sein müsste](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#wer-es-sein-müsste)
+  - [Der Prüfpunkt, den ich mitnehme](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#der-prüfpunkt-den-ich-mitnehme)
+- [3. Was ich in die Diskussion mitbringe](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#3-was-ich-in-die-diskussion-mitbringe)
+- [4. Belegübersicht](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#4-belegübersicht)
+- [Nachtrag nach der Diskussion](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#nachtrag-nach-der-diskussion)
+
 ## Extra · was nicht behandelt wurde
 
 ### [Extra · 0 Übersicht](#artefakte/extra/README.md)
@@ -194,30 +240,6 @@ Alle Dokumente unterhalb von `artefakte/`, aufgeschlüsselt bis zur dritten Übe
 - [B5. Was passiert, wenn das Modell selbst der Gegenstand des Widerstands ist \[ergänzt\]](#artefakte/extra/03_spannungen-und-blinde-flecken.md#b5-was-passiert-wenn-das-modell-selbst-der-gegenstand-des-widerstands-ist-ergänzt)
 - [B6. Die Grenze des Merksatzes \[Verweis\]](#artefakte/extra/03_spannungen-und-blinde-flecken.md#b6-die-grenze-des-merksatzes-verweis)
 
-## woche-03
-
-### [Woche 03 · Zwei Fragen zu Datenqualität und Governance](#artefakte/woche-03/datenqualitaet-zwei-fragen.md)
-
-*die beiden Leitfragen des Vormittags aus der Aktenlage beantworten, statt sie im Plenum zu improvisieren*
-
-`artefakte/woche-03/datenqualitaet-zwei-fragen.md` · Stand 2026-09-07
-
-- [1. Frage 1 — Welche der vier Dimensionen trifft uns am härtesten?](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#1-frage-1--welche-der-vier-dimensionen-trifft-uns-am-härtesten)
-  - [Die Antwort in einem Satz](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#die-antwort-in-einem-satz)
-  - [Warum Konsistenz, aus der Aktenlage](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#warum-konsistenz-aus-der-aktenlage)
-  - [Woran wir es merken — und woran wir es nicht merken](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#woran-wir-es-merken--und-woran-wir-es-nicht-merken)
-  - [Der Gegenkandidat, den ich nicht wegdiskutiere](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#der-gegenkandidat-den-ich-nicht-wegdiskutiere)
-  - [Was die Frage entscheiden würde](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#was-die-frage-entscheiden-würde)
-- [2. Frage 2 — Wer ist Accountable für unsere kritischste Datendomäne?](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#2-frage-2--wer-ist-accountable-für-unsere-kritischste-datendomäne)
-  - [Die Antwort](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#die-antwort)
-  - [Welche Domäne ich für die kritischste halte](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#welche-domäne-ich-für-die-kritischste-halte)
-  - [Was stattdessen existiert](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#was-stattdessen-existiert)
-  - [Wer es sein müsste](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#wer-es-sein-müsste)
-  - [Der Prüfpunkt, den ich mitnehme](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#der-prüfpunkt-den-ich-mitnehme)
-- [3. Was ich in die Diskussion mitbringe](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#3-was-ich-in-die-diskussion-mitbringe)
-- [4. Belegübersicht](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#4-belegübersicht)
-- [Nachtrag nach der Diskussion](#artefakte/woche-03/datenqualitaet-zwei-fragen.md#nachtrag-nach-der-diskussion)
-
 ---
 
-*Erzeugt am 2026-09-09 aus 11 Dokumenten. Neu erzeugen: `python coursetools/inhalt-bauen.py`*
+*Erzeugt am 2026-09-10 aus 12 Dokumenten. Neu erzeugen: `python coursetools/inhalt-bauen.py`*
