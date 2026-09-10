@@ -77,7 +77,8 @@ herkunft: verdichtet aus w03A-6-pitch-c-level.md. Jede Zahl ist in w03A-3 bis w0
 
 ## 9 · Diesmal anders — 30 Sek
 - **Die Nutzer sind schon da — wir wecken keinen Bedarf, wir legalisieren einen**
-- Das Abbruchkriterium stand vorher, nicht danach
+- **Das Abbruchkriterium steht vor Ihrem Beschluss — damit kann ich es hinterher nicht weich machen**
+- Der Kontrast: 2023 wurde erst drei Jahre später gemessen, und nur wegen des Audits
 - Keine zweite Baustelle: 10 Stunden, keine Schnittstelle
 - **„Messen Sie mich an diesen zwei Sätzen"**
 

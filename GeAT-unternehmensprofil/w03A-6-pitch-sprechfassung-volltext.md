@@ -169,7 +169,10 @@ herkunft: Sprechtext. Jede Zahl ist in w03A-3 bis w03A-5 nachgewiesen. Beträge 
 > **Erstens: Die Nutzer sind schon da.** Wir wecken keinen Bedarf, wir legalisieren einen. Das ist
 > die einzige Adoptionsgeschichte, die nach 2023 noch Kredit hat.
 >
-> **Zweitens: Das Abbruchkriterium haben Sie vor dem Beschluss gehört, nicht danach.**
+> **Zweitens: Das Abbruchkriterium steht vor Ihrem Beschluss.** Sie haben es vor vier Minuten
+> gehört, und **damit kann ich es hinterher nicht weich machen.** Ein Erfolgskriterium, das erst
+> nach der Bewilligung formuliert wird, lässt sich beliebig anpassen — 2023 haben wir überhaupt
+> erst drei Jahre später gemessen, und nur, weil ein Audit anstand.
 >
 > Und der Einwand, keine zweite Baustelle vor der Migration, ist berechtigt — er trifft aber den
 > Betrieb, nicht den Aufbau: zehn Stunden, keine Schnittstelle, migrationsfest.
@@ -278,7 +281,7 @@ Wenn die Sitzung kippt, diese acht Folien und nichts dazwischen:
 | **3** | 9 private Konten, ein Jahr, kein AV-Vertrag. „Wir beenden eine Verarbeitung ohne Rechtsgrundlage" |
 | **5** | 90 Tage, beide Abbruchbedingungen, Kündigung zum Quartalsende |
 | **8** | 2023: 95.000 €, 34 % Nutzung. „Wer sagt ‚nicht noch ein Werkzeug', hat recht" |
-| **9** | Die Nutzer sind schon da. Das Abbruchkriterium stand vorher |
+| **9** | Die Nutzer sind schon da. Das Abbruchkriterium steht vor dem Beschluss und ist damit bindend |
 | **10** | Nur Bedingung 1: ohne schriftliche Datenschutzfreigabe fließt kein Euro |
 | **13** | Die drei Beschlusspunkte |
 | **14** | Beide Ausgänge tragbar. „Ich habe eine Empfehlung, keine Sicherheit" |

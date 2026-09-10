@@ -132,8 +132,9 @@ herkunft: Sprechtext. Jede Zahl darin ist in w03A-3 bis w03A-5 nachgewiesen. All
 > **Erstens: die neun sind Nutzer, bevor wir etwas einführen.** Wir wecken keinen Bedarf, wir
 > legalisieren einen. Das ist die einzige Adoptionsgeschichte, die nach 2023 noch Kredit hat.
 >
-> **Zweitens gibt es diesmal ein Abbruchkriterium, und Sie haben es vor dem Beschluss gehört, nicht
-> danach.**
+> **Zweitens: das Abbruchkriterium steht vor Ihrem Beschluss, nicht danach — und damit kann ich es
+> hinterher nicht weich machen.** Ein Erfolgskriterium, das erst nach der Bewilligung formuliert
+> wird, lässt sich beliebig anpassen. 2023 wurde überhaupt erst drei Jahre später gemessen.
 >
 > **Zweiter Einwand, und er ist berechtigt: keine zweite Baustelle vor der Migration.** Er trifft
 > den Betrieb, nicht den Aufbau — zehn Stunden, keine Schnittstelle, migrationsfest. Siehe oben.
