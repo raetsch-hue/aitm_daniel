@@ -134,6 +134,15 @@ Der Punkt, an dem der ganze Zuschnitt des Vorhabens hängt.
 | Gesellschaftervertretung | **„Amortisation unter 24 Monaten oder wartet, bis die Software steht."** | `angenommen` |
 | Externer Datenschutzbeauftragter | stuft Bewerberauswahl als Annex III ein; seine Stellungnahme geht an die Gesellschafter | `angenommen` |
 
+**Die Signallage der beiden Instanzen, die den Zeitplan bestimmen** — ohne sie kann ein Gremium den Beschluss vertagen, obwohl es nicht müsste:
+
+| Instanz | Signallage | Herkunft |
+|---|---|---|
+| **Betriebsrat** — sieben Mitglieder, tagt **monatlich plus nach Anlass** | **Offen, wenn eine Betriebsvereinbarung Leistungs- und Verhaltenskontrolle ausschließt.** Die Vorsitzende hat 2023 beim damaligen Modul genau darauf bestanden — die Bedingung ist also bekannt und erprobt, nicht neu | `angenommen` |
+| **Externer Datenschutzbeauftragter** | Seine dokumentierte Warnung — *„Bewerberauswahl ist Annex III, das ist ein Hochrisikosystem mit Konformitätspflicht"* — **betrifft Stufe 4, den Assistenten, nicht Stufe 1.** Stufe 1 ist kein Bewerberauswahlsystem | Haltung `angenommen`, Abgrenzung aus der Bewertung |
+
+> **Die zweite Zeile ist für einen Dritten die wichtigere.** Wer nur das Zitat des Datenschutzbeauftragten liest, hält das ganze Vorhaben für blockiert. Die Einstufung als Hochrisikosystem gilt der **Besetzungsempfehlung** (Stufe 4), nicht dem freigegebenen Zugang für Anzeigentexte (Stufe 1). Diese Unterscheidung trägt den gesamten Zuschnitt — und wer sie im Gremium nicht sauber zieht, verliert den Beschluss an eine Frage, die gar nicht zur Sache gehört.
+
 > **Die Amortisationsforderung ist der dritte Einwand im Pitch** — und die Antwort darauf lautet nicht „doch, es amortisiert sich", sondern: *bei dieser Maßnahme ist Amortisation die falsche Kennzahl; 9.000 € beenden ein Rechtsrisiko. Wer sie hier verlangt, verschiebt den Verstoß um ein Quartal.* Ein Dritter sollte diese Forderung kennen, sonst wirkt der Einwand im Pitch erfunden.
 
 > **Die Zeile aus `zahlen.md`, die das erklärt:** *„Das ist keine Budgetgrenze, sondern eine Taktgrenze — und sie entscheidet mehr über den Zeitplan als die Technik."* Ein Vorhaben, das die Quartalssitzung verpasst, verliert ein Quartal.
@@ -151,6 +160,36 @@ Der Punkt, an dem der ganze Zuschnitt des Vorhabens hängt.
 | Verarbeitete Inhalte | Anzeigentexte und **Profilzusammenfassungen**, darunter Bewerberlebensläufe | `angenommen` |
 | Auftragsverarbeitungsvertrag | **keiner**. Kein Beschluss, keine Freigabe, keine Regel | `angenommen` |
 | Branchenvergleich | 46 % regelmäßige Nutzung | `öffentlich` |
+
+---
+
+## 3a · Der Arbeitsablauf — heute und ab Tag 1
+
+Die Frage, die im Gremium kommt: *„Was genau tippen die zwanzig Leute nächste Woche da ein?"*
+
+| | Heute | Ab Tag 1 |
+|---|---|---|
+| Werkzeug | privates KI-Konto, außerhalb des Unternehmens | freigegebener Zugang, AV-Vertrag, EU-Verarbeitung |
+| Inhalte | Anzeigentexte und Profilzusammenfassungen | unverändert dieselben |
+| Vorlagen | **eine private Prompt-Sammlung einer Recruiterin** — funktionierende Textbausteine, nicht geteilt | dieselben Bausteine, **gesichtet, geprüft, als interne Vorlagen freigegeben** |
+| Aufwand dafür | — | **2.000 €**, in den 22.000 € der Stufe 1 enthalten | 
+
+> **Das ist die stärkste Antwort auf die Adoptionsfrage, und sie steht sonst nirgends im Datenblatt.** Es wird kein Verhalten eingeführt, sondern ein vorhandenes legalisiert — einschließlich der Arbeitsmittel. Die Bausteine, die heute privat funktionieren, werden geprüft und zum Standard gemacht. Wer fragt, ob die zwanzig Personen das Werkzeug benutzen werden, bekommt hier die Antwort: neun tun es seit einem Jahr, und ihre Vorlagen sind der Startpunkt.
+
+---
+
+## 3b · Was der Zustand riskiert — Rahmen, nicht Rechnung
+
+Der Pitch stellt 9.000 € einem Risiko gegenüber, das im Quellmaterial **nicht beziffert** ist. Für einen kaufmännischen Entscheider fehlt damit die Vergleichsgröße. Was sich belegen lässt, ist der **Rahmen** — und der besteht aus zwei Teilen, von denen der zweite der schwerere ist.
+
+| Rahmen | Grundlage | Herkunft |
+|---|---|---|
+| **Bußgeld nach DSGVO** | Art. 83: bis zu 20 Mio. € **oder** 4 % des weltweiten Jahresumsatzes, je nachdem was höher ist. Bei 31 Mio. € Umsatz wäre die 4-%-Grenze rund 1,24 Mio. € | Gesetzeslage `öffentlich`, Anwendung auf diesen Fall `Rechtshypothese` |
+| **Erlaubnis zur Arbeitnehmerüberlassung** | GeAT besitzt eine **unbefristete Erlaubnis, wirksam ab 25.09.2000**. Aufsichtsbehörde ist die **Bundesagentur für Arbeit**. Die Erlaubnis setzt die Zuverlässigkeit des Verleihers voraus | Erlaubnis und Aufsicht `öffentlich`, der Zusammenhang zur Zuverlässigkeit `Rechtshypothese` |
+
+> **Warum der zweite Teil schwerer wiegt.** Ein Bußgeld kostet Geld. **Die Erlaubnis ist das Geschäftsmodell** — ohne sie gibt es keine Arbeitnehmerüberlassung. Das ist die eigentliche Größenordnung, gegen die 9.000 € stehen.
+>
+> **Und die Warnung, die dazugehört.** Die 1,24 Mio. € sind eine **gesetzliche Obergrenze, kein Erwartungswert.** Tatsächlich verhängte Bußgelder für Fälle dieser Art liegen um Größenordnungen darunter. Wer die Zahl als Risiko vorträgt, nennt eine Scheingenauigkeit — und wird von jedem, der es nachliest, darauf festgenagelt. **Den Rahmen nennen, die Zahl nicht als Prognose ausgeben.** Die belastbare Formulierung lautet: *„Ich habe den Schaden nicht beziffert. Der gesetzliche Rahmen reicht bis 4 % vom Umsatz, und unsere Erlaubnis hängt an unserer Zuverlässigkeit. Gegen beides stehen neuntausend Euro."*
 
 ---
 
@@ -325,6 +364,32 @@ Alle Preise sind **Listenwerte, prüfpflichtig, kein Angebot liegt vor.**
 
 ---
 
+### Die Prüffrage, die den 90-Tage-Ausstieg trägt
+
+| Frage | Stand |
+|---|---|
+| **Hat der Anbieter monatliche oder quartalsweise Kündbarkeit — oder eine Mindestvertragslaufzeit von zwölf Monaten?** | **nicht geklärt, in keiner Quelle dokumentiert** |
+
+> **Warum das die empfindlichste offene Stelle ist.** Der Pitch verspricht: *„Sonst kündigen wir zum Quartalsende."* Liegt eine Jahresbindung vor, ist dieses Versprechen nicht einlösbar — die 9.000 € sind dann für zwölf Monate gebunden, und das Abbruchkriterium ist eine Absichtserklärung statt eines Ausstiegs. **Ein Finanzverantwortlicher fragt das als Erstes.**
+>
+> **Konsequenz:** Die Kündbarkeit gehört als **vierte Bedingung** in die Beauftragung, nicht in die Hoffnung — *„unterjährige Kündbarkeit zum Quartalsende, sonst keine Beauftragung."* Sie kostet nichts, solange kein Vertrag unterschrieben ist, und sie ist der einzige Punkt, an dem der 90-Tage-Ausstieg scheitern kann.
+
+### Beschlussantrag, protokollreif
+
+Formulierung für das Sitzungsprotokoll, aus den Werten dieses Datenblatts:
+
+> **1.** Die Geschäftsführung beschließt die Beschaffung von **20 Zugängen** zu einer DSGVO-konformen Plattform mit EU-Verarbeitung, **Kosten höchstens 9.000 € im Jahr**, zulasten des freien Investitionsspielraums.
+>
+> **2.** Der Beschluss steht unter den **aufschiebenden Bedingungen**, dass vor Vertragsschluss vorliegen: **a)** die schriftliche Freigabe des Datenschutzbeauftragten einschließlich der Aussage zur Datenschutz-Folgenabschätzung, **b)** der unterzeichnete Auftragsverarbeitungsvertrag mit Nachweis der EU-Verarbeitung und der Löschung, **c)** eine Betriebsvereinbarung, die Leistungs- und Verhaltenskontrolle ausschließt, **d)** zwei Referenzkunden im deutschsprachigen Raum unter 150 Beschäftigten, **e)** unterjährige Kündbarkeit zum Quartalsende.
+>
+> **3.** Die Maßnahme wird **90 Tage nach Inbetriebnahme** überprüft. Sie wird zum Quartalsende gekündigt, wenn nicht **beide** Bedingungen erfüllt sind: kein Bewerberlebenslauf mehr in einem privaten Konto, und wöchentliche Nutzung an mindestens zwei von drei Standorten. Das Ergebnis der Prüfung wird protokolliert.
+>
+> **4.** Die IT-Leitung wird beauftragt, bis zum Ende dieser Woche den Stand der Ausschreibung zur Softwaremigration zu klären und, soweit noch möglich, drei Anforderungen in das Lastenheft aufzunehmen: offene Schnittstelle, Datenfeldarchitektur im Standard, Zeitnachweisformate der Kundenbetriebe.
+
+**Hinweis:** Punkt 2e ist gegenüber dem Pitch **neu** — er ergibt sich aus der offenen Prüffrage oben. Wer den Antrag ohne ihn stellt, hat das Abbruchkriterium aus Punkt 3 nicht abgesichert.
+
+---
+
 ## 11 · Welche Folie welche Zahl braucht
 
 Für einen Dritten, der die Präsentation nachbaut oder prüft:
@@ -353,7 +418,8 @@ Vier Lücken, die in der Präsentation ausdrücklich als solche vorgetragen werd
 2. **Es liegt kein Angebot vor.** Alle Bewertungen beruhen auf Herstellerunterlagen.
 3. **Der Stand der Migrationsausschreibung ist unbekannt** und konnte von der vortragenden Rolle nicht selbst geklärt werden.
 4. **Das Risiko der Nullvariante ist nicht beziffert.** Nichts zu tun kostet nachweisbar 0 € an Lizenz, Einführung und Betrieb; was die fortlaufende Verarbeitung ohne Rechtsgrundlage kostet, wurde nicht gerechnet. Die Empfehlung stützt sich an dieser Stelle auf eine **Einschätzung**, nicht auf eine Rechnung.
-5. **Ob eine Datenschutz-Folgenabschätzung nötig ist, ist offen** — zu klären schriftlich, vor dem ersten Lauf.
+5. **Die Vertragslaufzeit und Kündbarkeit des Anbieters sind nicht geklärt.** Ohne unterjährige Kündbarkeit ist das 90-Tage-Abbruchkriterium nicht einlösbar. Siehe [10](#10--der-beschlussgegenstand).
+6. **Ob eine Datenschutz-Folgenabschätzung nötig ist, ist offen** — zu klären schriftlich, vor dem ersten Lauf.
 
 Dazu eine fünfte, die weiter zurückreicht: **Der Reifegrad, auf dem die Gewichtung aufbaut, ist eine nicht validierte Einschätzung** — erhoben als Gruppenurteil, nicht über Prozessdaten oder Interviews. Jede Gewichtung, die darauf steht, trägt diesen Vorbehalt mit.
 
