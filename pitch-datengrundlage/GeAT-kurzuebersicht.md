@@ -1,7 +1,7 @@
 ---
 artefakt: GeAT — Kurzübersicht zum Unternehmen
 typ: ÜBERSICHT · abgeleitet, kein Bestandteil des Unternehmensprofils
-quelle: ausschließlich GeAT-datengrundlage-plattformfreigabe.md
+quelle: GeAT-datengrundlage-plattformfreigabe.md, ergänzt um die eine verwendete Messung aus GeAT-datenpruefung-verwendeter-umfang.md
 datum: 2026-09-11
 zweck: in fünf Minuten ein Gefühl für das Unternehmen bekommen, bevor man die Entscheidung prüft
 regel: Was nicht im Datenblatt steht, ist hier NICHT ergänzt worden, sondern in Abschnitt 7 als Lücke ausgewiesen
@@ -65,6 +65,8 @@ Einschätzung mit Stand 09/2026, **nicht validiert**. Skala 1 = ad hoc bis 5 = o
 
 **Woran man es festmachen kann:** Kernsystem seit 2013 **ohne offene Schnittstelle im Bestandsvertrag**, Ersatz läuft 2027 · Multiposting seit 2021, **ohne Verbindung zum Bewerbermanagement** · **41.000 Bewerberprofile, 63 % ohne strukturierte Qualifikationsfelder**, Lebensläufe als PDF ohne Textindex · **18.000 Profile liegen über der zugesagten Speicherdauer** · der Kernprozess läuft über drei Systeme und **vier manuelle Übertragungen**, Stundenzettel kommen auf Papier und als Foto im Messenger · **zwei IT-Köpfe, 1,5 Stellen**, bis Q1/2027 vollständig durch die Migration gebunden.
 
+**Und ein gemessener Befund, nicht geschätzt:** In einer maschinellen Datenprüfung vom **10.09.2026** nennen **437 von 1.473 Bewerberprofilen einen nachweispflichtigen Schein — und für keinen einzigen existiert ein Gültigkeitsdatum im Datenmodell.** Das ist keine Pflegefrage, sondern ein fehlendes Feld: Es lässt sich nur beim Systemwechsel beheben. Verwendeter Umfang und Grenzen der Prüfung: [`GeAT-datenpruefung-verwendeter-umfang.md`](GeAT-datenpruefung-verwendeter-umfang.md).
+
 > **Daten und Kultur stehen auf ZIEL 3, nicht 4.** Hier wird bewusst nicht das Maximum angestrebt — das ist eine Aussage über Realismus, nicht über Ehrgeiz.
 
 ## 5 · Die Vorgeschichte, die alles einfärbt
@@ -103,6 +105,7 @@ Drei Dinge stehen gleichzeitig:
 | **Unternehmensstrategie und Ziele** jenseits der Digitalisierung | **fehlt vollständig** |
 | **Kultur** über den Reifegradwert hinaus — Führungsstil, Fluktuation, Stimmung | **fehlt.** Der einzige Anhaltspunkt ist der Fall von 2023 |
 | **Zertifizierungen** — welche, seit wann | **unvollständig.** Ein ISO-Audit ist erwähnt, nicht welches |
+| **Datenqualität des Produktivbestands** | **fehlt.** Geprüft wurden zwei Übungsbestände, nicht die 41.000 Profile — ein Übertrag ist nicht zulässig |
 | **GeAT Academy** und das Qualifizierungsgeschäft | **fehlt vollständig** |
 | **Tarifbindung** und Lohnstruktur der 640 | **fehlt vollständig** |
 | **Namen und Personen** | **bewusst nicht enthalten** — im Datenblatt werden alle Beteiligten als Rollen geführt |

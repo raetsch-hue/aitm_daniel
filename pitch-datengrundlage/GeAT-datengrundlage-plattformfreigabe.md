@@ -201,7 +201,7 @@ Der Pitch stellt 9.000 € einem Risiko gegenüber, das im Quellmaterial **nicht
 | davon mit strukturierten Qualifikationsfeldern | 15.000 — also **63 % unstrukturiert** | `angenommen` |
 | **Profile über der zugesagten Speicherdauer** | **18.000** — kein Löschlauf etabliert | `angenommen` |
 | Lebenslauf-PDF | 41.000 Dateien, **kein Textindex**, teils ohne Texterkennung | `angenommen` |
-| Nachweispflichtige Scheine | 437 von 1.473 Profilen genannt, **für keinen ein Gültigkeitsdatum im Datenmodell** | gemessen am Übungsbestand |
+| Nachweispflichtige Scheine | 437 von 1.473 Profilen genannt, **für keinen ein Gültigkeitsdatum im Datenmodell** | **gemessen 10.09.2026**, Übungsbestand — [Umfang und Grenzen](GeAT-datenpruefung-verwendeter-umfang.md) |
 | Datenverantwortung | **niemand formal** — faktisch das Recruiting Center | `angenommen` |
 
 **Die 63 % begründen in der Präsentation**, warum das Kriterium „RAG und Integrationstiefe" nur 4 % Gewicht bekommt: die Voraussetzung fehlt. **Die 18.000 begründen** die Reihenfolge *erst löschen, dann strukturieren* und die Ersparnis von rund 24.000 € Aufbereitungsaufwand.
@@ -438,6 +438,7 @@ Zusammengestellt am **11.09.2026** aus:
 | `GeAT-unternehmensprofil/w03A-3-…-gueltig.md` | Kriterien, Gewichte, Scores, Gesamtscores |
 | `GeAT-unternehmensprofil/w03A-4-use-case-und-sensitivitaet.md` | Sensitivitätsprobe, Kippschwelle |
 | `GeAT-unternehmensprofil/w03A-5-entscheidungsvorlage.md` | 90 Tage, Bedingungen, offene Fragen |
+| `GeAT-unternehmensprofil/daten/` | die eine verwendete Messung aus der Datenqualitätsprüfung — Umfang in [`GeAT-datenpruefung-verwendeter-umfang.md`](GeAT-datenpruefung-verwendeter-umfang.md) |
 
 **Alle Beteiligten sind als Rollen geführt.** Im Unternehmensprofil stehen Namen; sie sind bis auf eine Ausnahme erfunden. In dieser Datei kommt keiner vor — sie ist für Dritte gedacht.
 
