@@ -77,6 +77,17 @@ Der Punkt, an dem der ganze Zuschnitt des Vorhabens hängt.
 | Lenkungsausschuss Digitalisierung | **existiert nicht** | `angenommen` |
 | Die vortragende Rolle | Digitalisierung und KI, geschaffen Mai 2026 — **kein eigenes Budget, kein Gremium, kein Weisungsrecht in den Niederlassungen** | Stelle `real`, Ausstattung `angenommen` |
 
+**Was die Freigabeinstanzen jeweils verlangen** — der Pflichtwert, ohne den die Gegenargumente im Pitch nicht zu verstehen sind:
+
+| Rolle | Forderung | Herkunft |
+|---|---|---|
+| Geschäftsführung, Vertriebsseite | schnelle Besetzung; trägt zugleich die Erinnerung an 2023 | `angenommen` |
+| Geschäftsführung, Finanz-/IT-Seite | **keine zweite Baustelle vor der Migration** — die Migration ist ihr Vorhaben | `angenommen` |
+| Gesellschaftervertretung | **„Amortisation unter 24 Monaten oder wartet, bis die Software steht."** | `angenommen` |
+| Externer Datenschutzbeauftragter | stuft Bewerberauswahl als Annex III ein; seine Stellungnahme geht an die Gesellschafter | `angenommen` |
+
+> **Die Amortisationsforderung ist der dritte Einwand im Pitch** — und die Antwort darauf lautet nicht „doch, es amortisiert sich", sondern: *bei dieser Maßnahme ist Amortisation die falsche Kennzahl; 9.000 € beenden ein Rechtsrisiko. Wer sie hier verlangt, verschiebt den Verstoß um ein Quartal.* Ein Dritter sollte diese Forderung kennen, sonst wirkt der Einwand im Pitch erfunden.
+
 > **Die Zeile aus `zahlen.md`, die das erklärt:** *„Das ist keine Budgetgrenze, sondern eine Taktgrenze — und sie entscheidet mehr über den Zeitplan als die Technik."* Ein Vorhaben, das die Quartalssitzung verpasst, verliert ein Quartal.
 
 **Daraus folgen zwei Aussagen der Präsentation:** dass überhaupt eine Freigabe nötig ist (die Rolle hat kein Budget), und dass der Betrag bewusst unter 25.000 € zugeschnitten wurde (sonst Quartalstakt).
@@ -155,6 +166,18 @@ Der Punkt, an dem der ganze Zuschnitt des Vorhabens hängt.
 
 **Fünf Optionen.** Zwei davon stehen in keinem Lehrbuch und sind für diesen Fall ergänzt worden: die KI-Funktionen der künftigen Branchensoftware, und die Nullvariante.
 
+| Kürzel | Option | Was gemeint ist |
+|---|---|---|
+| **A** | **Langdock** | Integrierte EU-Plattform, modellagnostisch, browserbasiert. **Die Empfehlung** |
+| **B** | Microsoft Copilot for M365 | In Word, Teams, Outlook integriert; Datenzugriff über Microsoft Graph |
+| **C** | Cloud-ML-Plattform | Entwicklerplattform für eigene Modelle |
+| **D** | KI-Funktionen der Branchensoftware 2027 | Produktfunktion des künftigen Kernsystems, existiert erst nach der Migration |
+| **E** | **Nullvariante** | Nichts tun, Zustand fortführen |
+
+**Skalenanker für die Scores 1–5**, im Quelldokument fixiert:
+*5 = erfüllt belegbar und vertraglich · 4 = erfüllt, Belege öffentlich (Herstellerdoku, Zertifikat) · 3 = teilweise, mit Aufwand herstellbar · 2 = nur auf der Roadmap oder nur behauptet · 1 = nicht vorgesehen.*
+Mit zwei Regeln: **keine 5 ohne Angebot und AVV**, und **keine 4 für ein Produkt, das niemand benennen kann.**
+
 **Acht Kriterien mit Gewichtung** (Summe 100 %, fixiert am 07.09.2026):
 
 | Nr | Kriterium | Gewicht |
@@ -183,7 +206,36 @@ Der Punkt, an dem der ganze Zuschnitt des Vorhabens hängt.
 | **Gesamtscore** | **100 %** | **3,49** | **3,09** | **1,78** | **2,32** | **2,32** |
 | *unabhängig belegt?* | | *nein* | *teilweise* | *teilweise* | *nein* | *entfällt* |
 
-> **Die letzte Zeile ist die wichtigste für einen Dritten.** Alle Bewertungen der empfohlenen Option beruhen auf **Herstellerunterlagen**; ein Angebot lag zum Zeitpunkt der Präsentation nicht vor. Das ist im Pitch als Bedingung ausgewiesen, nicht verschwiegen.
+### Warum A gewinnt — die vier entscheidenden Zellen
+
+Aus dem Quelldokument, alle vier aus dem Organisationskontext abgeleitet, keine aus einer Broschüre:
+
+| Zelle | Begründung |
+|---|---|
+| **K1 Compliance, 25 % · A = 4, B = 3** | Modellagnostische EU-Plattformen bieten AVV und EU-Verarbeitung als Standardangebot mit öffentlicher Dokumentation. Copilot bleibt bei 3, weil seine Compliance **nicht im Vertrag entschieden wird**, sondern an der Berechtigungsstruktur hängt |
+| **K2 Verfügbarkeit, 20 % · A = 4, B = 3** | Beide sind schnell. A ist schneller, weil bei Copilot **die Berechtigungsprüfung davorliegt und die Basislizenz ungeklärt ist** |
+| **K5 + K6, zusammen 17 % · A = 4/4, B = 3/2** | A **hängt nicht am Kernsystem**, das Q1/2027 ersetzt wird, und erzeugt keinen Betrieb im Haus. Copilot bringt Ecosystem-Bindung über Graph mit — kein prinzipielles Problem, aber sechs Monate vor einem Systemwechsel teuer |
+| **K3 Adoption, 17 % · A = 2, B = 4** | **Was A verliert.** Neuer Lieferant, neue Oberfläche, neue Nutzerverwaltung über sechs Standorte — in einem Haus, dessen letztes Werkzeug bei 34 % Nutzung liegt. Im Quelldokument als *„die teuerste Zelle der Empfehlung"* bezeichnet |
+
+**D und E liegen mit je 2,32 gleichauf.** Der Score kann sie nicht trennen, und das ist der Befund, nicht die Schwäche: die eine Option ist inhaltlich stark und terminlich unmöglich, die andere terminlich verfügbar und inhaltlich leer.
+
+### Kostenzeile je Option
+
+Alle Preise sind **Listenwerte, prüfpflichtig, kein Angebot liegt vor.**
+
+| Option | 20 Zugänge/Jahr | 69 Zugänge/Jahr | 20 Zugänge über 3 Jahre | Vorleistung, nicht in der Lizenz |
+|---|---:|---:|---:|---|
+| **A** Langdock | 4.800 – 7.200 € | 16.560 – 24.840 € | 14.400 – 21.600 € | neuer Lieferant: AVV, SSO, Nutzerverwaltung über sechs Standorte, Schulung |
+| **B** Copilot | 7.200 € | 24.840 € | 21.600 € | Berechtigungsstruktur in SharePoint prüfen, **Aufwand unbeziffert**; Basislizenz ungeprüft |
+| **C** Cloud-ML | Verbrauch, gering | Verbrauch, gering | — | Oberfläche, Authentifizierung, Protokollierung, Betrieb — der bestimmende Posten, ohne Angebot nicht nennbar |
+| **D** Branchensoftware | nicht separat | nicht separat | — | Verhandlungsaufwand, solange die Ausschreibung offen ist; danach Change Request |
+| **E** Nullvariante | **0 €** | **0 €** | **0 €** | Kontrollaufwand plus Stunden des Datenschutzbeauftragten. **Risiko der laufenden Verarbeitung nicht bezifferbar** |
+
+> **Die Kostenzeile der Nullvariante ist der ehrlichste Wert der ganzen Tabelle** — und der einzige, bei dem ein Dritter aufpassen muss. Nichts zu tun kostet **nachweisbar null Euro**; was es tatsächlich kostet, ist das Risiko der fortlaufenden Verarbeitung ohne Rechtsgrundlage, **und das ist in diesem Fall nicht beziffert worden.** Wer die Empfehlung prüft, prüft an dieser Stelle eine Einschätzung, keine Rechnung. Der Pitch argumentiert deshalb nicht über Kosten, sondern über Sichtbarkeit: *ein Verbot ohne Ersatz beendet nicht die Nutzung, nur die Beobachtung.*
+>
+> **Und eine Korrektur aus dem Quelldokument, die zum Zuschnitt gehört:** 20 Zugänge Copilot kosten 7.200 € und passen ebenfalls unter den Ansatz von 9.000 €. Der Kostenvorteil von A entsteht erst über drei Jahre und bei größerer Zahl. **Kosten sind hier also nicht das entscheidende Kriterium** — wer das behauptet, überzeichnet.
+
+> **Die letzte Zeile der Matrix ist die wichtigste für einen Dritten.** Alle Bewertungen der empfohlenen Option beruhen auf **Herstellerunterlagen**; ein Angebot lag zum Zeitpunkt der Präsentation nicht vor. Das ist im Pitch als Bedingung ausgewiesen, nicht verschwiegen.
 
 **Zwei Optionen scheiden vor der Bewertung aus, nicht über Punkte:** Cloud-ML, weil kein Data-Science-Team existiert · Copilot, weil der Bestand nicht in Microsoft 365 liegt.
 
@@ -216,7 +268,9 @@ Der Punkt, an dem der ganze Zuschnitt des Vorhabens hängt.
 | Abbruchbedingung 1 | kein Lebenslauf mehr in einem privaten Konto | gesetzt |
 | Abbruchbedingung 2 | mindestens **2 von 3** Standorten arbeiten wöchentlich damit | gesetzt |
 | Folge bei Nichterfüllung | Kündigung zum Quartalsende, Grund protokolliert | gesetzt |
+| **Empfohlene Option** | **Langdock** (Option A) — Angebot steht aus | Bewertung |
 | Bedingung Datenschutz | schriftliche Freigabe, AV-Vertrag **vorgelegt**, Löschung nachweisbar | gesetzt |
+| Bedingung Mitbestimmung | **Betriebsvereinbarung, die Leistungskontrolle ausschließt** | gesetzt |
 | Bedingung Markt | **2 Referenzkunden im DACH-Raum unter 150 Beschäftigten** | gesetzt |
 | Bedingung Einführung | Schulung durch die neun, keine externe Beratung | gesetzt |
 | Ersparnis Löschung vor Strukturierung | rund **24.000 €** | `gerechnet` |
@@ -236,6 +290,7 @@ Für einen Dritten, der die Präsentation nachbaut oder prüft:
 | 6 · Alternativen | kein Data-Science-Team · 41.000 Profile nicht in M365 · Migration Q1/2027 · Nullvariante Platz 2 | [4](#4--datenbestand), [5](#5--it-landschaft-und-migration), [8](#8--die-bewertungsmatrix) |
 | 7 · Robustheit | 3,49 / 3,09 von 5 · 16 Varianten · K3 17 % → 31 % | [8](#8--die-bewertungsmatrix), [9](#9--sensitivität-und-kippschwelle) |
 | 8 · Gegenargument | 95.000 € · 34 % · 2026 · ISO-Audit | [7](#7--die-vorgeschichte-die-jeden-adoptionsanspruch-prüft) |
+| 8 · Gegenargument, Einwand 3 | Amortisationsforderung der Gesellschaftervertretung | [2](#2--entscheidungswege-und-freigabegrenzen) |
 | 10 · Bedingungen | AV-Vertrag · 2 Referenzkunden < 150 · Einführungsaufwand unbeziffert | [10](#10--der-beschlussgegenstand) |
 | 11 · Zweitbeschluss | Stand der Migrationsausschreibung (**unbekannt**) | [12](#12--was-nicht-belegt-ist) |
 | 12 · Reihenfolge | 18.000 Profile · rund 24.000 € | [4](#4--datenbestand), [10](#10--der-beschlussgegenstand) |
@@ -249,7 +304,8 @@ Vier Lücken, die in der Präsentation ausdrücklich als solche vorgetragen werd
 1. **Der Einführungsaufwand der empfohlenen Option ist nicht beziffert.** Es ist zugleich die einzige Größe, die die Empfehlung umdrehen könnte (Kippschwelle 31 %).
 2. **Es liegt kein Angebot vor.** Alle Bewertungen beruhen auf Herstellerunterlagen.
 3. **Der Stand der Migrationsausschreibung ist unbekannt** und konnte von der vortragenden Rolle nicht selbst geklärt werden.
-4. **Ob eine Datenschutz-Folgenabschätzung nötig ist, ist offen** — zu klären schriftlich, vor dem ersten Lauf.
+4. **Das Risiko der Nullvariante ist nicht beziffert.** Nichts zu tun kostet nachweisbar 0 € an Lizenz, Einführung und Betrieb; was die fortlaufende Verarbeitung ohne Rechtsgrundlage kostet, wurde nicht gerechnet. Die Empfehlung stützt sich an dieser Stelle auf eine **Einschätzung**, nicht auf eine Rechnung.
+5. **Ob eine Datenschutz-Folgenabschätzung nötig ist, ist offen** — zu klären schriftlich, vor dem ersten Lauf.
 
 Dazu eine fünfte, die weiter zurückreicht: **Der Reifegrad, auf dem die Gewichtung aufbaut, ist eine nicht validierte Einschätzung** — erhoben als Gruppenurteil, nicht über Prozessdaten oder Interviews. Jede Gewichtung, die darauf steht, trägt diesen Vorbehalt mit.
 
