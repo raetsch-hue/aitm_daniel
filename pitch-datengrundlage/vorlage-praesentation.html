@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>C-Level Pitch · VORLAGE</title>
+<style>
+  :root{
+    --bg:#071512;
+    --bg2:#0e2c24;
+    --fg:#f5f2e8;
+    --muted:#c8d5cd;
+    --accent:#b7f4cf;
+    --accent2:#ffd173;
+    --danger:#ff9580;
+    --line:rgba(245,242,232,.18);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;overflow:hidden}
+  .deck{width:100vw;height:100vh;position:relative;background:
+    radial-gradient(circle at 8% 10%,rgba(183,244,207,.18),transparent 30%),
+    radial-gradient(circle at 78% 86%,rgba(255,209,115,.11),transparent 28%),
+    linear-gradient(135deg,var(--bg),var(--bg2));}
+  .slide{position:absolute;inset:0;padding:6.2vh 7.2vw;display:none;opacity:0;transition:opacity .25s ease;}
+  .slide.active{display:flex;opacity:1;flex-direction:column;justify-content:center;}
+  .kicker{font-size:clamp(16px,1.55vw,22px);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:2.2vh}
+  h1{font-size:clamp(54px,8vw,112px);line-height:.92;margin:0;letter-spacing:-.07em;max-width:1060px}
+  h2{font-size:clamp(43px,5.8vw,86px);line-height:.96;margin:0 0 3vh;letter-spacing:-.06em;max-width:1120px}
+  .big{font-size:clamp(58px,9vw,132px);line-height:.84;letter-spacing:-.08em;font-weight:900;margin:0}
+  .mid{font-size:clamp(26px,3.2vw,44px);line-height:1.1;letter-spacing:-.03em;font-weight:750;margin:0;max-width:1030px}
+  .small{font-size:clamp(18px,2vw,28px);line-height:1.24;color:var(--muted);max-width:1000px;margin-top:2.2vh}
+  .accent{color:var(--accent)} .gold{color:var(--accent2)} .danger{color:var(--danger)}
+  .row{display:flex;gap:4.5vw;align-items:stretch;flex-wrap:wrap;margin-top:3vh}
+  .fact{border-top:1px solid var(--line);padding-top:2vh;min-width:220px;flex:1}
+  .fact .num{font-size:clamp(42px,6vw,92px);font-weight:900;letter-spacing:-.07em;line-height:.88;color:var(--accent)}
+  .fact .label{font-size:clamp(17px,1.8vw,25px);color:var(--muted);margin-top:1vh;line-height:1.18}
+  .list{display:grid;gap:2.2vh;margin-top:2vh;max-width:1040px}
+  .item{font-size:clamp(24px,3vw,42px);font-weight:800;letter-spacing:-.04em;line-height:1.08;border-left:6px solid var(--accent);padding-left:1.8vw}
+  .item span{color:var(--muted);font-weight:650}
+  .thin{font-weight:500;color:var(--muted)}
+  .decision{font-size:clamp(30px,4.6vw,68px);font-weight:900;letter-spacing:-.06em;line-height:1.02;max-width:1080px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:4.5vw;align-items:center}
+  .arrow{font-size:clamp(38px,6vw,88px);font-weight:900;color:var(--accent2);letter-spacing:-.08em}
+  .footer{position:absolute;left:7.2vw;right:7.2vw;bottom:4vh;display:flex;justify-content:space-between;align-items:center;color:rgba(245,242,232,.52);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+  .progress{height:3px;background:rgba(245,242,232,.16);position:absolute;left:0;right:0;bottom:0}
+  .bar{height:100%;background:var(--accent);width:0%}
+  .notePanel{position:fixed;right:18px;bottom:18px;width:min(520px,42vw);max-height:46vh;overflow:auto;background:rgba(5,15,13,.92);border:1px solid var(--line);border-radius:18px;padding:18px 20px;color:#f5f2e8;display:none;box-shadow:0 20px 60px rgba(0,0,0,.45);font-size:15px;line-height:1.4;z-index:20;white-space:pre-wrap}
+  .notePanel.show{display:block}
+  .notePanel b{color:var(--accent)}
+  .hint{position:fixed;top:18px;right:22px;color:rgba(245,242,232,.46);font-size:13px;letter-spacing:.08em;text-transform:uppercase;z-index:10}
+  .stamp{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.65rem 1rem;color:var(--muted);font-size:clamp(15px,1.3vw,18px);font-weight:700;margin-top:3.2vh}
+  @media (max-width:800px){.slide{padding:7vh 7vw}.split{grid-template-columns:1fr}.notePanel{width:calc(100vw - 36px);max-height:50vh}.row{gap:2vh}.fact{min-width:45%}}
+  @media print{body{overflow:visible;background:white}.deck{height:auto;background:white;color:#111}.slide{position:relative;display:flex!important;opacity:1!important;height:100vh;page-break-after:always;background:linear-gradient(135deg,#071512,#0e2c24);color:#f5f2e8}.hint,.notePanel,.progress{display:none!important}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+  <div class="hint">←/→ · N Notizen · F Vollbild</div>
+
+<!-- ===================================================================
+     VORLAGE. 14 Folien, jede mit ihrer Aufgabe im Kommentar darüber.
+     Platzhalter in [eckigen Klammern] ersetzen. Struktur nicht ändern:
+     die Reihenfolge IST das Argument (siehe skill-c-level-pitch.md, 6).
+
+     Bausteine:
+       <div class="kicker">     Zeile über der Überschrift
+       <h1> / <h2>              Überschrift
+       <p class="big">          eine große Zahl
+       <p class="mid">          Aussagesatz, mittelgroß
+       <p class="small">        Erläuterung, gedämpft
+       <div class="row">        Kachelreihe (2–3 Stück, nicht mehr)
+         <div class="fact"><div class="num">X</div><div class="label">Y</div></div>
+       <div class="list">       Aufzählung mit Akzentbalken
+         <div class="item">Fett <span>gedämpfte Fortsetzung</span></div>
+       <div class="split">      zwei Spalten
+       <p class="decision">     Schlusssatz, groß
+     Farbklassen: accent (grün) · gold · danger (rot, für Problemzahlen)
+     data-notes = Sprechernotiz, mit N einblendbar. IMMER füllen.
+     ==================================================================== -->
+
+  <!-- 1 · TITEL. Nur Rahmen setzen. Kein Wort über Technik. -->
+  <section class="slide active" data-title="Titel" data-notes="[Regieanweisung: Haltung, Tempo. Was hier NICHT gesagt wird.]">
+    <div class="kicker">C-Level Pitch</div>
+    <h1>[Beschluss] statt [das, wofür man es halten könnte]</h1>
+    <p class="small">[Bedingte Freigabe für X — N Zugänge, Betrag im Jahr]</p>
+    <div class="stamp">[Kennung · Datum]</div>
+  </section>
+
+  <!-- 2 · BESCHLUSS (BLUF). Der Beschluss steht am Anfang.
+       Pflicht: Betrag · Umfang · Freigabekompetenz der Anwesenden. -->
+  <section class="slide" data-title="Beschluss" data-notes="[Warum überhaupt eine Freigabe nötig ist — und was die Grenze wirklich bedeutet: Gremienwechsel, nicht Fragepflicht.]">
+    <div class="kicker">Was ich heute brauche</div>
+    <p class="big">[Betrag]</p>
+    <p class="mid">[N Zugänge · M Standorte · unter K Bedingungen]</p>
+    <p class="small">[Warum die Anwesenden allein entscheiden können — und warum der Betrag so zugeschnitten ist.]</p>
+  </section>
+
+  <!-- 3 · DER GRUND. Das Problem, mit Mengengerüst. Kein Schuldzuweisung.
+       Pflicht: der Satz „Wir beschaffen kein X. Wir beenden Y." -->
+  <section class="slide" data-title="Risiko" data-notes="[Kernframing. Kein Vorwurf an die Betroffenen.]">
+    <div class="kicker">Der Grund</div>
+    <h2>[Das Problem in fünf Wörtern]</h2>
+    <div class="row">
+      <div class="fact"><div class="num danger">[Zahl]</div><div class="label">[Was sie zählt]</div></div>
+      <div class="fact"><div class="num danger">[Dauer]</div><div class="label">[seit wann]</div></div>
+      <div class="fact"><div class="num danger">[0]</div><div class="label">[was fehlt]</div></div>
+    </div>
+    <p class="small">[Der Beschluss als Tausch formuliert.]</p>
+  </section>
+
+  <!-- 4 · WIE. Beweist, dass das Vorhaben KLEIN ist. Drei Kacheln, ein Gedanke. -->
+  <section class="slide" data-title="Lösung" data-notes="[Nicht technisch werden. Zahlen, die eine Korrektur sind, als Korrektur vortragen.]">
+    <div class="kicker">Wie es geht</div>
+    <h2>[Drei Eigenschaften, die den Aufwand begrenzen]</h2>
+    <div class="row">
+      <div class="fact"><div class="num">[≤ N h]</div><div class="label">[Aufwand]</div></div>
+      <div class="fact"><div class="num">[0]</div><div class="label">[was NICHT gebaut wird]</div></div>
+      <div class="fact"><div class="num">[X]</div><div class="label">[Anteil am Spielraum]</div></div>
+    </div>
+  </section>
+
+  <!-- 5 · WANN UND STOP. Abbruchkriterium VOR dem Beschluss. Positiv formulieren. -->
+  <section class="slide" data-title="Start und Stop" data-notes="[Vor dem Beschluss nennen, sonst wirkt es wie nachträgliche Absicherung.]">
+    <div class="kicker">Wann</div>
+    <h2>[Start wann] — mit hartem Stop</h2>
+    <div class="decision"><span class="gold">[N Tage]</span> Probe. Weiter nur, wenn <span class="accent">beides</span> gilt:</div>
+    <div class="list" style="margin-top:2.6vh">
+      <div class="item">[Bedingung 1] <span>— messbar formuliert</span></div>
+      <div class="item">[Bedingung 2] <span>— messbar formuliert</span></div>
+    </div>
+    <p class="small">[Was sonst passiert, mit Frist.]</p>
+  </section>
+
+  <!-- 6 · ALTERNATIVEN. Ausschlusslogik, keine Punktetabelle.
+       Pflicht: die Nullvariante UND eine Ergebniszeile am Ende. -->
+  <section class="slide" data-title="Alternativen" data-notes="[Nullvariante ernst nehmen und trotzdem ablehnen — mit einem Grund, der nichts mit der Technik zu tun hat.]">
+    <div class="kicker">Warum nicht die Alternativen?</div>
+    <div class="list">
+      <div class="item">[Option A] <span>scheitert an [Tatsache, nicht Punktwert]</span></div>
+      <div class="item">[Option B] <span>scheitert an [Tatsache]</span></div>
+      <div class="item">[Option C] <span>scheitert an [Tatsache]</span></div>
+      <div class="item">Nichts tun <span>[warum es für heute nicht trägt]</span></div>
+    </div>
+    <p class="decision" style="margin-top:3.4vh">→ Bleibt <span class="accent">[Empfehlung]</span>: [Umfang, Betrag].</p>
+  </section>
+
+  <!-- 7 · ROBUSTHEIT. Skala nennen. Kippschwelle offen aussprechen. -->
+  <section class="slide" data-title="Robustheit" data-notes="[Die Kippschwelle ist der Vertrauensbeweis: die eine Annahme, bei der man falsch liegt.]">
+    <div class="kicker">Warum die Empfehlung trägt</div>
+    <div class="split">
+      <div><p class="big accent">[X,XX]</p><p class="small">[Sieger] · von 5</p></div>
+      <div><p class="big thin">[Y,YY]</p><p class="small">[Zweiter] · von 5</p></div>
+    </div>
+    <p class="mid" style="margin-top:3.4vh">Jedes Gewicht ±10 Punkte verschoben: <span class="accent">[N] von [N] Varianten halten.</span></p>
+    <p class="small">Eine Annahme kippt sie: [Kriterium] von [a] % auf <span class="gold">[b] %</span> — dann wäre [Alternative] richtig.</p>
+  </section>
+
+  <!-- 8 · DAS STÄRKSTE GEGENARGUMENT. Möglichst das EIGENE. Mit Zahl. -->
+  <section class="slide" data-title="Gegenargument" data-notes="[Selbst aussprechen, nicht defensiv. Dem Einwand zuerst recht geben.]">
+    <div class="kicker">Das stärkste Gegenargument — unser eigenes</div>
+    <h2>[Was schiefging, in einer Zeile]</h2>
+    <div class="row">
+      <div class="fact"><div class="num danger">[Betrag]</div><div class="label">[wofür]</div></div>
+      <div class="fact"><div class="num danger">[Quote]</div><div class="label">[Ergebnis]</div></div>
+      <div class="fact"><div class="num danger">[Jahr]</div><div class="label">[wann es auffiel]</div></div>
+    </div>
+  </section>
+
+  <!-- 9 · DIESMAL ANDERS. Jede Zeile ein KONTRAST zu Folie 8, keine Aufzählung. -->
+  <section class="slide" data-title="Anders" data-notes="[Drei Kontraste. Beim zweiten den Mechanismus aussprechen: Selbstbindung.]">
+    <div class="kicker">Diesmal anders</div>
+    <div class="list">
+      <div class="item">[Unterschied 1] <span>— warum das zählt</span></div>
+      <div class="item">[Unterschied 2] <span>— warum das bindend ist</span></div>
+      <div class="item">[Unterschied 3] <span>— warum der Einwand nicht greift</span></div>
+    </div>
+  </section>
+
+  <!-- 10 · BEDINGUNGEN. Offene Punkte als Bedingungen, nicht als Zweifel.
+       Nicht „Gates" nennen. Eine echte Lücke offen benennen. -->
+  <section class="slide" data-title="Bedingungen" data-notes="[Die Kette laut aussprechen: nicht beziffert, DESHALB binde ich mich, UND wenn es reißt, erfahren Sie es.]">
+    <div class="kicker">Vor dem ersten Euro</div>
+    <h2>Drei Bedingungen</h2>
+    <div class="list">
+      <div class="item">[Regulatorik] <span>[was vorgelegt sein muss — nicht zugesichert]</span></div>
+      <div class="item">[Marktprüfung] <span>[was belegt sein muss, sonst keine Beauftragung]</span></div>
+      <div class="item">[Die eigene Lücke] <span>[offen benannt, und wie sie eingehegt wird]</span></div>
+    </div>
+  </section>
+
+  <!-- 11 · ZWEITBESCHLUSS. Aus einer Wissenslücke wird ein Auftrag ans Gremium.
+       Entfällt nur, wenn es wirklich keine terminkritische Fremdfrage gibt. -->
+  <section class="slide" data-title="Zweitbeschluss" data-notes="[Zweite, eigenständige Entscheidung. Kein Geld, ein Auftrag. Terminkritisch machen, nicht dramatisieren.]">
+    <div class="kicker">Zweitbeschluss — kein Geld, ein Auftrag</div>
+    <h2>[Was jetzt gesichert werden muss]</h2>
+    <p class="mid">Ist [X] <span class="accent">noch offen</span>, kostet es nichts.<br>Ist es <span class="danger">zu</span>, kostet es später [Preis].</p>
+    <p class="small">[Die konkreten Punkte, die aufgenommen werden sollen.]</p>
+  </section>
+
+  <!-- 12 · REIHENFOLGE. Optional, entfällt bei Zeitnot. Max. 2 Kacheln. -->
+  <section class="slide" data-title="Reihenfolge" data-notes="[Nur wenn Zeit ist. Governance vor Werkzeug.]">
+    <div class="kicker">Reihenfolge</div>
+    <h2>[Erst A. Dann B. Dann C.]</h2>
+    <div class="row">
+      <div class="fact"><div class="num">[Zahl]</div><div class="label">[was zuerst passiert]</div></div>
+      <div class="fact"><div class="num">[Betrag]</div><div class="label">[was das spart]</div></div>
+    </div>
+  </section>
+
+  <!-- 13 · BESCHLUSSANTRAG. Genau drei Punkte. Nicht mehr begründen. -->
+  <section class="slide" data-title="Beschlussantrag" data-notes="[Langsamer sprechen. Danach Pause.]">
+    <div class="kicker">Beschlussantrag</div>
+    <div class="list">
+      <div class="item">[Punkt 1: die Freigabe] <span>[Umfang · Betrag · unter den Bedingungen]</span></div>
+      <div class="item">[Punkt 2: das Abbruchkriterium] <span>protokolliert</span></div>
+      <div class="item">[Punkt 3: der Zweitbeschluss] <span>[wer, was, bis wann]</span></div>
+    </div>
+  </section>
+
+  <!-- 14 · ZUSTIMMUNG. Beide Ausgänge tragbar zeigen. Dann die Frage. -->
+  <section class="slide" data-title="Zustimmung" data-notes="[Zeigt, dass es kein Szenario gibt, in dem die heutige Zustimmung schadet. Nicht weich auslaufen lassen.]">
+    <div class="kicker">Entscheidung jetzt möglich</div>
+    <div class="split">
+      <div><p class="arrow">[Bedingung erfüllt]</p><p class="small">[gute Folge]</p></div>
+      <div><p class="arrow">[Bedingung nicht erfüllt]</p><p class="small">[0 € ausgegeben · Ursache klar]</p></div>
+    </div>
+    <p class="decision" style="margin-top:4.4vh">Stimmen Sie der <span class="accent">bedingten Freigabe</span> zu?</p>
+  </section>
+
+  <div class="footer"><span id="titleNow">Titel</span><span id="countNow">1 / 14</span></div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+</div>
+<div class="notePanel" id="notes"></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+let i=0;
+const notes=document.getElementById('notes');
+function show(n){
+  i=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+  document.getElementById('titleNow').textContent=slides[i].dataset.title||'';
+  document.getElementById('countNow').textContent=(i+1)+' / '+slides.length;
+  document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';
+  notes.textContent=slides[i].dataset.notes||'';
+  location.hash='slide-'+(i+1);
+}
+function toggleNotes(){notes.classList.toggle('show');}
+document.addEventListener('keydown',e=>{
+  if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1)}
+  if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}
+  if(e.key.toLowerCase()==='n') toggleNotes();
+  if(e.key.toLowerCase()==='f') document.documentElement.requestFullscreen?.();
+  if(e.key==='Home') show(0);
+  if(e.key==='End') show(slides.length-1);
+});
+const m=location.hash.match(/slide-(\d+)/); if(m) i=parseInt(m[1],10)-1; show(i);
+</script>
+</body>
+</html>
