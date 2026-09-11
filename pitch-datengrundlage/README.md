@@ -13,8 +13,18 @@
 Jemand übergibt ein Unternehmensprofil als Markdown-Datei. Ergebnis sind vier Dateien: Präsentation, Sprechzettel, Volltext, Datenblatt.
 
 ```
-skill-c-level-pitch.md  +  fremdes-firmenprofil.md   →   vier Dateien
+skill-c-level-pitch.md  +  fremdes-firmenprofil.md
+        │
+        └─►  pitch-datengrundlage/<Firma>/
+                 <Firma>-pitch-praesentation.html
+                 <Firma>-pitch-sprechzettel.md
+                 <Firma>-pitch-sprechfassung-volltext.md
+                 <Firma>-datengrundlage-<vorhaben>.md
 ```
+
+Alle vier tragen den **Präfix der Firma**, für die sie gebaut wurden, und liegen in einem eigenen Unterverzeichnis. Nichts davon wird im fremden Unternehmensprofil abgelegt: es sind Ergebnisse, keine Quellen.
+
+Das durchgerechnete Beispiel folgt dieser Benennung noch nicht vollständig — es ist vor der Festlegung entstanden. `GeAT-datengrundlage-plattformfreigabe.md` trägt den Präfix, die drei GeAT-Sprechunterlagen liegen weiterhin unter `GeAT-unternehmensprofil/` mit ihrem Ketten-Präfix `w03A-6-`.
 
 Die Methode liegt bewusst **hier** und nicht unter `.claude/skills/` — sie ist kein aufrufbarer Skill. Wer ihn in Claude Code aufrufbar machen will, kopiert ihn als `SKILL.md` nach `.claude/skills/c-level-pitch/` — das Frontmatter ist bereits dafür gebaut.
 

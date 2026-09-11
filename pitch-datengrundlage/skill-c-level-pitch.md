@@ -5,7 +5,7 @@ typ: SKILL · Methodenbeschreibung, kein Bestandteil eines Unternehmensprofils
 ablage: pitch-datengrundlage/ — bewusst nicht unter .claude/skills/. Wer ihn aufrufbar machen will, kopiert ihn als SKILL.md dorthin
 datum: 2026-09-11
 eingabe: eine Firmen-md beliebiger Struktur
-ausgabe: Präsentation (HTML) · Sprechzettel · Volltext · Datenblatt
+ausgabe: vier Dateien mit Firmen-Präfix in pitch-datengrundlage/<Firma>/ — Präsentation (HTML), Sprechzettel, Volltext, Datenblatt
 beispiel: pitch-datengrundlage/GeAT-datengrundlage-plattformfreigabe.md (durchgerechnet)
 vorlage: pitch-datengrundlage/vorlage-praesentation.html
 baut_auf: vorlagen/pitch-c-level.md (die zehn Prüfkriterien) · coursebook/3.4 (Vier-Abschnitts-Format)
@@ -13,7 +13,7 @@ baut_auf: vorlagen/pitch-c-level.md (die zehn Prüfkriterien) · coursebook/3.4 
 
 # Skill: Vom Unternehmensprofil zum C-Level-Pitch
 
-> **Was dieser Skill kann.** Jemand übergibt ein Unternehmensprofil als Markdown-Datei — beliebig aufgebaut, aus einem anderen Kurs, einer anderen Branche, einer anderen Größe. Ergebnis sind vier Dateien: eine Präsentation, ein Sprechzettel, eine Volltextfassung und ein Datenblatt.
+> **Was diese Methode leistet.** Jemand übergibt ein Unternehmensprofil als Markdown-Datei — beliebig aufgebaut, aus einem anderen Kurs, einer anderen Branche, einer anderen Größe. Ergebnis sind **vier Dateien mit dem Präfix dieser Firma**: eine Präsentation, ein Sprechzettel, eine Volltextfassung und ein Datenblatt. Was sie genau enthalten und wie sie heißen, steht im nächsten Abschnitt.
 >
 > **Was er nicht kann.** Er erfindet keine Zahlen. Fehlt ein Pflichtwert, wird er als Lücke ausgewiesen — im Ergebnis, nicht im Nebensatz. Eine Präsentation mit sichtbaren Lücken ist brauchbar; eine mit erfundenen Zahlen ist es nicht.
 >
@@ -22,6 +22,36 @@ baut_auf: vorlagen/pitch-c-level.md (die zehn Prüfkriterien) · coursebook/3.4 
 > **Und die Grundregel, die über allem steht: Was nicht im Datensatz steht, wird erfragt — nicht geraten.** Schritt 0 nennt die drei Punkte, die immer zu fragen sind; darüber hinaus gilt sie für jede Unklarheit.
 
 > **Die Grundannahme.** Der Adressat ist eine **Freigabeinstanz, die haftet** — keine Peer-Gruppe. Daraus folgt alles Weitere: Beschluss nach vorn, Gegenargumente selbst nennen, offene Punkte als Bedingungen.
+
+---
+
+## Was am Ende entsteht — und wie es heißt
+
+**Vier Dateien**, und sie tragen alle den **Präfix der Firma**, für die sie gebaut wurden. Der Präfix ist der Kurzname, wie die Firma sich selbst schreibt — `GeAT`, `Hellwig`, `Brehmer`.
+
+| # | Datei | Was drin ist |
+|---|---|---|
+| 1 | `<Firma>-pitch-praesentation.html` | 14 Folien nach [`vorlage-praesentation.html`](vorlage-praesentation.html), Sprechernotiz je Folie |
+| 2 | `<Firma>-pitch-sprechzettel.md` | Stichpunkte je Folie mit Zeitbudget, die Sätze die fallen müssen, vorbereitete Antworten, Notfallpfad |
+| 3 | `<Firma>-pitch-sprechfassung-volltext.md` | Wort für Wort, mit Folienmarken, Pausen, Zeitmarken, Regieanweisungen |
+| 4 | `<Firma>-datengrundlage-<vorhaben>.md` | alle verwendeten Werte mit Herkunftskennzeichen, Status quo, Roadmap, Bewertungsmatrix mit Begründungen, Folien-Zuordnung, „Was nicht belegt ist" |
+
+**Ablage:** ein eigenes Unterverzeichnis je Firma, `pitch-datengrundlage/<Firma>/`. Der Präfix bleibt trotzdem am Dateinamen — die Dateien werden einzeln weitergegeben, und dann trägt nur der Name noch die Zuordnung.
+
+> **Nichts in einem fremden Unternehmensprofil ablegen.** Die vier Dateien sind Ergebnisse, keine Quellen. Wer sie in das übergebene Profil legt, vermischt Bestand und Ableitung — und beim nächsten Stand weiß niemand mehr, was gepflegt wird und was einmal erzeugt wurde.
+
+**Wohin die sechs Pflichtbestandteile aus dem [Ausgabeformat](#das-ausgabeformat-verbindlich) gehören:**
+
+| Bestandteil | Datei |
+|---|---|
+| Bewertungstabelle, Gewichte auf Summe 100, gewichtetes Ergebnis | **Datenblatt**, verdichtet auf Folie 7 |
+| Je Gewicht eine Begründungszeile | **Datenblatt** |
+| Markierte Lücken mit dem gewählten Weg aus [0.3](#03-wie-eine-lücke-überbrückt-wird) | **Datenblatt**, dazu Folie 10 |
+| Empfehlung in drei bis fünf Sätzen, zwei Gegenargumente | **Folien 6, 8, 9** und Volltext |
+| Abschnitt „Offene Fragen" | **Folie 10** und Datenblatt |
+| Die ersten 90 Tage mit Abbruchkriterium | **Folien 5, 10, 13** und Datenblatt |
+
+> **Wenn der Auftrag kleiner ist**, etwa nur eine Bewertungstabelle ohne Vortrag: Datei 4 allein genügt. Sie enthält alle sechs Bestandteile. Die Folien sind die Darstellung, das Datenblatt ist die Substanz.
 
 ---
 
