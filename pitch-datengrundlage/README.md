@@ -4,7 +4,7 @@
 
 | Datei | Was drin ist |
 |---|---|
-| [`skill-c-level-pitch.md`](skill-c-level-pitch.md) | **Die Methode** — kein installierter Skill, sondern eine Anleitung zum Lesen und Anwenden. Beginnt mit **Schritt 0: drei Dinge, die erfragt und nicht geraten werden** (welche sechs Gruppen, woher die Plattformen, wie Lücken überbrückt werden). Dann zwölf Pflichtwerte, Zuschnitt unter die Freigabegrenze, Kriterien herleiten, gewichten, Sensitivität, verbindliches Ausgabeformat, 14 Folien, Sprechunterlagen, Datenblatt |
+| [`skill-c-level-pitch.md`](skill-c-level-pitch.md) | **Die Methode** — kein installierter Skill, sondern eine Anleitung zum Lesen und Anwenden. Beginnt mit einem **Fragenkatalog: zwölf Fragen als Auswahl oder freie Antwort**, mit Voreinstellung bei Verfahrensfragen und ohne bei Sachfragen. Vier davon haben bewusst keine Voreinstellung — dort hält die Arbeit an, statt zu raten. Dann zwölf Pflichtwerte, Zuschnitt unter die Freigabegrenze, Kriterien herleiten, gewichten, Sensitivität, verbindliches Ausgabeformat, 14 Folien, Sprechunterlagen, Datenblatt |
 | [`vorlage-praesentation.html`](vorlage-praesentation.html) | **Die leere Präsentation.** Dieselbe Gestaltung und Steuerung, 14 Folien mit Platzhaltern, jede mit ihrer Aufgabe im Kommentar |
 | [`GeAT-datengrundlage-plattformfreigabe.md`](GeAT-datengrundlage-plattformfreigabe.md) | **Das durchgerechnete Beispiel.** Alle Werte, die in die GeAT-Präsentation eingegangen sind, mit Herkunftskennzeichen und Folien-Zuordnung |
 

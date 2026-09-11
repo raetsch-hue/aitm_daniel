@@ -55,9 +55,51 @@ baut_auf: vorlagen/pitch-c-level.md (die zehn Prüfkriterien) · coursebook/3.4 
 
 ---
 
-## Schritt 0 · Vorher fragen — drei Dinge, die nicht geraten werden
+## Der Fragenkatalog — alles, was erfragt wird
 
-**Diese Methode rät nicht. Sie fragt.** Drei Punkte stehen vor der Datenaufnahme, und keiner davon lässt sich aus dem übergebenen Profil erschließen.
+**Zwölf Fragen. Sie stehen hier vollständig, damit keine vergessen wird.** Die ersten sieben werden **vor** dem Start gestellt, die restlichen fünf entstehen unterwegs.
+
+**Zur Spalte „ohne Antwort":** Bei **Verfahrensfragen** gibt es eine Voreinstellung — die Arbeit soll nicht an einer Formsache stehenbleiben. Bei **Sachfragen** gibt es keine. *Was nicht im Datensatz steht und nicht beantwortet wird, wird nicht gesetzt, sondern als Lücke ausgewiesen — oder die Arbeit hält an.*
+
+### A · Vor dem Start: Auftrag und Ergebnis
+
+| # | Frage | Auswahl | Ohne Antwort |
+|---:|---|---|---|
+| 1 | **Welche sechs Gruppen sind gemeint?** Ausführlich in [0.1](#01-welche-sechs-gruppen-sind-gemeint) | ☐ nur **Reifegrad-Dimensionen** (Strategie · Technologie · Daten · Kultur · Prozesse · People) ☐ nur **Plattform-Kriterien** (DSGVO/AI Act · Deployment · RAG · MCP · Preis/Lock-in · Adoption) ☐ **beide** | Voreinstellung: **beide** — der vollständige Weg, wird im Ergebnis vermerkt |
+| 2 | **Welcher Ergebnisumfang?** | ☐ **ganzes Paket** (4 Dateien) ☐ Präsentation + Sprechzettel ☐ nur Präsentation ☐ **nur Datenblatt** | Voreinstellung: **ganzes Paket** |
+| 3 | **Firmenkurzname für den Präfix?** — wie die Firma sich selbst schreibt | *freie Antwort* | Voreinstellung: der Name aus dem Frontmatter des Profils |
+| 4 | **Wie heißt das Vorhaben?** — für den Dateinamen des Datenblatts | *freie Antwort* | Voreinstellung: aus dem Beschlussgegenstand abgeleitet |
+
+### B · Vor dem Start: der Gegenstand
+
+| # | Frage | Auswahl | Ohne Antwort |
+|---:|---|---|---|
+| 5 | **Woher kommen die Plattformen?** Ausführlich in [0.2](#02-woher-kommen-die-plattformen) | ☐ **vorgegeben** — welche? ☐ **Recherche** — gibt es gesetzte oder ausgeschlossene Kandidaten? | **keine Voreinstellung.** Ohne Antwort wird nicht bewertet |
+| 6 | **Was ist der Beschlussgegenstand, und welcher Betrag?** Pflichtwert 1 | *freie Antwort* | **keine.** Ohne diese Angabe gibt es keinen Pitch — [Schritt 1](#schritt-1--datenaufnahme--die-zwölf-pflichtwerte) |
+| 7 | **Wer entscheidet — welches Gremium, welche Freigabegrenze, welcher Tagungsrhythmus?** Pflichtwert 2 | *freie Antwort* | **keine.** Davon hängt der Zuschnitt ab — [Schritt 2](#schritt-2--der-zuschnitt--der-schritt-den-alle-überspringen) |
+
+### C · Wenn Pflichtwerte fehlen
+
+| # | Frage | Auswahl | Ohne Antwort |
+|---:|---|---|---|
+| 8 | **Der Anlass ist im Profil nicht erkennbar** — was ist das Problem, seit wann, woran messbar? Pflichtwert 4 | *freie Antwort* | **keine.** Arbeit hält an |
+| 9 | **Es gibt keine Vorgängerinitiative mit Zahl** — gab es ein früheres Vorhaben, das gescheitert oder gelungen ist? Pflichtwert 7 | ☐ ja, welches ☐ nein, es gibt keine | Wird als Lücke ausgewiesen. **Der Pitch verliert seinen stärksten Teil** und wird deutlich schwächer |
+| 10 | **Ein Kriterium hat im Datensatz keinen Beleg** — welcher der drei Wege? Ausführlich in [0.3](#03-wie-eine-lücke-überbrückt-wird) | ☐ **Annahme** mit Kennzeichnung ☐ **Recherche** mit Quelle ☐ **offene Frage** mit Zuständigkeit und Frist | Voreinstellung: **offene Frage** — die ehrlichste der drei. Stillschweigend füllen ist nie zulässig |
+
+### D · Unterwegs
+
+| # | Frage | Auswahl | Ohne Antwort |
+|---:|---|---|---|
+| 11 | **Die beiden besten Gesamtscores liegen unter 0,3 auseinander** — das ist kein Ergebnis, sondern unentschieden. Welches Kriterium fehlt? | *freie Antwort* | Wird als **unentschieden** ausgewiesen, keine Empfehlung ausgesprochen — [Schritt 5](#schritt-5--scoring-sensitivität-kippschwelle) |
+| 12 | **Das Vorhaben passt nicht unter die Freigabegrenze** — kleiner zuschneiden oder Gremiumsvorlage? | ☐ **kleiner zuschneiden** ☐ **Gremiumsvorlage** vorbereiten, mit Sitzungstermin | Voreinstellung: **kleiner zuschneiden**, solange der Zweck erhalten bleibt — [Schritt 2](#schritt-2--der-zuschnitt--der-schritt-den-alle-überspringen) |
+
+> **Die Fragen 5 bis 8 haben bewusst keine Voreinstellung.** Es sind die vier, bei denen eine gesetzte Antwort das Ergebnis unbrauchbar macht statt nur ungenau. Wer sie überspringt, baut eine Präsentation über eine Entscheidung, die niemand getroffen hat.
+
+---
+
+## Schritt 0 · Die drei Fragen im Detail
+
+**Diese Methode rät nicht. Sie fragt.** Der vollständige Katalog steht oben; hier sind die drei Fragen erläutert, bei denen die Antwort allein nicht genügt — man muss wissen, was aus ihr folgt.
 
 ### 0.1 Welche sechs Gruppen sind gemeint?
 
