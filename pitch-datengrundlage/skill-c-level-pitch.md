@@ -17,7 +17,68 @@ baut_auf: vorlagen/pitch-c-level.md (die zehn Prüfkriterien) · coursebook/3.4 
 >
 > **Was er nicht kann.** Er erfindet keine Zahlen. Fehlt ein Pflichtwert, wird er als Lücke ausgewiesen — im Ergebnis, nicht im Nebensatz. Eine Präsentation mit sichtbaren Lücken ist brauchbar; eine mit erfundenen Zahlen ist es nicht.
 >
+> **Zum Status.** Dies ist eine **Methodenbeschreibung**, kein installierter Skill. Sie liegt bewusst unter `pitch-datengrundlage/` und nicht unter `.claude/skills/` — sie wird gelesen und angewendet, nicht aufgerufen.
+>
+> **Und die Grundregel, die über allem steht: Was nicht im Datensatz steht, wird erfragt — nicht geraten.** Schritt 0 nennt die drei Punkte, die immer zu fragen sind; darüber hinaus gilt sie für jede Unklarheit.
+
 > **Die Grundannahme.** Der Adressat ist eine **Freigabeinstanz, die haftet** — keine Peer-Gruppe. Daraus folgt alles Weitere: Beschluss nach vorn, Gegenargumente selbst nennen, offene Punkte als Bedingungen.
+
+---
+
+## Schritt 0 · Vorher fragen — drei Dinge, die nicht geraten werden
+
+**Diese Methode rät nicht. Sie fragt.** Drei Punkte stehen vor der Datenaufnahme, und keiner davon lässt sich aus dem übergebenen Profil erschließen.
+
+### 0.1 Welche sechs Gruppen sind gemeint?
+
+In den Kursunterlagen gibt es **zwei verschiedene Sechsergruppen**. Sie werden regelmäßig verwechselt, und die Verwechslung kostet die halbe Bewertung:
+
+| | Gruppe | Die sechs |
+|---|---|---|
+| **1** | **Reifegrad-Dimensionen** | Strategie · Technologie · Daten · Kultur · Prozesse · People |
+| **2** | **Plattform-Kriterien aus Tag 3.1** | DSGVO/AI Act · Deployment · RAG · MCP · Preis/Lock-in · Adoption |
+
+Die erste beschreibt, **wo die Organisation steht**. Die zweite, **woran die Kandidaten gemessen werden**. Das eine ist die Begründung, das andere die Bewertung.
+
+> **Frage stellen, bevor irgendetwas gebaut wird:**
+> *„Sollen die sechs **Reifegrad-Dimensionen** durchgespielt werden (1), die sechs **Plattform-Kriterien** (2) — oder **beide**?"*
+
+| Antwort | Was daraus folgt |
+|---|---|
+| **nur 1** | Das Ergebnis ist eine **Standortbestimmung**. Die Bewertungsmatrix baut darauf auf, ersetzt sie aber nicht. Jede Dimension bekommt eine Zeile, auch die ohne Datenlage |
+| **nur 2** | Das Ergebnis ist eine **Bewertungsmatrix**. Die sechs Kriterien sind gesetzt und werden nur gewichtet, nicht hergeleitet — Schritt 3 entfällt weitgehend |
+| **beide** | Der vollständige Weg: erst Standort, dann Bewertung. Die Reifegrad-Dimensionen **begründen** die Gewichte der Plattform-Kriterien. **Das ist der Weg des durchgerechneten Beispiels** |
+
+**Wichtig bei Antwort 1 oder „beide":** Es werden **alle sechs Dimensionen durchgespielt, auch die ohne Datenlage.** Eine Dimension ohne Beleg wird nicht weggelassen, sondern markiert — siehe [0.3](#03-wie-eine-lücke-überbrückt-wird).
+
+> **Und der Widerspruch, der dabei auffallen wird:** Schritt 3 dieser Methode sagt *„was nicht trennt, bekommt kein Gewicht"* und wirft Kriterien ohne begründenden Satz heraus. Anforderung 1 verlangt das Gegenteil: Vollständigkeit. **Beides ist richtig, für verschiedene Dinge.** Die Reifegrad-Dimensionen werden **vollständig** durchgespielt, weil sie eine Bestandsaufnahme sind. Die Bewertungskriterien werden **auf Trennschärfe geprüft**, weil sie eine Entscheidung tragen. Wer das vermischt, bekommt entweder eine lückenhafte Standortbestimmung oder eine aufgeblähte Matrix.
+
+### 0.2 Woher kommen die Plattformen?
+
+Auch das ist zu fragen und nicht zu setzen:
+
+| Weg | Wann | Was zu tun ist |
+|---|---|---|
+| **Vorgabe** | Die zu vergleichenden Plattformen sind in der Aufgabe oder im Profil genannt | Übernehmen, unverändert. Auch dann die **Nullvariante ergänzen**, wenn sie fehlt |
+| **Recherche** | Es gibt keine Vorgabe | Kandidaten selbst bestimmen — **je einer aus jeder Kategorie**, die für die Organisation in Frage kommt. **Jeder Kandidat mit Quelle**, und die Auswahl wird begründet: warum diese drei und nicht andere |
+
+**Immer zu ergänzen, unabhängig vom Weg:** die **Nullvariante** und, falls vorhanden, **hausinterne Alternativen** — die Funktionen eines Systems, das ohnehin kommt. Beide stehen in keiner Marktübersicht und entscheiden trotzdem mit.
+
+> **Frage stellen:** *„Sind die Plattformen vorgegeben — oder soll ich sie recherchieren?"* Bei Recherche zusätzlich: *„Gibt es Kandidaten, die gesetzt sind oder ausgeschlossen?"*
+
+### 0.3 Wie eine Lücke überbrückt wird
+
+Fehlt eine Angabe, gibt es **genau drei zulässige Wege** — und einen unzulässigen:
+
+| Weg | Wie es aussieht |
+|---|---|
+| **Annahme mit Kennzeichnung** | Der Wert wird gesetzt, als `Annahme` markiert und begründet. Im Ergebnis erkennbar, nicht im Fließtext versteckt |
+| **Recherche mit Quelle** | Der Wert wird beschafft und mit Fundstelle belegt |
+| **Offene Frage mit Zuständigkeit** | Der Wert bleibt offen — mit **Name der Rolle**, die ihn beantworten kann, und **Frist** |
+
+> **Stillschweigend füllen ist keiner der drei Wege.** Eine Zahl ohne Kennzeichen ist eine Behauptung, und sie fällt genau dann auf, wenn es teuer wird — im Gremium.
+
+**Ein Kriterium ohne Beleg im Datensatz wird markiert, nicht weggelassen.** Die Markierung gehört in die Bewertungstabelle selbst, nicht in eine Fußnote.
 
 ---
 
@@ -35,7 +96,7 @@ Lies das übergebene Profil und trage diese zwölf Angaben zusammen. **Erfinde n
 | 6 | **Umsetzungskapazität und ihre Bindungen** (IT-Stellen, laufende Großvorhaben) | Folien 4 und 9 |
 | 7 | **Eine Vorgängerinitiative mit Zahl** — bevorzugt eine gescheiterte | Folie 8. **Der wichtigste Einzelwert** |
 | 8 | **Bestands- und Qualitätszahlen**, soweit ein Kriterium daran hängt | Folien 6 und 12 |
-| 9 | **Die Optionen**, einschließlich Nullvariante und hausinterner Alternativen | Folie 6 |
+| 9 | **Die Optionen**, einschließlich Nullvariante und hausinterner Alternativen. Fehlen sie im Profil: [0.2](#02-woher-kommen-die-plattformen) | Folie 6 |
 | 10 | **Regulatorische Lage** (Datenschutz, Branchenrecht, Mitbestimmung) | Folie 10 |
 | 11 | **Wer im Raum sitzt und welche Kennzahl diese Person verlangt** | Folien 8 und 14 |
 | 12 | **Was nicht bekannt ist** — ausdrücklich abgefragt | Folien 10 und 11 |
@@ -157,6 +218,21 @@ Benutze `vorlage-praesentation.html`. Jede Folie trägt ihre Aufgabe im Kommenta
 **Und eine Warnung, die Geld kostet:** Sag **nicht** „Sie haben null Risiko". Wenn der Pitch selbst offene Punkte nennt — und er soll —, ist der Satz widerlegbar, und zwar von jemandem im Raum. Sag stattdessen, worauf das Risiko **begrenzt** ist: Betrag und Zeitraum.
 
 **Sprechernotizen (`data-notes`) sind Pflicht auf jeder Folie.** Sie tragen, was gesagt und was **nicht** gesagt wird.
+
+---
+
+### Das Ausgabeformat, verbindlich
+
+Unabhängig davon, ob zusätzlich Folien gebaut werden — **diese sechs Bestandteile gehören in jedes Ergebnis:**
+
+1. **Die Bewertungstabelle:** alle Kriterien, ihre Gewichte mit **Summe 100**, alle Plattformen, je Zelle ein Score, je Spalte das **gewichtete Ergebnis**.
+2. **Je Gewicht eine Begründungszeile** — ein Satz über *diese* Organisation, nicht über die Technik.
+3. **Markierte Lücken** in der Tabelle selbst: welches Kriterium hat im Datensatz keinen Beleg, und über welchen der drei Wege aus [0.3](#03-wie-eine-lücke-überbrückt-wird) wurde es überbrückt.
+4. **Die Empfehlung in drei bis fünf Sätzen**, mit **mindestens zwei Gegenargumenten**.
+5. **Ein Abschnitt „Offene Fragen"** — mit Zuständigkeit und Frist, nicht als Aufzählung von Zweifeln.
+6. **Die ersten 90 Tage:** was konkret passiert, welche Bedingungen vor dem ersten Euro erfüllt sein müssen, und das **Abbruchkriterium** mit seinen messbaren Bedingungen.
+
+> **Punkt 6 wird am häufigsten vergessen und am häufigsten verlangt.** Eine Empfehlung ohne die ersten 90 Tage ist eine Meinung darüber, was man kaufen sollte — keine Entscheidungsvorlage. Und ein 90-Tage-Plan ohne Abbruchkriterium ist ein Zeitplan, keine Absicherung.
 
 ---
 
