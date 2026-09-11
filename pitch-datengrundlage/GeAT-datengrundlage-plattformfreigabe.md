@@ -66,6 +66,54 @@ Jeder Wert unten trägt eines dieser fünf Kennzeichen. Sie stammen aus dem Prof
 
 ---
 
+## 1a · Status quo — wo das Unternehmen steht
+
+*Kurzorientierung. Kein Ersatz für das Profil, aber genug, um zu beurteilen, ob die Gewichtung in Abschnitt 8 plausibel ist.*
+
+**Die Lage in vier Sätzen.** Ein Personaldienstleister mittlerer Größe in einem schrumpfenden Markt: Umsatz −5,5 %, EBIT-Marge von 4,6 auf 2,6 % gefallen, Besetzungsquote von 48 auf 40 % gesunken, Besetzungsdauer von 8 auf 11 Arbeitstage gestiegen. Digitalisiert wird bisher nicht aus Strategie, sondern weil die Branchensoftware ersetzt werden muss. Es gibt seit Mai 2026 erstmals eine Rolle für Digitalisierung und KI — ohne Budget, ohne Gremium, ohne Weisungsrecht. Und es gibt eine gescheiterte Vorgängerinitiative, die jede neue Zusage belastet.
+
+**Digitaler Reifegrad**, Skala 1 = ad hoc bis 5 = optimiert. **Einschätzung mit Stand 09/2026, ausdrücklich nicht validiert:**
+
+| Dimension | IST | ZIEL | Woran der IST-Wert hängt |
+|---|:---:|:---:|---|
+| Strategie | 2 | 4 | kein Digitalisierungsziel mit Budgetposten; die einzige beschlossene Maßnahme mit Geld ist der Systemwechsel 2027 |
+| Technologie | 2 | 4 | Kernsystem seit 2013, **ohne offene Schnittstelle im Bestandsvertrag**; Multiposting ohne Verbindung zum Bewerbermanagement |
+| Daten | 2 | 3 | 41.000 Profile, **63 % ohne strukturierte Qualifikationsfelder**, Können steht im Freitext |
+| Kultur | 2 | 3 | die Einführung von 2023 wurde **nie ausgewertet**, obwohl die Nutzung bei 34 % liegt |
+| Prozesse | 2 | 4 | der Kernprozess läuft über drei Systeme und **vier manuelle Übertragungen**; Stundenzettel auf Papier und als Foto im Messenger |
+| People | 3 | 4 | hohe Fachkompetenz, im Mittel 14 Jahre im Haus — aber keine Kapazität für Automatisierung |
+
+> **Zwei Dinge daran sind für die Bewertung der Empfehlung wichtig.** Erstens: **Daten und Kultur stehen auf ZIEL 3, nicht 4** — hier wird bewusst nicht das Maximum angestrebt. Zweitens: Der Reifegrad ist eine **Einschätzung, keine Messung**. Jede Gewichtung in Abschnitt 8, die darauf aufbaut, trägt diesen Vorbehalt mit. Das ist der wichtigste Prüfpunkt für einen Dritten.
+
+**Warum das die Gewichtung erklärt:** Technologie 2 und Prozesse 2 begründen das hohe Gewicht auf Betriebsaufwand und Exit. Daten 2 begründet, warum RAG-Fähigkeit nur 4 % bekommt — die Voraussetzung fehlt. Kultur 2 begründet die 17 % auf Adoption. **Ohne diese Tabelle wirken die Gewichte gegriffen; mit ihr sind sie herleitbar.**
+
+---
+
+## 1b · Roadmap — wo dieser Beschluss hingehört
+
+Der Pitch entscheidet **Stufe 1 von fünf**. Die übrigen sind hier nur so weit aufgeführt, dass die Einordnung stimmt.
+
+| Stufe | Ziel | Zeit | Betrag | Freigabe |
+|:---:|---|---|---:|---|
+| **1** | **Regelwerk vor Werkzeug** — die laufende Verarbeitung ohne Rechtsgrundlage beenden | Monat 1–2 | 22.000 € | **Geschäftsführung ← hier** |
+| 2 | Die 480.000 € Anzeigenbudget auswertbar machen: welche Quelle erzeugt welche Besetzung | Monat 1–4 | 30.000 € | Gesellschafterversammlung |
+| 3 | Datenfundament — Qualifikationskatalog, Pflichtfelder, Nichtbesetzungsgrund | Monat 3–10 | 110.000 € | Gesellschafterversammlung |
+| 4 | Der Assistent — **Findewerkzeug, nicht Sortierer** | Monat 8–14 | 60.000 € | Gesellschafterversammlung |
+| 5 | Den Zielkonflikt bezahlen: Zeit für Datenpflege vergüten statt appellieren | durchgehend | 18.000 € | Geschäftsführung |
+
+**Die Taktung gegen das Quartalsgremium** — der Grund, warum Stufe 1 klein zugeschnitten ist:
+
+| Termin | Was beschlossen werden muss |
+|---|---|
+| **sofort, Geschäftsführung** | **Stufe 1 (dieser Pitch)**, Stufe 5 anlaufend |
+| Q4/2026 | Stufe 2 und 3 gemeinsam — **als Migrationsvorbereitung begründet, nicht als KI-Vorhaben** |
+| Q1/2027 | keine Vorlage: die Migration läuft, die IT ist gebunden |
+| Q2/2027 | Stufe 4, Pilotstart, mit den Ergebnissen aus 2 und 3 als Nachweis |
+
+> **Drei Einordnungen für einen Dritten.** Erstens: **Stufe 2 steht bewusst vor Stufe 3.** Das Anzeigenbudget ist der einzige Posten, der sich aus laufenden Kosten refinanziert — er liefert die Amortisation an einer unstrittigen Stelle, bevor über das teure Stück geredet wird. Zweitens: **Stufe 5 läuft durchgehend mit**, nicht am Ende — sonst ist es wieder eine Ansage statt einer Vereinbarung, und genau daran ist 2023 gescheitert. Drittens: **Der Assistent kommt zuletzt.** Ohne die Stufen davor liefert er dasselbe Ergebnis wie 2023.
+
+---
+
 ## 2 · Entscheidungswege und Freigabegrenzen
 
 Der Punkt, an dem der ganze Zuschnitt des Vorhabens hängt.
@@ -327,4 +375,4 @@ Zusammengestellt am **11.09.2026** aus:
 
 **Alle Beteiligten sind als Rollen geführt.** Im Unternehmensprofil stehen Namen; sie sind bis auf eine Ausnahme erfunden. In dieser Datei kommt keiner vor — sie ist für Dritte gedacht.
 
-**Nicht enthalten:** alles, was nicht in die Präsentation eingegangen ist — Rohertragsrechnung, Prozesskennzahlen, Stakeholder-Analysen, Widerstandsmuster, die Stufen 2 bis 5 des Transformationsvorschlags. Wer das braucht, arbeitet mit dem Profil, nicht mit diesem Auszug.
+**Nicht enthalten:** Rohertrags- und Margenrechnung, Prozesskennzahlen im Detail, Stakeholder- und Widerstandsanalysen, die Ausgestaltung der Stufen 2 bis 5, die zweite Bewertungsmatrix für Stufe 4. Die Abschnitte [1a](#1a--status-quo--wo-das-unternehmen-steht) und [1b](#1b--roadmap--wo-dieser-beschluss-hingehört) geben eine **Kurzorientierung**, damit die Gewichtung beurteilbar ist — sie ersetzen das Profil nicht. Wer mit dem Unternehmen arbeiten will statt nur diese eine Entscheidung zu prüfen, arbeitet mit `GeAT-unternehmensprofil/`.
