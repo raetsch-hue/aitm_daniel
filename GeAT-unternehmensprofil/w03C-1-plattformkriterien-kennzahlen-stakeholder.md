@@ -17,7 +17,7 @@ basis_fuer: w03C-2-dsgvo-ai-act-auszug.md · w03C-3-reifegradstufe-building-pilo
 > **Was dieses Dokument ist.** Die Spalte **GeAT mbH** des Kursboards, ausgeschrieben. Das Board
 > fragt je Kriterium nach drei Dingen: *Relevante Kennzahlen*, *Anforderungen von Key
 > Stakeholder\*innen*, *Belege*. Die sechs Kriterien stehen in
-> [`coursebook/3.1`](#3.1/3.1_KI-Plattformen-im-Vergleich.md), die eigene Gewichtung in
+> [`coursebook/3.1`](#woche-3/3.1/3.1_KI-Plattformen-im-Vergleich.md), die eigene Gewichtung in
 > [`w03A-1-ki-analyse-fassung-1.md`](w03A-1-ki-analyse-fassung-1.md) Abschnitt 4.2.
 
 > **Aufbau.** Zuerst der Elevator Pitch für die Präsentation. Dann je Boardzeile **der eine Satz

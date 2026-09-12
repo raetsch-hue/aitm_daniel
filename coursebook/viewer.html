@@ -247,7 +247,14 @@
        nummeriert : true  -> Sortierung nach Nummer im Pfad (1.4 < 2.1)
                     false -> alphabetisch nach Titel                       */
   var BEREICHE = [
-    { id:'coursebook',   titel:'Coursebook',   ordner:'coursebook',   nummeriert:true  },
+    { id:'coursebook',   titel:'Einstieg',     ordner:'coursebook',   nummeriert:true  },
+    // Je Kurswoche ein Ordner unterhalb von coursebook/. Neue Woche? Hier eine
+    // Zeile ergaenzen und die Dokumente in dateien.js eintragen. Innerhalb der
+    // Woche wird nach der Nummer im Pfad sortiert (4.0 < 4.1 < 4.5).
+    { id:'woche-1',      titel:'Woche 1',      ordner:'woche-1',      nummeriert:true  },
+    { id:'woche-2',      titel:'Woche 2',      ordner:'woche-2',      nummeriert:true  },
+    { id:'woche-3',      titel:'Woche 3',      ordner:'woche-3',      nummeriert:true  },
+    { id:'woche-4',      titel:'Woche 4',      ordner:'woche-4',      nummeriert:true  },
     { id:'bibliothek',   titel:'Bibliothek',   ordner:'bibliothek',   nummeriert:false },
     { id:'artefakte',    titel:'Artefakte',    ordner:'artefakte',    nummeriert:false },
     { id:'examples',     titel:'Beispiele',    ordner:'examples',     nummeriert:false },

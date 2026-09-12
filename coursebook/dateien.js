@@ -22,7 +22,13 @@
 
 var DOKUMENTE = [
 
-  /* ================= COURSEBOOK ================= */
+  /* ================= COURSEBOOK =================
+     Ab 12.09.2026 liegen die Kurstage in Wochenordnern:
+     coursebook/woche-1/1.4/, coursebook/woche-4/4.0/ und so weiter.
+     Der Umschalter "Bereich" oben im Kopf ist damit die Wochenauswahl;
+     der Einstieg (Index und Quellen) bleibt in coursebook/0/.
+     Neue Woche? Ordner anlegen, hier die Zeilen ergaenzen und in
+     viewer.html eine Zeile in BEREICHE aufnehmen.  */
 
   // ---- Einstieg ----
   { datei: "0/00_Index-und-Gewichtung.md",
@@ -32,59 +38,77 @@ var DOKUMENTE = [
     titel: "0 · Weiterführende Quellen" },
 
   // ---- Woche 1 ----
-  { datei: "1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md",
+  { datei: "woche-1/1.4/1.4_Vier-Wellen-KI-Kategorien-Hype-Cycle.md",
     titel: "1.4 · Vier Wellen, KI-Kategorien, Hype Cycle" },
 
-  { datei: "1.5/1.5_Strategisches-Prompt-Engineering.md",
+  { datei: "woche-1/1.5/1.5_Strategisches-Prompt-Engineering.md",
     titel: "1.5 · Strategisches Prompt Engineering" },
 
   // ---- Woche 2 ----
-  { datei: "2.1/01_Change-Management-Lewin-ADKAR.md",
+  { datei: "woche-2/2.0/2.3_Essentials-Kraefte-sichtbar-machen.md",
+    titel: "2.0 · Essentials: Kräfte sichtbar machen (2.3)" },
+
+  { datei: "woche-2/2.0/2.4_Essentials-Widerstand.md",
+    titel: "2.0 · Essentials: Widerstand ist eine Information (2.4)" },
+
+  { datei: "woche-2/2.0/2.5_Essentials-Die-Woche-wird-ein-Plan.md",
+    titel: "2.0 · Essentials: Die Woche wird ein Plan (2.5)" },
+
+  { datei: "woche-2/2.1/01_Change-Management-Lewin-ADKAR.md",
     titel: "2.1 · Vertiefung: Lewin & ADKAR" },
 
-  { datei: "2.2/2.2_Kotter-8-Schritte-Modell.md",
+  { datei: "woche-2/2.2/2.2_Kotter-8-Schritte-Modell.md",
     titel: "2.2 · Kotters 8-Schritte-Modell" },
 
-  { datei: "2.2/2.2_Ergaenzung-Force-Field-Analyse.md",
+  { datei: "woche-2/2.2/2.2_Ergaenzung-Force-Field-Analyse.md",
     titel: "2.2 · Werkzeug: Force-Field-Analyse (Ergänzung)" },
 
-  { datei: "2.3/2.3_Kraefte-sichtbar-machen.md",
+  { datei: "woche-2/2.3/2.3_Kraefte-sichtbar-machen.md",
     titel: "2.3 · Kräfte sichtbar machen (Analyse)" },
 
-  { datei: "2.4/2.4_Widerstand-ist-eine-Information.md",
+  { datei: "woche-2/2.4/2.4_Widerstand-ist-eine-Information.md",
     titel: "2.4 · Widerstand ist eine Information (Analyse)" },
 
-  { datei: "2.5/2.5_Die-Woche-wird-ein-Plan.md",
+  { datei: "woche-2/2.5/2.5_Die-Woche-wird-ein-Plan.md",
     titel: "2.5 · Die Woche wird ein Plan (Analyse)" },
 
   // ---- Woche 3 ----
-  { datei: "3.1/3.1_KI-Plattformen-im-Vergleich.md",
+  { datei: "woche-3/3.0/3.0_Essentials-Woche-3.md",
+    titel: "3.0 · Essentials: Woche 3 komplett" },
+
+  { datei: "woche-3/3.1/3.1_KI-Plattformen-im-Vergleich.md",
     titel: "3.1 · KI-Plattformen im Vergleich (Analyse)" },
 
-  { datei: "3.2/3.2_Data-Governance-und-RAG.md",
+  { datei: "woche-3/3.2/3.2_Data-Governance-und-RAG.md",
     titel: "3.2 · Data Governance und RAG (Analyse)" },
 
-  { datei: "3.3/3.3_Implementierungspfade-und-Workspace.md",
+  { datei: "woche-3/3.3/3.3_Implementierungspfade-und-Workspace.md",
     titel: "3.3 · Implementierungspfade und Workspace (Analyse)" },
 
-  { datei: "3.4/3.4_Die-Entscheidung-vertreten.md",
+  { datei: "woche-3/3.4/3.4_Die-Entscheidung-vertreten.md",
     titel: "3.4 · Die Entscheidung vertreten (Analyse)" },
 
-  { datei: "3.5/3.5_Synthese-Plattform-Daten-Umsetzung.md",
+  { datei: "woche-3/3.5/3.5_Synthese-Plattform-Daten-Umsetzung.md",
     titel: "3.5 · Synthese: Plattform, Daten, Umsetzung (Analyse)" },
 
-  // ---- Kurzfassungen ----
-  { datei: "essentials/2.3_Essentials-Kraefte-sichtbar-machen.md",
-    titel: "2.3 · Essentials: Kräfte sichtbar machen" },
+  // ---- Woche 4 ----
+  { datei: "woche-4/4.0/4.0_Essentials-Woche-4.md",
+    titel: "4.0 · Essentials: Woche 4 komplett" },
 
-  { datei: "essentials/2.4_Essentials-Widerstand.md",
-    titel: "2.4 · Essentials: Widerstand ist eine Information" },
+  { datei: "woche-4/4.1/4.1_Stakeholder-Analyse-und-Power-Interest-Grid.md",
+    titel: "4.1 · Stakeholder-Analyse und Power/Interest Grid" },
 
-  { datei: "essentials/2.5_Essentials-Die-Woche-wird-ein-Plan.md",
-    titel: "2.5 · Essentials: Die Woche wird ein Plan" },
+  { datei: "woche-4/4.2/4.2_Key-User-und-Champions-Programm.md",
+    titel: "4.2 · Key User und Champions-Programm" },
 
-  { datei: "essentials/3.0_Essentials-Woche-3.md",
-    titel: "3.0 · Essentials: Woche 3 komplett" },
+  { datei: "woche-4/4.3/4.3_Botschaft-Kanal-und-Kommunikationsplan.md",
+    titel: "4.3 · Botschaft, Kanal und Kommunikationsplan" },
+
+  { datei: "woche-4/4.4/4.4_Executive-Briefing.md",
+    titel: "4.4 · Executive Briefing" },
+
+  { datei: "woche-4/4.5/4.5_Synthese-Stakeholder-Management-Plan.md",
+    titel: "4.5 · Synthese: Stakeholder-Management-Plan" },
 
   /* ================= BIBLIOTHEK =================
      Eigene Nachschlage-Einträge aus ../bibliothek/.

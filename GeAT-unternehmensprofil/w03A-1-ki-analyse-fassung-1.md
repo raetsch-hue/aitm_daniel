@@ -14,7 +14,7 @@ basis_fuer: w03A-2-ki-analyse-review.md. ÜBERHOLT von w03A-3 — nicht mehr zit
 
 # KI-Analyse GeAT mbH — welches Werkzeug, und warum nicht die anderen
 
-> **Was diese Datei ist.** Die Bewertungsmatrix aus [Coursebook 3.1, Abschnitt 6](../coursebook/3.1/3.1_KI-Plattformen-im-Vergleich.md), angewendet auf GeAT statt auf einen Versicherer mit 1.200 Beschäftigten. Sie ergänzt den [`transformationsvorschlag.md`](transformationsvorschlag.md): dort steht die **Reihenfolge**, hier steht das **Werkzeug** für Stufe 1 und Stufe 4.
+> **Was diese Datei ist.** Die Bewertungsmatrix aus [Coursebook 3.1, Abschnitt 6](../coursebook/woche-3/3.1/3.1_KI-Plattformen-im-Vergleich.md), angewendet auf GeAT statt auf einen Versicherer mit 1.200 Beschäftigten. Sie ergänzt den [`transformationsvorschlag.md`](transformationsvorschlag.md): dort steht die **Reihenfolge**, hier steht das **Werkzeug** für Stufe 1 und Stufe 4.
 >
 > **Wie sie zu lesen ist.** Drei Herkunftsarten, überall getrennt gehalten:
 > `Fakt` = belegt oder aus dem Profil als `öffentlich` übernommen · `Annahme` = Setzung dieser Analyse, begründet · `Einschätzung` = mein Urteil, bestreitbar.
@@ -397,4 +397,4 @@ Vier Stellen, an denen ich widersprechen würde, wenn jemand anders sie vorlegt:
 
 > **Regel für Änderungen an den Gewichtungen:** Wer sie verschiebt, trägt die Änderung hier ein, mit Grund und Datum. Eine nachträglich verschobene Gewichtung ohne Vermerk ist kein Nachjustieren, sondern ein rückwärts gerechnetes Ergebnis.
 
-**Verwandte Dateien:** [`transformationsvorschlag.md`](transformationsvorschlag.md) (Reihenfolge und Taktung) · [`vorhaben.md`](vorhaben.md) (Gegenstand, AI-Act-Einschätzung, parallele Initiativen) · [`systeme-daten.md`](systeme-daten.md) (Schatten-IT, Auftragsverarbeiter, Datenzustand) · [`zahlen.md`](zahlen.md) (Budget, Freigabegrenzen, IT-Budget) · [`menschen.md`](menschen.md) (Rollen, Gremien, Kulturmerkmale) · [Coursebook 3.1](../coursebook/3.1/3.1_KI-Plattformen-im-Vergleich.md) (Methode und ihre Mängel)
+**Verwandte Dateien:** [`transformationsvorschlag.md`](transformationsvorschlag.md) (Reihenfolge und Taktung) · [`vorhaben.md`](vorhaben.md) (Gegenstand, AI-Act-Einschätzung, parallele Initiativen) · [`systeme-daten.md`](systeme-daten.md) (Schatten-IT, Auftragsverarbeiter, Datenzustand) · [`zahlen.md`](zahlen.md) (Budget, Freigabegrenzen, IT-Budget) · [`menschen.md`](menschen.md) (Rollen, Gremien, Kulturmerkmale) · [Coursebook 3.1](../coursebook/woche-3/3.1/3.1_KI-Plattformen-im-Vergleich.md) (Methode und ihre Mängel)

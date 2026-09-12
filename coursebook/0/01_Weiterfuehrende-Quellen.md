@@ -2,8 +2,8 @@
 
 **Höchstens drei pro Thema — nur was den Aufwand wirklich lohnt**
 Kurs: AI and Digital Transformation Management · neue fische × SPICED, 2026
-Umfasst die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2, 3.3 und 3.4
-Links der Tage 1.4 bis 2.2 geprüft am 01.09.2026, die der Tage 3.3 und 3.4 am 09.09.2026
+Umfasst die Tage 1.4, 1.5, 2.1, 2.2, die Ergänzung zu 2.2, 3.3, 3.4 und 4.1 bis 4.5
+Links der Tage 1.4 bis 2.2 geprüft am 01.09.2026, die der Tage 3.3 und 3.4 am 09.09.2026, die der Woche 4 am 12.09.2026
 
 ---
 
@@ -17,7 +17,9 @@ Es gibt zu jedem dieser Themen hunderte Artikel und Videos. Die meisten wiederho
 
 Jeder Link wurde zum jeweils oben genannten Datum geprüft. Paywalls und Sprache sind vermerkt.
 
-> **Grenze dieser Liste:** Sie deckt bisher nicht alle Kurstage ab. Die Woche-3-Dokumente führen ihre Quellen inzwischen selbst vollständig und kommentiert. Für 2.3 bis 3.2 und 3.5 stehen die kommentierten Quellen in den jeweiligen Tagesdokumenten, jeweils im letzten Abschnitt — sie sind hier noch nicht auf drei zusammengezogen und nicht gewichtet.
+> **Grenze dieser Liste:** Sie deckt bisher nicht alle Kurstage ab. Die Dokumente der Wochen 3 und 4 führen ihre Quellen inzwischen selbst vollständig und kommentiert. Für 2.3 bis 3.2 und 3.5 stehen die kommentierten Quellen in den jeweiligen Tagesdokumenten, jeweils im letzten Abschnitt — sie sind hier noch nicht auf drei zusammengezogen und nicht gewichtet.
+
+> **Zur Woche 4 gilt eine zusätzliche Regel:** Mehrere im Kurs genannte Zahlen halten der Prüfung nicht stand, und eine Fristenangabe ist überholt. Die unten aufgenommenen Quellen sind deshalb **die geprüften** — welche Kursangabe wo abweicht, steht in den Tagesdokumenten (`coursebook/woche-4/4.1/` Abschnitt 10, `4.2/` Abschnitt 10, `4.3/` Abschnitt 3, `4.4/` Abschnitt 5, `4.5/` Abschnitt 8).
 
 ---
 
@@ -107,7 +109,7 @@ Journal of Applied Behavioral Science 35(1), 25–41. · Englisch, Fachaufsatz, 
 
 **Was du daraus mitnimmst:** Eine dauerhafte Änderung daran, wie du über Ablehnung sprichst und schreibst. Ersetze „Widerstand" durch die konkrete hemmende Kraft — das ist präziser, adressierbar, und es beschuldigt niemanden.
 
-**Zugang:** Über Hochschulbibliotheken zugänglich. Falls du nicht herankommst: Der Kern steht in [2.1 · Kritik und Alternativen](#2.1/01_Change-Management-Lewin-ADKAR.md#10-kritik-grenzen-und-alternativen).
+**Zugang:** Über Hochschulbibliotheken zugänglich. Falls du nicht herankommst: Der Kern steht in [2.1 · Kritik und Alternativen](#woche-2/2.1/01_Change-Management-Lewin-ADKAR.md#10-kritik-grenzen-und-alternativen).
 
 ### 3. Burnes (2020): „The Origins of Lewin's Three-Step Model of Change" ●
 
@@ -134,7 +136,7 @@ Harvard Business Review, Mai–Juni 1995.
 
 **Vorbehalt:** Es ist eine Beratungsbeobachtung, keine kontrollierte Untersuchung. Das mindert den praktischen Wert nicht, aber es gehört bei jeder Zitierung dazu.
 
-**Zugang:** Der Artikel liegt **hinter einer Bezahlschranke** — die Adresse steht oben, falls du über Hochschule oder Arbeitgeber Zugang hast. Falls nicht, ist nichts verloren: Die beiden Aussagen, auf die es ankommt — der Satz zum Überspringen von Schritten und Kotters *tatsächliche*, qualitative Formulierung zur Erfolgsquote — sind in [2.2 · Datenlage](#2.2/2.2_Kotter-8-Schritte-Modell.md#2-kotter-und-die-datenlage--was-belegt-ist-und-was-nicht) wörtlich zitiert und eingeordnet.
+**Zugang:** Der Artikel liegt **hinter einer Bezahlschranke** — die Adresse steht oben, falls du über Hochschule oder Arbeitgeber Zugang hast. Falls nicht, ist nichts verloren: Die beiden Aussagen, auf die es ankommt — der Satz zum Überspringen von Schritten und Kotters *tatsächliche*, qualitative Formulierung zur Erfolgsquote — sind in [2.2 · Datenlage](#woche-2/2.2/2.2_Kotter-8-Schritte-Modell.md#2-kotter-und-die-datenlage--was-belegt-ist-und-was-nicht) wörtlich zitiert und eingeordnet.
 
 ### 2. Kotter Inc., The 8 Steps for Leading Change ●●
 
@@ -159,7 +161,7 @@ Harvard Business Review, November 2012.
 
 ## Ergänzung zu 2.2 — Force-Field-Analyse
 
-> **Andere Rolle als die übrigen Abschnitte.** Diese drei Adressen sind nicht Vertiefung nach dem Block, sondern **Vorbereitung darauf**. Der Nachmittagsblock am Mittwoch ist der kürzeste der Woche, der Vormittag gehört dem Career Day. Wer die erste Quelle gelesen hat, spart im Block rund zwanzig Minuten. Aufbereitet und um das Verfahren, die Bewertungsregeln und eine Vorlage ergänzt steht alles in [Ergänzung 2.2](#2.2/2.2_Ergaenzung-Force-Field-Analyse.md) — die Quellen darunter sind das Original dazu.
+> **Andere Rolle als die übrigen Abschnitte.** Diese drei Adressen sind nicht Vertiefung nach dem Block, sondern **Vorbereitung darauf**. Der Nachmittagsblock am Mittwoch ist der kürzeste der Woche, der Vormittag gehört dem Career Day. Wer die erste Quelle gelesen hat, spart im Block rund zwanzig Minuten. Aufbereitet und um das Verfahren, die Bewertungsregeln und eine Vorlage ergänzt steht alles in [Ergänzung 2.2](#woche-2/2.2/2.2_Ergaenzung-Force-Field-Analyse.md) — die Quellen darunter sind das Original dazu.
 
 ### 1. Toolshero, Force Field Analysis (Lewin) ●●●
 
@@ -187,7 +189,7 @@ Human Relations 1(1), 5–41.
 
 **Warum diese Quelle:** Die Primärquelle zum Kraftfeld. Hier stehen die quasi-stationären Gleichgewichte im Original — und damit der Beleg für die Aussage, die der ganze Mittwoch trägt: dass ein Zustand von zwei gleich starken Kräftebündeln gehalten wird und dass das Lösen der hemmenden Seite andere Folgen hat als das Verstärken der treibenden.
 
-**Was du daraus mitnimmst:** Für die praktische Arbeit nichts, was nicht auch in den ersten beiden Quellen steht. Relevant, wenn du korrekt zitieren musst — und als Beleg dafür, dass die Kraftfeldanalyse **tatsächlich** von Lewin stammt, anders als das 3-Stufen-Modell ([Burnes-Vorbehalt](#2.1/01_Change-Management-Lewin-ADKAR.md#2-kurt-lewin-person-werk-und-was-davon-wirklich-von-ihm-stammt)).
+**Was du daraus mitnimmst:** Für die praktische Arbeit nichts, was nicht auch in den ersten beiden Quellen steht. Relevant, wenn du korrekt zitieren musst — und als Beleg dafür, dass die Kraftfeldanalyse **tatsächlich** von Lewin stammt, anders als das 3-Stufen-Modell ([Burnes-Vorbehalt](#woche-2/2.1/01_Change-Management-Lewin-ADKAR.md#2-kurt-lewin-person-werk-und-was-davon-wirklich-von-ihm-stammt)).
 
 > **Wenn du nur eine Sache liest:** die Force-Field-Seite — und zwar heute, nicht nach dem Block. Sie ist die einzige Quelle dieser ganzen Liste, die morgen Nachmittag Zeit spart.
 
@@ -216,7 +218,7 @@ Erhebung 2025, über 1.000 Unternehmen in Nordamerika und Europa.
 
 **Was du daraus mitnimmst:** Die Verteidigung gegen zu optimistische Roadmaps — und den Fehler, den das Modell sichtbar macht: *eine Plattform kaufen, die für eine Stufe gebaut ist, auf der man nicht steht.* Das ist der Kategorienfehler aus Tag 1.4, **zeitlich statt sachlich**, und er liegt genau wie jener **vor** der Bewertungsmatrix.
 
-**Wenn die Zeit knapp ist:** Die Zeiträume und die Stufennamen stehen aufbereitet in [3.3, Abschnitt 4](#3.3/3.3_Implementierungspfade-und-Workspace.md#f4). Die Seite selbst lohnt nur, wenn du korrekt zitieren musst.
+**Wenn die Zeit knapp ist:** Die Zeiträume und die Stufennamen stehen aufbereitet in [3.3, Abschnitt 4](#woche-3/3.3/3.3_Implementierungspfade-und-Workspace.md#f4). Die Seite selbst lohnt nur, wenn du korrekt zitieren musst.
 
 ### 3. OpenAI Enterprise, *AI in the Enterprise* (November 2025) ●●
 
@@ -241,7 +243,7 @@ Harvard Business Review, September–Oktober 1998.
 
 **Warum diese Quelle:** Sie beschreibt genau den Fehler, den die Kernaussage des Tages ermöglicht. Wenn die Gewichtung über die Empfehlung entscheidet, ist die Gewichtung auch die Stelle, an der sich unbemerkt manipulieren lässt — die Autoren führen das als *Confirming-Evidence-* und *Anchoring-*Falle: man setzt die Gewichte, bis das Ergebnis herauskommt, das man ohnehin wollte, und hält das Ergebnis anschließend für hergeleitet.
 
-**Was du daraus mitnimmst:** Den Grund, warum eine Matrix ohne **Sensitivitätsprüfung** keine Absicherung ist, sondern eine Begründungsmaschine. Das Gegenmittel steht in [3.4 · Was fehlt](#3.4/3.4_Die-Entscheidung-vertreten.md#g11): das wichtigste Kriterium um ±10 Prozentpunkte verschieben und prüfen, ob der Gewinner kippt. Zwei Minuten Arbeit, und aus einer Punktzahl wird eine Entscheidungsaussage.
+**Was du daraus mitnimmst:** Den Grund, warum eine Matrix ohne **Sensitivitätsprüfung** keine Absicherung ist, sondern eine Begründungsmaschine. Das Gegenmittel steht in [3.4 · Was fehlt](#woche-3/3.4/3.4_Die-Entscheidung-vertreten.md#g11): das wichtigste Kriterium um ±10 Prozentpunkte verschieben und prüfen, ob der Gewinner kippt. Zwei Minuten Arbeit, und aus einer Punktzahl wird eine Entscheidungsaussage.
 
 **Vorbehalt:** Managementklassiker von 1998, keine empirische Arbeit — die einzelnen Fallen sind seither in der Entscheidungsforschung unterschiedlich gut bestätigt. Als Prüfraster brauchbar, als Beleg für einen Effektumfang nicht.
 
@@ -254,13 +256,13 @@ Review of Educational Research 77(1), 81–112.
 
 **Was du daraus mitnimmst:** Eine Sprachregelung für jedes Review, das du selbst gibst: die Stelle, das Soll, der nächste Schritt. Und die Einsicht, warum *„bezieht sich auf das Artefakt und nicht auf die Person"* im Glossar steht — das ist keine Höflichkeitsregel, sondern der Wirksamkeitsbefund.
 
-**Zusatz, die vierte Quelle der Tagesseite:** Topping (2005), *Trends in Peer Learning* — 🔗 https://andymatuschak.org/files/2005%20Topping.pdf. Beantwortet die Anschlussfrage, **unter welchen Bedingungen Peer-Feedback scheitert**, und begründet die Lücke in [3.4 · Was fehlt, 11.5](#3.4/3.4_Die-Entscheidung-vertreten.md#g11): Bewertende müssen vorher an einem Beispiel kalibriert werden, sonst streuen die Bögen mehr als sie zeigen.
+**Zusatz, die vierte Quelle der Tagesseite:** Topping (2005), *Trends in Peer Learning* — 🔗 https://andymatuschak.org/files/2005%20Topping.pdf. Beantwortet die Anschlussfrage, **unter welchen Bedingungen Peer-Feedback scheitert**, und begründet die Lücke in [3.4 · Was fehlt, 11.5](#woche-3/3.4/3.4_Die-Entscheidung-vertreten.md#g11): Bewertende müssen vorher an einem Beispiel kalibriert werden, sonst streuen die Bögen mehr als sie zeigen.
 
 ### 3. TechnologyMatch: The Essential IT Vendor Selection Criteria and Checklist (2024) ●
 
 🔗 https://technologymatch.com/blog/the-essential-it-vendor-selection-criteria-and-checklist · Englisch, frei
 
-**Warum diese Quelle:** Sie ist **direkt anwendbar** — das dritte Auswahlkriterium dieser Liste. Neun Kriterienkategorien mit gewichteter Bewertung, und der Ertrag liegt nicht im Rahmen selbst, sondern im Abgleich: Die fünf oder sechs Kriterien des Kurses lassen sich daran auf Lücken prüfen, und die Lücken sind vorhersagbar dieselben — **Betrieb, Support, Exit**. Genau die Felder, die in [3.4 · Was eine Matrix nicht misst](#3.4/3.4_Die-Entscheidung-vertreten.md#g10) als blinde Flecken stehen.
+**Warum diese Quelle:** Sie ist **direkt anwendbar** — das dritte Auswahlkriterium dieser Liste. Neun Kriterienkategorien mit gewichteter Bewertung, und der Ertrag liegt nicht im Rahmen selbst, sondern im Abgleich: Die fünf oder sechs Kriterien des Kurses lassen sich daran auf Lücken prüfen, und die Lücken sind vorhersagbar dieselben — **Betrieb, Support, Exit**. Genau die Felder, die in [3.4 · Was eine Matrix nicht misst](#woche-3/3.4/3.4_Die-Entscheidung-vertreten.md#g10) als blinde Flecken stehen.
 
 **Was du daraus mitnimmst:** Eine Checkliste für die halbe Stunde vor der Abgabe einer Vorlage. Nicht um die Matrix zu verlängern — sondern um zu entscheiden, was bewusst **nicht** bewertet wurde und in „Offene Fragen" gehört.
 
@@ -270,9 +272,184 @@ Review of Educational Research 77(1), 81–112.
 
 ---
 
+## Tag 4.1 — Stakeholder-Analyse und Power/Interest Grid
+
+### 1. Die Normen, die den Gatekeeper erklären ●●●
+
+**Arbeitnehmerkammer Bremen:** *Eine (betriebsverfassungs-)rechtliche Betrachtung von KI*
+🔗 <https://www.arbeitnehmerkammer.de/betriebs-personalraete/digitalisierung/kuenstliche-intelligenz/eine-betriebsverfassungs-rechtliche-betrachtung-von-ki.html> · Deutsch, frei
+
+**Warum diese Quelle:** Der Kurs sagt „§ 87 BetrVG" ohne Absatz. Das genügt für die eigene Rolle nicht — die Absatzangabe entscheidet darüber, **wann** eingebunden werden muss. Hier stehen die einschlägigen Normen im Zusammenhang: § 87 Abs. 1 Nr. 6 (Mitbestimmung bei Überwachungseignung), **§ 90 Abs. 1 Nr. 3** (Unterrichtung **bei der Planung**, KI seit 2021 ausdrücklich genannt), § 80 Abs. 3 S. 2 (Sachverständiger, Erforderlichkeit **unwiderleglich vermutet**), § 95 Abs. 2a (Auswahlrichtlinien).
+
+**Was du daraus mitnimmst:** Die schärfere Diagnose zum Praxisfall des Tages. „Zu spät eingebunden" ist eine Prozessbeschreibung; **„Verstoß gegen § 90"** ist eine Auskunft — und sie verändert das Gespräch mit dem Sponsor, weil frühe Einbindung dann keine Höflichkeit mehr ist, sondern eine ohnehin bestehende Pflicht.
+
+**Gelesen aus Sicht der Gegenseite** — genau deshalb lesenswert.
+
+### 2. Die Gegenposition zum Kursfall ●●●
+
+**Bird & Bird zu ArbG Hamburg, Beschluss vom 16.01.2024 (24 BVGa 1/24)**
+🔗 <https://www.twobirds.com/de/insights/2024/germany/erstes-urteil-zu-rechten-des-betriebsrats-bei-einsatz-von-kuenstlicher-intelligenz> · Deutsch, frei
+
+**Warum diese Quelle:** Der Kurs zeigt den Fall, in dem Mitbestimmung greift. Dies ist der dokumentierte Fall, in dem sie **nicht** greift — Browserzugriff, private Accounts, keine Unternehmenshardware, kein Zugriff auf Nutzungsdaten.
+
+**Was du daraus mitnimmst:** Drei Prüffragen vor dem ersten Gespräch: *Läuft es auf unserer Hardware? Haben wir Zugriff auf die Nutzungsdaten? Entstehen personenbezogene Leistungsdaten?* Wer sie beantwortet hat, führt ein Fachgespräch statt einer Machtprobe.
+
+**Vorbehalt:** erstinstanzlich, Eilverfahren, enge Konstellation.
+
+### 3. Die Primärquelle zum Grid ●●
+
+**Mendelow, A. (1981):** *Environmental Scanning — The Impact of the Stakeholder Concept.* ICIS 1981 Proceedings, Cambridge MA
+🔗 <https://aisel.aisnet.org/icis1981/20/> · Englisch, frei, kurz
+
+**Warum diese Quelle:** Weil der Kurs sie auf 1991 datiert und sich dabei selbst widerspricht (Tag 3.5 nennt 1981). Und weil sichtbar wird, dass die **vier Quadranten mit Handlungsanweisung** nicht von Mendelow stammen, sondern aus der Popularisierung durch Johnson & Scholes.
+
+**Was du daraus mitnimmst:** Die Fähigkeit, korrekt zu zitieren — und zu wissen, dass „die Mendelow-Matrix" im Steuerkreis meistens die Johnson-Scholes-Fassung meint.
+
+> **Wenn du nur eine Sache liest:** die Normenübersicht. Sie ist die einzige Quelle der Woche, die dir im realen Gespräch sofort nützt.
+
+---
+
+## Tag 4.2 — Key User und Champions-Programm
+
+### 1. Der empirische Einwand gegen das Canvas ●●●
+
+**Howell, J. M. & Higgins, C. A. (1990):** *Champions of Technological Innovation.* Administrative Science Quarterly 35(2), 317–341
+🔗 <https://eric.ed.gov/?id=EJ411660> · Englisch, Fachaufsatz
+
+**Warum diese Quelle:** Sie ist die einzige begutachtete Arbeit, die die Frage des Tages direkt beantwortet — *soll man Champions ernennen?* — und sie antwortet gegen den Kursvorschlag: **Eine formale Ernennung kann die intrinsische Motivation untergraben und den Erfolg gefährden.** 25 gematchte Paare, Fragebögen und Interviews.
+
+**Was du daraus mitnimmst:** Die Trennung, die das Canvas brauchbar macht: **Zeit, Zugang, Kanal und Anerkennung formalisieren — die Tätigkeit nicht.** Und die Antwort auf den häufigsten Gegenvorschlag („dann benennen wir je Abteilung eine Person").
+
+### 2. Die zitierfähigen Adoptionszahlen ●●●
+
+**Microsoft & LinkedIn (2024):** *Work Trend Index — AI at Work Is Here. Now Comes the Hard Part.*
+🔗 <https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part> · Englisch, frei
+
+**Warum diese Quelle:** Der Kurs stützt den Tag auf „68 gegen 23 Prozent" aus einer Quelle ohne Stichprobe und ohne Methode. Hier sind Stichprobe (31.000 Befragte, 31 Länder) und Fragestellung offengelegt: **75 % nutzen KI bei der Arbeit, 78 % davon mit eigenen Werkzeugen; 79 % der Führungskräfte halten Adoption für wettbewerbskritisch, 60 % sagen, es gebe weder Vision noch Plan.**
+
+**Was du daraus mitnimmst:** Den Accountability Gap mit Zahl — und das stärkere Argument für das Programm: Es erzeugt nicht Nutzung, es macht **unkontrollierte Nutzung sichtbar.** Damit ist es zugleich eine Governance-Maßnahme.
+
+**Vorbehalt:** Erhebung eines Anbieters, der KI-Werkzeuge verkauft. Richtung plausibel, Höhe interessengefärbt — und das gehört mitgesagt.
+
+### 3. Das Dual Operating System im Original ●●
+
+**Kotter, J. P. (2014):** *Accelerate: Building Strategic Agility for a Faster-Moving World.* Harvard Business Review Press · Englisch
+
+**Warum diese Quelle:** Weil die Bedingung, unter der das Modell funktioniert — **echte Freiwilligkeit** —, in Nacherzählungen regelmäßig wegfällt. Genau diese Bedingung steht im Konflikt mit einem Canvas, das Auswahl, Rollenbeschreibung und Mandat festschreibt.
+
+**Was du daraus mitnimmst:** Die Sprache, um den Widerspruch zu benennen, statt ihn zu übersehen.
+
+> **Wenn du nur eine Sache liest:** Howell & Higgins. Vier Seiten Zusammenfassung genügen, und sie verändern, wie du Dimension 1 des Canvas ausfüllst.
+
+---
+
+## Tag 4.3 — Botschaft, Kanal und Kommunikationsplan
+
+### 1. Die Absender-Regel, die im Kurs fehlt ●●●
+
+**Prosci:** *Communications Checklist for Change Management*
+🔗 <https://www.prosci.com/blog/communications-checklist-for-change-management> · Englisch, frei
+
+**Warum diese Quelle:** Der Kurs ordnet **Kanäle** zu und lässt **Absender** aus. Prosci hat dazu die stabilste Aussage der Praxisliteratur: **Geschäftliche Gründe** wollen Beschäftigte von der **Führungsspitze** hören, **persönliche Auswirkungen** von der **direkten Führungskraft.**
+
+**Was du daraus mitnimmst:** Eine zusätzliche Spalte im Engagement-Kalender und zwei vermiedene Standardfehler — die Projektleitung, die ankündigt, und die Townhall, die Jobfragen beantworten soll.
+
+**Vorbehalt:** Beratungsforschung, Methodik nicht öffentlich. Über viele Erhebungswellen stabil.
+
+### 2. Der belegte Ersatz für den Siemens-Fall ●●●
+
+**Der Duolingo-Verlauf, April bis August 2025**
+🔗 <https://www.prdaily.com/the-scoop-duolingo-ceo-walks-back-ai-first-memo/> · Englisch, frei
+
+**Warum diese Quelle:** Der Siemens-Fall des Kurses ist ohne Quelle und ohne Messgröße. Dieser Verlauf ist mit Daten, Zitaten und der Korrektur durch die Unternehmensleitung dokumentiert — und er trägt dieselbe Lehre: **Die erste Botschaft war nicht falsch, sie beantwortete eine Frage, die niemand gestellt hatte.**
+
+**Was du daraus mitnimmst:** Drei Lehren statt einer — interne KI-Kommunikation ist bei kundensichtbaren Produkten nicht intern; die Korrektur bestätigte die Diagnose aus dem Mund des Absenders; und gelöschte Beiträge sind selbst eine Botschaft.
+
+### 3. Artikel 50 EU AI Act ●●
+
+**Verordnung (EU) 2024/1689, Artikel 50 — Transparenzpflichten**
+🔗 <https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689> · Deutsch, frei
+
+**Warum diese Quelle:** Weil ein Teil dessen, was der Tag als Gestaltungsfrage behandelt, **seit dem 02.08.2026 Pflicht ist** — und diese Frist von der Verschiebung der Hochrisiko-Pflichten ausdrücklich **nicht** betroffen ist.
+
+**Was du daraus mitnimmst:** Eine Kalenderzeile mit hartem Termin statt einer Tonempfehlung. Und einen Satz, der den Einwand *„müssen wir das so breit kommunizieren?"* nicht diskutiert, sondern erledigt.
+
+> **Wenn du nur eine Sache liest:** die Prosci-Checkliste. Sie ist die einzige der drei, die jede künftige Kommunikation verbessert, nicht nur diese.
+
+---
+
+## Tag 4.4 — Executive Briefing
+
+### 1. Die eine Quelle ohne Interessenlage ●●●
+
+**McKinsey & Company:** *The State of AI*
+🔗 <https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai> · Englisch, frei
+
+**Warum diese Quelle:** Von den vier Belegen, die der Kurs für Block 3 anbietet, ist dies der einzige ohne Anbieterfinanzierung. Und er liefert die beiden Zahlen, die zwei der vier Einwände zugleich beantworten: **88 % der Organisationen setzen KI in mindestens einer Funktion ein (Vorjahr 78 %), 21 % haben dafür Arbeitsabläufe grundlegend verändert** — und diese Neugestaltung zählt zu den Faktoren mit dem stärksten Beitrag zur Ergebniswirkung.
+
+**Was du daraus mitnimmst:** Wenn nur eine Zahl ins Deck darf, diese. Sie sagt, dass die Technologie nicht die Engstelle ist — und wohin das Geld gehört.
+
+**Vorbehalt:** Beratungsbefragung, keine Messung. Als Größenordnung brauchbar, als Nachweis nicht.
+
+### 2. Warum die Anordnung auf der Folie eine inhaltliche Entscheidung ist ●●●
+
+**Columbia Accident Investigation Board (2003), Report Volume 1** — der Abschnitt zur technischen Kommunikation
+🔗 <https://www.gocivilairpatrol.com/media/cms/Columbiapdf_5161B0B3295B0.pdf> · Englisch, frei
+
+**Warum diese Quelle:** Sie ist der schärfste dokumentierte Beleg dafür, dass **Verdichtung Information verliert** — und dass die Überschrift im Kopf der Lesenden mehr Gewicht trägt als der Inhalt darunter. Das Board hielt fest, es sei leicht nachvollziehbar, dass eine leitende Führungskraft die betreffende Folie lese, ohne zu erkennen, dass es um eine lebensbedrohliche Lage gehe.
+
+**Was du daraus mitnimmst:** Die Feedback-Dimension „Evidence" mit Nachdruck — *war die stärkste Zahl prominent oder vergraben?* Und die Regel: Eine Risikozeile in der Fußnote ist keine genannte Risikozeile.
+
+### 3. Die Herkunft des Fünf-Block-Modells ●●
+
+**Minto, B.:** *The Pyramid Principle* · Englisch
+
+**Warum diese Quelle:** Das Modell des Tages ist nicht neu — es ist Mintos **Antwort-zuerst**-Aufbau mit SCQA-Eröffnung, seit den späten 1970er-Jahren in der Beratungspraxis. Wer die Herkunft kennt, kann die Reihenfolge **begründen**, statt sie zu behaupten — und das ist genau der Einwand, der im Raum kommt.
+
+**Was du daraus mitnimmst:** Die ersten beiden Kapitel genügen. Dazu die Gegenposition zum Deck-Format überhaupt: In vielen Häusern fällt die Entscheidung **beim Lesen der Vorlage**, nicht im Meeting.
+
+> **Wenn du nur eine Sache liest:** die zwei McKinsey-Zahlen. Sie sind der einzige Beleg des Tages, den du ohne Vorbehaltssatz vortragen kannst.
+
+---
+
+## Tage 4.5 — Synthese, Governance und die Fristen
+
+### 1. Die aktuelle Fristenlage zum EU AI Act ●●●
+
+**Gibson Dunn:** *EU AI Act Omnibus Agreement — Postponed High-Risk Deadlines and Other Key Changes*
+🔗 <https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/> · Englisch, frei
+
+**Warum diese Quelle:** Weil die Angabe des Kurses — *„erste Hochrisiko-Anforderungen ab August 2026"* — überholt ist. Hochrisiko nach **Anhang III jetzt 02.12.2027**, nach **Anhang I 02.08.2028**; **Artikel 50 unverändert seit 02.08.2026**; Reallabore 02.08.2027; Artikel 4 (KI-Kompetenz) abgeschwächt.
+
+**Was du daraus mitnimmst:** Die Fähigkeit, dieselbe Empfehlung mit einer Begründung vorzutragen, die der Rechtslage standhält. **Eine überholte Frist im eigenen Vortrag beschädigt auch die richtigen Aussagen daneben.**
+
+**Vorbehalt:** Kanzleianalyse, Stand Sommer 2026. Keine Rechtsberatung — vor einer Aussage mit Außenwirkung den aktuellen Stand prüfen.
+
+### 2. Was ohne den AI Act schon heute gilt ●●●
+
+**DSGVO, Artikel 22 und Artikel 35** (mit Art. 37–39 zur Datenschutzbeauftragten)
+🔗 <https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679> · Deutsch, frei
+
+**Warum diese Quelle:** Weil die Fristverschiebung den Kurzschluss nahelegt, man habe bis Ende 2027 Zeit. **Artikel 22** gibt das Recht, nicht einer ausschließlich automatisierten Entscheidung unterworfen zu werden, und den Anspruch auf **Eingreifen einer Person** — das ist Human Oversight, heute geltend. **Artikel 35** verlangt die Folgenabschätzung bei hohem Risiko.
+
+**Was du daraus mitnimmst:** Den Argumentationswechsel für die zweite W5-Frage: **mit Artikel 22 DSGVO begründen, nicht mit Artikel 14 AI Act.** Aussage behalten, Beleg austauschen.
+
+### 3. Eine RACI-Vorlage für KI-Governance ●●
+
+**VerifyWise:** *AI Lifecycle RACI Framework*
+🔗 <https://verifywise.ai/ai-governance-library/organizational-roles-and-processes/raci-matrix-ai-governance-template> · Englisch, frei
+
+**Warum diese Quelle:** Die drei W5-Fragen enden in drei Zeilen eines RACI — DPO, Human Oversight, Compliance-Accountable. Hier gibt es die Vorlage dafür, statt sie neu zu erfinden.
+
+**Was du daraus mitnimmst:** Ein Ausgangsraster, das in Woche 5 in ISO 42001 einsortiert wird.
+
+> **Wenn du nur eine Sache liest:** die Fristenübersicht. Sie ist die einzige Korrektur dieser Woche, die dich unmittelbar vor einer falschen Aussage im Steuerkreis bewahrt.
+
+---
+
 ## Was hier bewusst nicht steht
 
-**Keine Prompt-Tipp-Sammlungen und keine „50 besten Prompts"-Videos.** Ein großer Teil dieser Inhalte besteht aus Techniken, die bei Modellen mit adaptivem Denken wirkungslos sind — „denke Schritt für Schritt", Superlative in der Rolle, emotionaler Druck. Was davon gilt und was nicht, steht in [1.5 · Was nicht funktioniert](#1.5/1.5_Strategisches-Prompt-Engineering.md#12-was-nicht-funktioniert--und-sicherheit).
+**Keine Prompt-Tipp-Sammlungen und keine „50 besten Prompts"-Videos.** Ein großer Teil dieser Inhalte besteht aus Techniken, die bei Modellen mit adaptivem Denken wirkungslos sind — „denke Schritt für Schritt", Superlative in der Rolle, emotionaler Druck. Was davon gilt und was nicht, steht in [1.5 · Was nicht funktioniert](#woche-1/1.5/1.5_Strategisches-Prompt-Engineering.md#12-was-nicht-funktioniert--und-sicherheit).
 
 **Keine Beratungsstudien als Belege.** Die Zahlen aus McKinsey und ähnlichen Erhebungen stehen bereits in den Kursdokumenten. Es sind Umfragewerte, keine Messungen — als Größenordnung brauchbar, als Nachweis nicht. Sie noch einmal zu verlinken, macht sie nicht belastbarer.
 
@@ -282,4 +459,4 @@ Review of Educational Research 77(1), 81–112.
 
 ---
 
-*Diese Liste wächst mit dem Kurs. Kommt ein neuer Foliensatz dazu, werden bis zu drei Quellen ergänzt — nach denselben Kriterien, mit geprüften Links.*
+*Diese Liste wächst mit dem Kurs. Kommt ein neuer Kurstag dazu, werden bis zu drei Quellen ergänzt — nach denselben Kriterien, mit geprüften Links und mit dem Prüfdatum im Kopf.*
